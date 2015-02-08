@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage[latin2]{inputenc}
+\usepackage{amsfonts}
+\usepackage[MeX]{polski}
+
+\author{Jakub Janczak}
+\title{Sprawozdanie z Technik Programowania Równoleg³ego nr 3}
+
+\begin{document}
+\maketitle
+
+\section{Komunkacja MPI}
+Celem zadania by³o napisanie programów pozwalaj±cych na obliczenie czasu w jakim dane wêdruj± w obrêbie komunikatora. 
+Oto wyniki
+
+\subsection{Standardowy Send}
+\includegraphics{standard.eps}
+
+\subsection{Synchroniczny Send}
+\includegraphics{sync.eps}
+
+\subsection{Ready to Send}
+\includegraphics{readytosend.eps}
+
+\subsection{Buforowany Send}
+\includegraphics{buffered.eps}
+
+\subsection{Nieblokuj±cy receive}
+\includegraphics{nonblockrecv.eps}
+
+\section{W³asne struktury danych}
+\subsection{Przesy³anie struktury}
+Zadanie polega³o na przesy³aniu struktury pomiêdzy procesami i zliczaniu sumy zmienno- i sta³oprzecinkowej ranków;
+
+\includegraphics{cycle1.eps}
+
+
+\subsection{Przesy³anie wektora}
+Przesy³any by³ wektor danej d³ugo¶ci
+
+\includegraphics{exchange.eps}
+
+\subsection{Przesy³anie podmacierzy}
+Przesy³anie podmacierzy (wykres zale¿no¶ci czasu od wielko¶ci podmacierzy)
+
+\includegraphics{exchange1.eps}
+
+\section{Umieszczenie procesów w przestrzeni}
+MPI posiada bardzo ciekaw± w³a¶ciwo¶æ pozwalaj±c± na umieszczenie procesów na wielowymiarowej siatce. 
+\subsection{Obliczanie sumy ranków z pomoc± cyklu MPI\_Cart}
+Wyniki by³y podobne do tych uzyskanych w przypadku zwyk³ego przekazywania struktury. Przy mocno rozproszonej architekturze mog± siê nieco poprawiæ dziêki zastosowaniu parametru reorder.
+
+\subsection{Obliczanie sumy ranków w torrusie}
+Zadanie polega³o na obliczeniu sumy ka¿dej z kolumn z osobna. Prezentacja wyników czasowych nie ma wiêkszego sensu
+
+\subsection{Sortowanie macierzy (N=n*n) n-procesowe}
+Wykorzystany algorytm polega³ na wykorzystaniu w³a¶ciwo¶ci sortowania macierzy naprzemiennie tj. przeprowadzane naprzemian sortowanie kolumn i wierszy \(log_2(n)\) razy powoduje jej przesortowanie zgodnie z warunkami zadania. Do sortowania wierszy i kolumn wykorzysta³em algorytm parallel-bubblesort
+
+\includegraphics{sort1.eps}
+
+\subsection{Sortowanie macierzy (N=n*n*m*m) n-procesowe}
+Rozszerzeniem powy¿szego algorytmu jest sortowanie w przypadku gdy jeden proces posiada podmacierz elementów. Algorytm wygl±da podobnie z t± ró¿nic±, ¿e do sortowania podmacierzy wykorzysta³em quicksort. Prezentacja wyników czasowych mija siê z celem z uwagi na losow± naturê quicksorta.
+\end{document}

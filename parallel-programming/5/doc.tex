@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[latin2]{inputenc}
+\usepackage{amsfonts}
+\usepackage[MeX]{polski}
+
+
+\title{Sprawozdanie nr 4 z Techink Programowania Równoleg³ego}
+\author{Jakub Janczak}
+
+\begin{document}
+	\maketitle
+	\section{Zadanie 1, 2, 3}
+		Zadania polega³y na stworzeniu programów przeprowadzaj±cych sumy ranków
+		\begin{enumerate}
+			\item Przeprowadzaj±cy sumowanie za pomoc± funkcji reduce
+			\item Przeprowadzaj±cy sumowanie czê¶ciowe (za pomoc± funkcji allgather)
+			\item Przeprowadzaj±cy sumowanie czê¶ciowe i wypisuj±cy wyniki w kolejno¶ci
+
+			Kod ¼ród³owy u autora
+		\end{enumerate}
+
+	\section{Zadania dodatkowe}
+		\subsection{Broadcast}
+			Celem zadania by³o zaimplementowanie programu w którym jeden z procesów wysy³a dane i odbiera od wszystkich pozosta³ych te dane z powrotem. 
+		\subsection{Scatter}
+			Zadanie odpowiadaj±ce, ale z u¿yciem funkcji MPI\_Scatter. Nastêpnie nale¿a³o porównaæ te dwie metody:
+
+			\includegraphics{bcast1.eps}
+
+			\includegraphics{scatter1.eps}
+
+		\subsection{Topologia grafowa}
+			W zadaniu nale¿a³o stworzyæ topologiê grafu i nastêpnie stworzyæ co¶ na wzór broadcastu. Nastêpnie nale¿a³o sprawdziæ jak czas przesy³u zale¿y od wielko¶ci wiadomo¶ci:
+
+			\includegraphics{len.eps}
+
+			oraz jak sposób grafowy ró¿ni siê od sposobu broadcastowego:
+
+			\includegraphics{graph.eps}
+
+			\includegraphics{bcast2.eps}
+
+\end{document}

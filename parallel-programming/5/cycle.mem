@@ -1,0 +1,22 @@
+#set terminal postscript eps "Arial" 24 
+set terminal postscript eps "Helvetica" 20
+set logscale x
+set grid
+set pointsize 4
+
+set output "bcast1.eps"
+plot "compare.out" using 1:2 t "Broadcast communication" with points
+
+set output "scatter1.eps"
+plot "compare.out" using 1:3 t "Scatter/Gather communication" with points
+
+set output "bcast2.eps"
+plot "compare1.out" using 1:2 t "Broadcast communication" with points
+
+set output "graph.eps"
+plot "compare1.out" using 1:3 t "Graph communication" with points
+
+unset logscale x
+
+set output "len.eps"
+plot "len1.out" using 1:2 t "Graph communication/length" with points

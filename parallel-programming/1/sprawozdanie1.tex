@@ -1,0 +1,230 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[latin2]{inputenc}
+\usepackage{amsfonts}
+\usepackage[MeX]{polski}
+
+
+\author{Jakub Janczak}
+\title{Dokumentacja do laboratorium z TPR}
+
+\begin{document}
+\maketitle
+\section{Przepustowo¶æ i opó¼nienie}
+\subsection{Opó¼nienie}
+Opó¼nienie - to narzut czasowy spowodowany protoko³em komunikacyjnym. Czynnikami wp³ywaj±cymi na warto¶æ opó¼nienia s±: medium, z³o¿no¶æ protoko³u, obci±¿enie etc.
+\\
+Pomiar opó¼nienia przeprowadzi³em wysy³aj±c pust± wiadomo¶æ z hosta blade01 do pozosta³ych hostów. Oto wyniki:
+\begin{verbatim}
+Delay of blade2: 257 us, [ 0.245 ]
+Delay of blade3: 245 us, [ 0.223 ]
+Delay of blade4: 223 us, [ 0.226 ]
+Delay of blade5: 226 us, [ 0.225 ]
+Delay of blade6: 225 us, [ 0.220 ]
+Delay of blade7: 220 us, [ 0.212 ]
+Delay of blade8: 212 us, [ 0.242 ]
+Delay of blade9: 242 us, [ 0.283 ]
+Delay of blade10: 283 us, [ 0.705 ]
+Delay of blade11: 705 us, [ 0.1382 ]
+Delay of blade12: 1382 us, [ 0.1262 ]
+Delay of blade13: 1262 us, [ 0.117 ]
+\end{verbatim}
+
+\subsection{Przepustowo¶æ}
+Przepustowo¶æ - jest to ilo¶æ danych przes³anych w transmisji w stosunku do czasu jaki ta transmisja poch³onê³a.
+\\
+Wyniki pomiaru przepustowo¶ci:
+\begin{verbatim}
+Delay and throughput for 3200 bytes of data
+2      0.00022      14.09588
+3      0.00019      16.10426
+4      0.00019      16.27604
+5      0.00019      16.27604
+6      0.00019      16.40730
+7      0.00019      16.14687
+8      0.00019      16.45152
+9      0.00022      13.65440
+10      0.00024      12.82251
+11      0.00022      13.90322
+12      0.00023      13.06963
+13      0.00023      13.53329
+
+Delay and throughput for 32000 bytes of data
+2      0.00141      21.65903
+3      0.00141      21.66672
+4      0.00146      20.95988
+5      0.00143      21.28886
+6      0.00161      18.98450
+7      0.00152      20.01809
+8      0.00153      19.90710
+9      0.00180      16.91662
+10      0.00200      15.29320
+11      0.00186      16.44266
+12      0.00194      15.69027
+13      0.00194      15.70642
+
+Delay and throughput for 320000 bytes of data
+2      0.00758      40.28723
+3      0.00740      41.26227
+4      0.00768      39.75455
+5      0.00774      39.41821
+6      0.00910      33.53949
+7      0.00790      38.62007
+8      0.00773      39.45643
+9      0.01019      29.93534
+10      0.01080      28.24656
+11      0.01024      29.79505
+12      0.01042      29.28610
+13      0.01066      28.64021
+
+Delay and throughput for 640000 bytes of data
+2      0.02758      22.13022
+3      0.02778      21.97208
+4      0.02865      21.30521
+5      0.02880      21.18982
+6      0.03477      17.55321
+7      0.03025      20.17491
+8      0.02936      20.78677
+9      0.03680      16.58429
+10      0.04026      15.16157
+11      0.03669      16.63741
+12      0.03851      15.84835
+13      0.03715      16.43137
+
+Delay and throughput for 32000000 bytes of data
+2      1.34505      22.68880
+3      1.36633      22.33547
+4      1.41249      21.60556
+5      1.41884      21.50890
+6      1.69806      17.97200
+7      1.50222      20.31499
+8      1.46709      20.80139
+9      1.86666      16.34875
+10      2.02776      15.04991
+11      1.80346      16.92167
+12      1.90953      15.98175
+13      1.83598      16.62193
+\end{verbatim}
+
+Wykres zale¿no¶ci przepustowo¶ci od wielko¶ci przesy³anych danych:
+
+\includegraphics{thr.eps}
+
+\section{Broadcast i unicast}
+PVM wspiera rozsy³anie do pojedyñczego hosta, wszystkich lub grupy hostów. Jednym z zadañ by³o zaimplementowanie broadcastu w oparciu o unicast i porównanie. Oto kod programu - implementuje on najprostsz± z mo¿liwych wersji (jedna maszyna przesy³a wiadomo¶æ do wszystkich pozosta³ych):
+
+\begin{verbatim}
+// master.c
+
+#include <stdio.h>
+#include <pvm3.h>
+
+#define COUNT 10
+
+int main(int argc, char** argv) {
+	int c=1, tid1, tids[BLADES],i;
+	char buf[8];
+	int x;
+	unsigned int delay[COUNT];
+	int count=10, intNumber=400;
+	if (argc>1) {
+		count = atoi(argv[1]);
+		if ( argc > 2 ) {
+			intNumber = atoi(argv[2]);
+		}
+	}
+
+	strcpy(buf, "blade");
+	buf[7] = '\0';
+	for(i=2;i<BLADES+1;i++) {
+		buf[5] = '0' + (int)i/10;
+		buf[6] = '0' + i%10;
+		printf("Spawning to %s:",buf);
+		if ((x = pvm_spawn("slave", (char**)0,PvmTaskHost,buf,1,&tids[i-2])) <= 0) {
+			printf("not successfull\n");
+			exit(1);
+		}
+		printf("Success %d\n", tids[i-2]);
+	}
+	printf("starting to send data\n");
+
+	int* a = (int*)malloc(sizeof(int)*intNumber);
+	pvm_initsend(PvmDataDefault);
+	pvm_pkint(a, intNumber, 0);
+	struct timeval tm1, tm2;
+	int j;
+	for(j=0;j<count;j++) {
+		gettimeofday(&tm1,NULL);
+		for(i=2;i<BLADES+1;i++)  {
+			pvm_send(tids[i-2], 13);
+		} 
+
+		pvm_barrier("slaves", BLADES-1);
+		gettimeofday(&tm2, NULL);
+		delay[j] = tm2.tv_sec*1000000 + tm2.tv_usec - tm1.tv_sec*1000000 - tm1.tv_usec;
+	}
+
+	int sum = 0;
+	for(j=0;j<count;j++) 
+		sum += delay[j];
+
+	printf("Delay of transmission was %d microsec\n", sum/count);
+	printf("Delay of transmission was %12.5lf seconds\n", (float)(sum/count)/1000000.0);
+	pvm_exit();
+}
+
+\end{verbatim}
+Program master realizuj±cy transmisjê broadcastow±, wygl±da podobnie z t± ró¿nic± ¿e zamiast pvm\_send w pêtli zawiera instrukcjê pvm\_bcast("slaves",13);
+
+\begin{verbatim}
+
+// slave.c
+#include <pvm3.h>
+#include <stdio.h>
+
+int main() {
+	printf("i'm %d\n", pvm_mytid());
+	pvm_initsend(PvmDataDefault);
+	pvm_recv(pvm_parent(),13);
+	pvm_barrier("slaves",BLADES);
+	printf("Received message from parent %d\n", pvm_parent());
+	pvm_exit();
+}
+
+\end{verbatim}
+Testy powtarzane by³y 10 razy \\
+Wyniki dla zerowej wiadomo¶ci:
+
+Broadcast:\\
+Delay of transmission was 696 microsec\\
+Delay of transmission was      0.00070 seconds\\
+\\
+Unicast:\\
+Delay of transmission was 564 microsec\\
+Delay of transmission was      0.00056 seconds\\
+
+
+Wyniki dla 100 wartosci typu int:\\
+
+Broadcast:\\
+Delay of transmission was 704 microsec \\
+Delay of transmission was      0.00070 seconds\\
+
+Unicast:\\
+Delay of transmission was 560 microsec\\
+Delay of transmission was      0.00056 seconds\\
+
+Troche to zadziwiaj±ce, ale ju¿ dla wiêkszych ilo¶ci danych (10000 warto¶ci typu int):
+
+Broadcast:\\
+Delay of transmission was 1759 microsec\\
+Delay of transmission was      0.00176 seconds\\
+
+Unicast:\\
+Delay of transmission was 7102 microsec\\
+Delay of transmission was      0.00710 seconds\\
+
+Podwy¿szanie ilo¶ci danych tylko zwiêksza³o przewagê broadcastu.
+
+
+\end{document}

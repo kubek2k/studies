@@ -1,0 +1,12 @@
+set terminal postscript eps "Arial" 24 
+set output "thr.eps"
+set logscale x
+set grid
+set yrange [00.0:30.00]
+set xrange [40:16000000]
+set pointsize 2
+plot "data.in" using 1:2 t "throughput" with linespoints smooth csplines
+#plot "data.in" using 1:2 with linespoints
+
+#pause -1
+

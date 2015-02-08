@@ -1,0 +1,40 @@
+set terminal postscript eps "Arial" 24 
+set logscale x
+set grid
+set pointsize 4
+
+set output "wzgl.eps"
+plot "lol1" using 5:4 t "blad wzgl PI" with points
+
+set output "bezwgl.eps"
+plot "lol1" using 5:3 t "blad bezwzgl PI" with points
+
+unset logscale x
+set output "speedup.eps"
+plot "lol2" using 1:(7.225082/$7) t "speedup" with linespoints
+
+set output "effect.eps"
+plot "lol2" using 1:((7.225082/$7)/$1) t "effectivity" with linespoints
+
+set output "speedup_sc.eps"
+plot "lol3" using 1:(($6/10000000)*(1.448798/$7)) t "scaled speedup" with linespoints
+
+set output "effect_sc.eps"
+plot "lol3" using 1:((($6*10000000)*1.448798/$7)/$1) t "scaled effectivity" with linespoints
+
+set output "speedup1.eps"
+plot "lol7" using 2:(1.8829480/$3) t "speedup" with linespoints
+
+set output "effect1.eps"
+plot "lol7" using 2:((1.8829480/$3)/$2) t "effectivity" with linespoints
+
+set output "speedup1_sc.eps"
+plot "lol6" using 2:($1*0.0127640/$3) t "scaled speedup" with linespoints
+
+set output "effect1_sc.eps"
+plot "lol6" using 2:($1*(0.0127640/$3)/$2) t "scaled effectivity" with linespoints
+
+#plot "data.in" using 1:2 with linespoints
+
+#pause -1
+
