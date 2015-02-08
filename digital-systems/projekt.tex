@@ -1,0 +1,112 @@
+\documentclass{article}
+\author{Jakub Janczak, Andrzej Augustynowicz}
+\title{Projekt pomiaru predkosci myszki}
+
+\begin{document}
+\maketitle
+
+\section{Wstep}
+
+Celem projektu bylo stworzenie urzadzenia mogacego porozumiec sie z myszka i pobierac z niej dane. Pierwotnie mialo to byc proste urzadzenie obrabiajace dane odebrane w "paczkach" od myszki. W trakcie realizacji, sama obrobka danych zostala zepchnieta na dalszy plan przez samo "zmuszenie" myszki do ich wysylania.
+
+\section{Opis problemu}
+
+Myszka PS/2 ktora przyszlo nam sie zajmowac komunikuje sie z komputerem za pomocy dwoch zlacz: \begin{itemize}
+	\item{Data} - szeregowe zlacze po ktorym przesylane sa dane ( dwukierunkowo - w ukladzie OC )
+	\item{Clock} - zlacze taktujace zlacze Data ( rowniez uzywane dwukierunkowo - OC )
+	\end{itemize}
+
+poza tym wtyczka PS/2 zawiera zlacza:\begin{itemize}
+	\item{Vcc} - 5V zasilanie +
+	\item{Ground} - masa
+	\item{dwa zarezerwowane zlacza}
+\end{itemize}
+
+\section{Krotki opis protokolu PS/2}
+	Domyslnie ( w stanie nieaktywnym ( idle ) w komunkacji PS/2 stan zlacz jest wymuszany na 1 przez urzadzenie.
+	\subsection{Odbieranie danych przez kontroler}
+		Proces ten sklada sie z nastepujacych faz:
+		\begin{itemize}
+			\item{Urzadzenie wymusza stan niski na Clock}
+			\item{Host rozpoczyna odbieranie danych - aktuwajac sie zboczem opadajacym} - prawidlowe dane rozpoczynaja sie bitem startu = 0
+			\item{Dane przybywaja w 11 bitowych paczkach}
+				\begin{itemize}
+					\item{bit startu} = 0
+					\item{8 bitow danych} w kolejnosci od najmlodszego do najstarszego ( 0 - 7 )
+					\item{bit parzystosci}
+					\item{bit stopu} = 1 
+				\end{itemize}
+			\item{Zlacza Clock i Data powracaja do stanu wysokiego}
+		\end{itemize}
+	\subsection{Wysylanie danych do urzadzenia}
+		Sprawa nie jest prosta gdyz wymaga od nas dwukierunkowego uzycia zlacz Data i Clock. Proces ten wyglada tak:
+		\begin{itemize}
+			\item{wymuszamy stan niski na Clock na 100 mikrosekund }
+			\item{wymuszamy stan niski na Data}
+			\item{przestajemy wymuszac niski stan na Clock}
+			\item{czekamy na taktowanie na Clock} - stan niski od urzadzenia
+			\item{rozpoczynamy wysylanie danych zgodnie z taktowaniem Clock}
+			\item{wysylamy 9 bitow ( 1. bit startu, potem dane i bit parzystosci}
+			\item{przestajemy wymuszac stan na Data}
+			\item{czekamy na stan niski na Data i Clock}
+			\item{urzadzenie przechodzi do stanu Idle}
+		\end{itemize}
+	\section{Interfejs myszki}
+		Myszka jako urzadzenie PS/2 podlega wszystkim podanym powyzej prawom. Glownym problemem jest fakt iz, zaraz po wlaczeniu nie jest ona gotowa do wysylania danych. Poczatkowo wykonuje ona tzw. BAT test i czeka na komendy od Hosta. W tym momencie jestesmy w stanie okreslic rozdzielczosc myszki, czy jej protokol ( np zmienic na rozszerzony IMPS/2 ). Mozemy rowniez okreslic ID urzadzenia. Chcac wymusic wspomniane wysylanie danych musimy jej poslac 8-bitowa komende: F4h. Jesli wszysztko pojdzie po naszej mysli urzadzenie odpowie ciagiem: AAh. ( wiecej komend na http://www.computer-engineering.org/ps2mouse/ ) 
+		Gdy juz uda nam sie spowodowac wysylanie danych przez myszke ( napewno sie uda :) ), mozemy rozpoczac odbieranie danych, ktore przychodza do nas w 3-bajtowych "paczkach" wg schematu podanego ponizej.\begin{itemize}
+		\item{Bajt 1.}
+			\begin{itemize}
+			\item{7} przepelnienie Y
+			\item{6} przepelnienie X
+			\item{5} znak Y ( gora, dol )
+			\item{4} znak X ( lewo, prawo )
+			\item{3} zawsze =1
+			\item{2} srodkowy przycisk
+			\item{1} prawy przycisk
+			\item{0} lewy przycisk
+			\end{itemize}
+		\item{Bajt 2.}
+			Dwojkowo zapisana odleglosc X
+		\item{Bajt 3.}
+			Dwojkowo zapisana odleglosc Y
+		\end{itemize}
+	\section{Sposob realizacji projektu}
+	Projekt zrealizowny jest z pomoca oprogramowania Quartus II Web Edition 5.0 firmy Altera z wykorzystaniem jezyka VHDL. W jego budowie mozna wyroznic dwie zasadnicze czesci:
+	\begin{itemize}
+		\item{Czesc odbierajaco-wyswietlajaca} - sklada sie z licznika mod 33 i rejestru przesuwnego 33 bitowego oraz 33 bramek NOT ( niestety wyswietlacze aktywowane stanem L )
+		\item{Czesc "probujaca" zmusic myszke do wspolpracy} - sklada sie z 
+		\begin{itemize}
+			\item{3 buforow 3 stanowych}
+			\item{licznika mod 16} podpietego do zewnetrznego zegara celem odliczenia przyjamniej 100 us
+			\item{rejestru 11 bitowego i licznika mod 11} aktywowanych zboczem rosnacym - sluzace do wysylania danych do urzadzenia
+			\item{duzej ilosci przerzutnikow} "sterujacych" sekwencyjnoscia procesu startowego
+		\end{itemize}
+	\end{itemize}
+	
+	\section{Mozliwosci rozbudowy}
+	Czesci ktore moznaby dodac do istniejacego juz projektu
+	\begin{itemize}
+		\item{ladne wyswietlanie ruchu myszki} - np z pomoca linijek czy za pomoca liczb wyswietlanych na wyswietlaczach 7-segmentowych
+		\item{sprawdzanie poprawnosci danych} - weryfikacja bitow parzystosci, startu i stopu
+		\item{powiazanie ruchu z czasem} - wyswietlanie rzeczyswistej predkosci  ( pobozne zyczenie )
+	\end{itemize}
+	\section{Przydatne zasoby}
+	Spec PS/2
+
+	\it{www.computer-engineering.org}
+	
+	Quartus
+
+	\it{www.altera.com}
+	
+	VHDL
+
+	\it{http://csold.cs.ucr.edu/content/esd/labs/tutorial/}
+
+	\it{http://www.vhdl.org/vhdlsynth/vhdlexamples/}
+
+	\it{http://www.altera.com/support/examples/vhdl/vhdl.html}
+
+	\it{http://www.seas.upenn.edu/~ee201/vhdl/vhdl\_primer.html}
+
+\end{document}
