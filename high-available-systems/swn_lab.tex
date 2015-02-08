@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage[latin2]{inputenc}
+\usepackage{amsfonts}
+\usepackage[MeX]{polski}
+\usepackage{graphicx}
+
+\title{Systemy Wysokiej Niezawodno¶ci: \\ Linux-HA 2.0 i DRBD}
+
+\author{Jakub Janczak \& Tomasz Duszka}
+\begin{document}
+\maketitle
+
+\section{Wprowadzenie}
+Heartbeat w wersji 1.2.7 przesta³ byæ rozwijany, poniewa¿ stwierdzono kilka braków w jego funkcjonalno¶ci, spowodowoanych architektur±.
+W wersji 2 zmieniono podej¶cie do opisu zasobów - plik /etc/ha.d/haresources wymieniono na opis za pomoc± XML. Takie podej¶cie da³o wiêksze mo¿liwo¶ci zarówno u¿ytkownikom, jak i projektantom skryptów zarz±dzaj±cych zasobami, tj: sprawdzanie poprawno¶ci wej¶cia w trakcie startu linux-ha, mo¿liwo¶æ monitorowania zasobów, przydzielenie unikalnych identyfikatorów (zasobom, maszynom itd) itd.. Poza tym zmieniono budowê systemu na wieloprocesow± (wyró¿niono demony zarz±dzaj±ce lokalnymi zasobami, klastrem, demony zarz±dzania itd..). Wiêcej informacji, wraz z przyk³adowymi konfiguracjami mo¿na znale¼æ na stronie: http://www.linux-ha.org, a przede wszystkim na wiki.linux-ha.org. 
+
+\section{Konfiguracja Heartbeat2 w starym stylu}
+
+\subsection{Opis konfiguracji stanowiska}
+Skonfiguruj komputery w nastêpuj±cy sposób:
+
+\includegraphics[width=100mm]{diagram.ps}
+
+1. Skonfiguruj heartbeat (tak jak w wersji 1.0) w trybie active/passive udostêpniaj±cy adres 10.0.2.2/24 i serwer Apache, 
+z w³±czonymi opcjami 
+\begin{itemize}
+	\item{u¿ycie demona logd}
+	\item{oba stanowiska nale¿± do grupy}
+	\item{sprawdzanie po³±czenia za pomoc± pingowania bramy o adresie IP ... }
+	\item{aktywne ipfail}
+	\item{komunikaty heartbeat maj± byæ rozprowadzane za pomoc± interfejsów eth0 i eth1}
+	\item{wy³±czony auto\_failback}
+\end{itemize}
+2. Sprawd¼ dzia³anie klastra symuluj±c:
+\begin{itemize}
+	\item{wy³±czenie jednego z nodów}
+	\item{od³±czenie od sieci jednego z interfejsów sieciowych}
+	\item{od³±czenie od sieci interfejsów sieciowych na jednym z komputerów}
+	\item{b³êdne zakoñczenie serwera HTTP ('killall -TERM httpd' lub '/etc/init.d/http stop') }
+\end{itemize}
+
+3. Wezwij prowadz±cego celem weryfikacji wyników
+
+4. Wy³±cz demona heartbeat
+
+\section{Konwersja pliku haresources + GUI}
+1. Skonwertuj pliki /etc/ha.d/haresources narzêdziem /usr/lib/heartbeat/haresources2cib.py do wersji zgodnej z linux-HA 2
+
+2. Obejrzyj wynikowy /var/lib/heartbeat/cib.xml
+
+Szczególnie przyjrzyj siê sekcji dotycz±cej zasobów - jak zauwa¿y³e¶ zosta³a dodana akcja monitorowania demona http (co 120s) - dziêki temu unikamy sytuacji w której wy³±cza siê on "bez wiedzy" klastra.
+
+3. Uaktywnij demona zarz±dzania klastrem poprzez dodanie do pliku ha.cf linii:
+\begin{verbatim}
+	crm yes
+\end{verbatim}
+
+4. Zrestartuj heartbeat 
+
+5. Przetestuj dzia³anie konfiguracji (w szczególno¶ci spróbuj zabiæ demona http i odczekaj dwie minuty) 
+
+6. Wezwij prowadz±cego celem weryfikacji wyników
+
+7. W³±cz GUI hearbeat2 (polecenie 'python /usr/lib/heartbeat/haclient.py' / bez has³a) i zobacz jak klaster reaguje na poszczególne akcje:
+\begin{itemize}
+	\item{prze³±czenie aktywnego nodu (tego z zasobami) w stan standby}
+	\item{prze³±czenie drugiego nodu w stan standby}
+	\item{zastopowanie grupy group1}
+	\item{w³±czenie zasobu IP}
+\end{itemize}
+
+8. Wezwij prowadz±cego celem weryfikacji dzia³ania klastra
+
+9. Wy³±cz demona heartbeat
+
+\section{DRBD}
+
+DRBD to sieciowe urz±dzenie blokowe pozwalaj±ce na replikacjê danych bêd±c± niezauwa¿aln± dla u¿ytkownika (urz±dzenia drbd zachowuj± siê w systemie jak zwyk³e dyski). W naszej konfiguracji u¿yjemy DRBD jako no¶nik stron www. Na temat DRBD przeczytasz na stronie http://www.drbd.org oraz na http://www.linux-ha.org/DRBD
+
+Do u¿ycia DRBD, bêdziesz potrzebowa³ dodatkowej partycji na obu komputerach (musi mieæ ona przynajmniej 200MB wielko¶ci) - dodaj jedn± na wolnym miejscu na dysku (np. w miejsce nieu¿ywanej partycji NTFS).
+
+1. Skonfiguruj DRBD w nastêpuj±cy sposób:
+\begin{itemize}
+\item{Komunikacja po drugich interfejsach sieciowych}
+\item{Wewnêtrzny obszar na meta-dane}
+\item{W przypadku awarii dysku - system ma dalej funkcjonowaæ w trybie "oderwanym"}
+\end{itemize}
+
+2. Ustal node1 jako primary node\footnote{Nale¿y u¿yæ metody si³owej: drbdadm -- --do-what-I-say primary $<$nazwa\_zasobu$>$}, za³ó¿ system plików na /dev/drbd0 i pozwól dyskom siê zsynchronizowaæ (cat /proc/drbd) 
+
+3. Wezwij prowadz±cego celem weryfikacji poprawno¶ci konfiguracji
+
+\subsection{Testowanie DRBD}
+
+1. Na node1 zamontuj urz±dzenie /dev/drbd0 i dodaj na nim jaki¶ plik.
+
+2. Odmonuj urz±dzenie i prze³±cz je w stan secondary
+
+3. Na node2 prze³±cz urz±dzenie /dev/drbd0 w stan primary i zamontuj je
+
+4. Obejrzyj zamontowan± partycjê
+
+5. Zasymuluj sytuacjê split-brain, za pomoc± wy³±czenia interfejsu eth1 na jednym z komputerów
+
+6. Na node1 urz±dzenia znajduj± siê w stanie: .....................
+
+7. Na node1 spróbuj prze³±czyæ /dev/drbd0 w stan primary. Dokonaj kilku zmian w plikach, i ponownie prze³±cz go w stan secondary.
+
+8. Na node2 zamontuj /dev/drbd0 i dokonaj zmian w systemie plików.
+
+9. Odmontuj /dev/drbd0 na node2
+
+10. Podnie¶ uprzednio opuszczony interfejs i obserwuj plik /proc/drbd na jednym z komputerów
+
+11. Je¶li zepsu³e¶ urz±dzenie, wymu¶ stan primary na jednym z nodów, w przeciwnym wypadku wszystkie modyfikacje zachowa³y siê.
+
+\subsection{Dodanie DRBD do dzia³aj±cego klastra}
+
+Z poziomu GUI Hearbeat2:
+
+1. Zastopuj grupê zasobów
+
+1. Dodaj do grupy zasób drbdisk z pierwszym parametrem symbolizujacym nazwê zasobu z pliku /etc/drbd.conf (name = 1, value = $<$ta\_nazwa$>$)
+
+2. Dodaj do grupy zasób Filesystem/ocf podaj±c punkt montowania, urz±dzenie (drbd0) i rodzaj system plików, i umie¶æ go za poprzednio dodanym zasobem
+
+3. Na obu nodach skonfiguruj HTTPd aby korzysta³ ze stron zawartych na urz±dzeniu DRBD (jako DocumentRoot podaj uprzednio podany punkt montowania)
+
+4. Wystartuj grupê
+
+5. Obserwuj dzia³anie klastra poprzez prze³±czanie nodów w stan Active/Standby
+
+6. Wezwij prowadz±cego celem weryfikacji zadania
+
+\section{Zadanie dodatkowe: Synchronizacja danych w klastrze za pomoc± csync2}
+O programie csync2 przeczytasz na stronie: 	http://oss.linbit.com/csync2/. Jest to do¶æ ciekawa alternatywa dla rsync stworzona specjalnie pod k±tem klastrów
+\footnote{Przyk³adow± konfiguracjê programu znajdziesz na stronie: http://zhenhuiliang.blogspot.com/2006/04/csync2-is-so-cool.html}.
+
+\subsection{Konfiguracja}
+Dla przyk³adu bêdziemy synchronizowaæ plik /etc/hosts pomiêdzy dwoma nodami:
+0. Na obu maszynach u¿yj skryptu /usr/local/sbin/gen\_csync\_cert.sh, celem wygenerowania kluczy i certyfikatów hostów.
+
+1. Wygeneruj klucz dla grupy z pomoc± csync2 -k, i skopiuj go na obie maszyny.
+
+2. Stwórz plik /etc/csync2.cfg z synchronizacj± plików: /etc/hosts i /etc/csync2.cfg dla danej grupy (u¿yj wygenerowanego klucza jako klucza grupy).
+
+3. Dodaj do konfiguracji demona inetd wpis uruchamiaj±cy csync2 z opcj± -i lub uruchom go jakos standalone serwer (opcja -ii)
+
+4. Skopiuj konfiguracjê na drug± maszyne (ew. zrestartuj serwery).
+
+W tym momencie csync2 jest gotowy do pracy.
+
+5. Na jednej z maszyn zmieñ plik /etc/hosts i zmiany zatwierd¼ poleceniem csync -x 
+
+6. Sprawdz zawarto¶æ pliku na drugiej maszynie.
+
+7. Aby zautomatyzowaæ proces replikacji, proponujê dodaæ do crona uruchamianie csync -x co 5 sekund.
+
+8. Opu¶æ interfejsy sieciowe na obu maszynach, a potem dokonaj zmian w plikach /etc/hosts.
+
+9. Podnie¶ interfejsy sieciowe i spróbuj zatwierdziæ zmiany.
+
+10. Rozwi±¿ konflikt na korzy¶æ jednej z maszyn.
+
+\end{document}

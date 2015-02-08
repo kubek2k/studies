@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[latin2]{inputenc}
+\usepackage{amsfonts}
+\usepackage[MeX]{polski}
+\title{Plan przyk³adowego laboratorium z wykorzystaniem Linux-HA 2.0 i DRBD}
+
+
+\author{Jakub Janczak \& Tomasz Duszka}
+\begin{document}
+\maketitle
+\section{Plan laboratorium}
+W oparciu o dystrybucjê Fedora Core - nie bêdzie konieczne tworzenie obrazów systemu
+\subsection{Konwersja pliku /etc/haresources do cib.xml i obserwacja dzia³ania heartbeat 2}
+z u¿yciem: \\
+python /usr/lib/heartbeat/cts/haresources2cib.py > /var/lib/heartbeat/crm/cib.xml \\
+uruchomienie klastra w trybie active/passive (z migracja IP i serwera apache)
+\subsection{Dodanie monitoringu us³ug i obserwacja dzia³ania klastra}
+Killowanie Apache'a etc..
+
+\subsection{Dodanie DRBD jako no¶nika stron dla Apache'a}
+Obserwacja sytuacji migracji i split-brainu
+Przyk³adowe u¿ycie programu drbdlinks
+
+\subsection{Ew. U¿ycie programu csync jako alternatywy dla rsync}
+
+\section{Ewentualne rozszerzenia}
+\subsection{Dodanie STONITH do klastra} - ale to mo¿e byæ dosyæ ciê¿kie, ale poniek±d spektakularne
+
+\end{document}
