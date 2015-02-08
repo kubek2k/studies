@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="bpel_code_instrumenation_concept.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3189">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3191" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3193" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3189"
+       id="radialGradient3195"
+       cx="129.85481"
+       cy="48.639183"
+       fx="129.85481"
+       fy="48.639183"
+       r="4.6826172"
+       gradientTransform="matrix(2.2563835,13.689814,-0.7670236,0.1264219,-9.6176259,-1571.0328)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.967176"
+     inkscape:cx="244.39086"
+     inkscape:cy="894.78379"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1232"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="0">
+    <sodipodi:guide
+       orientation="1,0"
+       position="526.27443,891.25454"
+       id="guide3169" />
+    <sodipodi:guide
+       orientation="-0.70710678,0.70710678"
+       position="-144.75132,903.66179"
+       id="guide3217" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.82838303000000002;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3364"
+       width="537.64777"
+       height="466.30603"
+       x="20.678761"
+       y="-10.526062" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2383"
+       width="53.743538"
+       height="41.529091"
+       x="81.446342"
+       y="78.797836"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="85.128113"
+       y="103.25826"
+       id="text3155"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         sodipodi:role="line"
+         id="tspan3157"
+         x="85.128113"
+         y="103.25826"
+         style="font-size:12px;font-weight:normal">Invoke1</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3161"
+       width="53.743538"
+       height="41.529091"
+       x="81.138245"
+       y="152.24197"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="102.94473"
+       y="177.44054"
+       id="text3163"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="fill:url(#radialGradient3195);fill-opacity:1"
+         sodipodi:role="line"
+         id="tspan3165"
+         x="102.94473"
+         y="177.44054">If1</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 108.23041,120.46943 L 108.09772,152.09947"
+       id="path3167"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#rect2383"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <rect
+       style="font-size:10px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3178"
+       width="53.743538"
+       height="41.529091"
+       x="81.446342"
+       y="219.73692"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="101.32592"
+       y="244.41852"
+       id="text3180"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="font-size:11.60524464px;font-weight:normal"
+         sodipodi:role="line"
+         id="tspan3182"
+         x="101.32592"
+         y="244.41852">If1</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 108.22268,219.59443 L 108.10545,193.91357"
+       id="path3197"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="85.275986"
+       y="176.05731"
+       id="text3199"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         sodipodi:role="line"
+         id="tspan3201"
+         x="85.275986"
+         y="176.05731"
+         style="font-size:12px;font-weight:normal">Assign1</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4,4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       d="M 135.33238,240.25192 L 162.44029,240.00151"
+       id="path3205"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4,4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 108.66724,261.40852 L 108.94429,277.99867"
+       id="path3207"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4,4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 162.94026,239.50155 L 162.94026,275.49886"
+       id="path3209"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <path
+       id="path3213"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 193.87202,45.090466 C 193.78746,157.28065 317.52875,148.24637 317.52875,148.24637 M 193.19766,307.32258 C 193.1131,195.1324 316.85439,204.16668 316.85439,204.16668 M 317.65261,116.88032 L 317.65261,230.8718 L 369.14877,172.37617 L 317.65261,116.88032 z"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3245"
+       width="53.743538"
+       height="41.529091"
+       x="390.31158"
+       y="37.16251"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="394.89215"
+       y="61.622925"
+       id="text3247"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         sodipodi:role="line"
+         id="tspan3249"
+         x="394.89215"
+         y="61.622925"
+         style="font-size:12px;font-weight:normal">Invoke1</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 414.64746,130.56807 L 414.2445,164.03681"
+       id="path3259"
+       inkscape:connector-type="polyline"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <rect
+       style="font-size:10px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3263"
+       width="53.743538"
+       height="41.529091"
+       x="390.31158"
+       y="295.86996"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="411.01904"
+       y="320.03461"
+       id="text3265"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="font-size:11.60524464px;font-weight:normal"
+         sodipodi:role="line"
+         id="tspan3267"
+         x="411.01904"
+         y="320.03461">If1</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 415.43011,227.64296 L 415.31289,201.96211"
+       id="path3269"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3253"
+       width="53.743538"
+       height="41.529091"
+       x="390.31158"
+       y="163.14537"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="412.95993"
+       y="189.37787"
+       id="text3255"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="fill:url(#radialGradient3195);fill-opacity:1"
+         sodipodi:role="line"
+         id="tspan3257"
+         x="412.95993"
+         y="189.37787">If1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="395.80817"
+       y="187.99463"
+       id="text3271"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="font-size:11.60524464px;font-weight:normal"
+         sodipodi:role="line"
+         id="tspan3273"
+         x="395.80817"
+         y="187.99463">Assign1</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4,4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       d="M 445.74923,316.38497 L 472.85714,316.13456"
+       id="path3275"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4,4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 419.0183,337.54158 L 419.29535,354.13172"
+       id="path3277"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4,4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 473.29131,315.6346 L 473.29131,351.63191"
+       id="path3279"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:12.57234859px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="205.43768"
+       y="178.76958"
+       id="text3281"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         sodipodi:role="line"
+         id="tspan3283"
+         x="205.43768"
+         y="178.76958"
+         style="font-size:12px;font-weight:bold">Instrumentacja</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3289"
+       width="62.18343"
+       height="48.050827"
+       x="390.31158"
+       y="93.598808"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.18977833px;font-style:normal;font-weight:bold;fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="415.12543"
+       y="122.75455"
+       id="text3291"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="fill:url(#radialGradient3195);fill-opacity:1"
+         sodipodi:role="line"
+         id="tspan3293"
+         x="415.12543"
+         y="122.75455">If1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="393.93036"
+       y="106.10813"
+       id="text3295"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="font-size:11.60524464px;font-weight:normal"
+         sodipodi:role="line"
+         id="tspan3297"
+         x="393.93036"
+         y="106.10813">Invoke</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="397.54916"
+       y="115.68279"
+       id="text3299"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="font-size:8px;font-weight:normal"
+         sodipodi:role="line"
+         id="tspan3301"
+         x="397.54916"
+         y="115.68279">wysłanie </tspan><tspan
+         style="font-size:8px;font-weight:normal"
+         sodipodi:role="line"
+         x="397.54916"
+         y="125.68279"
+         id="tspan3303">informacji</tspan><tspan
+         style="font-size:8px;font-weight:normal"
+         sodipodi:role="line"
+         x="397.54916"
+         y="135.6828"
+         id="tspan3305">pomiarowych</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.96710372px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 414.70488,78.317137 L 414.86366,93.433923"
+       id="path3324"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3342"
+       width="62.18343"
+       height="48.050827"
+       x="390.31158"
+       y="226.63727"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.18977833px;font-style:normal;font-weight:bold;fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="411.29404"
+       y="254.75908"
+       id="text3344"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="fill:url(#radialGradient3195);fill-opacity:1"
+         sodipodi:role="line"
+         id="tspan3346"
+         x="411.29404"
+         y="254.75908">If1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.67103672px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="393.93036"
+       y="239.14661"
+       id="text3348"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="font-size:11.60524464px;font-weight:normal"
+         sodipodi:role="line"
+         id="tspan3350"
+         x="393.93036"
+         y="239.14661">Invoke</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.73682976px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="397.54916"
+       y="249.23822"
+       id="text3352"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         style="font-size:7.73682976px;font-weight:normal"
+         sodipodi:role="line"
+         id="tspan3354"
+         x="397.54916"
+         y="249.23822">wysłanie </tspan><tspan
+         style="font-size:7.73682976px;font-weight:normal"
+         sodipodi:role="line"
+         x="397.54916"
+         y="258.90927"
+         id="tspan3356">informacji</tspan><tspan
+         style="font-size:7.73682976px;font-weight:normal"
+         sodipodi:role="line"
+         x="397.54916"
+         y="268.58029"
+         id="tspan3358">pomiarowych</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 415.76731,273.81904 L 416.26245,295.72747"
+       id="path3362"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3386"
+       width="116.81841"
+       height="264.67154"
+       x="63.07851"
+       y="43.654263"
+       ry="19.366211"
+       rx="17.574451"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:13px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="74.443535"
+       y="63.290787"
+       id="text3388"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         sodipodi:role="line"
+         id="tspan3390"
+         x="74.443535"
+         y="63.290787"
+         style="font-size:12;font-weight:bold">Proces BPEL</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3399"
+       width="116.66502"
+       height="369.97983"
+       x="377.85736"
+       y="2.868165"
+       ry="17.766254"
+       rx="16.517437"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624" />
+    <text
+       xml:space="preserve"
+       style="font-size:13px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="389.14569"
+       y="22.42799"
+       id="text3401"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/bpel_code_instrumenation_concept.png"
+       inkscape:export-xdpi="300.01624"
+       inkscape:export-ydpi="300.01624"><tspan
+         sodipodi:role="line"
+         id="tspan3403"
+         x="389.14569"
+         y="22.42799"
+         style="font-weight:bold;font-size:12">Proces BPEL</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,80 @@
+Wstęp teoretyczny
+
+ESB (Enterprise Service Bus) to jedno z podejść które ułatwia implementację architektury SOA. Jest to oparta na standardach platforma integracyjna, która łączy w sobie zalety takich podejść jak komunikacja w oparciu o wiadomości, Web Service'y, transformacje danych, inteligentne wyznaczanie trasy, niezawodność, koordynacja interakcji i transakcyjność w komunikacji pomiędzy różnorodnymi aplikacjami gospodarczymi 7). Cała idea opiera się na istnieniu szyny, za pomocą której odbywa się każda komunikacja w systemie. Dzięki swoim właściwościom szyna jest w stanie sama decydować o tym gdzie ma wysłać daną wiadomość.
+
+tutaj będzie rysunek jak to mniej więcej wygląda
+Historia ESB
+
+ESB jako koncepcja nie powstało z przypadku. Na jej kształt miało wpływ wiele doświadczeń z wcześniejszych prób zmierzenia się z problemem integracji usług. Najbardziej znaczący wkład miały koncepcje MOM oraz EAI:
+MOM
+
+Idea Message Oriented Middleware 8) powstała w na początku lat 80, jako odpowiedź na potrzeby skomunikowania dynamicznie rozwijających się systemów komupterowych. Opiera się ona na koncepcji wymiany jednostek danych (wiadomości) z pomocą ustalonych protokołów komunikacyjnych. Zazwyczaj komunikacja ta odbywa się asynchronicznie, a jej uczestnicy nie są świadomi istnienia drugiej strony (tj. aplikacja nie jest zainteresowana tym co jest po drugiej stronie kanału komunikacyjnego, po prostu wysyła i/lub odbiera dane).
+
+Tryby komunikacji
+
+MOM w założeniach powinno obsługiwać dwa tryby komunikacji:
+
+    *
+	      Send/Receive (wyślij/odbierz) - tryb w którym istnieje tylko jeden producent i jeden konsument wiadomości
+		      *
+			        Publish/Subscribe (publikuj/zapisz się) - tryb w którym istnieje jeden producent, a odbiorców może być dowolna ilość
+
+					Na początku koncepcja ta realizowana była na poprzez narzucanie własnego standardu komunikacji w obrębie aplikacji, jednak z czasem dopracowano się rozwiązań i standardów które są z powodzeniem użytkowane w wielu aplikacjach. Do tych należą między innymi:
+
+					    *
+						      JMS (Java Messaging System) - najszerzej stosowany standard w oparciu o który zostało stworzonych kilka poważnych implementacji stosowanych głównie w serwerach aplikacyjnych JEE takich jak OpenJMS (najszerzej stosowany), OpenMQ, ActiveMQ, JBossMQ czy Websphere MQ.
+							      *
+								        IceStorm - stosowany w technologii ICE
+										    *
+											      Specyfikacje WS-Events i WS-Notifications tu moge sie rozpisac jak trzeba
+
+												  Dzięki dużej popularności rozwiązań typu MOM, wiele doczekało się właściwości które powodują, że są one z powodzeniem wykorzystywane w aplikacjach o duży wymaganiach - takich jak:
+
+												      *
+													        niezawodność dostarczania wiadomości zapewniana przez założenie, każda wiadomość jest autonomiczna (tj. w momencie jej wysłania rola aplikacji w przetwarzaniu danego elementu kończy się) oraz przez zastosowanie:
+															          o
+																	              kolejkowania i zapewnienia dostarczenia, tzw. mechanizm store-and-forward, który powoduje, że wiadomość dociera do adresata nawet jeśli dołączy on do kanału informacyjnego dopiero po jakimś czasie od wysłania wiadomości 9)
+																				            o
+																							            mechanizmów potwierdzeń pozwalających wysyłającemu na stwierdzenie, że wiadomość dotarła do adresata
+																										    *
+																											      filtrowanie wiadomości na podstawie pól nagłówka
+																												      *
+																													        hierarchiczność tematów mechanizmu publish/subscribe - polega na tym że wiadomości wysyłane do tematów nadrzędnych trafiają do jego wszystkich podgałęzi
+																															    *
+																																      mechanizmy autoryzacji wysyłania i odbierania wiadomości w oparciu o ACL z uwzględnieniem hierarchi tematów
+																																	      *
+																																		        obsługa transakcyjności tzn. dostarczanie wiadomości jest zablokowane do czasu, aż transakcja zostanie zakończone oraz wszystkie wiadomości zostaną pomyślnie wysłane
+
+																																				EAI
+
+																																				Enterprise Application Integration, to idea która pojawiła się w połowie lat 90 poprzedniego stulecia, polegająca na integracji w oparciu o jeden centralny punkt tzw. hub-and-spoke broker 10). Na punkcie tym spoczywa zadanie zawiadywania cała komunikacją w obrębie systemu - to on decyduje o tym gdzie ma trafić dana wiadomość. Dodatkowo architektura ta separuje aplikacje od właściwego kodu integrującego poprzez użycie opgrogramowania BPM (Business Process Management).
+
+																																				korzysta z idei hub-and-spoke broker integration 11) - tj.
+
+																																				umiejscowienie ESB wśród tych technologii pokazuje poniższy obrazek:
+
+																																				Gdzie jest ESB i dlaczego
+																																				Założenia ESB
+
+																																				    *
+																																					      rozdział z 1.7 z książki powyżej - może z obrazkami :)
+
+																																						      *
+																																							        założenia ESB + pokazać zgodność z SOA
+
+																																									(przynajmniej tak piszą na http://en.wikipedia.org/wiki/Enterprise_service_bus) http://www-306.ibm.com/software/info1/websphere/index.jsp?tab=landings/esb
+
+																																									    *
+																																										      problemy ESB (conieco o wydajności)
+																																											      *
+																																												        istniejące implementacje ESB http://www-306.ibm.com/software/info1/websphere/index.jsp?tab=landings/esb
+																																														    *
+																																															      zastosowania ESB w prawdziwym świecie:
+
+																																																  rozdział nr 2 książki + 1.8 ? http://www.oreillynet.com/xml/blog/2006/08/esb_adoption_in_government.html http://www.gcn.com/print/25_20/41319-1.html http://steve.vinoski.net/blog/2007/10/04/the-esb-question/
+																																																  JBI ?
+
+																																																  JBI technical overview https://open-esb.dev.java.net/kb/preview4/jbiag.html
+
+																																																  Proponuję spojrzeć do książki rozdział 10.1 oraz do dokumentacji glassfisha
+

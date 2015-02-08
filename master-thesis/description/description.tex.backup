@@ -1,0 +1,21 @@
+\chapter{System badania wydajno¶ci}
+
+W tym rozdziale opisane zosta³y kryteria jakie powinien spe³niaæ system wspomagaj±cy badanie wydajno¶ci systemów o architekturze SOA. W dalszej czê¶ci znajdzie siê analiza mo¿liwych rozwi±zañ w kontek¶cie tych kryteriów, oraz wyja¶nienie ostatecznego wyboru.
+
+\bigskip
+
+\input{description/requirements.tex}
+
+\input{description/concepts.tex}
+
+\section{Wybrane podej¶cie}
+Bior±c pod uwagê kryterium przeno¶no¶ci, którego spe³nienie jest konieczne, w celu stworzenia rozwi±zania, stosowalnego w ró¿nych realizacjach ESB, nie mo¿na skorzystaæ z wymienionych wy¿ej rozwi±zañ nie wymagaj±cych modyfikacji kodu. Wszystkie one s± charakterystyczne dla ¶rodowiska OpenESB i jest bardzo ma³o prawdopodobne, ¿e bêdzie mo¿liwa ich realizacja na innych platformach.
+%nawet zak³adaj±c próby przeniesienia ich na inne platformy nie mo¿na mieæ pewno¶ci, ¿e bêdzie to technicznie wykonalne.
+
+% kolejna analizowana koncepcja 
+Koncepcja modyfikacji procesów biznesowych, jest bardzo prosta, 
+a stworzenie oprogramowania automatyzuj±cego ten proces jest mo¿liwe do wykonania.
+% i mo¿na sobie wyobraziæ programy pozwalaj±ce na automatyzacjê tego procesu. 
+Nie pozwala ona jednak na wygenerowanie zdarzeñ opatrzonych jednoznacznymi znacznikami czasowymi co dyskwalifikuje to rozwi±zanie.
+
+Ostatnie z przedstawionych rozwi±zañ, mimo konieczno¶ci implementacji charakterystycznego dla ka¿dego ¶rodowiska ESB kodu generuj±cego zdarzenia, pozwala na stworzenie rozwi±zania najbardziej elastycznego. Przy odpowiedniej dekompozycji stworzonego oprogramowania, i zastosowaniu technik nieintruzywnej instrumentacji stanowi podstawê do stworzenia najbardziej uniwersalnego rozwi±zania. Adaptacja stworzonego oprogramowania bêdzie wymaga³o umiarkowanego nak³adu pracy. Koncepcja ta zosta³a wybrana do realizacji w ramach niniejszej pracy.

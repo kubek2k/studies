@@ -1,0 +1,264 @@
+\chapter{Testy}
+
+W niniejszym rozdziale opisana zosta³a procedura testowania z u¿yciem narzêdzia BPEL Profiler. 
+Przedstawiono sposób konfiguracji sprzêtu i oprogramowania ¶rodowiska testowego, oraz opisano aplikacje bêd±ce materia³em do testów. Rozdzia³ zawiera równie¿ wyniki dzia³ania stworzonego narzêdzia.
+
+\section{Testowane oprogramowanie}
+
+Testy zosta³y przeprowadzone na przyk³adowych aplikacjach BPEL dostarczanych przez firmê Sun \texttrademark - BPEL Blueprints. S± to proste, wzorcowe rozwi±zania problemów integracyjnych z u¿yciem jêzyka BPEL\cite{tests:blueprints}. Poni¿ej przedstawiono krótki opis  ka¿dego z nich.
+
+\paragraph{Aplikacja realizuj±ca synchroniczne wywo³anie us³ugi}
+Jest to prosty proces realizuj±cy integracjê sklepu z magazynem. Graficzna prezentacja procesu BPEL jest przedstawiona na rysunku 5.1.
+%\ref{tests:blueprint1}.
+
+\begin{figure}
+ \centering
+ \includegraphics[bb=0 0 400 345]{tests/blueprint1_process.png}
+ % blueprint1_process.png: 1667x1438 pixel, 300dpi, 14.11x12.18 cm, bb=0 0 400 345
+ \label{tests:blueprint1}
+ \caption{Aplikacja realizuj±ca synchroniczne wywo³anie us³ugi}
+\end{figure}
+
+Na podstawie przychodz±cych do interfejsu sklepu (POServicePlink) ¿±dañ nastêpuje synchroniczne odpytanie us³ugi magazynu (requestInventoryPlink) o dostêpno¶æ produktu. W zale¿no¶ci od odpowiedzi magazynu, us³uga sklepu potwierdza lub odmawia z³o¿enia zamówienia.
+
+\paragraph{Aplikacja realizuj±ca asynchroniczne wywo³anie us³ugi}
+
+Proces realizuj±cy tak± sam± funkcjonalno¶æ jak poprzedni. Ró¿ni± siê one jedynie sposobem komunikacji z magazynem - w tym przypadku, wywo³anie us³ugi magazynu jest jednokierunkowe. Nastêpnie proces oczekuje na jedno ze zdarzeñ z bloku EventBasedDecision - nadej¶cie odpowiedzi lub up³yniêcie limitu czasowego. Odpowied¼ wysy³ana do klienta jest zale¿na od tej odpowiedzi. Prezentacja graficzna procesu znajduje siê na rysunku 5.2.
+%\ref{tests:blueprint2}
+
+\begin{figure}
+ \centering
+ \includegraphics[bb=0 0 400 371]{tests/blueprint2_process.png}
+ % blueprint2_process.png: 1667x1547 pixel, 300dpi, 14.11x13.10 cm, bb=0 0 400 371
+ \label{tests:blueprint2}
+ \caption{Aplikacja realizuj±ca asynchroniczne wywo³anie us³ugi}
+\end{figure}
+
+\paragraph{Aplikacja realizuj±ca synchroniczne wywo³anie us³ugi z obs³ug± wyj±tków}
+Rozszerzenie pierwszego procesu o mechanizm obs³ugi wyj±tków - proces pocz±tkowo sprawdza poprawno¶æ przychodz±cego zamówienia, w wypadku b³êdu rzuca wyj±tek. Drugim obs³ugiwanym wyj±tkiem jest sygnalizowany przez magazyn brak zamawianego produktu. Graficzna prezentacja procesu znajduje siê na rysunku 5.3. %\ref{tests:blueprint3}.
+
+\begin{figure}
+ \centering
+ \includegraphics[bb=0 0 400 389]{tests/blueprint3_process.png}
+ % blueprint3_process.png: 1667x1621 pixel, 300dpi, 14.11x13.72 cm, bb=0 0 400 389
+  \label{tests:blueprint3}
+ \caption{Aplikacja realizuj±ca obs³ugê wyj±tków rzucanych z procesu oraz wykorzystywanych us³ug}
+\end{figure}
+
+\paragraph{Aplikacja koreluj±ca kilka wywo³añ}
+
+Proces bêd±cy rozszerzeniem pierwszego wariantu, o mo¿liwo¶æ potwierdzenia lub anulowania zamówienia. Po z³o¿eniu zamówienia, aplikacja czeka na dalsze instrukcje, lub up³yniêcie limitu czasowego, po czym podejmuje stosowne do zdarzenia akcje. Korelacja jest realizowana poprzez zawarcie w przesy³anych wiadomo¶ciach parametrów pozwalaj±cych na zidentyfikowanie instancji procesu dla którego przeznaczona jest dana wiadomo¶æ. Graficzna prezentacja procesu znajduje siê na rysunku 5.4.
+%\ref{tests:blueprint4}.
+
+\begin{figure}
+ \centering
+ \includegraphics[bb=0 0 400 505]{tests/blueprint4_process.png}
+ % blueprint4_process.png: 1667x2106 pixel, 300dpi, 14.11x17.83 cm, bb=0 0 400 505
+ \label{tests:blueprint4}
+ \caption{Aplikacja koreluj±ca kilka wywo³añ dotycz±cych tej samej instancji procesu}
+\end{figure}
+
+\paragraph{Aplikacja realizuj±ca równoleg³e asynchroniczne wywo³anie kilku us³ug}
+
+Proces realizuj±cy wycinek funkcjonalno¶ci biura turystycznego, pozwalaj±cego na jednoczesn± rezerwacjê biletu lotniczego, hotelu i samochodu. Realizuje on równoleg³e wykonanie trzech asynchronicznych wywo³añ us³ug rezerwacji, których wynik jest zwracany do klienta. Reprezentacja graficzna procesu znajduje siê na rysunku 5.5. %\ref{tests:blueprint5}. 
+
+\begin{figure}
+ \centering
+ \includegraphics[bb=0 0 400 372]{tests/blueprint5_process.png}
+ % blueprint5_process.png: 1667x1551 pixel, 300dpi, 14.11x13.13 cm, bb=0 0 400 372
+ \label{tests:blueprint5}
+ \caption{Aplikacja realizuj±ca równoleg³e asynchroniczne wywo³anie us³ug}
+\end{figure}
+
+\newpage
+
+\section{Opis procedury testowania}
+
+Procedurê testowania realizowano wed³ug nastêpuj±cego schematu:
+
+\begin{itemize}
+ \item Instalacja testowanej aplikacji w ¶rodowisku OpenESB 
+ \item Wyzwolenie procesu testowanej us³ugi 
+ \item Obserwacja wyników na konsoli wizualizacyjnej
+\end{itemize}
+
+Wyzwalanie procesu powtarzano dla ró¿nych danych celem ukazania mo¿liwo¶ci budowania procesu w locie oraz agregowania wyników koñcowych.
+
+\paragraph{Analiza intruzywno¶ci pomiaru} 
+Zaburzenie zbieranych wyników mo¿e zostaæ przeanalizowane w dwóch aspektach:
+\begin{itemize}
+ \item Modyfikacja infrastruktury spowodowana wysy³aniem dodatkowych komunikatów z danymi o wydajno¶ci. Serwer JMS oraz konsola wizualizacyjna znajduj± siê zwykle na osobnej maszynie, celem zniwelowania ich wp³ywu na badane us³ugi. Stosowane ³±cza pomiêdzy maszynami maj± zwykle bardzo du¿± przepustowo¶æ (np. \nolinebreak{1 Gbps} w izolowanym ¶rodowisku testowym) co przy ma³ym rozmiarze komunikatów o wydajno¶ci powoduje, ¿e wp³yw dodatkowych komunikatów z danymi o wydajno¶ci na badane us³ugi jest pomijalny.
+ \item Zbieranie dodatkowych danych o wydajno¶ci zaburza naturê badanych us³ug. Wybrany sposób instrumentacji i zbierania danych nie powoduje du¿ych narzutów czasowych. Proces wysy³ania danych do kolejki JMS odbywa siê asynchronicznie, co równie¿ nie zaburza wyników w znacznym stopniu.
+\end{itemize}
+Zastosowany sposób zbierania danych nie ma znacz±cego wp³ywu na badane us³ugi. Dok³adne badania s± trudne do przeprowadzenia z uwagi na brak porównywalnego narzêdzia do badania wydajno¶ci us³ug opartych o paradygmat SOA.
+
+\paragraph{Weryfikacja wyników}
+Weryfikacja zebranych wyników mo¿e zostaæ dokonana w dwóch aspektach:
+\begin{itemize}
+ \item Zgodno¶æ pomiêdzy oryginalnym modelem biznesowym a wygenerowanym modelem w konsoli wizualizacyjnej. Zgodno¶æ stwierdzana jest na podstawie wizualnego porównaniu obu modeli.
+ \item Poprawno¶æ zebranych danych (statystyk czasowych). Weryfikacja zebranych danych liczbowych jest trudna do przeprowadzenia, z powodu braku porównywalnych narzêdzi do badania wydajno¶ci us³ug opartych o paradygmat SOA. Jedynym wyznacznikiem poprawno¶ci zebranych danych mo¿e byæ ich zgodno¶æ z warto¶ciami szacunkowymi dla danego modelu (np. przy zastosowaniu konstrukcji WAIT z parametrem 2 sekundy, czas wykonania takiej aktywno¶ci powinien wynosiæ co najmniej 2 sekundy).
+\end{itemize}
+Weryfikacja otrzymanych wyników jest bardzo trudna do przeprowadzenia. Mo¿na jedynie wizualnie oceniæ otrzymane warto¶ci.
+
+%Instrumentacja kodu silnika BPEL ¶rodowiska wykonawczego nie pozostaje bez wp³ywu na czas wykonania procesu. Nale¿y jednak zwróciæ uwagê, i¿ z uwagi na sposób instrumentacji wzrost czasu wykonania nie wp³ywa znacz±co na wyniki otrzymywane dla ka¿dej aktywno¶ci. Stopieñ wp³ywu pomiarów na czas wykonania procesu jest g³ównie determinowany przez szybko¶æ dzia³ania zastosowanego rozwi±zania MOM (w przypadku przyk³adowej procedury - OpenJMS).
+
+\section{Konfiguracja infrastruktury}
+
+Konfiguracjê infrastruktury przedstawia rysunek \ref{fig:tests:deployment}. Na Serwerze 1 zainstalowano zinstrumentowane ¶rodowisko wykonawcze, i umieszczano na nim kolejne testowana aplikacje. Serwer JMS i konsola wizualizacyjna (na Serwrze 2) zosta³y odizolowane od ¶rodowiska wykonawczego, celem zminimalizowania ich wp³ywu na wyniki testów.
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 300 303]{tests/deployment.png}
+ % deployment.png: 1250x1262 pixel, 300dpi, 10.58x10.68 cm, bb=0 0 300 303
+ \caption{Diagram konfiguracji infrastruktury testowej}
+ \label{fig:tests:deployment}
+\end{figure}
+
+Podczas konfiguracji zwrócono szczególn± uwagê na oddzielenie medium komunikacyjnego od ¶rodowiska zewnêtrznego. Zosta³o ona ca³kowicie odizolowane, celem zniwelowania opó¼nieñ i zak³oceñ pracy ze strony innych komputerów.
+
+\paragraph{Konfiguracja oprogramowania} Zosta³a zainstalowana standardowa dystrybucja OpenESB w wersji \textit{v2-ur2-b04-patch-20080603}, uruchamiana na maszynie wirtualnej Java \textit{1.6.0\_03}. Konfiguracja sensora wydajno¶ci oraz konsoli wizualizacyjnej zosta³a wykonana zgodnie z instrukcjami zawartymi w dodatku A.
+
+\newpage
+
+\section{Dynamiczna prezentacja wyników}
+
+Konsola wizualizacyjna nie posiada informacji o oryginalnym modelu badanego procesu biznesowego. Model w konsoli jest budowany w sposób dynamiczny, w miarê otrzymywania nowych informacji od sensora wydajno¶ci. Przyk³ad dzia³ania mechanizmu dynamicznego budowania modelu procesu znajduje siê na rysunku \ref{fig:tests:diagram_grow}. Rysunek ilustruje badanie prostego procesu biznesowego, który sk³ada siê z wywo³ania operacji webservice (INVOKE) i ewentualnie obs³u¿enia rzuconego wyj±tku. Na kolejnych fragmentach rysunku pokazono coraz bardziej uszczegó³owiony model procesu, który coraz lepiej przybli¿a oryginalny model.
+
+\newpage
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 391 490]{ss/tests_diagram_grow2.png}
+ % tests_diagram_grow2.png: 1631x2043 pixel, 300dpi, 13.81x17.30 cm, bb=0 0 391 490
+ \caption{Dynamiczne budowanie modelu w trakcie zbierania danych}
+ \label{fig:tests:diagram_grow}
+\end{figure}
+
+
+%Zrealizowana aplikacja w sposób dynamiczny buduje model procesu, w miarê otrzymywania kolejnych danych. Mechanizm dynamicznego budowania modelu zosta³ zilustrowany na rysunku \ref{fig:tests:diagram_grow}. Rysunek obrazuje dwukrotne wykonanie pewnego procesu biznesowego. Przy pierwszym wykonaniu procesu wybrana zosta³a lewa ga³±¼ instrukcji IF, natomiast przy drugim wykonaniu prawa ga³±¼ instrukcji IF (odpowiadaj±ca konstrukcji ELSE). Po pierwszym wykonaniu procesu konsola nie ma informacji o aktywno¶ci zawartej w konstrukcji ELSE, dlatego prawe odga³êzienie konstrukcji IF pozostaje puste (widoczne jest to na lewej czê¶ci rysunku \ref{fig:tests:diagram_grow}. Przy drugim uruchomieniu procesu konsola uzyskuje informacje o aktywno¶ci zawartej w konstrukcji ELSE i mo¿e pokazaæ pe³n± budowê u¿ytej instrukcji warunkowej (por. prawa czê¶æ rysunku).
+
+%\begin{figure}[htb!]
+% \centering
+% \includegraphics[bb=0 0 413 301]{ss/tests_diagram_grow.png}
+% % tests1.png: 1720x1256 pixel, 300dpi, 14.56x10.63 cm, bb=0 0 413 301
+% \caption{Dynamiczne budowanie modelu w trakcie zbierania danych}
+% \label{fig:tests:diagram_grow}
+%\end{figure}
+
+\newpage
+
+\section{Wyniki testów}
+
+Ka¿da z aplikacji zaprezentowanych w rozdziale 5.1 zosta³a umieszczona w kontenerze. Procesy biznesowe oferowane przez aplikacje zosta³y kilkukrotnie wykonane (w miarê mo¿liwo¶ci starano siê pokazaæ ró¿ne ¶cie¿ki w procesach).  Wizualna weryfikacja otrzymanych rysunków pozwala stwierdziæ, ¿e s± one zgodne z oryginalnymi modelami procesów biznesowych przedstawionymi w rozdziale 5.1. Otrzymane warto¶ci liczbowe s± warto¶ciami realistycznymi (brak konkurencyjnych narzêdzi uniemo¿liwia przeprowadzenie testów porównawczych). Dodatkowo w celu u³atwienia interpretacji otrzymanych wyników, na rysunku \ref{fig:tests_ss_overview} zamieszczono uk³ad i oznaczenie elementów g³ównego okna konsoli wizualizacyjnej.
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 396 189]{appendix/ss_overview_small.png}
+ % ss_overview.png: 1649x789 pixel, 300dpi, 13.97x6.68 cm, bb=0 0 396 189
+ \caption{Uk³ad g³ównego okna aplikacji}
+ \label{fig:tests_ss_overview}
+\end{figure}
+
+Zebrane dane zosta³y zaprezentowane na kolejnych stronach. Poni¿ej znajduje siê krótki komentarz do ka¿dego badanego procesu biznesowego.
+
+\paragraph{Aplikacja realizuj±ca synchroniczne wywo³anie us³ugi}
+Na rysunku \ref{fig:tests:ss_blueprint1} przedstawiono zagregowany widok modelu procesu po siedmiokrotnym wykonaniu procesu biznesowego. Zagregowany widok modelu pokazuje informacjê uzyskan± ze wszystkich wykonañ procesu, dlatego w instrukcji IF pokazane zosta³y obie mo¿liwo¶ci wykonania (lewa ga³±¼ wykonywana przy spe³nieniu warunku z instrukcji IF, prawa ga³±¼ w przeciwnym razie).
+
+\paragraph{Aplikacja realizuj±ca asynchroniczne wywo³anie us³ugi}
+Rysunek \ref{fig:tests:ss_blueprint2} przedstawia fragment modelu demonstruj±cy u¿ycie instrukcji IF. Analizuj±c ¶cie¿kê wykonania mo¿na zauwa¿yæ, ¿e zosta³a wykonana prawa czê¶æ instrukcji warunkowej odpowiadaj±ca za klauzulê ELSE.
+
+\paragraph{Aplikacja realizuj±ca synchroniczne wywo³anie us³ugi z obs³ug± wyj±tków}
+
+Rysunek \ref{fig:tests:ss_blueprint3} przedstawia proces realizacji b³êdnego zamówienia. Instrukcja IF (por. rysunek) odpowiada za zweryfikowanie typu zamówienia. Poniewa¿ u¿yty typ zamówienia by³ niepoprawny nastêpuje przej¶cie do instrukcji THROW która generuje wyj±tek typu CannotCompleteOrder (prawy dolny róg rysunku). Warto zauwa¿yæ, ¿e ¶cie¿ka wychodz±ca z instrukcji THROW nie ma koloru oznaczaj±cego aktywno¶æ (zielonego), poniewa¿ sterowanie wskutek wyj±tku zostaje przeniesione bezpo¶rednio do bloku obs³ugi wyj±tku CATCH. Obs³uga wyj±tku poprzez instrukcjê REPLY ustawia odpowiedni rezultat procesu biznesowego informuj±cy o nieprawid³owym zamówieniu.
+
+Rysunek \ref{fig:tests:ss_blueprint3_2} przedstawia proces realizacji zamówienia niedostêpnego w magazynie. Typ zamówienia zosta³ pozytywnie zweryfikowany z u¿yciem instrukcji warunkowej IF. Sterowanie zosta³o nastêpnie przekazane do instrukcji INVOKE, która wykonuje operacje webservice odpowiadaj±c± za sprawdzenie stanu magazynowego pod k±tem z³o¿onego zamówienia . Poniewa¿ w magazynie brakuje zamawianych towarów, wywo³anie operacji koñczy siê wyj±tkiem InventoryFaultType (prawy dolny róg rysunku).
+
+Przyk³adowe statystyki wykonania operacji INVOKE pokazano na rysunku \ref{fig:tests:ss_blueprint3_details}. W drugim wierszu mo¿na zauwa¿yæ niepoprawne zakoñczenie operacji INVOKE wskutek wyst±pienia wyj±tku InventoryFaultType (wyj±tek ten oznacza³ brak zamawianych towarów w magazynie).
+
+\paragraph{Aplikacja koreluj±ca kilka wywo³añ}
+Rysunek \ref{fig:tests:ss_blueprint4} przedstawia fragment modelu demonstruj±cy u¿ycie instrukcji PICK. Analizuj±c ¶cie¿kê wykonania mo¿na zauwa¿yæ, ¿e proces po napotkaniu instrukcji PICK zatrzyma³ siê w oczekiwaniu na dowolny z dwóch typów komunikatów (obszary OnMessage). Funkcjonalno¶æ ta jest wykorzystywana do zrealizowania mo¿liwo¶ci anulowania lub potwierdzania z³o¿onego zamówienia. Po otrzymaniu komunikatu z potwierdzeniem zamówienia nast±pi³o dalsze wykonanie procesu. 
+
+\paragraph{Aplikacja realizuj±ca równoleg³e asynchroniczne wywo³anie kilku us³ug}
+Rysunek \ref{fig:tests:ss_blueprint5} przedstawia wykonywanie równoleg³ej rezerwacji biletu lotniczego, hotelu oraz samochodu. Fragmenty odpowiadaj±ce za obs³ugê rezerwacji hotelu oraz samochodu zosta³y zwiniête, wskutek czego zajmuj± mniej miejsca oraz uwydatniaj± pozosta³± czê¶æ modelu.
+
+%Z uwagi na charakter pracy, przedstawione wyniki stanowi± jedynie efekt dzia³ania stworzonego oprogramowania. Analiza wyników nie zosta³a ujêta w obrêbie niniejszej pracy.
+
+\newpage
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 320 507]{ss/blueprint1.png}
+ % blueprint1.png: 777x1232 pixel, 175dpi, 11.28x17.88 cm, bb=0 0 320 507
+ \caption{Aplikacja realizuj±ca synchroniczne wywo³anie us³ug (por. rysunek 5.1).}
+ \label{fig:tests:ss_blueprint1}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 320 507]{ss/blueprint2.png}
+ % blueprint2.png: 777x1232 pixel, 175dpi, 11.28x17.88 cm, bb=0 0 320 507
+ \caption{Aplikacja realizuj±ca asynchroniczne wywo³anie us³ugi (por. rysunek 5.2).}
+ \label{fig:tests:ss_blueprint2}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 320 507]{ss/blueprint3.png}
+ % blueprint3.png: 777x1232 pixel, 175dpi, 11.28x17.88 cm, bb=0 0 320 507
+ \caption{Aplikacja realizuj±ca synchroniczne wywo³anie us³ugi z obs³ug± wyj±tków (por. rysunek 5.3).}
+ \label{fig:tests:ss_blueprint3}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 320 507]{ss/blueprint3_2.png}
+ % blueprint3.png: 777x1232 pixel, 175dpi, 11.28x17.88 cm, bb=0 0 320 507
+ \caption{Aplikacja realizuj±ca synchroniczne wywo³anie us³ugi z obs³ug± wyj±tków (por. rysunek 5.3).}
+ \label{fig:tests:ss_blueprint3_2}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 231 480]{ss/blueprint3_details.png}
+ % blueprint3_details.png: 481x1000 pixel, 150dpi, 8.14x16.93 cm, bb=0 0 231 480
+ \caption{Szczegó³y dzia³ania aktywno¶ci INVOKE z rysunku 5.10.}
+ \label{fig:tests:ss_blueprint3_details}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 320 507]{ss/blueprint4.png}
+ % blueprint4.png: 777x1232 pixel, 175dpi, 11.28x17.88 cm, bb=0 0 320 507
+ \caption{Aplikacja koreluj±ca kilka wywo³añ (por. rysunek 5.4).}
+ \label{fig:tests:ss_blueprint4}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 320 507]{ss/blueprint5.png}
+ % blueprint5.png: 777x1232 pixel, 175dpi, 11.28x17.88 cm, bb=0 0 320 507
+ \caption{Aplikacja realizuj±ca równoleg³e asynchroniczne wywo³anie kilku us³ug (por. rysunek 5.5).}
+ \label{fig:tests:ss_blueprint5}
+\end{figure}
+
+
+\newpage
+
+Wykazano przydatno¶æ stworzonego narzêdzia w pomiarach wydajno¶ci aplikacji o architekturze SOA. Oprogramowanie dzia³a³o poprawnie - prezentowane przej¶cia w procesach biznesowych pokrywa³y siê z rzeczywisto¶ci±. Wyniki testów wydajno¶ciowych by³y zgodne z oczekiwaniami, co oznacza, ¿e narzêdzie mo¿e byæ z powodzeniem u¿yte w analizie wydajno¶ci aplikacji.
+
+% Wyniki bêd±ce efektem dzia³ania programu mog± stanowiæ podstawê do szerokiej analizy wydajno¶ci,  równie¿ poszukiwanie tzw. ``w±skich garde³''. Mo¿liwo¶æ obserwacji czêsto¶ci przej¶æ procesów przez poszczególne aktywno¶ci procesu, umo¿liwia wyodrêbnienie najczêstszych przypadków u¿ycia. 
+
+% Przeprowadzenie takiej analizy pominiêto, gdy¿ wykracza to poza ramy pracy.
+

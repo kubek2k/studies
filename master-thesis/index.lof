@@ -1,0 +1,57 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Ewolucja architektur oprogramowania \cite {soa:ibm_soma}}}{4}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Zmiana w podej\'sciu do projektowaniu oprogramowania}}{5}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Schemat integracji 4 podsystem\'ow (ka\.zdy-z-ka\.zdym)}}{9}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Przyk\IeC {\l }adowy schemat funkcjonowania aplikacji opartej o SOA}}{10}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Przyk\IeC {\l }ad funkcjonowania aplikacji opartej o us\IeC {\l }ugi webservice}}{13}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Posta\'c wiadomo\'sci SOAP z za\IeC {\l }\k acznikami \cite {ws:suntechdays}}}{15}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Schemat wykorzystania UDDI \cite {ws:suntechdays}}}{16}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Zasada dzia\IeC {\l }ania ESB \cite {esb:sojbi}}}{17}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Zasada dzia\IeC {\l }ania MOM}}{18}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Zasada dzia\IeC {\l }ania EAI \cite {esb:book:chapell}}}{19}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces ESB jako pochodna EAI i MOM}}{20}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Nomenklatura JBI\cite {esb:jbi:jbi_components_theory}}}{24}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Orchiestracja}}{26}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Choreografia}}{27}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Elementy konstrukcyjne j\k ezyka BPEL}}{30}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Pakiet Netbeans - wizualny edytor procesu BPEL}}{31}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architektura u\.zywana do badania wydajno\'sci aplikacji}}{34}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Schemat wywo\IeC {\l }ania us\IeC {\l }ugi webservice w OpenESB}}{37}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Koncepcja rozwi\k azania w oparciu o interfejs monitorowania silnika BPEL}}{39}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Koncepcja rozwi\k azania z u\.zyciem HULP}}{40}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Koncepcja rozwi\k azania z u\.zyciem BPEL SE Events Listener}}{42}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Koncepcja instrumentacji kodu BPEL aplikacji}}{43}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Koncepcja instrumentacji \'srodowiska wykonania}}{44}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Przyk\IeC {\l }ad u\.zycia biblioteki instrumentuj\k acej kod}}{49}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Posta\'c komunikatu z danymi o wydajno\'sci w postaci diagramu klas UML}}{55}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Przep\IeC {\l }yw komunikat\'ow z danymi o wydajno\'sci}}{56}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Emulacja \'srodowiska NetBeans 6.0 w bibliotece wizualizacyjnej}}{56}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Przyk\IeC {\l }adowy wynik dzia\IeC {\l }ania cz\k e\'sci wizualizacyjnej}}{57}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Fragment wizualizacji procesu BPEL wykorzystuj\k acy zmian\k e koloru danego po\IeC {\l }\k aczenia w celu pokazania cz\k esto\'sci jego u\.zycia}}{58}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Aplikacja realizuj\k aca synchroniczne wywo\IeC {\l }anie us\IeC {\l }ugi}}{60}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Aplikacja realizuj\k aca asynchroniczne wywo\IeC {\l }anie us\IeC {\l }ugi}}{61}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Aplikacja realizuj\k aca obs\IeC {\l }ug\k e wyj\k atk\'ow rzucanych z procesu oraz wykorzystywanych us\IeC {\l }ug}}{63}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Aplikacja koreluj\k aca kilka wywo\IeC {\l }a\'n dotycz\k acych tej samej instancji procesu}}{64}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Aplikacja realizuj\k aca r\'ownoleg\IeC {\l }e asynchroniczne wywo\IeC {\l }anie us\IeC {\l }ug}}{65}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Diagram konfiguracji infrastruktury testowej}}{68}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Dynamiczne budowanie modelu w trakcie zbierania danych}}{69}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Uk\IeC {\l }ad g\IeC {\l }\'ownego okna aplikacji}}{70}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Aplikacja realizuj\k aca synchroniczne wywo\IeC {\l }anie us\IeC {\l }ug (por. rysunek 5.1).}}{72}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Aplikacja realizuj\k aca asynchroniczne wywo\IeC {\l }anie us\IeC {\l }ugi (por. rysunek 5.2).}}{73}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Aplikacja realizuj\k aca synchroniczne wywo\IeC {\l }anie us\IeC {\l }ugi z obs\IeC {\l }ug\k a wyj\k atk\'ow (por. rysunek 5.3).}}{74}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Aplikacja realizuj\k aca synchroniczne wywo\IeC {\l }anie us\IeC {\l }ugi z obs\IeC {\l }ug\k a wyj\k atk\'ow (por. rysunek 5.3).}}{75}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Szczeg\'o\IeC {\l }y dzia\IeC {\l }ania aktywno\'sci INVOKE z rysunku 5.10.}}{76}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Aplikacja koreluj\k aca kilka wywo\IeC {\l }a\'n (por. rysunek 5.4).}}{77}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Aplikacja realizuj\k aca r\'ownoleg\IeC {\l }e asynchroniczne wywo\IeC {\l }anie kilku us\IeC {\l }ug (por. rysunek 5.5).}}{78}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Konfiguracja konsoli}}{95}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Szczeg\'o\IeC {\l }owe informacje o wywo\IeC {\l }aniach}}{96}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Uk\IeC {\l }ad g\IeC {\l }\'ownego okna aplikacji}}{97}

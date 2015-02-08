@@ -1,0 +1,147 @@
+
+
+%\documentclass{book}
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[latin2]{inputenc}
+\usepackage{amsfonts}
+\usepackage[MeX]{polski}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{xspace}
+\usepackage{supertabular}
+\usepackage{listings}
+\usepackage{color}
+
+\usepackage{caption}
+\renewcommand{\captionfont}{\itshape}		% ewentualnie moze \bfseries
+
+\definecolor{darkgray}{rgb}{0.95,0.95,0.95}
+\lstset{language=Java}
+\lstset{backgroundcolor=\color{white}}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+\lstset{keywordstyle=\color{black}\bfseries\emph}
+\lstset{basicstyle=\footnotesize}
+
+\title{Badanie wydajno¶ci systemów o architekturze SOA \\
+ \large Praca magisterska
+}
+\author{Tomasz Duszka i Jakub Janczak}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\thispagestyle{empty}
+\begin{center}
+Akademia Górniczo - Hutnicza im. Stanis³awa Staszica w Krakowie \\
+Wydzia³ Elektrotechniki, Automatyki, Informatyki i Elektroniki \\
+Katedra Informatyki
+% \\ Akademii Górniczo Hutniczej w Krakowie
+\rule{\textwidth}{.1mm}
+\end{center}
+
+\begin{figure}[hkp!]
+ \centering
+% \includegraphics[width=50pt]{agh_znak}
+ \includegraphics[bb=0 0 64 124]{agh_logo_kolor.png}
+ \label{fig:orzel_agh}
+\end{figure}
+
+% \vskip 80pt
+\begin{center}
+{\bf \large Praca magisterska}
+\vskip 10pt
+{\bf \huge Badanie wydajno¶ci systemów o architekturze SOA}
+\end{center}
+
+\vskip 60pt
+\begin{center}
+{\Large \bf Tomasz Duszka, Jakub Janczak}\\
+\texttt{duszka@student.agh.edu.pl, janczak@student.agh.edu.pl}
+\end{center}
+
+\vskip 80pt
+\begin{center}
+{\bf
+    Promotor: dr in¿. Dominik Radziszowski
+}
+\end{center}
+
+\vskip 60pt
+\noindent
+\rule{\textwidth}{.1mm}
+\begin{center}
+Kraków, 2008
+\end{center}
+
+
+% \maketitle
+
+\pagenumbering{arabic}
+
+\newpage
+
+%\linespread{1.3}		%1.3 dla interlinii 1.5
+
+\tableofcontents
+
+%\part{Wstêp}
+
+\input{intro/intro.tex}
+
+\input{chapter1/chapter1.tex}
+
+%\part{Implementacja}
+
+\input{description/description.tex}
+
+\input{implementation/implementation.tex}
+
+\input{tests/tests.tex}
+
+% \part{Zakoñczenie}
+
+\input{conclusions/conclusions.tex}
+
+\input{akronimy.tex}
+
+% ponizszy fragment umieszcza bibliografie w osobnym rozdziale oraz wylacza justyfikacje (viva la \LaTeX :)
+\makeatletter
+\def\thebibliography#1{\chapter{Bibliografia\@mkboth
+	{REFERENCES}{REFERENCES}}\raggedright\list
+	{[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+	\advance\leftmargin\labelsep
+	\usecounter{enumi}}
+\def\newblock{\hskip .11em plus .33em minus .07em}
+\sloppy\clubpenalty4000\widowpenalty4000
+\sfcode`\.=1000\relax}
+\makeatother
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\makeatletter
+\renewcommand\listoffigures{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter{Spis rysunków}%
+      \@mkboth{SPISRYSUNKOW}%
+              {SPISRYSUNKOW}%
+    \@starttoc{lof}%
+    \if@restonecol\twocolumn\fi
+    }
+\makeatother
+
+\listoffigures
+
+\appendix
+
+\input{appendix/appendix1.tex}
+
+\end{document}

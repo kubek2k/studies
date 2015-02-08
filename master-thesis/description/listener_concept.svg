@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="listener_concept.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path3234"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path3231"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.4) translate(10,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.6745186"
+     inkscape:cx="145.876"
+     inkscape:cy="822.78144"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1232"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2493"
+       width="398.32346"
+       height="295.01016"
+       x="5.9718657"
+       y="102.23834"
+       rx="9.5572395"
+       ry="7.4659567" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#155aff;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       id="rect3159"
+       width="0"
+       height="4.7909503"
+       x="-191.03914"
+       y="131.30199"
+       rx="12.814118"
+       ry="4.7909503" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3169"
+       width="130.58069"
+       height="149.64336"
+       x="210.42722"
+       y="176.29315"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.11442471px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="245.72095"
+       y="188.93988"
+       id="text3171"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364"><tspan
+         sodipodi:role="line"
+         id="tspan3173"
+         x="245.72095"
+         y="188.93988"
+         style="font-size:10px;font-weight:normal">Kontener JBI</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3175"
+       width="107.81962"
+       height="18.526751"
+       x="222.44092"
+       y="237.15408"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.11442471px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="266.17105"
+       y="247.51634"
+       id="text3179"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364"><tspan
+         sodipodi:role="line"
+         id="tspan3181"
+         x="266.17105"
+         y="247.51634"
+         style="font-size:10px;font-weight:normal">NMR</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3183"
+       width="97.138229"
+       height="44.387383"
+       x="228.16101"
+       y="251.47562"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.11442471px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="277.30142"
+       y="267.58215"
+       id="text3189"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364"><tspan
+         sodipodi:role="line"
+         x="277.30142"
+         y="267.58215"
+         id="tspan3197"
+         style="font-size:10px;font-weight:normal">Silnik</tspan><tspan
+         sodipodi:role="line"
+         x="277.30142"
+         y="280.08215"
+         id="tspan3203"
+         style="font-size:10px;font-weight:normal">BPEL</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3205"
+       width="78.206947"
+       height="24.770401"
+       x="235.6411"
+       y="290.74722"
+       rx="4"
+       ry="4"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.1001215px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="274.47235"
+       y="300.49124"
+       id="text3207"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364"><tspan
+         sodipodi:role="line"
+         id="tspan3209"
+         x="274.47235"
+         y="300.49124"
+         style="font-size:8px;font-weight:normal;text-align:center;text-anchor:middle">Moduł</tspan><tspan
+         sodipodi:role="line"
+         x="274.47235"
+         y="310.49124"
+         id="tspan2512"
+         style="font-size:8px;font-weight:normal;text-align:center;text-anchor:middle">rozsylania zdarzeń</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Mstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 154.66775,305.26619 L 235.69741,305.26869"
+       id="path5052"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2534"
+       width="82.692169"
+       x="69.432022"
+       y="297.67679"
+       height="15.21008"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="79.724403"
+       y="309.16351"
+       id="text3318"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364"><tspan
+         sodipodi:role="line"
+         id="tspan3320"
+         x="79.724403"
+         y="309.16351"
+         style="font-size:10px;font-weight:normal">Obserwator</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.99999986999999990;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="168.44652"
+       y="302.15134"
+       id="text3336"
+       transform="matrix(0.9999954,3.0383194e-3,-3.0383194e-3,0.9999954,0,0)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364"><tspan
+         sodipodi:role="line"
+         id="tspan3338"
+         x="168.44652"
+         y="302.15134"
+         style="font-size:7.99999986999999990;font-weight:normal">zdarzenie</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3340"
+       width="78.828629"
+       height="59.121468"
+       x="72.315842"
+       y="205.55165"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="111.13297"
+       y="219.28694"
+       id="text3342"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364"><tspan
+         sodipodi:role="line"
+         id="tspan3344"
+         x="112.72477"
+         y="219.28694"
+         style="font-size:10px;font-weight:normal;text-align:center;text-anchor:middle">Logika </tspan><tspan
+         sodipodi:role="line"
+         x="111.13297"
+         y="231.78694"
+         id="tspan3346"
+         style="font-size:10px;font-weight:normal;text-align:center;text-anchor:middle">przetwarzania</tspan><tspan
+         sodipodi:role="line"
+         x="112.72477"
+         y="244.28694"
+         id="tspan3348"
+         style="font-size:10px;font-weight:normal;text-align:center;text-anchor:middle">danych </tspan><tspan
+         sodipodi:role="line"
+         x="111.13297"
+         y="256.78693"
+         id="tspan3350"
+         style="font-size:10px;font-weight:normal;text-align:center;text-anchor:middle">pomiarowych</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Mstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 111.00761,265.75999 L 110.90961,297.09888"
+       id="path3352"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/listener_concept.png"
+       inkscape:export-xdpi="299.91364"
+       inkscape:export-ydpi="299.91364"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

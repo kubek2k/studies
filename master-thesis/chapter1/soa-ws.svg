@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="soa-ws.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path5538"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3830"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="277.42518"
+     inkscape:cy="890.43217"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1232"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.13500000000000001;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:1.13500000000000001, 3.40499999999999980;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6852"
+       width="608"
+       height="520"
+       x="-99"
+       y="-95.63781" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path3173"
+       sodipodi:cx="267.85715"
+       sodipodi:cy="122.36218"
+       sodipodi:rx="34.285713"
+       sodipodi:ry="34.285713"
+       d="M 302.14286,122.36218 A 34.285713,34.285713 0 1 1 233.57143,122.36218 A 34.285713,34.285713 0 1 1 302.14286,122.36218 z"
+       transform="translate(116.92857,35.214287)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path3191"
+       sodipodi:cx="267.85715"
+       sodipodi:cy="122.36218"
+       sodipodi:rx="34.285713"
+       sodipodi:ry="34.285713"
+       d="M 302.14286,122.36218 A 34.285713,34.285713 0 1 1 233.57143,122.36218 A 34.285713,34.285713 0 1 1 302.14286,122.36218 z"
+       transform="translate(116.92857,-44.785713)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="384.49136"
+       y="73.384071"
+       id="text3193"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan3195"
+         x="384.49136"
+         y="73.384071"
+         style="font-size:14px;text-align:center;text-anchor:middle">WEB</tspan><tspan
+         sodipodi:role="line"
+         x="384.49136"
+         y="90.884071"
+         style="font-size:14px;text-align:center;text-anchor:middle"
+         id="tspan2577">SERWIS</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path3197"
+       sodipodi:cx="267.85715"
+       sodipodi:cy="122.36218"
+       sodipodi:rx="34.285713"
+       sodipodi:ry="34.285713"
+       d="M 302.14286,122.36218 A 34.285713,34.285713 0 1 1 233.57143,122.36218 A 34.285713,34.285713 0 1 1 302.14286,122.36218 z"
+       transform="translate(116.92857,115.21429)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="137.85715"
+       y="330.93362"
+       id="text3240"><tspan
+         sodipodi:role="line"
+         id="tspan3242"
+         x="137.85715"
+         y="330.93362" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="198.23763"
+       y="317.30298"
+       id="text3244"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         x="198.23763"
+         y="317.30298"
+         id="tspan3248">UDDI</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="path3254"
+       sodipodi:cx="155"
+       sodipodi:cy="282.36218"
+       sodipodi:rx="65"
+       sodipodi:ry="7.8571429"
+       d="M 220,282.36218 A 65,7.8571429 0 1 1 90,282.36218 A 65,7.8571429 0 1 1 220,282.36218 z"
+       transform="translate(62.196824,50.199289)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="path3252"
+       sodipodi:cx="155"
+       sodipodi:cy="282.36218"
+       sodipodi:rx="65"
+       sodipodi:ry="7.8571429"
+       d="M 220,282.36218 A 65,7.8571429 0 1 1 90,282.36218 A 65,7.8571429 0 1 1 220,282.36218 z"
+       transform="translate(62.196681,4.558514)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 282.01811,286.83141 L 282.14311,332.97426"
+       id="path3261"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 152.17882,286.86712 L 152.17882,332.49212"
+       id="path3772"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.977;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3776"
+       width="127.94212"
+       height="11.092742"
+       x="153.177"
+       y="320.77182"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.97699999999999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3791"
+       sodipodi:cx="258.09396"
+       sodipodi:cy="151.50815"
+       sodipodi:rx="52.325901"
+       sodipodi:ry="52.325901"
+       d="M 310.41986,151.50815 A 52.325901,52.325901 0 1 1 205.76806,151.50815 A 52.325901,52.325901 0 1 1 310.41986,151.50815 z"
+       transform="matrix(1.5337593,0,0,0.6554252,-307.11212,33.465241)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="58.689857"
+       y="137.36601"
+       id="text3793"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan3795"
+         x="58.689857"
+         y="137.36601"
+         style="font-size:14px">KLIENT</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend);marker-start:none"
+       d="M 106.77312,167.0645 L 192.33304,278.08026"
+       id="path3804"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="67.17514"
+       y="239.18938"
+       id="text6129"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan6131"
+         x="67.17514"
+         y="239.18938">1. wyszukanie usług</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 204.35386,278.08026 L 118.79394,164.23607"
+       id="path6133"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="232.83809"
+       y="94.42131"
+       id="text7167"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan7169"
+         x="232.83809"
+         y="94.42131">2. zapytanie</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="274.20309"
+       y="121.64166"
+       id="text7690"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan7692"
+         x="274.20309"
+         y="121.64166">3. odpowiedź</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="384.608"
+       y="152.71179"
+       id="text2585"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan2587"
+         x="384.608"
+         y="152.71179"
+         style="font-size:14px;text-align:center;text-anchor:middle">WEB</tspan><tspan
+         sodipodi:role="line"
+         x="384.608"
+         y="170.21179"
+         style="font-size:14px;text-align:center;text-anchor:middle"
+         id="tspan2589">SERWIS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="384.608"
+       y="232.61485"
+       id="text2591"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan2593"
+         x="384.608"
+         y="232.61485"
+         style="font-size:14px;text-align:center;text-anchor:middle">WEB</tspan><tspan
+         sodipodi:role="line"
+         x="384.608"
+         y="250.11485"
+         style="font-size:14px;text-align:center;text-anchor:middle"
+         id="tspan2595">SERWIS</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.72001868000000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2600"
+       width="20.731909"
+       height="14.4348"
+       x="294.41122"
+       y="84.572258"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.73696899px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 304.74307,91.851885 L 304.74307,91.851885 z"
+       id="path2602"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.89575195px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="284.66379"
+       y="102.35159"
+       id="text2604"
+       transform="scale(1.0469392,0.9551653)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan2606"
+         x="284.66379"
+         y="102.35159">XML</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75207984000000005px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 294.41913,84.579486 L 304.83746,91.875776"
+       id="path2608"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75244533999999985;stroke-linecap:butt;stroke-linejoin:miter;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 304.39029,91.883568 L 314.91624,84.633921"
+       id="path3386"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.13480710999999990;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3911"
+       width="24.560183"
+       height="27.463356"
+       x="340.30963"
+       y="45.580818"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="340.61902"
+       y="70.098564"
+       id="text3913"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan3915"
+         x="340.61902"
+         y="70.098564">WSDL</tspan></text>
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.23499999999999999;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 341.74401,50.22356 C 341.79609,49.83369 342.16235,49.05272 342.36901,48.53606 C 342.72215,47.65322 342.74401,48.30728 342.74401,48.91106 C 342.74401,50.55662 344.03418,48.09411 344.36901,47.53606 C 344.49985,47.318 344.66068,47.1194 344.80651,46.91106 C 345.45932,45.97849 344.99401,48.5469 344.99401,49.91106 C 344.99401,51.42059 345.52611,48.67711 346.11901,48.97356 C 346.38545,49.10678 346.63662,49.64346 347.05651,49.22356 C 347.67182,48.60825 346.98784,51.00306 347.80651,49.16106 C 347.86753,49.02378 347.97318,49.41106 348.05651,49.53606 C 348.06001,49.54131 348.43222,46.85141 348.93151,48.84856 C 349.27845,50.23632 349.20509,50.52633 349.99401,50.72356 C 350.43479,50.83376 350.35745,50.15817 350.86901,50.28606 C 350.89665,50.29297 351.6777,48.42631 351.68151,48.41106 C 351.96275,47.28611 352.15909,48.08679 352.61901,47.47356 C 352.79418,47.24 353.10725,49.63755 353.30651,50.03606 C 353.32977,50.08258 354.22705,49.52468 354.43151,49.47356 C 354.47193,49.46346 354.51484,49.47356 354.55651,49.47356 C 355.20206,49.47356 355.49401,46.24098 355.49401,48.72356 C 355.49401,49.76235 355.81244,49.84263 356.30651,49.34856 C 356.40818,50.66081 356.35905,50.79602 356.93151,50.22356 C 356.98046,50.17462 356.66472,50.99035 357.24401,50.41106 C 357.81676,49.83831 358.44052,46.44709 358.99401,48.66106 C 359.13989,49.24458 359.52125,49.63663 360.11901,49.78606 C 360.15033,49.79389 360.27267,49.47253 361.05651,49.78606 C 361.69788,50.04261 361.16044,48.01499 362.11901,48.97356 C 362.3996,49.25415 362.11714,50.03794 362.61901,49.53606 C 362.96706,49.18801 362.94324,49.09728 363.24401,49.59856 C 363.34138,49.76085 363.36562,49.80125 363.43151,49.91106"
+       id="path3927"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.23499999999999999;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 341.49401,54.47356 C 341.69078,54.80151 341.84437,53.79178 342.05651,53.47356 C 343.29353,51.61803 343.42021,52.83726 344.55651,53.97356 C 345.07695,54.494 344.96521,50.64696 345.36901,53.47356 C 345.74837,56.12908 345.39406,55.16933 346.05651,54.28606 C 346.55865,53.61654 346.35813,53.61162 346.99401,52.84856 C 347.27673,52.5093 348.14892,53.34322 348.24401,53.72356 C 349.11381,57.20275 347.18629,57.38385 349.55651,54.22356 C 350.27351,53.26757 349.81707,52.73412 350.86901,53.78606 C 350.92212,53.83918 350.95234,53.66106 350.99401,53.59856 C 351.15497,53.35712 351.51634,53.91106 351.80651,53.91106 C 352.39812,53.91106 353.74751,52.33458 353.36901,53.84856 C 353.28941,54.16698 352.98861,53.50211 353.68151,53.84856 C 354.13166,54.07364 354.77153,53.70063 355.11901,53.41106 C 356.03675,52.64628 355.62693,57.94981 356.24401,56.09856 C 356.46715,55.42915 356.98865,54.16642 357.43151,53.72356 C 357.73681,53.41826 358.11314,52.86859 358.30651,52.72356 C 358.69457,52.43252 358.99401,54.9355 358.99401,55.22356 C 358.99401,55.66551 359.53623,54.08842 359.93151,54.28606 C 360.31385,54.47723 360.52832,53.67312 360.80651,53.34856 C 360.98657,53.1385 361.38414,52.90728 361.61901,52.84856 C 361.88858,52.78117 362.31635,52.86665 362.49401,52.91106 C 362.59464,52.93622 362.83405,53.52865 362.86901,53.59856 C 362.96366,53.78787 362.98641,53.95837 363.05651,54.09856"
+       id="path3929"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.23499999999999999;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 341.99401,58.91106 C 342.26571,59.45446 342.89981,60.50618 342.74401,60.97356 C 342.26729,62.40371 341.42772,63.53008 343.61901,60.97356 C 344.64565,59.77581 343.73407,60.69728 345.05651,60.03606 C 345.25322,59.93771 345.18151,58.02096 345.18151,59.66106 C 345.18151,62.87146 344.2801,60.79135 346.18151,60.41106 C 347.05561,60.23624 346.13452,59.55157 346.93151,60.34856 C 347.49594,60.91299 347.53463,55.32352 348.55651,59.41106 C 348.81926,60.46208 348.99712,61.02206 348.74401,62.16106 C 348.60239,62.79834 348.9907,60.81814 349.86901,60.59856 C 351.17489,60.27209 349.88506,57.75567 350.86901,59.72356 C 351.50194,60.98943 351.23321,59.30472 352.18151,60.41106 C 352.59409,60.89241 352.32562,59.63678 352.93151,60.84856 C 353.81892,62.62339 354.40921,60.42111 355.36901,60.66106 C 355.84525,60.78012 356.16124,59.88911 356.30651,59.59856 C 356.52944,59.1527 356.9445,58.77308 357.24401,58.47356 C 357.7518,57.96577 357.93438,59.41967 357.99401,59.59856 C 358.21164,60.25146 357.3912,61.59302 358.11901,61.41106 C 358.27688,61.3716 358.83443,60.43633 358.99401,60.22356 C 359.2874,59.83238 359.60429,59.42578 359.93151,59.09856 C 360.18581,58.84426 360.62985,58.6869 360.93151,58.53606 C 361.22474,58.38945 362.18027,58.77013 362.49401,58.84856 C 362.55464,58.86372 362.61901,58.84856 362.68151,58.84856"
+       id="path3931"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.13480710999999990;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3943"
+       width="24.560183"
+       height="27.463356"
+       x="340.04016"
+       y="124.53357"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="340.34952"
+       y="149.05132"
+       id="text3945"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan3947"
+         x="340.34952"
+         y="149.05132">WSDL</tspan></text>
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.23499999999999999;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 341.47452,129.17632 C 341.52659,128.78645 341.89286,128.00548 342.09952,127.48882 C 342.45266,126.60598 342.47452,127.26004 342.47452,127.86382 C 342.47452,129.50938 343.76469,127.04687 344.09952,126.48882 C 344.23036,126.27076 344.39119,126.07216 344.53702,125.86382 C 345.18982,124.93125 344.72452,127.49966 344.72452,128.86382 C 344.72452,130.37335 345.25662,127.62987 345.84952,127.92632 C 346.11596,128.05954 346.36712,128.59622 346.78702,128.17632 C 347.40233,127.56101 346.71835,129.95582 347.53702,128.11382 C 347.59803,127.97654 347.70369,128.36382 347.78702,128.48882 C 347.79052,128.49407 348.16273,125.80417 348.66202,127.80132 C 349.00896,129.18908 348.9356,129.47909 349.72452,129.67632 C 350.1653,129.78652 350.08796,129.11093 350.59952,129.23882 C 350.62716,129.24573 351.40821,127.37907 351.41202,127.36382 C 351.69326,126.23887 351.8896,127.03955 352.34952,126.42632 C 352.52469,126.19276 352.83776,128.59031 353.03702,128.98882 C 353.06028,129.03534 353.95756,128.47744 354.16202,128.42632 C 354.20244,128.41622 354.24535,128.42632 354.28702,128.42632 C 354.93257,128.42632 355.22452,125.19374 355.22452,127.67632 C 355.22452,128.71511 355.54295,128.79539 356.03702,128.30132 C 356.13869,129.61357 356.08956,129.74878 356.66202,129.17632 C 356.71097,129.12738 356.39523,129.94311 356.97452,129.36382 C 357.54727,128.79107 358.17102,125.39985 358.72452,127.61382 C 358.8704,128.19734 359.25176,128.58939 359.84952,128.73882 C 359.88084,128.74665 360.00318,128.42529 360.78702,128.73882 C 361.42839,128.99537 360.89095,126.96775 361.84952,127.92632 C 362.13011,128.20691 361.84765,128.9907 362.34952,128.48882 C 362.69757,128.14077 362.67375,128.05004 362.97452,128.55132 C 363.07189,128.71361 363.09613,128.75401 363.16202,128.86382"
+       id="path3949"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.23499999999999999;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 341.22452,133.42632 C 341.42129,133.75427 341.57488,132.74454 341.78702,132.42632 C 343.02404,130.57079 343.15072,131.79002 344.28702,132.92632 C 344.80746,133.44676 344.69572,129.59972 345.09952,132.42632 C 345.47888,135.08184 345.12457,134.12209 345.78702,133.23882 C 346.28916,132.5693 346.08864,132.56438 346.72452,131.80132 C 347.00724,131.46206 347.87943,132.29598 347.97452,132.67632 C 348.84432,136.15551 346.9168,136.33661 349.28702,133.17632 C 350.00402,132.22033 349.54758,131.68688 350.59952,132.73882 C 350.65263,132.79194 350.68285,132.61382 350.72452,132.55132 C 350.88548,132.30988 351.24685,132.86382 351.53702,132.86382 C 352.12862,132.86382 353.47802,131.28734 353.09952,132.80132 C 353.01992,133.11974 352.71912,132.45487 353.41202,132.80132 C 353.86217,133.0264 354.50204,132.65339 354.84952,132.36382 C 355.76726,131.59904 355.35744,136.90257 355.97452,135.05132 C 356.19766,134.38191 356.71916,133.11918 357.16202,132.67632 C 357.46732,132.37102 357.84365,131.82135 358.03702,131.67632 C 358.42508,131.38528 358.72452,133.88826 358.72452,134.17632 C 358.72452,134.61827 359.26673,133.04118 359.66202,133.23882 C 360.04436,133.42999 360.25883,132.62588 360.53702,132.30132 C 360.71708,132.09126 361.11465,131.86004 361.34952,131.80132 C 361.61908,131.73393 362.04686,131.81941 362.22452,131.86382 C 362.32515,131.88898 362.56456,132.48141 362.59952,132.55132 C 362.69417,132.74063 362.71692,132.91113 362.78702,133.05132"
+       id="path3951"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.23499999999999999;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 341.72452,137.86382 C 341.99622,138.40722 342.63032,139.45894 342.47452,139.92632 C 341.9978,141.35647 341.15823,142.48284 343.34952,139.92632 C 344.37616,138.72857 343.46458,139.65004 344.78702,138.98882 C 344.98373,138.89047 344.91202,136.97372 344.91202,138.61382 C 344.91202,141.82422 344.01061,139.74411 345.91202,139.36382 C 346.78612,139.189 345.86503,138.50433 346.66202,139.30132 C 347.22645,139.86575 347.26513,134.27628 348.28702,138.36382 C 348.54977,139.41484 348.72763,139.97482 348.47452,141.11382 C 348.3329,141.7511 348.72121,139.7709 349.59952,139.55132 C 350.9054,139.22485 349.61557,136.70843 350.59952,138.67632 C 351.23245,139.94219 350.96372,138.25748 351.91202,139.36382 C 352.3246,139.84517 352.05613,138.58954 352.66202,139.80132 C 353.54943,141.57615 354.13972,139.37387 355.09952,139.61382 C 355.57576,139.73288 355.89175,138.84187 356.03702,138.55132 C 356.25995,138.10546 356.67501,137.72584 356.97452,137.42632 C 357.48231,136.91853 357.66489,138.37243 357.72452,138.55132 C 357.94215,139.20422 357.12171,140.54578 357.84952,140.36382 C 358.00739,140.32436 358.56494,139.38909 358.72452,139.17632 C 359.01791,138.78514 359.3348,138.37854 359.66202,138.05132 C 359.91632,137.79702 360.36036,137.63966 360.66202,137.48882 C 360.95525,137.34221 361.91078,137.72289 362.22452,137.80132 C 362.28515,137.81648 362.34952,137.80132 362.41202,137.80132"
+       id="path3953"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.13480710999999990;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3957"
+       width="24.560183"
+       height="27.463356"
+       x="339.65033"
+       y="205.33257"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="339.95969"
+       y="229.85031"
+       id="text3959"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan3961"
+         x="339.95969"
+         y="229.85031">WSDL</tspan></text>
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.23499999999999999;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 341.08469,209.9753 C 341.13677,209.58543 341.50303,208.80446 341.70969,208.2878 C 342.06283,207.40497 342.08469,208.05902 342.08469,208.6628 C 342.08469,210.30837 343.37486,207.84586 343.70969,207.2878 C 343.84053,207.06974 344.00136,206.87114 344.14719,206.6628 C 344.8,205.73023 344.33469,208.29864 344.33469,209.6628 C 344.33469,211.17234 344.86679,208.42885 345.45969,208.7253 C 345.72613,208.85852 345.9773,209.39521 346.39719,208.9753 C 347.0125,208.35999 346.32853,210.75481 347.14719,208.9128 C 347.20821,208.77552 347.31386,209.1628 347.39719,209.2878 C 347.40069,209.29306 347.7729,206.60315 348.27219,208.6003 C 348.61913,209.98807 348.54577,210.27808 349.33469,210.4753 C 349.77547,210.5855 349.69813,209.90991 350.20969,210.0378 C 350.23733,210.04471 351.01838,208.17806 351.02219,208.1628 C 351.30343,207.03786 351.49977,207.83854 351.95969,207.2253 C 352.13486,206.99175 352.44793,209.3893 352.64719,209.7878 C 352.67045,209.83433 353.56773,209.27642 353.77219,209.2253 C 353.81261,209.2152 353.85552,209.2253 353.89719,209.2253 C 354.54274,209.2253 354.83469,205.99273 354.83469,208.4753 C 354.83469,209.51409 355.15312,209.59437 355.64719,209.1003 C 355.74886,210.41255 355.69973,210.54776 356.27219,209.9753 C 356.32114,209.92637 356.0054,210.7421 356.58469,210.1628 C 357.15744,209.59006 357.7812,206.19884 358.33469,208.4128 C 358.48057,208.99632 358.86193,209.38837 359.45969,209.5378 C 359.49101,209.54564 359.61335,209.22428 360.39719,209.5378 C 361.03856,209.79435 360.50112,207.76673 361.45969,208.7253 C 361.74028,209.0059 361.45782,209.78968 361.95969,209.2878 C 362.30774,208.93975 362.28392,208.84902 362.58469,209.3503 C 362.68206,209.5126 362.7063,209.553 362.77219,209.6628"
+       id="path3963"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.23499999999999999;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 340.83469,214.2253 C 341.03146,214.55326 341.18505,213.54352 341.39719,213.2253 C 342.63421,211.36978 342.76089,212.589 343.89719,213.7253 C 344.41763,214.24574 344.30589,210.39871 344.70969,213.2253 C 345.08905,215.88082 344.73474,214.92108 345.39719,214.0378 C 345.89933,213.36828 345.69881,213.36336 346.33469,212.6003 C 346.61741,212.26104 347.4896,213.09497 347.58469,213.4753 C 348.45449,216.9545 346.52697,217.13559 348.89719,213.9753 C 349.61419,213.01932 349.15775,212.48586 350.20969,213.5378 C 350.26281,213.59092 350.29302,213.4128 350.33469,213.3503 C 350.49565,213.10887 350.85702,213.6628 351.14719,213.6628 C 351.7388,213.6628 353.08819,212.08632 352.70969,213.6003 C 352.63009,213.91872 352.32929,213.25385 353.02219,213.6003 C 353.47234,213.82538 354.11221,213.45237 354.45969,213.1628 C 355.37743,212.39802 354.96761,217.70155 355.58469,215.8503 C 355.80783,215.18089 356.32933,213.91816 356.77219,213.4753 C 357.07749,213.17001 357.45382,212.62033 357.64719,212.4753 C 358.03525,212.18427 358.33469,214.68724 358.33469,214.9753 C 358.33469,215.41725 358.87691,213.84016 359.27219,214.0378 C 359.65453,214.22897 359.869,213.42486 360.14719,213.1003 C 360.32725,212.89024 360.72482,212.65902 360.95969,212.6003 C 361.22926,212.53292 361.65703,212.61839 361.83469,212.6628 C 361.93532,212.68796 362.17473,213.28039 362.20969,213.3503 C 362.30435,213.53961 362.32709,213.71012 362.39719,213.8503"
+       id="path3965"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.23499999999999999;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 341.33469,218.6628 C 341.60639,219.2062 342.24049,220.25793 342.08469,220.7253 C 341.60798,222.15545 340.7684,223.28182 342.95969,220.7253 C 343.98633,219.52756 343.07475,220.44903 344.39719,219.7878 C 344.5939,219.68946 344.52219,217.77271 344.52219,219.4128 C 344.52219,222.6232 343.62078,220.54309 345.52219,220.1628 C 346.39629,219.98799 345.4752,219.30331 346.27219,220.1003 C 346.83662,220.66474 346.87531,215.07527 347.89719,219.1628 C 348.15994,220.21382 348.3378,220.77381 348.08469,221.9128 C 347.94307,222.55008 348.33138,220.56988 349.20969,220.3503 C 350.51557,220.02383 349.22574,217.50742 350.20969,219.4753 C 350.84262,220.74117 350.57389,219.05647 351.52219,220.1628 C 351.93477,220.64415 351.6663,219.38852 352.27219,220.6003 C 353.1596,222.37514 353.74989,220.17285 354.70969,220.4128 C 355.18593,220.53187 355.50192,219.64085 355.64719,219.3503 C 355.87012,218.90445 356.28518,218.52482 356.58469,218.2253 C 357.09248,217.71751 357.27506,219.17141 357.33469,219.3503 C 357.55232,220.00321 356.73188,221.34476 357.45969,221.1628 C 357.61756,221.12335 358.17511,220.18807 358.33469,219.9753 C 358.62808,219.58413 358.94497,219.17753 359.27219,218.8503 C 359.52649,218.596 359.97053,218.43865 360.27219,218.2878 C 360.56542,218.1412 361.52096,218.52187 361.83469,218.6003 C 361.89532,218.61547 361.95969,218.6003 362.02219,218.6003"
+       id="path3967"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.72001868000000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3976"
+       width="20.731909"
+       height="14.4348"
+       x="203.08742"
+       y="119.3515"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.73696899px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 213.41927,126.63113 L 213.41927,126.63113 z"
+       id="path3978"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.89575195px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="197.43445"
+       y="138.76334"
+       id="text3980"
+       transform="scale(1.0469392,0.9551653)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan3982"
+         x="197.43445"
+         y="138.76334">XML</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75207984000000005px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 203.09533,119.35873 L 213.51366,126.65502"
+       id="path3984"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75244533999999985;stroke-linecap:butt;stroke-linejoin:miter;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 213.06649,126.66281 L 223.59244,119.41316"
+       id="path3986"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:none;marker-start:url(#Arrow1Lstart)"
+       d="M 350.5,82.862186 L 319,89.862186"
+       id="path3988"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 290.5,95.862186 L 165.5,122.86219"
+       id="path6319"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 353.58579,95.301526 L 227.35356,123.09443"
+       id="path6321"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 197.5,129.86219 L 168.5,135.86219"
+       id="path6323"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.25191867;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:1.25191866, 3.75575598;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6846"
+       width="146.9613"
+       height="212.35471"
+       x="183.9062"
+       y="22.873173"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="226.98128"
+       y="34.128422"
+       id="text6848"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan6850"
+         x="226.98128"
+         y="34.128422">Protokół SOAP</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 279,153.86218 L 162.5,145.86218"
+       id="path2735"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.72001868000000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2739"
+       width="20.731909"
+       height="14.4348"
+       x="285.63812"
+       y="146.64919"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.73696899px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 295.96996,153.92881 L 295.96996,153.92881 z"
+       id="path2741"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.89575195px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="276.284"
+       y="167.34236"
+       id="text2743"
+       transform="scale(1.0469392,0.9551653)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan2745"
+         x="276.284"
+         y="167.34236">XML</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75207984000000005px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 285.64602,146.65641 L 296.06435,153.9527"
+       id="path2747"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75244533999999985;stroke-linecap:butt;stroke-linejoin:miter;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 295.61718,153.96049 L 306.14313,146.71085"
+       id="path2749"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Lstart);marker-end:none;stroke-opacity:1"
+       d="M 348.75,158.29604 L 310.75,155.79604"
+       id="path2751"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 351.61612,168.96573 L 225.88389,161.25863"
+       id="path2753"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.72001868000000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2757"
+       width="20.731909"
+       height="14.4348"
+       x="196.13811"
+       y="153.14919"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.73696899px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 206.46996,160.42881 L 206.46996,160.42881 z"
+       id="path2759"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.89575195px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="190.79671"
+       y="174.14746"
+       id="text2761"
+       transform="scale(1.0469392,0.9551653)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan2763"
+         x="190.79671"
+         y="174.14746">XML</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75207984000000005px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 196.14602,153.15641 L 206.56435,160.4527"
+       id="path2765"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75244533999999985;stroke-linecap:butt;stroke-linejoin:miter;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 206.11718,160.46049 L 216.64313,153.21085"
+       id="path2767"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow2Lend);stroke-opacity:1"
+       d="M 188.39845,158.02261 L 149.39845,155.02261"
+       id="path2769"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="226.72461"
+       y="146.56921"
+       id="text2771"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan2773"
+         x="226.72461"
+         y="146.56921">4. zapytanie</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="249.83008"
+       y="176.24304"
+       id="text2775"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa-ws.png"
+       inkscape:export-xdpi="299.93274"
+       inkscape:export-ydpi="299.93274"><tspan
+         sodipodi:role="line"
+         id="tspan2777"
+         x="249.83008"
+         y="176.24304">5. odpowiedź</tspan></text>
+  </g>
+</svg>

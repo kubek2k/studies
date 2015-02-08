@@ -1,0 +1,31 @@
+\chapter{Akronimy}
+
+% TODO - posortować to alfabetycznie
+
+\begin{itemize}
+ \item AOP - Aspect Oriented Programming
+ \item JVM - Java Virtual Machine
+ \item BPM - Business Process Management
+ \item WS - WebService
+ \item ESB - Enterprise Service Bus
+ \item p2p - peer to peer
+ \item SOA - Service Oriented Architecture
+ \item BPEL - Business Process Execution Language
+ \item XML - eXtensible Markup Language
+ \item EAI - Enterprise Application Integration
+ \item MOM - Message Oriented Middleware
+ \item QoS - Quality of Service
+ \item SLA - Service Level Agreement
+ \item BPEL - Business Process Execution Language
+ \item JBI - Java Business Integration
+ \item BPEL4WS - Bussiness Process Execution Language for WebServices
+ \item WS-BPEL - WebServices - Bussiness Process Execution Language
+ \item JSR
+ \item JCP 
+ \item NMR - Normalized Message Router
+ \item SE - Service Engine
+ \item BC - Binding Component
+ \item SOAP - Service Oriented Architecture Protocol
+ \item UDDI - Universal Description, Discovery and Integration
+ \item WSDL - Web Service Definition Language
+\end{itemize}

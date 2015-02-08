@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="esb.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+   inkscape:export-xdpi="89.948105"
+   inkscape:export-ydpi="89.948105">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Send"
+       style="overflow:visible;">
+      <path
+         id="path3231"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Sstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Sstart"
+       style="overflow:visible">
+      <path
+         id="path3228"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.2) translate(6,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.6410559"
+     inkscape:cx="168.99588"
+     inkscape:cy="523.72099"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1400"
+     inkscape:window-height="1002"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="0,1"
+       position="-322.90476,435.21946"
+       id="guide2424" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0032ff;stroke-width:1.16541672;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2387"
+       width="230.23335"
+       height="30.193073"
+       x="81.505493"
+       y="371.42273"
+       rx="4.3240223"
+       ry="1.301545"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0032ff;stroke-width:4.69999981;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path3159"
+       sodipodi:cx="390.39438"
+       sodipodi:cy="725.91168"
+       sodipodi:rx="37.020157"
+       sodipodi:ry="52.164768"
+       d="M 427.41454,725.91168 A 37.020157,52.164768 0 1 1 353.37422,725.91168 A 37.020157,52.164768 0 1 1 427.41454,725.91168 z"
+       transform="matrix(0.4394973,0,0,0.2801577,137.65574,182.99851)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0032ff;stroke-width:4.69999981;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path3181"
+       sodipodi:cx="390.39438"
+       sodipodi:cy="725.91168"
+       sodipodi:rx="37.020157"
+       sodipodi:ry="52.164768"
+       d="M 427.41454,725.91168 A 37.020157,52.164768 0 1 1 353.37422,725.91168 A 37.020157,52.164768 0 1 1 427.41454,725.91168 z"
+       transform="matrix(0.4392242,0,0,0.2856883,-88.200194,178.99602)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.69999981;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       id="rect3183"
+       width="62.232307"
+       height="28.908482"
+       x="80.768509"
+       y="372.0386"
+       rx="4.3240223"
+       ry="1.3404164"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.3449688px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 109.01031,401.15582 L 109.01031,386.12377 L 265.46473,386.12377 L 265.46473,401.35625"
+       id="path3189"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.34143245px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 198.85141,385.92602 L 198.85141,371.98252"
+       id="path3193"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.34143245px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 138.76674,385.92602 L 138.76674,381.99828"
+       id="path3195"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.34143245px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 234.44504,386.1224 L 234.44504,391.03209"
+       id="path3203"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92426491;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:url(#Arrow1Send);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 109.00347,403.49584 L 109.00347,420.86974"
+       id="path3211"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.93070483;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:url(#Arrow1Send);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 264.89284,403.94167 L 264.89284,421.72523"
+       id="path4514"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.30076432;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:url(#Arrow1Send);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 199.2618,348.00794 L 199.2618,367.06085"
+       id="path4516"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <g
+       id="g4524"
+       transform="matrix(0.4387235,0,0,0.4387235,40.04764,171.25859)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105">
+      <rect
+         ry="0"
+         rx="0"
+         y="576.51947"
+         x="119.24441"
+         height="57.124432"
+         width="98.747131"
+         id="rect4518"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.23336339;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+         inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+         inkscape:export-xdpi="89.948105"
+         inkscape:export-ydpi="89.948105" />
+      <text
+         id="text4520"
+         y="610.59686"
+         x="127.95202"
+         style="font-size:18px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+         xml:space="preserve"
+         inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+         inkscape:export-xdpi="89.948105"
+         inkscape:export-ydpi="89.948105"><tspan
+           y="610.59686"
+           x="127.95202"
+           id="tspan4522"
+           sodipodi:role="line">Aplikacja</tspan></text>
+    </g>
+    <g
+       id="g4529"
+       transform="matrix(0.4387235,0,0,0.4387235,195.99319,170.38116)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105">
+      <rect
+         ry="0"
+         rx="0"
+         y="576.53314"
+         x="119.25811"
+         height="57.097027"
+         width="101.23392"
+         id="rect4531"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.26076794;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529" />
+      <text
+         id="text4533"
+         y="610.59686"
+         x="127.95202"
+         style="font-size:18px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+         xml:space="preserve"><tspan
+           y="610.59686"
+           x="127.95202"
+           id="tspan4535"
+           sodipodi:role="line">Aplikacja</tspan></text>
+    </g>
+    <g
+       id="g4537"
+       transform="matrix(0.4387235,0,0,0.4387235,187.82757,65.613545)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105">
+      <rect
+         ry="0"
+         rx="0"
+         y="576.52631"
+         x="119.25128"
+         height="57.110687"
+         width="99.990479"
+         id="rect4539"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.24710941;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529" />
+      <text
+         id="text4541"
+         y="610.59686"
+         x="127.95202"
+         style="font-size:18px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+         xml:space="preserve"><tspan
+           y="610.59686"
+           x="127.95202"
+           id="tspan4543"
+           sodipodi:role="line">Aplikacja</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92131937;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:url(#Arrow1Send);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 237.64797,330.83515 L 224.38817,330.83515"
+       id="path4545"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.02612662;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       id="rect4547"
+       width="36.629784"
+       height="23.563753"
+       x="183.12245"
+       y="319.20221"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.89702368px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="186.43561"
+       y="332.9198"
+       id="text4549"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105"><tspan
+         sodipodi:role="line"
+         id="tspan4551"
+         x="186.43561"
+         y="332.9198">Adapter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="179.79463"
+       y="498.63885"
+       id="text4553"><tspan
+         sodipodi:role="line"
+         id="tspan4555"
+         x="179.79463"
+         y="498.63885" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.05743694px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="165.76468"
+       y="406.02942"
+       id="text4557"
+       transform="scale(1.0302158,0.9706704)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/chapter1/esb.png"
+       inkscape:export-xdpi="89.948105"
+       inkscape:export-ydpi="89.948105"><tspan
+         sodipodi:role="line"
+         id="tspan4559"
+         x="165.76468"
+         y="406.02942">Szyna</tspan></text>
+  </g>
+</svg>

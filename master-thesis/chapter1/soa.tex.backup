@@ -1,0 +1,192 @@
+\section{SOA}
+
+\subsection{Wstêp}
+
+
+
+% WAZNE
+%
+%TEN COMPANIES WHERE SOA MADE A DIFFERENCE:
+%http://blogs.zdnet.com/service-oriented/?p=781
+%
+
+Od pocz±tku istnienia oprogramowania komputerowego - a wiêc ju¿ od kilkudziesiêciu lat - obserwowany jest ci±g³y wzrost poziomu jego z³o¿ono¶ci. Systemy maj± dzia³aæ w sposób bardziej automatyczny, wspieraæ wiêcej czynno¶ci, byæ bardziej niezawodne oraz prostsze w obs³udze. Tradycyjne architektury tworzenia oprogramowania w niewystarczaj±cym stopniu wspieraj± twórców aplikacji i powoli osi±gaj± granicê swoich mo¿liwo¶ci. Obserwowany jest znaczny wzrost kosztów zwi±zanych z rozwi±zywaniem problemów czysto technologicznych, np. integracj± systemów zbudowanych na podstawie ró¿nych platform middleware. In¿ynierowie musz± równie¿ niezmiennie radziæ sobie z ci±g³ymi naciskami organizacyjnymi i biznesowymi takimi jak: ograniczanie kosztów wytwarzanego oprogramowania, potrzeb± szybkiej odpowiedzi na zmieniaj±ce siê wymagania, mo¿liwo¶ci± ³atwej integracji i absorbcji nowych partnerów biznesowych. Z powodu tej ci±g³ej presji przemys³ IT przez wiele lat podlega³ i ci±gle podlega ewolucji. W tym czasie zd±¿y³o powstaæ wiele prób rozwi±zania powy¿szych trudno¶ci. By³y to ró¿ne architektury przeznaczone do tworzenia systemów rozproszonych, przeno¶ne jêzyki programowania, ¶rodowiska wspieraj±ce integracjê systemów itp. Jednak próba kompleksowego rozwi±zania wspomnianych problemów pojawi³a siê dopiero niedawno. W roku 1996 w raportach Gartnera wprowadzone zosta³o pojêcie architektury opartej o serwisy (SOA - Service Oriented Architecture)\footnote{http://www.gartner.com/DisplayDocument?doc\_cd=29201} która jest kolejnym krokiem w ewolucji architektur oprogramowania, prób± spe³nienia ¿±dañ i rozwi±zania problemów organizacji IT w jeszcze wiêkszym stopniu ni¿ dotychczas.
+
+
+\subsection{Definicja SOA}
+
+% TODO: do przepisania :/
+% TODO: tutaj trzeba wstawic wykres z badan pokazujacy ze CIO najwiecej uwagi w 2002 zwracali na integracje
+\textbf{TODO}
+
+Opinie CIO w 2002 roku?
+
+\textbf{TODO}
+
+%Zwiêkszone zainteresowania SOA zwi±zane jest z rozpowszechnianiem siê technologii Web Serwisów i dyskusjami na temat %zysków które mo¿na dziêki nim osi±gn±æ. Tematy poruszane w tych dyskusjach nie s± nowe, pojawia³y siê one ju¿ od %czasu gdy technologia CORBA umo¿liwi³a integracjê aplikacji z ró¿nych ¶rodowisk heterogenicznych.
+
+Do problemów zwi±zanych z integracj± aplikacji mo¿na zaliczyæ np:
+
+\begin{itemize}
+ \item niezgodno¶æ danych na poziomie binarnym (np. jeden komputer u¿ywa kodowania Big Endian a inny Little Endian)
+ \item konieczno¶æ obs³ugi rozproszonych mechanizmów transakcyjnych, autoryzacji i autentykacji
+ \item ró¿nice koncepcyjne pomiêdzy u¿ytymi platformami middleware (np. RMI operuje na poziomie wywo³ania metody interfejsu, Sun RPC na poziomie wywo³ania funkcji)
+\end{itemize}
+
+Technologie komponentowe stworzone w latach 90 XX wieku (CORBA, DCOM, RMI itp.) pozwala³y na integracjê aplikacji z ró¿nych ¶rodowisk heterogenicznych. Zmniejsza³y one konieczno¶æ nadmiernego skupiania siê in¿ynierów nad kwestiami technologicznymi integracji. Dla przyk³adu komponenty w technologii CORBA (wykorzystuj±cej do transportu protokó³ IIOP) mog³y siê komunikowaæ nie tylko z innymi komponentami CORBA, ale tak¿e np. z RMI. Jednak¿e technologie komponentowe nie rozwi±za³y wszystkich problemów integracyjnych, a oprócz nich zaczê³y pojawiaæ siê tak¿e nowe:
+
+\begin{itemize}
+ \item statyczno¶æ komponentów, brak mo¿liwo¶ci wymiany wadliwych w trakcie dzia³ania systemu
+ \item ¶cis³e powi±zanie komponentów \footnote{tightly coupled}
+ \item redundantno¶æ oprogramowania (np. implementacja tej samej funkcjonalno¶ci w kilku systemach)
+ \item brak ponownego u¿ytkowania ju¿ stworzonych podsystemów
+ \item integracja N podsystemów (z których ka¿dy mo¿e u¿ywaæ ka¿dego innego) wymaga³a ilo¶ci po³±czeñ proporcjonalnej do kwadratu ilo¶ci podsystemów
+\end{itemize}
+
+Na prze³omie XX i XXI wieku pojawi³y siê technologie, których u¿ycie pozwoli³o rozwi±zaæ wiêkszo¶æ problemów technologii komponentowych. Najpopularniejsze z tych technologii to Web Serwisy. Jednak oprócz nich potrzebny by³ równie¿ ogólny opis architektury nieograniczonej przez ¿adne technologie. Architektury w której aplikacje mog³yby byæ tworzone, integrowane i powtórnie u¿ytkowane; która umo¿liwi³aby sk³adanie aplikacji z gotowych elementów celu szybkiego dostarczania dynamicznych rozwi±zañ. Prób± odpowiedzi na te potrzeby by³o pojawienie siê SOA \footnote{http://opengroup.org/projects/soa/doc.tpl?gdid=10632}.
+
+\begin{quotation}
+ \textbf{SOA} (\textbf{Service Oriented Architecture}) - architektura zorientowana na \textbf{us³ugi}.
+\end{quotation}
+
+\begin{quotation}
+ \textbf{Us³uga} - logiczna reprezentacja powtarzalnej czynno¶ci biznesowej maj±ca oczekiwany rezultat (np. pobierz prognozê pogody, sprawd¼ czy osoba figuruje w krajowym rejestrze d³ugów).
+\end{quotation}
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 330 238]{chapter1/soa.png}
+ % soa.png: 412x298 pixel, 90dpi, 11.63x8.41 cm, bb=0 0 330 238
+ \caption{Przyk³adowy schemat funkcjonowania SOA}
+ \label{fig:soa}
+\end{figure}
+
+Warty zaznaczenia jest fakt, ¿e SOA i Web Serwisy nie s± pojêciami równoznacznymi. Web Serwisy s± dowodem i przyk³adem na istnienie technologii, która umo¿liwia konstrukcjê systemu zgodnego z SOA. Zostan± omówione bardziej szczegó³owo w nastêpnym rozdziale.
+
+\subsection{Kluczowe elementy}
+
+System zbudowany w oparciu o SOA charakteryzuje siê nastêpuj±cymi cechami.
+\begin{enumerate}
+ \item Wszystkie operacje systemu s± zdefiniowane jako us³ugi. Mog± to byæ zarówno proste operacje biznesowe (pobierz stan konta), operacje transakcyjne zbudowane z innych us³ug (przelew miêdzy rachunkami) jak i funkcje systemowe (wy¶lij e-mail). Do in¿ynierów nale¿y decyzja o poziomie ziarnisto¶ci oferowanych us³ug.
+ \item Interfejs us³ugi jest odseparowany od jej implementacji. Konsumenci us³ugi przy wykonywaniu operacji nie znaj± dok³adnego algorytmu w jaki operacja zostanie wykonana, znaj± jedynie semantykê i syntaktykê tej operacji.
+ \item Prawid³owe funkcjonowanie systemu przy zachowaniu lu¼nego wi±zania\footnote{loosely coupled} miêdzy us³ugami uzyskuje siê dziêki wprowadzeniu kontraktów.
+ \item System jest systemem dynamicznym. W trakcie jego dzia³ania mo¿na dodawaæ nowe us³ugi oraz wymieniaæ stare (np. poprawiaæ znalezione w nich b³êdy, konstruowaæ efektywniejsze wersje us³ugi).
+ \item Istnieje mo¿liwo¶æ wielokrotnej implementacji tej samej us³ugi w ró¿nych wersjach (np. za pomoc± ró¿nych algorytmów, ró¿nych dostawców). U¿ytkownik decyduje której implementacji chce u¿yæ (np. tej która w danej chwili jest najmniej obci±¿ona).
+ \item Budowanie systemu odbywa siê na zasadzie kompozycji z istniej±cych ju¿ us³ug. Poprzednio systemy by³y tworzone poprzez integracjê elementów, co powodowa³o konieczno¶æ pisania kodu dostosowuj±cego mechanizmy tych elementów (np. sposobu komunikacji, obs³ugi transakcji, kontroli dostêpu).
+ \item Wystêpuje ca³kowita transparentno¶æ lokalizacji. Konsument us³ugi nie jest ¶wiadomy gdzie fizycznie operacje danej us³ugi s± wykonywane. Us³uga mo¿e w sposób niezauwa¿alny dla konsumenta migrowaæ pomiêdzy maszynami w trakcie dzia³ania systemu albo byæ zreplikowana na kilka maszyn w celu zmniejszenia czasu wykonywania jej operacji.
+\end{enumerate}
+
+\subsection{Kontrakt}
+
+Podstaw± prawid³owej konstrukcji oprogramowania w technologii SOA jest definiowanie kontraktów pomiêdzy us³ugami. Kontrakty umo¿liwiaj± separacjê interfejsów od implementacji oraz realizacjê lu¼nych powi±zañ pomiêdzy us³ugami (modyfikacja szczegó³ów implementacji us³ugi nie powoduje zmian w kontrakcie a wiêc jest transparentna dla konsumentów danej us³ugi). Kontrakt jest zawierany ka¿dorazowo pomiêdzy us³ug± a jej konsumentem (którym mo¿e byæ tak¿e inna us³uga). Zawiera opis tego co us³uga oferuje i czego oczekuje. Nie istnieje sformalizowana postaæ kontraktu w SOA, ale dobry kontrakt powinien zawieraæ nastêpuj±ce pozycje \footnote{http://en.wikipedia.org/wiki/Service-oriented\_architecture\#Service\_contract}:
+\begin{itemize}
+ \item ogólne informacje o us³udze
+   \begin{itemize}
+    \item nazwa kontraktu, wersja
+    \item w³asciciel (osoba/organizacja)
+    \item rodzaj us³ugi (np. integracyjna, prezentacyjna, biznesowa)
+   \end{itemize}
+ \item opis funkcjonalny operacji zawartych w us³udze
+   \begin{itemize}
+    \item semantyka operacji (wymagania funkcjonalne w stosunku do us³ugi)
+    \item syntaktyka operacji (typy argumentów i rezultatów, wyj±tki)
+    \item szczegó³y sposobu wywo³ania operacji (adres URL us³ugi oraz rodzaj protoko³u transportu np. SOAP)
+   \end{itemize}
+ \item opis niefunkcjonalny
+   \begin{itemize}
+    \item transakcyjno¶æ operacji
+    \item QoS (Quality of Service)
+    \item SLA (Service Level Agreement) np. dozwolone opó¼nienie w wykonywaniu us³ugi
+    \item autoryzacja, ograniczenie dostêpu do operacji serwisu okre¶lonej grupie konsumentów
+   \end{itemize}
+\end{itemize}
+
+
+% TODO:
+% - cos wiecej o tym ze sa loosely coupled?
+% - wiecej odnosnikow do zrodel
+% - pokolorowac ladnie tekst (boldem wazniejsze rzeczy)
+% - pisac o problemach SOA?
+% - napisac rozdzial o webserwisach
+
+
+%Web Serwisy to zbiór technologii (takich jak XML, SOAP, WSDL, UDDI) 
+%Sama technologia Web Serwisów zostanie umówiona dok³adniej w dalszej czêsci pracy,
+
+
+
+
+
+%Podstawowe wymagania biznesowe takie jak obnizanie kosztu, zmniejszanie czasu potrzebnego na stworzenie oprogramowania, integracja systemow, B2B oraz B2C (????), zwiekszenie ROI (????), tworzenie adaptacyjnego i responsywnego modelu biznesowego etc, powodowa³y ci±g³e poszukiwanie lepszych rozwiazan. Powstajace rozwazania punktowe (???) nie rozwiazywaly podstawowego problemu.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%
+
+%However, several recent developments in the software industry have helped to bring SOA further to the forefront. With personalized client/server, Web-based and portal-style user interfaces, an increasing number of projects require reuse of application business logic over multiple access channels. Different user categories (operators, customers, mobile sales staff, self-service employees, managers), in different situations (office, home, road, hotel) and using different devices (personal digital assistants, phones, laptop computers) all may request access to the same essential set of back-end business functions. The loosely coupled SOA provides the natural basis for unintrusive reuse of the back-end logic by multiple styles of clients.
+
+%In many respects, SOA is a new way of thinking about computing. The development mindset must switch from connecting one system to another to providing services which abstract the functionality.
+
+%The service provides those common functions and a program becomes logic to perform unique actions while orchestrating these services by invoking them at the appropriate time and in the appropriate sequence.
+
+
+%DEFINICJA:
+
+%Integracja odnosi siê do organizacji systemów (komputerowych, produkcyjnych lub administracyjnych) i polega na zespoleniu tych systemów tak, aby mog³y one korzystaæ nawzajem ze swoich zasobów, takich jak pliki lub urz±dzenia.
+
+
+%Droga w kierunku SOA ma swój pocz±tek o wiele wcze¶niej ni¿ mog³oby siê wydawaæ, mianowicie w latach 60 ubieg³ego wieku. W roku 1968 w niemieckim mie¶cie Garmisch odby³a siê konferencja na której amerykañski in¿ynier Malcolm Douglas McIlroy wyg³osi³ odczyt pod tytu³em ?Mass Produced Software Components? 1). By³a to pierwsza publikacja na ¶wiecie ukazuj±ca ideê budowania oprogramowania na podstawie istniej±cych ju¿ komponentów. Oczywi¶cie sama idea budowania oprogramowania z mniejszych elementów by³a ju¿ znana o wiele wcze¶niej - wszak elementami tymi mog± byæ np. funkcje lub obiekty. Ka¿dy z tych elementów mo¿e byæ traktowany jako pewnego rodzaju ?czarna skrzynka?. Umo¿liwia ona w sposób kontrolowany dostêp do pewnej funkcjonalno¶ci (zachowania, danych) poprzez dobrze sprecyzowany interfejs. W przypadku funkcji interfejsem tym jest jej nag³ówek a zachowaniem cia³o, w przypadku obiektu odpowiednio deklaracja interfejsu oraz jego implementacja. Równie¿ programowanie komponentowe wprowadzone przez McIlroy'a wpisuje siê w koncepcje ?czarnych skrzynek?, ale wyró¿nia siê mniejsz± ziarnisto¶ci± ni¿ np. programowanie obiektowe. Komponent mo¿na wzi±æ komponent z dr promotora2) jest zwykle du¿ym modu³em programowym, zrealizowanym najczê¶ciej z po³±czenia grupy obiektów, które pracuj± razem w celu udostêpnienia pewnej funkcjonalno¶ci. S± one sprawdzonym sposobem budowania oprogramowania i posiadaj± niew±tpliwie wiele znanych zalet (np. u¿ywanie dobrze przetestowanych elementów, przyspieszone tworzenie oprogramowania). Dla programowania komponentowego powsta³o oczywi¶cie wiele wspieraj±cych je systemów middleware 3) jak chocia¿by CORBA, EJB, DCOM. Jednak po pewnym czasie technologie te zaczê³y byæ ofiarami w³asnego sukcesu. Dzia³ania takie jak integracja kilku systemów (np. systemu obs³ugi kredytów z rejestrem d³u¿ników) zaczê³y byæ wbrew logice dzia³aniami czasoch³onnymi i bardzo kosztownymi. By³o to spowodowane g³ównie niekompatybilno¶ci± u¿ytych systemów middleware, trudno¶ciami w komunikacji w sieciach rozproszonych (firewall, NAT). Nawet je¶li pokonywano te problemy to w wyniku otrzymywali¶my systemy mocno ze sob± powi±zane, komponent aby u¿yæ innego musia³ wiedzieæ dok³adnie gdzie on jest (gdzie wys³aæ dane), jakiego protoko³u komunikacji u¿yæ, jaki interfejs udostêpnia zdalny komponent etc. Przy du¿ej ilo¶ci komponentów zarz±dzanie nimi i ich powi±zaniami stawa³o siê zbyt kosztownym zadaniem.
+
+%Rozwi±zaniem tych problemów znalaz³o siê w architekturze SOA. Jest to koncepcja tworzenia systemów oprogramowania na podstawie dobrze zdefiniowanych serwisów/us³ug. Pojêcie SOA obejmuje calo¶æ sposobów przetwarzania informacji, metod organizacji serwisów oraz technicznych podstaw ich funkcjonowania. Poprzez pojêcie serwisu rozumiemy tutaj element oprogramowania o dobrze wyspecyfikowanym interfejsie realizuj±cym okre¶lone funkcje. Serwis jest to wiêc zwykle co¶ wiêcej ni¿ komponent, czêsto realizowany na podstawie kilku komponentów poprzez udostêpnienie ich najwa¿niejszej funkcjonalno¶ci. Wspó³praca serwisów odbywa siê przy wykorzystaniu ustandaryzowanych sposobów komunikacji np. SOAP. Same serwisy jak i sposoby komunikacji s± zdefiniowane na do¶æ wysokim poziomie abstrakcji, w sposób niezale¿ny od u¿ywanych jêzyków programowania, architektur komputerów, systemów operacyjnych. Wszystko to sprawia, ¿e problemy integracji (znane chocia¿by z programowania komponentowego) w architekturze SOA nie wystêpuj±.
+
+
+%\subsection{Idea}
+
+%\subsection{Za³o¿enia}
+
+
+%Realizacja koncepcji SOA powinna przebiegac z uwzglêdnieniem kilku g³ównych za³o¿eñ. Ich stosowanie przybli¿a nas w stronê efektywnego i poprawnego dzia³ania stworzonego przez nas oprogramowania. Za³o¿eniami tymi s± 4):
+
+%*ponowne u¿ytkowanie ju¿ stworzonych us³ug, odpowiednia ziarnisto¶æ i podzia³ na modu³y
+%*zgodno¶æ ze standardami, zarówno ogólnymi jak i specyficznymi dla danej organizacji
+%*identyfikacja i kategoryzacja us³ug, ich monitorowanie i ¶ledzenie
+%*definiowanie kontraktów pomiêdzy us³ugami
+%*oddzielenie logiki biznesowej od u¿ywanych technologii
+
+%Jednym z najwa¿niejszych za³o¿eñ wymienionych powy¿ej jest kontrakt. Opisuje on ró¿ne aspekty wymagane do wspó³dzia³ania z danym serwisem. Jego znajomo¶æ jest kluczowa aby inny serwis móg³ z danego skorzystaæ. Modyfikacja kontraktu powinna byæ dokonywana ze szczególn± ostro¿no¶ci± poniewa¿ zwykle prowadzi do zaburzenia dzia³ania systemu. Informacje przechowywane w kontrakcie mo¿na podzieliæ na 3 grupy 5):
+
+%*ogólne informacje
+%onazwa kontraktu, wersja
+%ow³a¶ciciel (osoba/organizacja)
+%orodzaj us³ugi (np. integracyjna, prezentacyjna, biznesowa)
+%*opis funkcjonalny
+%owymagania funkcjonalne (co dok³adnie dana us³uga ma realizowaæ)
+%ooperacje (argumenty, rezultaty, wyj±tki)
+%osposób wywo³ania (adres URL oraz rodzaj transportu np. SOAP)
+%*opis niefunkcjonalny
+%oautoryzacja i bezpieczeñstwo, ograniczenie dostêpu do serwisu okre¶lonej grupie podmiotów
+%oQoS (Quality of Service)
+%otransakcyjno¶æ operacji serwisu
+%oSLA (Service Level Agreement) (np. dozwolone opó¼nienie w wykonywaniu us³ugi)
+%osemantyka dodatkowych terminów u¿ywanych w opisie us³ugi i interfejsie
+
+%\section{Problemy}
+
+%Problemy zwi±zane z SOA
+
+%SOA jest wspania³± koncepcj±, posiadaj±c± wiele zalet i korzy¶ci p³yn±cych z jej stosowania. Jednak jak wszystko na ¶wiecie ma tak¿e pewne wady. Wady te generalnie nie dyskryminuj± w ¿aden sposób tej technologii, nie s± to krytyczne lub nierozwi±zywalne problemy. Wa¿ne w nich jest to, ¿eby byæ ¶wiadomym ich istnienia. Dziêki temu mo¿emy przewidzieæ typowe problemy z którymi bêdziemy musieli siê zetkn±æ w trakcie realizacji koncepcji SOA oraz spróbowaæ im zaradziæ.
+
+%Jedn± z g³ównych zasad panuj±cych w SOA jest tworzenie lu¼no powi±zanych serwisów. Ma to swoje niezaprzeczalne zalety które by³y ju¿ wcze¶niej poruszane w niniejszej pracy. Jednak czy lu¼ne wi±zania rzeczywi¶cie s± sam± zalet±? Ich obs³uga wymaga przecie¿ u¿ycia bardzo du¿ej ilo¶ci kodu, odpowiedzialnego za takie rzeczy jak wyszukiwanie us³ug, ró¿ne rodzaju transportu danych i informacji kontrolnych, autoryzacje i autentykacje, transakcyjno¶æ pomiêdzy serwisami itp. Wszystkie te rzeczy oczywi¶cie dziej± siê w trybie rozproszonym co znacz±co zwiêksza ich stopieñ skomplikowania, tym samym wystawiaj±c je na ró¿nego rodzaju ataki z zewn±trz i b³êdy wewn±trz systemu. Rozproszenie i skomplikowanie systemu powoduje te¿ zwykle jego czê¶ciow± nieprzewidywalno¶æ, np. okre¶lone problemy mog± pojawiaæ siê tylko przy pewnych opó¼nieniach na ³±czach prowadz±cych do niektórych us³ug. Mo¿e to utrudniaæ wyszukiwanie i poprawianie b³êdów. Problemem staje siê te¿ du¿e tempo ewolucji systemu. Zmiany mog± byæ wprowadzane przez wielu u¿ytkowników (czêsto nie maj±cych wiêkszej wiedzy o programowaniu) w wielu miejscach systemu. Wiadomo, ¿e teoretycznie dziêki zachowaniu kontraktów nie powinno to powodowaæ niepoprawnej pracy, ale w praktyce mo¿e to stwa¿ac problemy, pomijaj±c ju¿ fakt ¿e przecie¿ kontrakty te¿ mog± zostaæ zmienione.
+
+%Drug± do¶æ wa¿n± cech± SOA która mo¿e stanowiæ jej wadê jest ponowne u¿ywanie istniej±cych ju¿ fragmentów aplikacji. Tworzymy serwis do obs³ugi rejestru d³u¿ników poniewa¿ jest on nam potrzebny w systemie bankowym. Po chwili tworzymy system obs³ugi sklepu i wykorzystujemy nasz serwis d³u¿ników. Za chwilê wykorzystujemy go w jeszcze paru innych tworzonych przez nas systemach. Wówczas pojawia siê problem. Nasz serwis obs³ugi d³u¿ników by³ zaprojektowany do pracy w specyficznych warunkach (system bankowy). W przypadku u¿ywania go wielokrotnie w miejscach do których nie by³ pocz±tkowo przewidziany, mog± pojawiæ siê problemy z jego wydajno¶ci± i poprawno¶ci± dzia³ania. Bez wgl±du i dobrej analizy przebiegu procesów biznesowych mo¿emy nawet nie zauwa¿yæ, ¿e g³ównym sprawc± spadku wydajno¶ci jest nasz ma³y serwis obs³ugi d³u¿ników. Dodatkowo je¶li w tym ma³ym serwisie zostanie wykryty b³±d, luka w zabezpieczeniach lub z jakiego¶ powodu przestanie on dzia³aæ to powoduje to natychmiastowe konsekwencje w wielu systemach które go wykorzystuj±.
+
+%Jak wiêc widaæ architektura SOA mimo rozlicznych zalet ma tak¿e swoje wady. Nie s± to mo¿e wielkie i nierozwi±zywalne problemy, ale pokazuj± t± koncepcjê w innym ¶wietle, nie jako idealne panaceum na wszystkie bol±czki ale raczej podej¶cie które pomimo swoich wielu zalet czasem mo¿e powodowaæ problemy w praktyce.
+
+%
+

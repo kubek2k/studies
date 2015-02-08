@@ -1,0 +1,33 @@
+\chapter{Wymagania}
+% rozwiniêcie postawionego we wstêpie problemu pomiaru wydajno¶ci (to bêdzie ciê¿ki kawa³ek chleba)
+
+% to na koñcu
+\section{Wymagania dotycz±ce ¶rodowiska testowego}
+
+\subsection{Obrane technologie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% o czym tu mozna napisac...
+%
+
+pare zdan na wstepie o tym ze srodowisko ESB (?), BPEL, jakis diagram z pokazaniem gdzie jest konsola wizualizacyjna
+
+- pare zdan o potrzebach biznesowych (?) ale nie za duzo...
+- opis wymagan technicznych odnosnie samej aplikacji
+- opis wymagan technicznych ogolnych (istnienie globalnego punktu z ktorego mozna monitorowac dane etc)
+
+najpierw krotkie info o serwerach aplikacji etc?
+
+na jakim poziomie to ma byc? chyba nie tak bardzo niskim zeby schodzic do wyjatkow etc
+
+funkcjonalne/niefunkcjonalne?
+- centralny punkt z ktorego mozna monitorowac dane
+- mo¿liwie mala ingerencja (instrumentacja?) serwerow aplikacji
+- maly narzut na pomiar danych (kazdy pomiar zaburza zjawisko)
+
+
+wymagania mozna np podzielic na pare grup (ale to w sumie chyba chodzi glownei o wymagania odnosnie naszej aplikacji?):
+- wymagania zwiazane z modyfikacja srodowiska (serwerow aplikacji)
+- wymagania zwiazane z konsola wizualizacyjna
+- wymagania ogolne

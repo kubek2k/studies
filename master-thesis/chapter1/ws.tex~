@@ -1,0 +1,101 @@
+\section{Webservice}
+
+Miêdzynarodowa organizacja W3C \cite{misc:w3c} zajmuj±ca siê ustanawianiem standardów dotycz±cych Internetu zdefiniowa³a webservice w sposób nastêpuj±cy\cite{ws:w3c_def}:
+
+\begin{quotation}
+ \textbf{Webservice} - oprogramowanie wspieraj±ce wymianê danych miêdzy maszynami poprzez sieæ, wykorzystuj±ce w tym celu zbiór ustandaryzowanych technologii (WSDL, XML, SOAP, UDDI)\cite{ws:w3c_def}.
+\end{quotation}
+
+Webservice nie jest synonimem SOA. SOA jest to architektura zorientowana na lu¼no powi±zane us³ugi, podczas gdy webservice jest to zbiór konkretnych technologii (WSDL, XML, SOAP, UDDI), u¿ytych do realizacji SOA. Technologia webservice jest wiêc przyk³adowym sposobem realizacji SOA, nie jedynym, ale w dotychczasowej praktyce jednym z najpopularniejszych.
+
+Przyk³adowy scenariusz u¿ycia webservice zaprezentowany zosta³ na rysunku \ref{fig:soa-ws}. Sk³ada siê on z nastêpuj±cych etapów:
+\begin{itemize}
+ \item wyszukanie konkretnej us³ugi w rejestrze UDDI
+ \item uzyskanie dokumentu WSDL us³ugi
+ \item wys³anie zapytania zgodnego z protoko³em SOAP do us³ugi
+ \item przetworzenie zapytania przez us³ugê
+ \item odebranie odpowiedzi zgodnej z protoko³em SOAP od us³ugi
+\end{itemize}
+
+% przyk³ad us³ug webservice z zaznaczonymi WSDL, XML, SOAP, UDDI
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 330 255]{chapter1/soa-ws.png}
+ % soa-ws.png: 412x319 pixel, 90dpi, 11.63x9.00 cm, bb=0 0 330 255
+ \caption{Przyk³ad funkcjonowania aplikacji opartej o us³ugi webservice}
+ \label{fig:soa-ws}
+\end{figure}
+
+Implementacja us³ug webservice odbywa siê z wykorzystaniem ustandaryzowanych technologii:
+\begin{itemize}
+ \item WSDL (Web Service Definition Language) - opis us³ugi w postaci XML
+ \item SOAP - protokó³ wymiany danych z us³ugami
+ \item UDDI (Universal Description, Discovery and Integration) - obs³uga rejestru us³ug.
+\end{itemize}
+
+\subsection{WSDL}
+
+WSDL (Web Service Definition Language) jest to dokument XML opisuj±cy webservice. Mo¿e przechowywaæ zarówno ogóln± informacjê o us³udze (operacje i ich argumenty) jak równie¿ szczegó³owe informacje (powi±zanie us³ug z protoko³ami i adresami pod którymi us³ugi te s± dostêpne). Plik WSDL sk³ada siê z definicji nastêpuj±cych elementów (w nawiasach podano oryginalne angielskie nazwy)\cite{ws:wsdl:spec}:
+\begin{itemize}
+ \item typ (type) - definicja typu danych
+ \item komunikat (message) - z³o¿ony typ danych
+ \item operacja (operation) - definicja operacji wraz z komunikatami zawieraj±cymi argumenty oraz rezultat operacji
+ \item typ portu (port type) - zbiór operacji
+ \item wi±zanie (binding) - typ portu powi±zany z konkretnym protoko³em (np. SOAP+HTTP)
+ \item port (port) - wi±zanie wraz z adresem (np. URL dla HTTP, email dla SMTP)
+ \item us³uga (service)- zbiór portów
+\end{itemize}
+
+Dokument WSDL nie jest obowi±zkowym elementem ka¿dego webservice. Je¶li jednak wystêpuje to jest on realizacj± kontraktu SOA pomiêdzy us³ug± a jej konsumentem. Zawiera opis parametrów oczekiwanych przez us³ugê oraz oferowanych (typ rezultatu, nazwy operacji okre¶laj±ce ich semantykê). Nie odwo³uje siê w ¿aden sposób do implementacji us³ugi, dziêki czemu wystêpuje separacja pomiêdzy interfejsem us³ugi (opisywanym w WSDL i kontrakcie) a jej implementacj±. Zmiany w implementacji us³ugi - nie powoduj±ce zmian w semantyce ani syntaktyce operacji - nie zmieniaj± dokumentu WSDL tej us³ugi. Tym samym nie naruszaj± kontraktu i nie wymagaj± zmian u konsumentów us³ugi.
+
+\subsection{SOAP}
+
+SOAP (dawniej Simple Object Access Protocol, pó¼niej Service Oriented Architecture Protocol, obecnie brak oficjalnego rozwiniêcia tego akronimu\cite{ws:w3c_soap}) jest to protokó³ opisuj±cy sposób kodowania i wymiany wiadomo¶ci w formacie XML. Do przesy³ania wiadomo¶ci zakodowanej zgodnie z SOAP najczê¶ciej wykorzystuje siê protokó³ HTTP/HTTPS (ze wzglêdu na jego popularno¶æ w internecie), ale mo¿liwe jest te¿ wykorzystanie np. SMTP, FTP, RMI/IIOP. Protokó³ SOAP mo¿e byæ u¿yty w realizacji ró¿nych wzorców wymiany wiadomo¶ci (MEP - Message Exchange Pattern), ale dla potrzeb webservice u¿ywa siê go w RPC (RPC - Remote Procedure Call)\cite{ws:w3c_soap_rpc}.
+
+Wiadomo¶æ SOAP z za³±cznikami sk³ada siê z:
+\begin{itemize}
+ \item w³a¶ciwej wiadomo¶ci SOAP w formacie XML
+  \begin{itemize}
+   \item elementów nag³ówka (opcjonalne)
+   \item tre¶ci wiadomo¶ci
+  \end{itemize}
+ \item za³±czników przechowuj±cych dane binarne
+\end{itemize}
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 311 238]{chapter1/soap.png}
+ % soap.png: 1295x991 pixel, 300dpi, 10.96x8.39 cm, bb=0 0 311 238
+ \caption{Postaæ wiadomo¶ci SOAP z za³±cznikami \cite{ws:suntechdays}}
+ \label{fig:soap}
+\end{figure}
+
+Proces wykonania operacji danego webservice rozpoczyna siê od stworzenia odpowiedniej wiadomo¶ci w formacie SOAP. Format tej wiadomo¶ci zosta³ przedstawiony na rysunku \ref{fig:soap}. W jej tre¶ci przesy³ane s± informacje o ¿±danej operacji oraz warto¶ciach jej parametrów. Dodatkowo (w nag³ówku) mog± byæ przekazane np. parametry do autoryzacji (nazwa u¿ytkownika i has³o), identyfikator sesji. Po wys³aniu wiadomo¶ci do us³ugi (np. na adres uzyskany z pliku WSDL) nastêpuje wykonanie ¿±danej operacji i odes³anie odpowiedzi do nadawcy. Odpowied¼ jest równie¿ zakodowana w formacie SOAP i zawiera informacje o rezultacie wykonania operacji (lub ewentualnych wyj±tkach).
+
+\subsection{UDDI}
+UDDI (Universal Description, Discovery and Integration)\cite{ws:uddi} - technologia pozwalaj±ca na publikacjê i wyszukiwanie informacji o us³ugach webservice. Jest to otwarty standard zarz±dzany przez organizacjê OASIS \cite{ws:oasis}. Sposób wykorzystania UDDI opiera siê na mechanizmie publikacja-wyszukanie-powi±zanie (z ang. publish-find-bind) przedstawionym na \nolinebreak{rysunku \ref{fig:uddi}}:
+\begin{itemize}
+ \item u¿ycie us³ugi musi byæ poprzedzone \textbf{opublikowaniem} jej w rejestrze
+ \item konsument \textbf{wyszukuje} interesuj±ce go us³ugi w rejestrze
+ \item po znalezieniu us³ugi nastêpuje \textbf{powi±zanie} jej z konsumentem, który uzyskuje mo¿liwo¶æ wykonywania operacji tej us³ugi
+\end{itemize}
+
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 268 122]{chapter1/uddi.png}
+ % uddi.png: 700x318 pixel, 188dpi, 9.44x4.29 cm, ABB=0 0 268 122
+ \caption{Schemat wykorzystania UDDI \cite{ws:suntechdays}}
+ \label{fig:uddi}
+\end{figure}
+
+UDDI przechowuje informacjê o zbiorze podmiotów biznesowych. Pojedyñczy wpis o podmiocie biznesowym podzielony jest na nastêpuj±ce grupy:
+\begin{itemize}
+ \item ``white pages'' - adres, dane kontaktowe
+ \item ``yellow pages'' - kategorie do jakich nale¿y biznes i jego us³ugi
+ \item ``green pages'' - techniczne informacje o udostêpnianych us³ugach (m.in. adresy URL plików WSDL)
+\end{itemize}
+
+W roku 2000 wraz ze specyfikacj± standardu UDDI powsta³ publiczny rejestr us³ug UDDI stworzony przez firmê IBM, Microsoft oraz SAP \cite{ws:uddi:public}. 
+%Rejestr ten zosta³ wy³±czony w roku 2006 i do tego czasu 
+W rejestrze tym, do momentu jego wy³±czenia w roku 2006, zgromadzono ponad 50000 wpisów o us³ugach \cite{ws:uddi:public}. Wy³±czenie publicznego rejestru by³o efektem zwiêkszaj±cego siê zainteresowania podmiotów biznesowych prywatnymi rejestrami UDDI.

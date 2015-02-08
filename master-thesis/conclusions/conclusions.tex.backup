@@ -1,0 +1,57 @@
+\chapter{Wnioski z pracy i mo¿liwo¶ci dalszego rozwoju systemu}
+
+SOA to wci±¿ innowacyjny paradygmat tworzenia oprogramowania.
+Ju¿ teraz mo¿na jednak zaobserwowaæ tendencjê do zwiêkszania siê jego udzia³u w¶ród aktualnie dominuj±cych technologii IT.
+Coraz wiêcej systemów opartych jest o paradygmat SOA, co przynosi wymierne korzy¶ci w postaci np. lu¼nych powi±zañ pomiêdzy us³ugami, u³atwionej ich integracji oraz konieczno¶ci stosowania kontraktów. 
+Badanie wydajno¶ci aplikacji opartych o paradygmat SOA jest bardzo przydatne poniewa¿ pozwala m.in. znale¼æ s³abe punkty tworzonej aplikacji (ang. bottlenecks), analizowaæ zachowanie siê konkretnych wywo³añ procesów biznesowych oraz wyszukiwaæ b³êdy i niepoprawnie dzia³aj±ce procesy.
+Autorom niniejszej pracy w trakcie jej tworzenia nie uda³o siê znale¼æ aplikacji wspieraj±cych takie badania oraz spe³niaj±cych jednocze¶nie zbiór wymagañ zawartych w rozdziale 3.1.
+Autorzy zaproponowali modularn± architekturê aplikacji pozwalaj±c± analizowaæ procesy biznesowe zachodz±ce w dowolnym kontenerze aplikacji oraz obrazowaæ je w czytelny sposób z u¿yciem centralnej konsoli wizualizacyjnej.
+
+W ramach pracy autorzy zapoznali siê z mo¿liwo¶ciami technologii wspomagaj±cych budowanie aplikacji o architekturze SOA. Pog³êbiona zosta³a wiedza na temat jêzyka BPEL i rozwi±zañ realizuj±cych koncepcjê ESB. Wyniki analizy mo¿liwo¶ci oprogramowania wspieraj±cego tworzenie rozwi±zañ o architekturze SOA, zosta³y wykorzystane do wybrania przyk³adowego, testowanego ¶rodowiska.
+% W rezultacie naszej pracy mamy mo¿liwo¶æ ????. (zdania magisterki :)
+
+Postawione zosta³y wymagania jakie powinien spe³niaæ system badania wydajno¶ci, ze szczególnym naciskiem na sposób umieszczenia sensora w obrêbie ¶rodowiska wykonawczego.
+% Rozwa¿ono kilka koncepcji, i wybrano do implementacji najlepiej pasuj±c± w kontek¶cie postawionych wymagañ.
+Za zbioru rozwa¿anych koncepcji, do implementacji wybrano najlepiej pasuj±c± w kontek¶cie postawionych wymagañ.
+
+Stworzone zosta³o zarówno narzêdzie do automatycznej instrumentacji ¶rodowiska wykonawczego, jak i obserwacji otrzymywanych parametrów wydajno¶ciowych aplikacji.
+Zosta³o ono wzbogacone o mo¿liwo¶æ przedstawiania wyników obserwacji w postaci samobuduj±cego siê procesu biznesowego.
+
+W celu prezentacji osi±gniêæ przygotowane zosta³o ¶rodowisko testowe.
+Do testowania wybrano kilka przyk³adowych aplikacji, realizuj±cych typowe przypadki u¿ycia w aplikacjach opartych o jêzyk BPEL. 
+Przypadki te by³y podstaw± do przeprowadzenia procedur testowych, oraz ¼ród³em zamieszczonych w pracy wyników.
+% W oparciu o powy¿sze przeprowadzono przyk³adow± procedurê testow±, bêd±c± ¼ród³em zamieszczonych w pracy wyników.
+
+\section{Mo¿liwo¶ci zastosowania stworzonego oprogramowania}
+
+Stworzone oprogramowanie w pe³ni spe³nia postawione w pracy wymagania.
+Narzêdzie pozwala na wykonanie pomiarów dzia³aj±cej aplikacji, bez znacznej ingerencji w ¶rodowisko wykonawcze. Dostarczane statystyki s± zbierane w locie i wysy³ane w ogólnie znanym formacie do serwera JMS, dziêki czemu mo¿liwa jest ich jednoczesna analiza w kilku lokalizacjach. % TODO dodac ze mozliwy jest jednoczesny pomiar z kilku kontenerow
+
+Narzêdzie wizualizacyjne pozwala na prezentacjê wyników analizy w trakcie dzia³ania aplikacji, pozwalaj±c jednocze¶nie na szybkie odnalezienie ``w±skich garde³'' systemów. Zbierane statystyki mo¿na poddawaæ dalszej obróbce, celem dalszej agregacji, tworzeniu wykresów itp. Z uwagi na niski narzut czasowy wprowadzany instrmentacj± ¶rodowiska wykonawczego, narzêdzie mo¿e byæ z powodzeniem stosowane w dzia³aj±cych aplikacjach m.in. do ¶ledzenia czêstotliwo¶ci przej¶æ poszczególnych ¶cie¿ek w procesie biznesowym.
+
+Dziêki intuicyjnemu interfejsowi u¿ytkownika, narzêdzie mo¿e byæ u¿ywane nawet przez programistów o niewielkiej wiedzy w dziedzinie problemu. Nieskomplikowana forma prezentacji graficznej wyników pomiarów, pozwala na przedstawianie ich osobom nie posiadaj±cym szczegó³owej wiedzy technicznej.
+
+\section{Dalszy rozwój systemu}
+
+Zrealizowana aplikacja ma s³u¿yæ jako przyk³adowe rozwi±zanie problemu badania wydajno¶ci us³ug zgodnych z paradygmatem SOA. Aplikacja nie powinna byæ wiêc traktowana jako kompletny program, lecz jako punkt wyj¶cia do dalszych prac i udoskonaleñ.
+
+\paragraph{Zwiêkszenie ilo¶ci obs³ugiwanych implementacji}
+
+Aplikacja zosta³a wyposa¿ona w regu³y instrumentacji kontenerów OpenESB. Poniewa¿ sama aplikacja ma jedynie demonstrowaæ sposób badania wydajno¶ci, wiêc ograniczenie wbudowanej obs³ugi kontenerów tylko do OpenESB nie ma wp³ywu na testy opisane w rozdziale 5. Modu³owa budowa sensora wydajno¶ci umo¿liwia proste dopisanie regu³ instrumentacji dla dowolnego kontenera ESB. Regu³y te s± podstaw± do dokonania instrumentacji przez bibliotekê wstrzykuj±c± kod (por. rozdzia³ 4.1.1). Biblioteka ta zapewnia podstawowy zestaw adnotacji dla pisania regu³ (np. wykonaj podany kod przed startem okre¶lonej metody). Zestaw ten mo¿e byæ poszerzony w przypadku braku odpowiedniej adnotacji. W szczególnych przypadkach istnieje mo¿liwo¶æ wymiany ca³ego silnika instrumentuj±cego kod, bez zmiany pozosta³ej czê¶ci systemu (konsoli, sensorów, formatu wiadomo¶ci JMS itp). Kolejnym etapem pracy nad aplikacj± powinno byæ napisanie regu³ instrumentacji dla najpopularniejszych kontenerów obecnych na rynku.
+
+GlassFish (serwer aplikacji wchodz±cy w sk³ad OpenESB) w wersji 3.0\cite{concl:glassfishv3} bêdzie budowany na bazie platformy OSGi\cite{concl:osgi} (system modu³ów dla Javy). Powoduje to mo¿liwo¶æ umieszczania modu³ów (np. silnika BPEL) w dowolnym ¶rodowisku wspieraj±cym OSGi. Poniewa¿ regu³y instrumentacji silnika BPEL z OpenESB s± ju¿ napisane, wiêc mamy mo¿liwo¶æ  integracji us³ug za pomoc± ESB oraz badania i analizowania wydajno¶ci us³ug w dowolnym ¶rodowisku wspieraj±cym platformê OSGi.
+
+
+\paragraph{Rozszerzenie mo¿liwo¶ci wizualizacyjnych konsoli}
+
+Obecnie konsola wizualizacyjna jest w stanie przedstawiæ badany proces w postaci diagramu BPEL. Posiada równie¿ mo¿liwo¶æ wy¶wietlania informacji statystycznych (np. statystyki czasowe czyli minimalny, ¶redni i maksymalny czas trwania aktywno¶ci) o dowolnym elemencie procesu. Otrzymywane od sensorów dane pozwalaj± jednak na prezentacjê wiêkszej ilo¶ci informacji. Pozwalaj± one np. na wykre¶lanie diagramów Gantta\cite{diagram:gantt} zachodz±cego procesu. Obrazuje on podzia³ procesu na poszczególne zadania oraz rozmieszczenie ich w czasie. Dodatkowo obecn± wersjê aplikacji mo¿na rozszerzyæ o mo¿liwo¶æ rysowania wykresów (np. koszt wywo³ania operacji webservice w czasie).
+
+\paragraph{Integracja prezentacji wyników z modu³em NetBeans BPEL Designer}
+
+¦rodowisko programowania NetBeans udostêpnia wbudowany modu³ BPEL Desinger umo¿liwiaj±cy graficzn± edycjê i modelowanie procesów BPEL. Fragmenty tego modu³u zosta³y u¿yte w stworzonej przez autorów aplikacji do prezentowania procesu BPEL w konsoli wizualizacyjnej. Docelowo nale¿a³oby równie¿ zrealizowaæ integracjê w drug± stronê, czyli wbudowaæ w edytor Netbeans BPEL Designer mo¿liwo¶ci konsoli wizualizacyjnej procesów BPEL. Posiadanie danych o wydajno¶ci budowanego procesu bezpo¶rednio w edytorze, usprawni³oby modelowanie procesów, oraz umo¿liwi³o efektywniejsze i szybsze poprawianie b³êdów w procesach biznesowych.
+
+\bigskip
+
+Niniejsza praca magisterska wpisuje siê w aktualne ¶wiatowe trendy tworzenia aplikacji opartych o us³ugi i stara siê wype³niæ lukê w badaniu ich wydajno¶ci.
+Stworzone oprogramowanie stanowi solidne narzêdzie niezbêdne do produkcyjnego zastosowania procedur biznesowych implementowanych w oparciu o jêzyk BPEL.
+Mnogo¶æ problemów oraz mo¿liwo¶ci rozwoju stworzonego oprogramowania postawionych w pracy, ¶wiadczy o szerokim spektrum mo¿liwo¶ci kontynuacji badañ w tej dziedzinie.

@@ -1,0 +1,68 @@
+
+W celu zbadania wydajno¶ci aplikacji zbudowanej zgodnie z paradygmatem SOA potrzebne s± dodatkowe dane zbierane w trakcie dzia³ania takiej aplikacji. Dane te opisuj± jednostkowe operacje wykonywane przez aplikacjê (np. wywo³anie us³ugi webservice, sekwencje wywo³añ operacji, pêtle, instrukcje warunkowe, bloki obs³ugi wyj±tków) i zawieraj± m.in. informacjê o czasie trwania danej operacji, dodatkowych parametrach (np. adres i operacja przy us³udze webservice), statusie (np. zakoñczenie poprawne, zakoñczenie z powodu wyj±tku) itp. Po zebraniu pomiary mog± zostaæ przedstawione u¿ytkownikowi w czytelny sposób, np. jako diagramy Gantta\cite{diagram:gantt}, model BPEL, wykresy, itp.
+
+W systemach badaj±cych wydajno¶æ za zbieranie danych odpowiada sensor wydajno¶ci.
+Mo¿na wyró¿niæ dwa podej¶cia do kwestii jego lokalizacji:
+\begin{itemize}
+ \item Umieszczenie sensora wydajno¶ci w \textbf{obrêbie us³ug}.  Takie podej¶cie wymaga modyfikacji ka¿dej z us³ug, co powoduje, ¿e us³ugi musz± byæ ¶wiadome brania udzia³u w badaniu wydajno¶ci. W przypadku posiadania kodu ¼ród³owego us³ug konieczna jest jego analiza i odpowiednia modyfikacja, co czyni ten proces czasoch³onnym; przy braku kodu ¼ród³owego us³ug odpowiednia modyfikacja jest ju¿ czêsto niewykonalna w rozs±dnych granicach czasowych. 
+ \item Umieszczenie sensora wydajno¶ci w \textbf{obrêbie kontenera}. Zalet± tego podej¶cia jest fakt, ¿e modyfikacje ¶rodowiska w którym dzia³aj± us³ugi nale¿y wykonaæ tylko raz, niezale¿nie od ilo¶ci wykorzystywanych us³ug.
+\end{itemize}
+Wariant z sensorem wydajno¶ci w us³ugach jest niepraktyczny w realizacji i jako taki zosta³ odrzucony.  Podjêto decyzjê o umieszczeniu sensora wydajno¶ci w obrêbie kontenera szyny ³±cz±cej us³ugi. Zarys koncepcji badania wydajno¶ci aplikacji zosta³ przedstawiony na rysunku \ref{fig:desc:arch}.
+
+\begin{figure}
+ \centering
+ \includegraphics[bb=0 0 349 327]{description/esb2-eff.png}
+ % esb2-eff.png: 911x853 pixel, 188dpi, 12.31x11.52 cm, bb=0 0 349 327
+ \caption{Architektura u¿ywana do badania wydajno¶ci aplikacji}
+ \label{fig:desc:arch}
+\end{figure}
+
+
+Przedstawiona ogólna architektura systemu badania wydajno¶ci aplikacji opartych o paradygmat SOA ukrywa w sobie szereg problemów i decyzji, zarówno koncepcyjnych (np. sposób dzia³ania sensora wydajno¶ci, sposób identyfikacji procesów i aktywno¶ci badanej us³ugi) jak i technologicznych (np. rodzaj rozwi±zania MOM u¿ywanego do przesy³ania danych o wydajno¶ci). Prowadzi to do istnienia wielu mo¿liwych sposobów realizacji takiej aplikacji. Przed wybraniem jednego sposobu 
+% badania wydajno¶ci - które zostanie zaimplementowane i przetestowane w oparciu o przyk³adowe aplikacje - 
+nale¿a³o zdefiniowaæ kryteria ró¿nicuj±ce potencjalne rozwi±zania. Kryteriami tymi s± wymagania funkcjonalne i niefunkcjonalne w stosunku do elementów architektury zawartych na rysunku \ref{fig:desc:arch}.
+
+\section{Wymagania}
+
+Zestaw wymagañ zosta³ podzielony na dwie grupy, pierwsza dotyczy konsoli wizualizacyjnej, a druga sensora wydajno¶ci.
+
+\subsection{Wymagania w stosunku do konsoli}
+
+W stosunku do konsoli wizualizacyjnej postawiono nastêpuj±ce wymagania:
+
+\begin{itemize}
+ \item przygotowanie ¶rodowiska poprzez dodanie sensora wydajno¶ci (mo¿e siê to wi±zaæ z np. instrumentacj± bibliotek serwera, modyfikacj± jego plików startowych lub rozmieszczeniem (ang. deploy) w serwerze specjalnej aplikacji monitoruj±cej wydajno¶æ)
+ \item odbieranie informacji o wydajno¶ci z wykorzystaniem Message Oriented Middleware (np. JMS)
+ \item obrazowanie na bie¿±co (ang. online) wyników badania wydajno¶ci aplikacji
+ \item prezentacja wyników w postaci sekwencji jêzyka BPEL (np. wykonanie operacji us³ugi webservice, przypisanie warto¶ci do zmiennej)
+ \item równoczesna obs³uga kilku instancji ¶rodowiska ESB
+\end{itemize}
+
+Uzyskiwane dane o wydajno¶ci aplikacji powinny byæ przedstawiane w sposób przejrzysty dla u¿ytkownika w postaci diagramu z modelem BPEL. Dla ka¿dej operacji przedstawionej na diagramie powinny byæ dostêpne informacje:
+\begin{itemize}
+ \item ¶redni, minimalny, maksymalny oraz sumaryczny czas trwania operacji
+ \item czas rozpoczêcia i zakoñczenia, parametry, rezultat (np. zakoñczenie przez rzucenie wyj±tku) ka¿dego wywo³ania operacji.
+\end{itemize}
+
+\subsection{Wymagania w stosunku do sensora wydajno¶ci}
+
+Typowa metryka uzyskiwana z procesu mierzenia wydajno¶ci - czas wykonania operacji - mo¿e mieæ ró¿n± warto¶æ w zale¿no¶ci od warstwy na której dzia³a sensor wydajno¶ci. Sytuacjê tê przedstawiono na rysunku \ref{fig:desc:invoke}, na którym znajduje siê przyk³adowy schemat wywo³ania us³ugi webservice z poziomu jêzyka BPEL w OpenESB. Przyk³adowo, je¶li sensor umie¶cimy w obrêbie JBI, to w zmierzonym czasie wykonania operacji webservice bêdzie zawarta tylko czê¶æ 4 i 5 sekwencji rzeczywistego wywo³ania operacji (por. rysunek \ref{fig:desc:invoke}). Pominiêty zostanie wówczas wp³yw adaptera JBI oraz silnika BPEL na czas wykonania operacji, a tym samym zaburzony zostanie wynik badania wydajno¶ci aplikacji. W celu zniwelowania skutków niew³a¶ciwego zbierania wyników wydajno¶ci, nale¿y sensor wydajno¶ci umie¶ciæ w obrêbie silnika BPEL. 
+
+\begin{figure}[h!kp]
+ \centering
+ \includegraphics[bb=0 0 204 473]{description/arch3.png}
+ % arch3.png: 533x1235 pixel, 188dpi, 7.20x16.68 cm, bb=0 0 204 473
+ \caption{Schemat wywo³ania us³ugi webservice w OpenESB}
+ \label{fig:desc:invoke}
+\end{figure}
+
+Wymagania w stosunku do sensora wydajno¶ci:
+\begin{itemize}
+ \item dzia³anie mo¿liwie blisko silnika BPEL, w celu uzyskania dok³adnych wyników
+ \item brak ingerencji w zewnêtrzne us³ugi (sensor nie mo¿e modyfikowaæ sposobu ich dzia³ania)
+ \item minimalny wp³yw na dzia³anie aplikacji (najwa¿niejsze jest ograniczenie narzutów czasowych zwi±zanych ze zbieraniem danych o wydajno¶ci)
+ \item mo¿liwo¶æ implementacji w najpopularniejszych serwerach aplikacji (sama implementacja sensora wydajno¶ci bêdzie ró¿ni³a siê szczegó³ami w zale¿no¶ci od serwera aplikacji)
+ \item zautomatyzowany proces do³±czania sensora wydajno¶ci, z minimaln± ingerencj± u¿ytkownika.
+% - kwestia u¿ycia tego powinna byæ w miarê niezale¿na od JBI/ESB
+\end{itemize}
+

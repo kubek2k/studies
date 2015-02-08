@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="soap.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+   inkscape:export-xdpi="400.07828"
+   inkscape:export-ydpi="400.07828">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.6537499"
+     inkscape:cx="102.13889"
+     inkscape:cy="978.86726"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1232"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#4040ff;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3585"
+       width="495.1351"
+       height="449.81183"
+       x="-118.01147"
+       y="-46.512741"
+       rx="2"
+       ry="2" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.91675806000000004;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2383"
+       width="82.36261"
+       height="146.7617"
+       x="10.670547"
+       y="13.599624"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="52.003025"
+       y="24.697784"
+       id="text3155"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3157"
+         x="52.003025"
+         y="24.697784">Wiadomość SOAP</tspan><tspan
+         sodipodi:role="line"
+         x="52.003025"
+         y="34.697784"
+         id="tspan3159">z załącznikami</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#404040;stroke-width:1.13499999000000007;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3181"
+       width="73.167046"
+       height="14.210129"
+       x="15.117499"
+       y="83.49144"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="34.048714"
+       y="92.561729"
+       id="text3183"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3185"
+         x="34.048714"
+         y="92.561729">załącznik</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#404040;stroke-width:1.13499999000000007;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3194"
+       width="73.167046"
+       height="14.210129"
+       x="15.117499"
+       y="101.34177"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="34.048714"
+       y="110.41206"
+       id="text3196"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3198"
+         x="34.048714"
+         y="110.41206">załącznik</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#404040;stroke-width:1.13499999000000007;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3202"
+       width="73.167046"
+       height="14.210129"
+       x="15.117158"
+       y="141.25107"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="34.04837"
+       y="150.32137"
+       id="text3204"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3206"
+         x="34.04837"
+         y="150.32137">załącznik</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="47.467884"
+       y="124.77337"
+       id="text3248"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3250"
+         x="47.467884"
+         y="124.77337">...</tspan><tspan
+         sodipodi:role="line"
+         x="47.467884"
+         y="134.77338"
+         id="tspan3252">...</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#404040;stroke-width:1.91675806000000004;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3278"
+       width="82.36261"
+       height="146.7617"
+       x="120.73102"
+       y="13.600101"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="146.63644"
+       y="23.790754"
+       id="text3280"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3282"
+         x="146.63644"
+         y="23.790754">Koperta</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#808080;stroke-width:1.13500000000000001;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3288"
+       width="72.082657"
+       height="55.15144"
+       x="126.0146"
+       y="32.43877"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#808080;stroke-width:1.13500000000000001;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3297"
+       width="72.082657"
+       height="55.15144"
+       x="125.71227"
+       y="96.290619"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="147.54346"
+       y="41.326656"
+       id="text3299"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3301"
+         x="147.54346"
+         y="41.326656"
+         style="font-size:6px">nagłówek</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#c4c4c4;stroke-width:1.13499999000000007;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3303"
+       width="62.887379"
+       height="9.6749811"
+       x="130.91451"
+       y="49.861805"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="143.77618"
+       y="55.908669"
+       id="text3305"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3307"
+         x="143.77618"
+         y="55.908669">element nagłówka</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#c4c4c4;stroke-width:1.13499999000000007;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3316"
+       width="62.887379"
+       height="9.6749811"
+       x="130.91458"
+       y="72.468002"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="143.77626"
+       y="78.51487"
+       id="text3318"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3320"
+         x="143.77626"
+         y="78.51487">element nagłówka</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="159.63719"
+       y="63.397709"
+       id="text3322"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3324"
+         x="159.63719"
+         y="63.397709">...</tspan><tspan
+         sodipodi:role="line"
+         x="159.63719"
+         y="68.397713"
+         id="tspan3326">...</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#c4c4c4;stroke-width:1.13499999000000007;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3330"
+       width="62.887379"
+       height="9.6749811"
+       x="130.91451"
+       y="112.51638"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="147.77618"
+       y="118.56324"
+       id="text3332"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3334"
+         x="147.77618"
+         y="118.56324">element treści</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#c4c4c4;stroke-width:1.13499999000000007;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3338"
+       width="62.887379"
+       height="9.6749811"
+       x="130.91451"
+       y="135.84215"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="147.77618"
+       y="141.88902"
+       id="text3340"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3342"
+         x="147.77618"
+         y="141.88902">element treści</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="159.63727"
+       y="126.89027"
+       id="text3344"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3346"
+         x="159.63727"
+         y="126.89027">...</tspan><tspan
+         sodipodi:role="line"
+         x="159.63727"
+         y="131.89027"
+         id="tspan3348">...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="154.06784"
+       y="105.68709"
+       id="text3350"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3352"
+         x="154.06784"
+         y="105.68709"
+         style="font-size:6px">treść</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#404040;stroke-width:1.13500000000000001;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3362"
+       width="72.476723"
+       height="37.10257"
+       x="15.462663"
+       y="42.592453"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="50.49131"
+       y="59.164909"
+       id="text3379"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318"><tspan
+         sodipodi:role="line"
+         id="tspan3381"
+         x="50.49131"
+         y="59.164909">Koperta</tspan><tspan
+         sodipodi:role="line"
+         x="50.49131"
+         y="69.164909"
+         id="tspan3383">(XML)</tspan></text>
+    <path
+       style="opacity:1;fill:none;fill-rule:evenodd;stroke:#404040;stroke-width:0.98669565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.98669565, 0.98669565;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 87.219218,43.499024 L 120.3698,13.555275"
+       id="path3385"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#404040;stroke-width:0.97418594;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.97418594, 0.97418594;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 86.999175,78.968422 L 119.94848,158.95129"
+       id="path3583"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soap.png"
+       inkscape:export-xdpi="599.88318"
+       inkscape:export-ydpi="599.88318" />
+  </g>
+</svg>

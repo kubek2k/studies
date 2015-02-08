@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="soa.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3830"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="235.63216"
+     inkscape:cy="872.76606"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1232"
+     inkscape:window-height="777"
+     inkscape:window-x="12"
+     inkscape:window-y="15" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.977;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect7696"
+       width="1052.1749"
+       height="685.89355"
+       x="-233.34523"
+       y="-139.81984" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path3173"
+       sodipodi:cx="267.85715"
+       sodipodi:cy="122.36218"
+       sodipodi:rx="34.285713"
+       sodipodi:ry="34.285713"
+       d="M 302.14286,122.36218 A 34.285713,34.285713 0 1 1 233.57143,122.36218 A 34.285713,34.285713 0 1 1 302.14286,122.36218 z"
+       transform="translate(116.92857,35.214287)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="355.5"
+       y="162.57648"
+       id="text3175"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"><tspan
+         sodipodi:role="line"
+         id="tspan3177"
+         x="355.5"
+         y="162.57648"
+         style="font-size:14px">USŁUGA</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path3191"
+       sodipodi:cx="267.85715"
+       sodipodi:cy="122.36218"
+       sodipodi:rx="34.285713"
+       sodipodi:ry="34.285713"
+       d="M 302.14286,122.36218 A 34.285713,34.285713 0 1 1 233.57143,122.36218 A 34.285713,34.285713 0 1 1 302.14286,122.36218 z"
+       transform="translate(116.92857,-44.785713)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="355.5"
+       y="82.576462"
+       id="text3193"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"><tspan
+         sodipodi:role="line"
+         id="tspan3195"
+         x="355.5"
+         y="82.576462"
+         style="font-size:14px">USŁUGA</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path3197"
+       sodipodi:cx="267.85715"
+       sodipodi:cy="122.36218"
+       sodipodi:rx="34.285713"
+       sodipodi:ry="34.285713"
+       d="M 302.14286,122.36218 A 34.285713,34.285713 0 1 1 233.57143,122.36218 A 34.285713,34.285713 0 1 1 302.14286,122.36218 z"
+       transform="translate(116.92857,115.21429)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="355.5"
+       y="242.57646"
+       id="text3199"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"><tspan
+         sodipodi:role="line"
+         id="tspan3201"
+         x="355.5"
+         y="242.57646"
+         style="font-size:14px">USŁUGA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="137.85715"
+       y="330.93362"
+       id="text3240"><tspan
+         sodipodi:role="line"
+         id="tspan3242"
+         x="137.85715"
+         y="330.93362" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="160.76097"
+       y="316.59589"
+       id="text3244"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"><tspan
+         sodipodi:role="line"
+         x="160.76097"
+         y="316.59589"
+         id="tspan3248">REJESTR USŁUG</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="path3254"
+       sodipodi:cx="155"
+       sodipodi:cy="282.36218"
+       sodipodi:rx="65"
+       sodipodi:ry="7.8571429"
+       d="M 220,282.36218 A 65,7.8571429 0 1 1 90,282.36218 A 65,7.8571429 0 1 1 220,282.36218 z"
+       transform="translate(62.196824,50.199289)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="path3252"
+       sodipodi:cx="155"
+       sodipodi:cy="282.36218"
+       sodipodi:rx="65"
+       sodipodi:ry="7.8571429"
+       d="M 220,282.36218 A 65,7.8571429 0 1 1 90,282.36218 A 65,7.8571429 0 1 1 220,282.36218 z"
+       transform="translate(62.196681,4.558514)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 282.01811,286.83141 L 282.14311,332.97426"
+       id="path3261"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 152.17882,286.86712 L 152.17882,332.49212"
+       id="path3772"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.977;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3776"
+       width="127.94212"
+       height="11.092742"
+       x="153.177"
+       y="320.77182"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.97699999999999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3791"
+       sodipodi:cx="258.09396"
+       sodipodi:cy="151.50815"
+       sodipodi:rx="52.325901"
+       sodipodi:ry="52.325901"
+       d="M 310.41986,151.50815 A 52.325901,52.325901 0 1 1 205.76806,151.50815 A 52.325901,52.325901 0 1 1 310.41986,151.50815 z"
+       transform="matrix(1.5337593,0,0,0.6554252,-307.11212,33.465241)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="16.263451"
+       y="138.07312"
+       id="text3793"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"><tspan
+         sodipodi:role="line"
+         id="tspan3795"
+         x="16.263451"
+         y="138.07312"
+         style="font-size:14px">KONSUMENT USŁUG</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend);marker-start:none"
+       d="M 106.77312,167.0645 L 192.33304,278.08026"
+       id="path3804"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="67.17514"
+       y="239.18938"
+       id="text6129"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"><tspan
+         sodipodi:role="line"
+         id="tspan6131"
+         x="67.17514"
+         y="239.18938">1. wyszukanie usług</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 204.35386,278.08026 L 118.79394,164.23607"
+       id="path6133"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257" />
+    <g
+       id="g2513"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257">
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/tomek/mgr/mgr/images/soa.png"
+         inkscape:connector-type="polyline"
+         id="path6650"
+         d="M 158.39192,114.73859 L 350.72496,70.190867"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/tomek/mgr/mgr/images/soa.png"
+         id="text7167"
+         y="85.040108"
+         x="212.13203"
+         style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="85.040108"
+           x="212.13203"
+           id="tspan7169"
+           sodipodi:role="line">2. zapytanie</tspan></text>
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/tomek/mgr/mgr/images/soa.png"
+         inkscape:connector-type="polyline"
+         id="path7173"
+         d="M 350.01786,81.504576 L 166.17009,124.63809"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/tomek/mgr/mgr/images/soa.png"
+         id="text7690"
+         y="118.98123"
+         x="236.17366"
+         style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="118.98123"
+           x="236.17366"
+           id="tspan7692"
+           sodipodi:role="line">3. odpowiedź</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow2Lend);stroke-opacity:1"
+       d="M 167.89652,136.58146 L 350.33006,154.96624"
+       id="path2523"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="240.72852"
+       y="140.50177"
+       id="text2525"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"><tspan
+         sodipodi:role="line"
+         id="tspan2527"
+         x="240.72852"
+         y="140.50177">4. zapytanie</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow2Lend);stroke-opacity:1"
+       d="M 351.74428,165.57284 L 162.94676,146.48096"
+       id="path2529"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="252.74933"
+       y="171.9368"
+       id="text2531"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/soa.png"
+       inkscape:export-xdpi="300.07257"
+       inkscape:export-ydpi="300.07257"><tspan
+         sodipodi:role="line"
+         id="tspan2533"
+         x="252.74933"
+         y="171.9368">5. odpowiedź</tspan></text>
+  </g>
+</svg>

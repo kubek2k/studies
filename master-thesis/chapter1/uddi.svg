@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="uddi.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3226"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3229"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="82.837513"
+     inkscape:cy="961.60195"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1232"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000001999999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect10279"
+       width="582.85712"
+       height="328.57144"
+       x="-128.57143"
+       y="-75.494965"
+       rx="2"
+       ry="2" />
+    <text
+       xml:space="preserve"
+       style="font-size:11;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="60"
+       y="88.076469"
+       id="text2403"><tspan
+         sodipodi:role="line"
+         id="tspan2405"
+         x="60"
+         y="88.076469" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="92.14286"
+       y="130.21931"
+       id="text2419"><tspan
+         sodipodi:role="line"
+         id="tspan2421"
+         x="92.14286"
+         y="130.21931" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="17.499996"
+       y="124.71933"
+       id="text2411"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526"><tspan
+         sodipodi:role="line"
+         id="tspan2413"
+         x="17.499996"
+         y="124.71933">KONSUMENT USŁUGI</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path2427"
+       sodipodi:cx="177.5"
+       sodipodi:cy="56.469322"
+       sodipodi:rx="55.714287"
+       sodipodi:ry="14.821428"
+       d="M 233.21429,56.469322 A 55.714287,14.821428 0 1 1 121.78571,56.469322 A 55.714287,14.821428 0 1 1 233.21429,56.469322 z"
+       transform="translate(-114.28571,65.571432)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526" />
+    <text
+       xml:space="preserve"
+       style="font-size:9px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="108.21429"
+       y="34.290749"
+       id="text2415"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526"><tspan
+         sodipodi:role="line"
+         id="tspan2417"
+         x="108.21429"
+         y="34.290749">DOSTAWCA USŁUGI</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path3199"
+       sodipodi:cx="177.5"
+       sodipodi:cy="56.469322"
+       sodipodi:rx="55.714287"
+       sodipodi:ry="14.821428"
+       d="M 233.21429,56.469322 A 55.714287,14.821428 0 1 1 121.78571,56.469322 A 55.714287,14.821428 0 1 1 233.21429,56.469322 z"
+       transform="translate(-27.142857,-25.035713)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526" />
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="238.28572"
+       y="120.61218"
+       id="text2423"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526"><tspan
+         sodipodi:role="line"
+         id="tspan2425"
+         x="238.28572"
+         y="120.61218"
+         style="font-size:9px;text-align:center;text-anchor:middle">REJESTR USŁUG</tspan><tspan
+         sodipodi:role="line"
+         x="238.28572"
+         y="131.86218"
+         style="font-size:9px;text-align:center;text-anchor:middle"
+         id="tspan3203">UDDI</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path3201"
+       sodipodi:cx="177.5"
+       sodipodi:cy="56.469322"
+       sodipodi:rx="55.714287"
+       sodipodi:ry="14.821428"
+       d="M 233.21429,56.469322 A 55.714287,14.821428 0 1 1 121.78571,56.469322 A 55.714287,14.821428 0 1 1 233.21429,56.469322 z"
+       transform="translate(61.142857,65.571432)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 238.21429,106.6479 L 238.21429,32.005038 L 206.07143,32.005038"
+       id="path7135"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 61.785714,107.00504 L 61.785714,32.362181 L 94.285714,32.362181"
+       id="path8179"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)"
+       d="M 61.071429,136.29075 L 61.071429,154.1479 L 237.85714,154.1479 L 237.85714,137.00504"
+       id="path9223"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="243.21429"
+       y="64.505035"
+       id="text10267"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526"><tspan
+         sodipodi:role="line"
+         id="tspan10269"
+         x="243.21429"
+         y="64.505035">PUBLIKACJA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="110"
+       y="167.71933"
+       id="text10271"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526"><tspan
+         sodipodi:role="line"
+         id="tspan10273"
+         x="110"
+         y="167.71933">WYSZUKANIE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="-22.5"
+       y="64.592728"
+       id="text10275"
+       inkscape:export-filename="/home/tomek/mgr/mgr/chapter1/uddi.png"
+       inkscape:export-xdpi="300.04526"
+       inkscape:export-ydpi="300.04526"><tspan
+         sodipodi:role="line"
+         id="tspan10277"
+         x="-22.5"
+         y="64.592728">POWIĄZANIE</tspan></text>
+  </g>
+</svg>

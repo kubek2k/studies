@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2523"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="arch-evo.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs2525">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient15459">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop15461" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop15463" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3358"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3376"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path3361"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.4) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Send"
+       style="overflow:visible;">
+      <path
+         id="path3370"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyTriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="EmptyTriangleOutM"
+       style="overflow:visible">
+      <path
+         id="path3519"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;fill:#FFFFFF;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.4) translate(-4.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path3364"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2531" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient15459"
+       id="linearGradient15465"
+       x1="441.48868"
+       y1="171.35378"
+       x2="79.138451"
+       y2="171.35378"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0028203,0,0,1.0028203,-0.1036829,-5.3545725e-2)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.1259824"
+     inkscape:cx="332.75748"
+     inkscape:cy="764.88205"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1400"
+     inkscape:window-height="1002"
+     inkscape:window-x="0"
+     inkscape:window-y="24">
+    <sodipodi:guide
+       orientation="0,1"
+       position="277.97947,903.6553"
+       id="guide2537" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata2528">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99369081999999997"
+       id="rect15491"
+       width="570.73352"
+       height="442.84521"
+       x="-36.25098"
+       y="-172.18442" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.96795797px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="47.893456"
+       y="148.78241"
+       id="text2533"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan2535"
+         x="47.893456"
+         y="148.78241">funkcje</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.6913991px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="36.763805"
+       y="96.695633"
+       id="text2539"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan2541"
+         x="36.763805"
+         y="96.695633">void foo() {</tspan><tspan
+         sodipodi:role="line"
+         x="36.763805"
+         y="103.80988"
+         id="tspan2547">          bar(1, &quot;abcd&quot;);</tspan><tspan
+         sodipodi:role="line"
+         x="36.763805"
+         y="110.92414"
+         id="tspan2551">          ....</tspan><tspan
+         sodipodi:role="line"
+         x="36.763805"
+         y="118.03838"
+         id="tspan2549">}</tspan><tspan
+         sodipodi:role="line"
+         x="36.763805"
+         y="125.15263"
+         id="tspan2545" /><tspan
+         sodipodi:role="line"
+         x="36.763805"
+         y="132.26688"
+         id="tspan2543" /></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect2553"
+       width="34.07349"
+       height="19.827536"
+       x="114.55169"
+       y="65.412949"
+       ry="0"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.6913991px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="121.34917"
+       y="77.107452"
+       id="text3325"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3327"
+         x="121.34917"
+         y="77.107452">Klasa 1</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect3336"
+       width="34.07349"
+       height="19.827536"
+       x="171.98071"
+       y="65.625519"
+       ry="0"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.6913991px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="178.77818"
+       y="77.32003"
+       id="text3338"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3340"
+         x="178.77818"
+         y="77.32003">Klasa 3</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect3344"
+       width="34.07349"
+       height="19.827536"
+       x="118.11319"
+       y="105.0345"
+       ry="0"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.6913991px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="124.91067"
+       y="116.729"
+       id="text3346"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3348"
+         x="124.91067"
+         y="116.729">Klasa 2</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5691399;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:3.4148392, 1.13827975;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 148.62554,74.29696 L 171.76696,74.505685"
+       id="path3350"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5691399px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#EmptyTriangleOutM);stroke-opacity:1"
+       d="M 134.24399,104.8696 L 132.49439,85.405379"
+       id="path4130"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.96795797px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="151.62181"
+       y="148.78241"
+       id="text4655"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4657"
+         x="151.62181"
+         y="148.78241">klasy</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect4661"
+       width="58.764568"
+       height="32.053398"
+       x="228.63899"
+       y="54.402958"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.6913991px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="236.75362"
+       y="63.306679"
+       id="text4663"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4665"
+         x="236.75362"
+         y="63.306679">&lt;&lt;component&gt;&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.82967854px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="237.73999"
+       y="74.633614"
+       id="text4667"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4669"
+         x="237.73999"
+         y="74.633614">Komponent 1</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect4671"
+       width="58.764568"
+       height="32.053402"
+       x="306.10141"
+       y="53.709866"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.6913991px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="313.32565"
+       y="65.284706"
+       id="text4673"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4675"
+         x="313.32565"
+         y="65.284706">&lt;&lt;component&gt;&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.82967901px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="314.31204"
+       y="76.611641"
+       id="text4677"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4679"
+         x="314.31204"
+         y="76.611641">Komponent 2</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect4688"
+       width="58.764568"
+       height="32.053398"
+       x="228.19383"
+       y="102.08851"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.6913991px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="236.30844"
+       y="110.99223"
+       id="text4690"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4692"
+         x="236.30844"
+         y="110.99223">&lt;&lt;component&gt;&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.82967854px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="237.29483"
+       y="122.31915"
+       id="text4694"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4696"
+         x="237.29483"
+         y="122.31915">Komponent 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.82967854px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="262.91833"
+       y="148.78241"
+       id="text4698"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4700"
+         x="262.91833"
+         y="148.78241">komponenty</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5691399;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#EmptyTriangleOutM);stroke-miterlimit:4;stroke-dasharray:1.13827975, 1.13827975;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 257.72839,101.80394 L 257.86901,86.740926"
+       id="path4702"
+       inkscape:connector-type="polyline"
+       inkscape:connection-end="#rect4661"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       inkscape:connection-start="#rect4688" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5691399;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:1.7074196, 1.7074196;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 305.81684,70.00201 L 287.68813,70.164215"
+       id="path4706"
+       inkscape:connector-type="polyline"
+       inkscape:connection-end="#rect4661"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="path6812"
+       sodipodi:cx="435.84161"
+       sodipodi:cy="53.012676"
+       sodipodi:rx="29.529768"
+       sodipodi:ry="17.984295"
+       d="M 465.37138,53.012676 A 29.529768,17.984295 0 1 1 406.31185,53.012676 A 29.529768,17.984295 0 1 1 465.37138,53.012676 z"
+       transform="matrix(1.0028202,0,0,1.0028202,2.5681715,-15.639361)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.02820206px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="418.93558"
+       y="40.192924"
+       id="text6814"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan6816"
+         x="418.93558"
+         y="40.192924">Usługa 1</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="path6825"
+       sodipodi:cx="435.84161"
+       sodipodi:cy="53.012676"
+       sodipodi:rx="29.529768"
+       sodipodi:ry="17.984295"
+       d="M 465.37138,53.012676 A 29.529768,17.984295 0 1 1 406.31185,53.012676 A 29.529768,17.984295 0 1 1 465.37138,53.012676 z"
+       transform="matrix(1.0028202,0,0,1.0028202,51.77481,32.676665)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.02820206px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="468.14221"
+       y="88.508949"
+       id="text6827"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan6829"
+         x="468.14221"
+         y="88.508949">Usługa 2</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="path6833"
+       sodipodi:cx="435.84161"
+       sodipodi:cy="53.012676"
+       sodipodi:rx="29.529768"
+       sodipodi:ry="17.984295"
+       d="M 465.37138,53.012676 A 29.529768,17.984295 0 1 1 406.31185,53.012676 A 29.529768,17.984295 0 1 1 465.37138,53.012676 z"
+       transform="matrix(1.0028202,0,0,1.0028202,-25.708957,60.731132)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.02820206000000169px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00282025000000008;stroke-opacity:1;font-family:Arial"
+       x="390.65845"
+       y="116.56342"
+       id="text6835"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan6837"
+         x="390.65845"
+         y="116.56342"
+         style="stroke-width:1.00282025000000008;stroke:none;stroke-opacity:1;fill:#000000;fill-opacity:1">Usługa 3</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00282025px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-end:none;stroke-opacity:1;display:inline"
+       d="M 455.89274,51.550057 L 473.7051,70.698344"
+       id="path7366"
+       inkscape:connector-type="polyline"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00282025px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-end:none;stroke-opacity:1;display:inline"
+       d="M 462.12707,94.745032 L 438.52568,106.32306"
+       id="path7368"
+       inkscape:connector-type="polyline"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.82967854px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="449.21695"
+       y="149.07272"
+       id="text12169"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan12171"
+         x="449.21695"
+         y="149.07272">usługi</tspan></text>
+    <path
+       style="fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:url(#linearGradient15465);stroke-width:6.31776762;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 51.552161,171.78349 L 433.62728,171.78349"
+       id="path12173"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/arch-evo.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="158.08417"
+       y="195.33282"
+       id="text15467"><tspan
+         sodipodi:role="line"
+         id="tspan15469"
+         x="158.08417"
+         y="195.33282" /></text>
+  </g>
+</svg>

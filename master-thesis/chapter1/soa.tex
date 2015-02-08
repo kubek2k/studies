@@ -1,0 +1,95 @@
+\section{SOA}
+
+Zwiêkszone zainteresowanie SOA zwi±zane jest z rozpowszechnianiem siê technologii webservice i dyskusjami na temat zysków, które mo¿na dziêki ich wdro¿eniu osi±gn±æ. Problemy poruszane w tych dyskusjach nie s± nowe, pojawia³y siê ju¿ od czasu gdy technologia CORBA umo¿liwi³a integracjê heterogenicznych aplikacji z ró¿nych ¶rodowisk. Do problemów tych - zwi±zanych z integracj± aplikacji - mo¿na zaliczyæ np:
+
+\begin{itemize}
+ \item niezgodno¶æ danych na poziomie binarnym (np. jeden komputer u¿ywa kodowania Big Endian a inny Little Endian)
+ \item konieczno¶æ obs³ugi rozproszonych mechanizmów transakcyjnych, autoryzacji i uwierzytelniania
+ \item ró¿nice koncepcyjne pomiêdzy u¿ytymi platformami po¶rednicz±cymi (np. RMI operuje na poziomie wywo³ania metody interfejsu, Sun RPC na poziomie wywo³ania funkcji)
+\end{itemize}
+
+Technologie obiektowe stworzone w latach 90 XX wieku (CORBA, DCOM, RMI itp.) pozwalaj± na integracjê aplikacji oraz zmniejszaj± konieczno¶æ nadmiernego skupiania siê in¿ynierów nad kwestiami technologicznymi tego procesu. Dla przyk³adu obiekty w technologii CORBA (wykorzystuj±cej do transportu protokó³ IIOP) mog± komunikowaæ siê nie tylko z innymi obiektami CORBA, ale tak¿e np. z RMI. Technologie te nie rozwi±za³y wszystkich problemów integracyjnych, a oprócz nich zaczê³y pojawiaæ siê nowe utrudnienia:
+
+\begin{itemize}
+ \item statyczno¶æ obiektów, brak mo¿liwo¶ci wymiany wadliwych w trakcie dzia³ania systemu
+ \item ¶cis³e powi±zanie elementów systemu (z ang. tight coupling)
+ \item redundantno¶æ oprogramowania (np. implementacja tej samej funkcjonalno¶ci w kilku systemach)
+ \item brak ponownego u¿ytkowania ju¿ stworzonych podsystemów
+ \item integracja N podsystemów (z których ka¿dy mo¿e u¿ywaæ ka¿dego innego) wymaga³a ilo¶ci po³±czeñ proporcjonalnej do kwadratu ilo¶ci podsystemów (por. rysunek \ref{fig:integr})
+\end{itemize}
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 241 97]{chapter1/integr.png}
+ % integr.png: 631x254 pixel, 188dpi, 8.51x3.43 cm, bb=0 0 241 97
+ \caption{Schemat integracji 4 podsystemów (ka¿dy-z-ka¿dym)}
+ \label{fig:integr}
+\end{figure}
+
+
+Na prze³omie XX i XXI wieku pojawi³y siê technologie, których u¿ycie pozwoli³o rozwi±zaæ czê¶æ wspomnianych problemów.
+Najpopularniejsze z nich to technologia webservice. Jednak oprócz technologii potrzebny by³ równie¿ ogólny opis architektury. Architektury, w której aplikacje mog³y byæ tworzone, integrowane i powtórnie u¿ytkowane; która umo¿liwi³aby sk³adanie aplikacji z gotowych elementów w celu szybkiego dostarczania rozwi±zañ. Prób± odpowiedzi na te potrzeby by³o zaproponowanie SOA.
+
+\begin{quotation}
+ \textbf{SOA} (\textbf{Service Oriented Architecture}) \cite{soa:open_group_def} - architektura zorientowana na lu¼no powi±zane \textbf{us³ugi}.
+\end{quotation}
+
+\begin{quotation}
+ \textbf{Us³uga} - logiczna reprezentacja powtarzalnej czynno¶ci biznesowej maj±ca oczekiwany rezultat (np. pobierz prognozê pogody, sprawd¼ czy osoba figuruje w krajowym rejestrze d³ugów)\cite{soa:open_group_def}.
+\end{quotation}
+
+Podkre¶lenia wymaga fakt, ¿e SOA i webservice nie s± pojêciami równoznacznymi. Us³ugi webservice s± dowodem i przyk³adem na istnienie technologii, która umo¿liwia konstrukcjê systemu zgodnego z SOA. 
+% Zostan± omówione bardziej szczegó³owo w nastêpnym rozdziale.
+
+Na rysunku \ref{fig:soa} znajduje siê przyk³adowy schemat funkcjonowania aplikacji opartej o SOA. Pierwszym etapem jej dzia³ania jest wyszukanie wymaganej us³ugi w rejestrze (uzyskuje siê w ten sposób m.in. informacjê o lokalizacji us³ugi). Nastêpnie do us³ugi wys³ane zostaje ¿±danie wykonania operacji, które jest przez ni± przetwarzane a rezultat odes³any z powrotem do aplikacji. Schemat ten jest powielany dla ka¿dej z us³ug, a ca³y ci±g wywo³añ jest sterowany kodem aplikacji SOA.
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 330 238]{chapter1/soa.png}
+ % soa.png: 412x298 pixel, 90dpi, 11.63x8.41 cm, bb=0 0 330 238
+ \caption{Przyk³adowy schemat funkcjonowania aplikacji opartej o SOA}
+ \label{fig:soa}
+\end{figure}
+
+\subsection{Kluczowe elementy}
+
+Wybrane elementy funkcjonowania systemu opartego o SOA:
+\begin{enumerate}
+ \item Wszystkie operacje systemu s± zdefiniowane jako \textbf{us³ugi}. Mog± to byæ zarówno proste operacje biznesowe (pobierz stan konta), operacje transakcyjne zbudowane z innych us³ug (przelew miêdzy rachunkami) jak i funkcje systemowe (np. wy¶lij e-mail). Do in¿ynierów nale¿y decyzja o poziomie ziarnisto¶ci oferowanych us³ug.
+ \item Interfejs us³ugi jest \textbf{odseparowany} od implementacji. Konsumenci us³ugi nie znaj± dok³adnego sposobu realizacji operacji, znaj± jedynie semantykê i syntaktykê tej operacji.
+ \item Prawid³owe funkcjonowanie systemu przy zachowaniu lu¼nego wi±zania (ang. loose coupling) miêdzy us³ugami uzyskuje siê dziêki wprowadzeniu \textbf{kontraktów}.
+ \item System jest \textbf{systemem dynamicznym}. W trakcie jego dzia³ania mo¿na dodawaæ nowe us³ugi oraz wymieniaæ stare (np. poprawiaæ znalezione w nich b³êdy, konstruowaæ efektywniejsze wersje us³ugi).
+ \item Istnieje mo¿liwo¶æ \textbf{wielokrotnej implementacji} tej samej us³ugi w ró¿nych wersjach (np. za pomoc± ró¿nych algorytmów, ró¿nych dostawców). U¿ytkownik decyduje której instancji us³ugi chce u¿yæ (np. tej która w danej chwili jest najmniej obci±¿ona lub tej która jest najtañsza).
+ \item Budowanie systemu odbywa siê na zasadzie \textbf{kompozycji} z istniej±cych ju¿ us³ug. Poprzednio systemy by³y tworzone poprzez integracjê elementów, co powodowa³o konieczno¶æ pisania kodu dostosowuj±cego mechanizmy tych elementów (np. sposobu komunikacji, obs³ugi transakcji, kontroli dostêpu).
+ \item Wystêpuje ca³kowita \textbf{transparentno¶æ lokalizacji}. Konsument us³ugi nie jest ¶wiadomy gdzie fizycznie operacje danej us³ugi s± wykonywane. Us³uga mo¿e w sposób niezauwa¿alny dla konsumenta migrowaæ pomiêdzy maszynami w trakcie dzia³ania systemu albo byæ zreplikowana na kilka maszyn w celu zmniejszenia czasu wykonywania operacji.
+\end{enumerate}
+Dodatkowej uwagi wymaga pojêcie kontraktów, bêd±cych podstaw± prawid³owej konstrukcji oprogramowania opartego o SOA.
+
+\subsection{Kontrakt}
+
+Kontrakty s± zawierane ka¿dorazowo pomiêdzy us³ug± a jej konsumentem (którym mo¿e byæ tak¿e inna us³uga). Umo¿liwiaj± separacjê interfejsów od implementacji oraz realizacjê lu¼nych powi±zañ pomiêdzy us³ugami (modyfikacja szczegó³ów implementacji us³ugi nie powoduje zmian w kontrakcie, a wiêc jest transparentna dla konsumentów danej us³ugi). Zawieraj± opis informacji oferowanych i oczekiwanych przez us³ugê. Dobry kontrakt powinien zawieraæ nastêpuj±ce pozycje \cite{soa:kontrakt}:
+
+\begin{itemize}
+ \item ogólne informacje o us³udze
+   \begin{itemize}
+    \item nazwa kontraktu, wersja
+    \item w³a¶ciciel (osoba/organizacja)
+    \item rodzaj us³ugi (np. integracyjna, prezentacyjna, biznesowa)
+   \end{itemize}
+ \item opis funkcjonalny operacji zawartych w us³udze
+   \begin{itemize}
+    \item semantyka operacji (wymagania funkcjonalne w stosunku do us³ugi)
+    \item syntaktyka operacji (typy argumentów i rezultatów, wyj±tki)
+    \item szczegó³y sposobu wywo³ania operacji (adres URL us³ugi oraz rodzaj protoko³u transportu np. SOAP)
+   \end{itemize}
+ \item opis niefunkcjonalny
+   \begin{itemize}
+    \item transakcyjno¶æ operacji
+    \item QoS (Quality of Service)
+    \item SLA (Service Level Agreement) np. dozwolone opó¼nienie w wykonywaniu us³ugi
+    \item autoryzacja, ograniczenie dostêpu do operacji serwisu okre¶lonej grupie konsumentów
+   \end{itemize}
+\end{itemize}
+
+Podkre¶lenia wymaga fakt, ¿e nie istnieje sformalizowana postaæ kontraktu SOA. Powy¿sze informacje s± jedynie proponowan± zawarto¶ci± kontraktu. Rzeczywista zawarto¶æ kontraktu bêdzie mia³a ró¿n± postaæ w zale¿no¶ci od u¿ytej technologii.
+

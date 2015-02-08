@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="arch.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3405"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lstart"
+       style="overflow:visible">
+      <path
+         id="path3402"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) translate(1,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0372633"
+     inkscape:cx="149.03025"
+     inkscape:cy="934.63783"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1232"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7800"
+       width="522.52887"
+       height="456.97174"
+       x="-113.76089"
+       y="-107.42053"
+       rx="2"
+       ry="2" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2480"
+       width="220.53133"
+       height="14.656642"
+       x="21.814535"
+       y="123.88098"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/arch.png"
+       inkscape:export-xdpi="188.33"
+       inkscape:export-ydpi="188.33" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="28.696743"
+       y="135.1291"
+       id="text2482"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/arch.png"
+       inkscape:export-xdpi="188.33"
+       inkscape:export-ydpi="188.33"><tspan
+         sodipodi:role="line"
+         id="tspan2484"
+         x="28.696743"
+         y="135.1291">MESSAGE ORIENTED MIDDLEWARE</tspan></text>
+    <g
+       id="g2496"
+       transform="translate(-10,-4)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/arch.png"
+       inkscape:export-xdpi="188.33"
+       inkscape:export-ydpi="188.33">
+      <rect
+         ry="2"
+         rx="2"
+         y="168.87346"
+         x="104.98245"
+         height="26.245613"
+         width="74.646614"
+         id="rect2486"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         id="g2492">
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+           x="113.50375"
+           y="186.59778"
+           id="text2488"><tspan
+             sodipodi:role="line"
+             id="tspan2490"
+             x="113.50375"
+             y="186.59778">KONSOLA</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3291"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/arch.png"
+       inkscape:export-xdpi="188.33"
+       inkscape:export-ydpi="188.33">
+      <rect
+         ry="2"
+         rx="2"
+         y="24.778973"
+         x="22.155388"
+         height="73.283211"
+         width="58.967419"
+         id="rect2405"
+         style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text2407"
+         y="60.678726"
+         x="50.786968"
+         style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="60.678726"
+           x="50.786968"
+           id="tspan2409"
+           sodipodi:role="line">SERWER</tspan><tspan
+           id="tspan2411"
+           y="73.178726"
+           x="50.786968"
+           sodipodi:role="line">APLIKACJI</tspan></text>
+      <rect
+         ry="2"
+         rx="2"
+         y="27.505789"
+         x="24.541353"
+         height="19.428572"
+         width="53.513783"
+         id="rect2413"
+         style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text2415"
+         y="39.094757"
+         x="30.972429"
+         style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:8px"
+           y="39.094757"
+           x="30.972429"
+           id="tspan2417"
+           sodipodi:role="line">APLIKACJA</tspan></text>
+      <text
+         id="text2509"
+         y="88.091499"
+         x="52.491226"
+         style="font-size:5px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="88.091499"
+           x="52.491226"
+           id="tspan2511"
+           sodipodi:role="line">MONITOR</tspan><tspan
+           id="tspan2513"
+           y="94.341499"
+           x="52.491226"
+           sodipodi:role="line">WYDAJNOŚCI</tspan></text>
+      <path
+         id="path3289"
+         d="M 32.0401,97.976219 L 32.0401,80.59276 L 71.919799,80.59276 L 71.919799,97.976219"
+         style="fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.59999999999999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+    <g
+       id="g3304"
+       transform="translate(161.26817,-7.7486038e-7)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/arch.png"
+       inkscape:export-xdpi="188.33"
+       inkscape:export-ydpi="188.33">
+      <rect
+         ry="2"
+         rx="2"
+         y="24.778973"
+         x="22.155388"
+         height="73.283211"
+         width="58.967419"
+         id="rect3306"
+         style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text3308"
+         y="60.678726"
+         x="50.786968"
+         style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="60.678726"
+           x="50.786968"
+           id="tspan3310"
+           sodipodi:role="line">SERWER</tspan><tspan
+           id="tspan3312"
+           y="73.178726"
+           x="50.786968"
+           sodipodi:role="line">APLIKACJI</tspan></text>
+      <rect
+         ry="2"
+         rx="2"
+         y="27.505789"
+         x="24.541353"
+         height="19.428572"
+         width="53.513783"
+         id="rect3314"
+         style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text3316"
+         y="39.094757"
+         x="30.972429"
+         style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:8px"
+           y="39.094757"
+           x="30.972429"
+           id="tspan3318"
+           sodipodi:role="line">APLIKACJA</tspan></text>
+      <text
+         id="text3320"
+         y="88.091499"
+         x="52.491226"
+         style="font-size:5px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="88.091499"
+           x="52.491226"
+           id="tspan3322"
+           sodipodi:role="line">MONITOR</tspan><tspan
+           id="tspan3324"
+           y="94.341499"
+           x="52.491226"
+           sodipodi:role="line">WYDAJNOŚCI</tspan></text>
+      <path
+         id="path3326"
+         d="M 32.0401,97.976219 L 32.0401,80.59276 L 71.919799,80.59276 L 71.919799,97.976219"
+         style="fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g3355"
+       transform="translate(80.80201,-7.7486038e-7)"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/arch.png"
+       inkscape:export-xdpi="188.33"
+       inkscape:export-ydpi="188.33">
+      <rect
+         ry="2"
+         rx="2"
+         y="24.778973"
+         x="22.155388"
+         height="73.283211"
+         width="58.967419"
+         id="rect3357"
+         style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text3359"
+         y="60.678726"
+         x="50.786968"
+         style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="60.678726"
+           x="50.786968"
+           id="tspan3361"
+           sodipodi:role="line">SERWER</tspan><tspan
+           id="tspan3363"
+           y="73.178726"
+           x="50.786968"
+           sodipodi:role="line">APLIKACJI</tspan></text>
+      <rect
+         ry="2"
+         rx="2"
+         y="27.505789"
+         x="24.541353"
+         height="19.428572"
+         width="53.513783"
+         id="rect3365"
+         style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text3367"
+         y="39.094757"
+         x="30.972429"
+         style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:8px"
+           y="39.094757"
+           x="30.972429"
+           id="tspan3369"
+           sodipodi:role="line">APLIKACJA</tspan></text>
+      <text
+         id="text3371"
+         y="88.091499"
+         x="52.491226"
+         style="font-size:5px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="88.091499"
+           x="52.491226"
+           id="tspan3373"
+           sodipodi:role="line">MONITOR</tspan><tspan
+           id="tspan3375"
+           y="94.341499"
+           x="52.491226"
+           sodipodi:role="line">WYDAJNOŚCI</tspan></text>
+      <path
+         id="path3377"
+         d="M 32.0401,97.976219 L 32.0401,80.59276 L 71.919799,80.59276 L 71.919799,97.976219"
+         style="fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.59999999999999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Lend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 132.59148,97.976219 L 132.59148,164.78324"
+       id="path3379"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/arch.png"
+       inkscape:export-xdpi="188.33"
+       inkscape:export-ydpi="188.33" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:none;marker-end:url(#Arrow2Lend)"
+       d="M 52.150376,97.976219 L 52.150376,111.95116 L 122.36591,111.95116 L 122.36591,164.44238"
+       id="path5712"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/arch.png"
+       inkscape:export-xdpi="188.33"
+       inkscape:export-ydpi="188.33" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.59999999999999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:none;marker-end:url(#Arrow2Lend)"
+       d="M 213.71429,98.317071 L 213.71429,111.95116 L 142.13534,111.95116 L 141.79449,164.44238"
+       id="path6756"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/arch.png"
+       inkscape:export-xdpi="188.33"
+       inkscape:export-ydpi="188.33" />
+  </g>
+</svg>

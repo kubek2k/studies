@@ -1,0 +1,14 @@
+\chapter{Technologie}
+
+\input{chapter1/soa.tex}
+
+\bigskip
+Paradygmat SOA w praktyce mo¿e zostaæ zrealizowany na ró¿ne sposoby. Najpopularniejszym z nich jest u¿ycie technologii webservice.
+\input{chapter1/ws.tex}
+
+\bigskip
+Oprócz technologii webservice mo¿liwo¶æ realizacji paradygmatu SOA daje równie¿ platforma integracyjna ESB.
+\input{chapter1/esb.tex}
+
+% TODO: 2 zdania :)
+\input{chapter1/bpel.tex}

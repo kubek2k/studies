@@ -1,0 +1,161 @@
+\section{BPEL}
+Aby w pe³ni korzystaæ z zalet SOA, konieczne jest osi±gniecie niezale¿no¶ci kompozycji us³ug, od ich implementacji.\cite{bpel:book:bpel4ws}
+
+Istniej± dwa podej¶cia do tego zagadnienia \cite{bpel:book:wsbpel}:
+\begin{itemize}
+ \item \textbf{Orchiestracja} - w której jeden centralny komponent przejmuje kontrolê nad us³ugami 
+ bêd±cymi uczestnikami procesu biznesowego, koordynuj±c ich wspó³pracê. Us³ugi nie s± ¶wiadome bycia
+  uczestnikami procesu biznesowego (przyk³ad ilustruje rys \ref{fig:bpel_orchiestracja}).
+  \begin{figure}[h!tb]
+   \centering
+   \includegraphics[bb=0 0 237 222]{chapter1/orchiestracja.png}
+   % orchiestracja.png: 306x287 pixel, 93dpi, 8.36x7.84 cm, bb=0 0 237 222
+   %\includegraphics[bb=0 0 311 238]{chapter1/orchiestracja.png}
+   %% orchiestracja.png: 384x294 pixel, 89dpi, 10.96x8.39 cm, bb=0 0 311 238
+   \caption{Orchiestracja}
+   \label{fig:bpel_orchiestracja}
+  \end{figure}
+
+ \item \textbf{Choreografia} - podej¶cie w którym zamiast jednego centralnego punktu, ka¿da us³uga wie
+kiedy i z jakimi us³ugami ma siê komunikowaæ. Us³ugi musz± byæ ¶wiadome uczestniczenia w procesie biznesowym (przyk³ad ilustruje rysunek \ref{fig:bpel_choreografia}).
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 210 252]{chapter1/choreografia.png}
+ % choreografia.png: 271x326 pixel, 93dpi, 7.40x8.90 cm, bb=0 0 210 252
+ %\includegraphics[bb=0 0 211 254]{chapter1/choreografia.png}
+ % choreografia.png: 609x422 pixel, 93dpi, 16.63x11.53 cm, bb=0 0 472 327
+ \caption{Choreografia}
+ \label{fig:bpel_choreografia}
+\end{figure}
+
+\end{itemize}
+
+
+
+% mo¿e jaki¶ krotki tekst o tym ze ¿eby w pe³ni korzystac z SOA musimy jako¶ osi±gn±æ kompozycje us³ug, i tu ew wymieniæ podej¶cie orchiestracji i choreografii, nastepnie napisaæ o BPEL.
+% Powstanie jêzyka BPEL mia³o zwi±zek z potrzeb± oddzielenia logiki elementów procesu od jego przebiegu.
+
+% krótko wspomnieæ o tym kto mia³ wp³yw na powstanie jêzyka, 
+<<<<<<< .mine
+\textbf{BPEL}\cite{bpel:spec} (Business Process Execution Language) jest to zdefiniowany przez organizacjê OASIS jêzyk orchiestracji procesów biznesowych opartych o us³ugi zdefiniowane w jêzyku WSDL.
+=======
+%TODOTODO
+\textbf{BPEL}\cite{bpel:spec} (Business Process Execution Language) jest to zdefiniowany przez organizacjê OASIS jêzyk orchiestracji procesów biznesowych opartych o us³ugi zdefiniowane w jêzyku WSDL.
+>>>>>>> .r389
+
+Jêzyk ten pozwala na modelowanie na dwóch poziomach abstrakcji: opisowym poziomie abstrakcyjnym(z ang. Abstract Business Process)\footnote{modele takie nie maj± byæ wykonywane, a s± jedynie tworzone celem zobrazowania pewnego konkretnego procesu} i dok³adniejszym poziomie wykonania(z ang. Executable Business Process)\cite{bpel:spec}.
+
+Interakcja z us³ugami w jêzyku BPEL odbywa siê na dwa sposoby:
+\begin{itemize}
+ \item eksport funkcjonalno¶ci, wykonanie procesu BPEL jest zwykle wyzwalane poprzez ¿±danie wykonania operacji webservice
+ \item import funkcjonalno¶ci, proces BPEL umo¿liwia wykonanie operacji na us³ugach webservice
+\end{itemize}
+
+\subsection{Wersje BPEL}
+
+\paragraph{Wersje 1.0 i 1.1}
+BPEL,a w zasadzie BPEL4WS (Business Process Execution Language for Web Services) powsta³ w 2002 jako efekt wspó³pracy firm BEA, IBM i Microsoft. W roku 2003 do organizacji specyfikuj±cej BPEL do³±czy³y firmy SAP oraz Siebel Systems, a jêzyk ewoluowa³ do wersji 1.1. Wersja ta zosta³a zaaprobowana przez organizacjê OASIS (Organization for the Advancement of Structured Information Standards), i od tamtego czasu jêzyk ten sta³ siê standardem w dziedzinie kompozycji procesów biznesowych\cite{bpel:bpeljava}\cite{bpel:book:wsbpel}\cite{bpel:wikipedia}\cite{bpel:spec1.1}.
+
+\subparagraph{Mo¿liwo¶ci jêzyka BPEL w wersji 1.1}
+Specyfikacja jêzyka BPEL przewiduje nastêpuj±ce mo¿liwo¶ci:
+
+\begin{itemize}
+ \item definiowanie typowanych zmiennych i synchronizowany dostêp do nich
+ \item wykonywanie operacji webservice
+ \item równoleg³e wykonywanie operacji 
+ \item definiowanie zasiêgów (scope) dla zmiennych
+ \item rzucanie i obs³ugiwanie wyj±tków
+ \item dostêp do zmiennych za pomoc± wyra¿eñ XPath
+ \item manipulacja zmiennymi
+\end{itemize}
+
+% ciê¿ko powiedziec co tu wstawiæ
+
+\subparagraph{Dostêpne konstrukcje} BPEL w wersji 1.1 oferuje nastêpuj±ce konstrukcje:
+\begin{itemize}
+ \item \textbf{Proste}
+ \begin{itemize}
+  \item \textbf{Assign} przypisanie warto¶ci zmiennej
+  \item \textbf{Wait} oczekiwanie okre¶lony okres czasu
+  \item \textbf{Empty} instrukcja pusta
+  \item \textbf{Throw} rzucenie wyj±tku
+  \item \textbf{ReThrow} ponowne rzucenie z³apanego wyj±tku
+  \item \textbf{Exit} zakoñczenie procesu				 
+  \item \textbf{Compensate} pozwalaj±ce na zdefiniowanie zachowania procesu w obrêbie transakcji, w przypadku, gdy jedna z jego sk³adowych zawiedzie (próba odwrócenia efektów dzia³ania elementów ju¿ wykonanych\footnote{analogiczne do zachowania transakcyjno¶ci w bazach danych, tzw. ACID (skrót ten pochodzi z terminologii baz danych, i oznacza cztery warunki jakie musz± spe³niaæ transakcje: atomowo¶æ, spójno¶æ, izolacja i trwa³o¶æ (z ang. Atomicity, Consistency, Isolation, Durability)\cite{bpel:acid})})
+ \end{itemize}
+ \item \textbf{Strukturalne}
+ \begin{itemize}
+    \item \textbf{Sequence} wydzielony blok strukturalny
+    \item \textbf{Scope} zasiêg zmiennej
+    \item \textbf{If} instrukcja warunkowa
+    \item \textbf{While} pêtla z warunkiem ewaluowanym na jej pocz±tku
+    \item \textbf{Pick} oczekiwanie na jedno z zadeklarowanych zdarzeñ
+    \item \textbf{Flow} wykonanie równoleg³e
+  \end{itemize}
+  \item \textbf{Operacje na us³ugach webservice}
+  \begin{itemize}
+    \item \textbf{Receive} odebranie wiadomo¶ci z us³ugi dostarczanej przez
+     proces\footnote{operacja ta jest najczê¶ciej operacj± wyzwalaj±c± proces}
+    \item \textbf{Reply} odpowied¼ na odebran± wiadomo¶æ\footnote{analogicznie
+     operacja taka najczê¶ciej koñczy wyzwolony proces}
+    \item \textbf{Invoke} wykonanie operacji na us³udze webservice.
+  \end{itemize}
+\end{itemize}
+
+
+\subsubsection{Wersja 2.0}
+Opracowana w roku 2004 nowa wersja jêzyka BPEL wprowadzi³a takie usprawnienia jak mo¿liwo¶æ rozszerzania jêzyka, czy uproszczenia w przypisywaniu i inicjalizacji zmiennych. Pojawi³y siê nowe pêtle: RepeatUntil\footnote{pêtla z warunkiem ewaluowanym na jej koñcu} i wykonywana zarówno równolegle, jak i sekwencyjnie ForEach\footnote{pêtla dokonuj±ca pewnych operacji na zbiorze danych}. Uproszczono równie¿ obs³ugê b³êdów oraz inicjalizacjê tzw. Partner Link\footnote{odniesieñ do us³ug w obrêbie procesów}. Zmieniono równie¿ oficjaln± nazwê jêzyka - obecnie oficjaln± nazw± jest WS-BPEL (Web Service - Business Process Execution Language)\footnote{uczyniono tak celem dopasowania siê do pozosta³ych nazw standardów z zakresu technologii webservice których nazwy zwyczajowo zaczynaj± siê od ``WS-''}\cite{bpel:bpeljava}\cite{bpel:book:wsbpel}\cite{bpel:wikipedia}\cite{bpel:spec2}. \\
+\\
+Wszystkie dostêpne obecnie konstrukcje jêzyka BPEL, wraz z ich graficznymi reprezentacjami przedstawia rysunek \ref{fig:bpel_pallette}(nale¿y mieæ jednak na uwadze fakt, i¿ reprezentacje te nie stanowi± czê¶ci standardu).
+
+% \begin{figure}[h!tb]
+%  \centering
+%  \includegraphics[width=200pt,bb=0 0 373 230]{chapter1/netbeans_pallette.png}
+%  % netbeans_pallette.png: 373x230 pixel, 72dpi, 13.16x8.11 cm, bb=0 0 373 230
+%  \caption{Elementy konstrukcyjne jêzyka BPEL}
+%   \label{fig:bpel_pallette} 
+% \end{figure}
+
+\begin{figure}[h!kp]
+ \centering
+ \includegraphics[bb=0 0 100 363]{chapter1/netbeans_pallette.png}
+ % netbeans_pallette.png: 162x548 pixel, 72dpi, 5.71x19.33 cm, bb=0 0 162 548
+ \caption{Elementy konstrukcyjne jêzyka BPEL}
+ \label{fig:bpel_pallette}
+\end{figure}
+
+
+
+% \begin{figure}[htb]
+%  \centering
+%  \includegraphics[width=12cm,height=8cm,bb=0 0 1232 777]{chapter1/bpel_src.png}
+%  % bpel_src.png: 1232x777 pixel, 72dpi, 43.47x27.42 cm, bb=0 0 1232 777
+%  \caption{Pakiet NetBeans - proces BPEL opisany w XML}
+%  \label{fig:bpel_sample_src}
+% \end{figure}
+
+\subsection{Dostêpne implementacje BPEL}
+Jêzyk BPEL jest obs³ugiwany w wielu ¶rodowiskach integracyjnych, zarówno jako komponenty, jak i samodzielne rozwi±zania. Do najbardziej rozwiniêtych komercyjnych rozwi±zañ nale¿±\cite{bpel:book:bpel4ws}:
+\begin{itemize}
+ \item IBM Websphere Business Integration Foundation\texttrademark\cite{esb:impl:websphere}
+ \item Oracle BPEL Process Manager\texttrademark\cite{bpel:impl:oracle}
+ \item Microsoft BizTalk\texttrademark\cite{bpel:impl:biztalk}
+ \item BEA Aqualogic\texttrademark\cite{esb:impl:aqualogic}
+\end{itemize}
+
+Istnieje równie¿ kilka rozwi±zañ niekomercyjnych takich jak:
+\begin{itemize}
+ \item OpenESB BPEL JBI Component\cite{esb:impl:openesb}
+ \item ActiveBPEL Engine\cite{bpel:impl:activebpel}
+ \item Apache ODE\cite{bpel:impl:ode}
+\end{itemize}
+
+\begin{figure}[h!kp]
+ \centering
+ \includegraphics[width=12cm,height=8cm,bb=0 0 1232 777]{chapter1/bpel_des.png}
+ % bpel_des.png: 1232x777 pixel, 72dpi, 43.47x27.42 cm, bb=0 0 1232 777
+ \caption{Pakiet Netbeans - wizualny edytor procesu BPEL}
+ \label{fig:bpel_sample_des}
+\end{figure}
+
+Istnieje równie¿ szereg narzêdzi u³atwiaj±cych modelowanie procesów w jêzyku BPEL, takich jak oparte na platformie Eclipse Oracle BPEL Designer\cite{bpel:tool:oracle} i IBM Websphere Application Developer Integration Edition\cite{bpel:tool:websphere}, czy wybrany przez autorów, oparty o platformê Netbeans BPEL Designer\cite{bpel:tool:netbeans} (przedstawiony na rys. \ref{fig:bpel_sample_des}). Wybór ten zosta³ podyktowany dojrza³o¶ci± i otwarto¶ci± rozwi±zania, oraz zaawansowan± integracj± z wybranym wcze¶niej ¶rodowiskiem OpenESB.

@@ -1,0 +1,410 @@
+\section[ESB]{Enterprise Service Bus}
+
+% 
+ESB (Enterprise Service Bus) to jedno z podej¶æ które u³atwia tworzenie oprogramowania o architekturze SOA. Zak³ada ono tworzenie sterowanego zdarzeniami systemu opartego o lu¼no powi±zane us³ugi. Wymiana danych jest dokonywana przez szynê,
+ której zadaniem jest wyznaczanie tras wiadomo¶ci, na podstawie dostarczonej konfiguracji. G³ównym zamiarem jej twórców by³o rozlu¼nienie powi±zania pomiêdzy wykorzystywanymi us³ugami, a medium transportowym, co przedstawia rysunek \ref{fig:esb}. 
+ 
+% Jest to oparta na standardach platforma integracyjna, która
+% ³±czy w sobie zalety takich podej¶æ jak komunikacja w oparciu o wiadomo¶ci, technologia WebService, transformacje danych, inteligentne wyznaczanie trasy, niezawodno¶æ, orchiestracja i transakcyjno¶æ w komunikacji pomiêdzy ró¿norodnymi
+% aplikacjami korporacyjnymi\footnote{z ang. \textit{enterprise applications}}.
+% Ca³a idea opiera siê na istnieniu szyny, w oparciu o któr± odbywa siê ka¿da komunikacja w obrêbie tworzonego systemu. Odpowiednio skonfigurowana - jest w stanie sama decydowaæ o przeznaczeniu ka¿dej wiadomo¶ci, na podstawie jej tre¶ci\footnote{z ang. content based routing}.
+% Skonfigorowana szyna decyduje o tym gdzie ma zostaæ wys³ana przetwarzna wiadomo¶æ.
+% Dziêki swoim w³a¶ciwo¶ciom szyna jest w stanie sama
+% decydowaæ o tym gdzie ma wys³aæ dan± wiadomo¶æ. % napisaæ o tym ¿e to my decydujemy o tym jak lataj± wiadomo¶ci
+
+%\begin{figure}[htb!]
+% \centering
+% \includegraphics[bb=0 0 208 106]{chapter1/esb.png}
+% % esb.png: 260x132 pixel, 90dpi, 7.34x3.73 cm, bb=0 0 208 106
+% \caption{Zasada dzia³ania ESB \cite{esb:sojbi}}
+% \label{fig:esb}
+%\end{figure}
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 233 170]{chapter1/esb2.png}
+ % esb2.png: 608x445 pixel, 188dpi, 8.21x6.01 cm, bb=0 0 233 170
+ \caption{Zasada dzia³ania ESB \cite{esb:sojbi}}
+ \label{fig:esb}
+\end{figure}
+
+
+\subsection{Historia ESB}
+ESB powsta³o na bazie popularnych obecnie koncepcji MOM i EAI. Poni¿ej znajduje siê ich krótka charakterystyka.
+
+% Na kszta³t ESB mia³o wp³yw wiele do¶wiadczeñ z wcze¶niejszych prób kompleksowego podej¶cia 
+% do problemu integracji us³ug. Najbardziej znacz±cy wk³ad mia³y koncepcje MOM oraz EAI:
+
+\paragraph{Message Oriented Middleware}
+to architektura której rozwój rozpocz±³ siê na pocz±tku lat 80 i trwa do dzi¶. Opiera siê ona na koncepcji asynchronicznej wymiany jednostek danych (wiadomo¶ci) z pomoc± jednolitych protoko³ów komunikacyjnych. % zastanowiæ siê czy jednolitych i czy wiadomo¶ci czy komunikaty
+Podstawowymi trybami komunikacji MOM s±: % bo mog± byæ inne
+\begin{itemize}
+\item  Point-to-Point (punkt-punkt) - tryb w którym istnieje tylko jeden
+producent i jeden konsument wiadomo¶ci
+\item  Publish/Subscribe (publikuj/zapisz siê) - tryb w którym istnieje jeden
+producent, a odbiorców mo¿e byæ dowolna ilo¶æ
+\end{itemize}
+
+U¿ycie rozwi±zañ MOM sta³o siê standardem obs³ugi asynchronicznych zdarzeñ w du¿ych aplikacjach biznesowych, stymuluj±c jednocze¶nie ich rozwój. Wiele z nich posiada tak zaawansowane w³a¶ciwo¶ci jak: niezawodno¶æ dostarczania, kolejkowanie i filtrowanie wiadomo¶ci, transakcyjno¶æ, mo¿liwo¶æ klastrowania, czy zaawansowane mechanizmy bezpieczeñstwa. 
+
+Do standardów realizuj±cych ideê MOM nale¿± miêdzy innymi:JMS (Java Messaging System) \cite{esb:mom:jms}, IceStorm \cite{esb:mom:icestorm}, CORBA notification service \cite{esb:mom:corba}, Microsoft MSQM \cite{esb:mom:msqm} oraz specyfikacje WS-Events \cite{esb:mom:wsevents} i WS-Notifications \cite{esb:mom:wsnotifications}.
+
+\begin{figure}[h!tb]
+ \centering
+ \includegraphics[bb=0 0 221 88]{chapter1/mom.png}
+ % mom.png: 273x109 pixel, 89dpi, 7.79x3.11 cm, bb=0 0 221 88
+ %\includegraphics[bb=0 0 203 88]{chapter1/mom.png}
+ %% mom.png: 251x109 pixel, 89dpi, 7.16x3.11 cm, bb=0 0 203 88
+ \caption{Zasada dzia³ania MOM}
+ \label{fig:mom}
+\end{figure}
+
+
+% Dziêki du¿ej popularno¶ci rozwi±zañ typu MOM, wiele doczeka³o siê w³a¶ciwo¶ci
+% które powoduj±, ¿e s± one z powodzeniem wykorzystywane w aplikacjach o du¿ych wymaganiach - takich jak:
+% nie jest to po polsku
+% du¿a popularno¶æ rozw. MOM zaoowocowala ich dalszym rozwojem i wzbogacaniem o nowe wlasciwosci!!!
+
+% \begin{itemize}
+% \item  \textbf{niezawodno¶æ dostarczania wiadomo¶ci} zapewniana przez za³o¿enie,
+% ka¿da wiadomo¶æ jest autonomiczna (tj. w momencie jej wys³ania rola aplikacji w
+% przetwarzaniu danego elementu koñczy siê) oraz przez zastosowanie:
+% \begin{itemize}
+% \item  kolejkowania i zapewnienia dostarczenia, tzw. mechanizm
+% store-and-forward, który powoduje, ¿e wiadomo¶æ dociera do adresata nawet je¶li
+% do³±czy on do kana³u informacyjnego dopiero po jakim¶ czasie od wys³ania
+% wiadomo¶ci \footnote{du¿e znaczenie ma tutaj tzw. persystencja wiadomo¶ci celem
+% jej dalszego u¿ycia}
+% \item  mechanizmów potwierdzeñ pozwalaj±cych wysy³aj±cemu upewniæ siê, ¿e
+% wiadomo¶æ dotar³a do adresata
+% \end{itemize}
+% 
+% \item \textbf{filtrowanie wiadomo¶ci} na podstawie pól nag³ówka
+% 
+% \item \textbf{hierarchiczno¶æ tematów} mechanizmu publish/subscribe - polega na
+% tym ¿e wiadomo¶ci
+% wysy³ane do tematów nadrzêdnych trafiaj± do jego wszystkich podga³êzi
+% \item \textbf{mechanizmy autoryzacji} wysy³ania i odbierania wiadomo¶ci w
+% oparciu o ACL z uwzglêdnieniem hierarchi tematów
+% \item \textbf{obs³uga transakcyjno¶ci} tzn. dostarczanie wiadomo¶ci jest
+% % co z t± transakcyjno¶ci± 
+% zablokowane do czasu, a¿ transakcja zostanie zakoñczone oraz wszystkie
+% wiadomo¶ci zostan± pomy¶lnie wys³ane 
+% \end{itemize}
+
+% napisac o dodatkowych wlasciwosciach niefunkcjonalnych tak jak load-balancing, fail-over...
+
+\paragraph{EAI}
+Enterprise Application Integration, to idea która pojawi³a siê w po³owie lat 90. Celem jaki przy¶wieca³ jej twórcom by³a redukcja ilo¶ci koniecznych po³±czeñ
+w systemie rozproszonym poprzez wprowadzenie jednego centralnego punktu tzw. hub-and-spoke broker \footnote{po¶rednik w strukturze gwia¼dzistej}. Na punkcie tym spoczywa zadanie zawiadywania ca³± komunikacj± w obrêbie systemu - to on decyduje o tym gdzie ma trafiæ dana wiadomo¶æ. Architektura ta separuje aplikacjê od w³a¶ciwego kodu integruj±cego poprzez u¿ycie oprogramowania BPM (Business Process Management)\cite{esb:bpm}.
+\begin{figure}[h!tb]
+ \centering
+ \includegraphics[bb=0 0 207 221]{chapter1/eai.png}
+ % eai.png: 256x273 pixel, 89dpi, 7.31x7.79 cm, bb=0 0 207 221
+ \caption{Zasada dzia³ania EAI \cite{esb:book:chapell}}
+ \label{fig:eai}
+\end{figure}
+
+W za³o¿eniach EAI mia³a byæ stosowana w nastêpuj±cych przypadkach:
+\begin{itemize}
+ \item Integracja procesów biznesowych - zapewnienie ³±czno¶ci pomiêdzy
+ procesami biznesowymi aplikacji istniej±cych w du¿ych systemach
+ \item Zapewnianie integralno¶ci danych w ró¿nych czê¶ciach systemu 
+ 	\footnote{Znane równie¿ pod terminem EII (Enterprise Information
+ 	 Integration)}
+ \item Uniezale¿nienie implementacji od systemów zewnêtrznych - przeniesienie 
+ regu³ i polityk biznesowych do EAI, tak aby zmiany dostawców nie wp³ywa³y na
+  inne czê¶ci
+ systemu
+ \item Udostêpnienie ujednoliconego interfejsu dla z³o¿onych aplikacji
+\end{itemize}
+
+Istnieje wiele implementacji EAI, w¶ród najbardziej znanych znajduj± siê:
+Microsoft BizTalk Server\texttrademark, SAP Exchange Infrastructure (SAP XI) \texttrademark oraz webMethods Integration Server \texttrademark.
+
+% \subsection{ESB jako potomek MOM i EAI}
+% ESB jako koncepcja maj±ca swe podwaliny w obu tych podej¶ciach. Z MoM zaczerpnê³a komunikacjê w oparciu o rozproszon± infrastrukturê, oddzielaj±c jednocze¶nie mechanizm regu³ systemowych (biznesowych) od implementacji poszczególnych czê¶ci systemu:
+
+\paragraph{ESB jako pochodna obu technologii}
+
+\begin{figure}[h!tb]
+ \centering
+ \includegraphics[bb=0 0 211 118]{chapter1/esb-where.png}
+ % esb-where.png: 465x258 pixel, 100dpi, 11.81x6.55 cm, bb=0 0 335 186
+ \label{fig:esb_where}
+\end{figure}
+
+Rysunek \ref{fig:esb_where} obrazuje sposób w jaki ESB czerpa³o swoje cechy z obu technologii. Korzystaj±c z charakterystycznej dla MOM rozproszonej infrastruktury dostarczania wiadomo¶ci, oddziela logikê dostarczania od ich w³a¶ciwego przetwarzania. Druga z w³a¶ciwo¶ci jest charakterystyczna dla EAI.
+
+\subsection{Za³o¿enia i cechy ESB}
+
+Jednym z najwa¿niejszych zamierzeñ twórców ESB by³o osi±gniecie mo¿liwo¶ci zastosowania tego rozwi±zania w najwiêkszej liczbie przypadków. Dlatego te¿ idea ESB opiera siê na nastêpuj±cych za³o¿eniach:
+\begin{itemize}
+	\item adaptowalno¶æ niezale¿na od warunków wdro¿enia - skali,
+ technologii uczestnicz±cych czy sposobu modelowania aplikacji
+	\item zunifikowane podej¶cie do po³±czenia poszczególnych elementów 
+oprogramowania
+	\item ³atwo¶æ integracji z oprogramowaniem zarówno wewn±trz, jak i na 
+zewn±trz korporacji
+	\item prostota tworzenia aplikacji i dodawania do ju¿ istniej±cego
+	 rozwi±zania
+	\item zdecentralizowanie dzia³ania us³ug integracyjnych
+	\item zwiêkszona przejrzysto¶æ systemu
+	\item du¿a elastyczno¶æ i ³atwo¶æ reagowania na zmieniaj±ce siê
+	wymagania
+	\item zapewnienie du¿ej skalowalno¶ci tworzonych rozwi±zañ
+\end{itemize}
+
+% nie ma tu co napisac na koncu
+
+\paragraph{Cechy ESB}
+Z uwagi na fakt, i¿ koncepcja ESB nie jest poparta ¿adnym standardem, nie da siê wyró¿niæ mo¿liwo¶ci jakich takie oprogramowanie winno dostarczaæ. 
+Istnieje jednak pewien ustalony zakres funkcjonalno¶ci i cech, które takie rozwi±zanie zwyk³o spe³niaæ. Do takich nale¿± \cite{esb:book:chapell}:
+\begin{itemize}
+ \item \textbf{Autonomiczno¶æ z mo¿liwo¶ci± dostêpu z zewn±trz}
+ \item \textbf{Bezpieczeñstwo i niezawodno¶æ}
+ \item \textbf{Integracja oparta o uznane standardy} - do tych standardów nale¿±
+  \begin{itemize}
+    \item XML - najpowszechniej u¿ywany obecnie jêzyk opisu danych, wraz z jêzykami
+     wspomagaj±cymi jego u¿ycie, tj. XSD, XPath czy XSLT
+    \item WSDL - zwyczajowo stosowany do opisu interfejsów us³ug
+    \item Standardy dostêpu do danych tj. LDAP, SQL czy RSS
+    \item Standardy wymiany danych tj. SOAP, REST, DCOM czy XMPP
+    \item Standardy transformacji danych tj. XSLT czy stosowany w hurtowniach
+     danych\footnote{ang. data warehouses} ETL
+  \end{itemize}
+ \item{\textbf{Dostarczenie ustalonego zestawu funkcjonalno¶ci} w który zwyczajowo wchodz±:}
+ \begin{itemize}
+  \item \textbf{Mo¿liwo¶æ sterowania procesem wykonania} - z u¿yciem takich standardów jak
+   WS-BPEL, WS-Choreography czy (mniej popularnego) ebXML BPSS.
+  \item \textbf{Rozproszone transformacje danych}
+  \item \textbf{Przetwarzanie danych w czasie rzeczywistym} - mo¿liwo¶æ definiowania reakcji 
+  na konkretne warto¶ci lub trendy danych
+  \item \textbf{Zdalna konfiguracja}
+  \item \textbf{Zdalne zarz±dzanie}
+  \item \textbf{Monitorowanie}
+ \end{itemize}
+\end{itemize}
+
+% zdanie wienczace
+
+% http://www.sonicsoftware.com/solutions/service_oriented_architecture/enterprise_service_bus/index.ssp
+
+% \subparagraph{Du¿y zasiêg rozwi±zania}
+% Rozwi±zanie tworzy jedn± powszechn± sieæ integracyjn± dla ca³ego systemu. Aplikacje w prosty sposób 
+% mog± do³±czyæ do szyny, i wymieniaæ dane z pozosta³ymi. Co wa¿ne, nie jest konieczne aby ju¿ istniej±ce
+% aplikacje by³y adaptowane specjalnie dla ESB - szyna w zamierzeniach powinna obs³ugiwaæ jak najwiêcej 
+% metod komunikacji.
+
+% \subparagraph{Rozproszone transformacje danych}
+% Kluczow± czê¶ci± integracji aplikacji jest konwersja miedzy u¿ywanmi przez nie formatami. Modu³y 
+% za to odpowiadaj±ce rozwi±zuj± wiele problemów zwi±zanych z enkapsulacj±, niepasuj±cymi typami danych, czy ró¿nicami w ich strukturach\footnote{Wiêcej informacji na ten temat mo¿na znale¼æ na stronie: http://en.wikipedia.org/wiki/Object-Relational\_impedance\_mismatch}.
+
+% \subparagraph{Realizacja SOA sterowanego zdarzeniami}
+% Realizuj±c SOA w oparciu o ESB aplikacje, i us³ugi integracyjne s± traktowane jako abstrakcyjne 
+% ``koñcówki'', których jedynym zadaniem jest przyjêcie danych w jakim¶ formacie, i odes³anie odpowiedzi
+% po ich przetworzeniu. Maj±c tak sformu³owane podej¶cie mo¿emy powiedzieæ, ¿e ESB w pe³ni wspiera 
+% tworzenie aplikacji o architekturze SOA, z takimi zaletami jak lu¼ne wi±zanie czy ponowne u¿ycie.
+
+% \subparagraph{Orchiestracja}
+% ESB pozwala na orchiestracjê procesów, tj. na sterowanie kolejno¶cia wywo³añ i wymian± danych pomiêdzy
+% poszczególnymi aplikacjami i serwisami integracyjnymi (tzw. process flow). Maj±c tak± mo¿liwo¶æ 
+% ³atwe staje siê zarz±dzanie zmianami w definicjach przep³ywów w obrêbie systemu, a dzia³anie systemu
+% zyskuje na przejrzysto¶ci.
+
+% \subparagraph{Bezpieczeñstwo i niezawodno¶æ}
+% Po³±czenia w obrêbie szyny, jak równie¿ poza ni± mog± byæ bardzo silnie szyfrowane. Dodatkowo maj±c jednolite rozwi±zanie integracyjne, ³atwiejsze staje siê opracowywanie polityk bezpieczeñstwa. 
+% Niezawodno¶æ ESB jest oparta o fakt, i¿ trzon tego rozwi±zania pozostaj± ju¿ bardzo dojrza³e i pewne rozwi±zania MOM.
+
+% \subparagraph{Autonomiczno¶æ z mo¿liwo¶ci± po³±czenia na zewn±trz}
+% W przeciwieñstwie do EAI, które wymaga³o od wszystkich podsystemów po³±czenia do jednego punktu centralnego, ESB pozwala na naturalniejszy podzia³ aplikacji w obrêbie systemu - mo¿liwe jest takie 
+% zorganizowanie integracji, by ka¿da jednostka organizacyjna posiada³a w³asn± szynê, odrêbn± szynê, a interakcje odbywa³y siê z udzia³em sieci integracynej wy¿szego szczebla (równie¿ szyny ESB). Dzia³anie 
+% takie pozwala na lu¼niejsze powi±zanie pomiêdzy podsystemami, i co za tym idzie pe³niejsze wype³nienie
+% paradygmatu SOA. 
+
+% \subparagraph{Zdalna konfiguracja, zarz±dzanie i monitorowanie}
+% Poniewa¿ ESB w za³o¿eniach jest technologi± integracyjn± wdra¿an± u ró¿nych klientów, jej przydatn±
+%  w³a¶ciwo¶ci± jest mo¿liwo¶æ jej zdalna obs³ugi. Wa¿ne jest aby szyna udostêpnia³a 
+% pe³ne mo¿liwo¶æi
+%  konfiguracji ju¿ istniej±cych i dodawania nowych elementów do szyny. Inn± wa¿na
+%  w³a¶ciwo¶ci±, jest 
+% mo¿liwo¶æ wgl±du w parametry pracy systemu, takie jak przepustowo¶æ, obci±¿enie poszczególnych komponentów, czy stopa b³êdów.
+
+% \subparagraph{Obs³uga pewnej klasy szerzej przyjêtych standardów}
+% ESB powsta³o z zamiarem wykorzystania ju¿ istniej±cych standardów. Obejmuj± one ró¿ne klasy zagadnieñ
+% integracji:
+
+% \subparagraph{U¿ycie jêzyka XML}
+% XML jest podstawowym formatem danych u¿ywanym w ESB. Jego wieloplatformowe wsparcie i powszechne uznanie,
+%  czyni go w zasadzie jedynym wyborem. Dodatkowym czynnikiem wp³ywaj±cym na u¿ycie XML jest mnogo¶æ
+%  technologii, które powsta³y wokó³ tego jêzyka, takie jak szeroko stosowany SOAP, czy bardzo dobrze
+%  rozwiniête mechanizmy transformacji takie jak XSLT.
+% 
+% \subparagraph{Protoko³y transportu i dostêpu do danych}
+% Chc±c zapewniæ jak najwy¿sz± integracjê z ró¿nymi systemami ESB musi obs³ugiwaæ szerok± gamê tego typu
+% standardów. W obecnym czasie nale¿± do nich przede wszystkim protoko³y coraz popularniejszych w
+%  ostatnim czasie WebService'ów, takie SOAP czy REST. Wa¿nym, i czêsto obs³ugiwanym standardem jest
+%  równiez wspomniany wcze¶niej JMS. Do gamy proko³ów nale¿± równie¿ takie protoko³y jak:
+% \begin{itemize}
+%  \item file - monitorowanie plików w systemie plików na jakim¶ serwerze
+%  \item bazodanowe JDBC czy LDAP - mo¿liwo¶æ reagowania na pojawiaj±ce siê dane poprzez wykonywanie co
+%  jaki¶ czas danego zapytania SQL
+%  \item DCOM
+%  \item RSS
+%  \item SIP
+%  \item XMPP
+%  \item TCPIP
+% \end{itemize}
+% i wiele innych standardów. Taka mnogo¶æ standardów pozwala daje du¿e mo¿liwo¶ci je¶li chodzi o interakcje
+% z istniej±cymi podsystemami.
+
+% \subparagraph{Standardy tranformacji danymi}
+% Standardowo obs³ugiwane s± jezyki XPath i XQuery, oraz przeznaczony do transformacji plików XML jêzyk XSLT. 
+% Innym czêsto obs³ugiwanym standardem jest przyjêty w hurtowniach danych standard ETL (Extract, Transform, Load).
+
+% \subparagraph{Standardy sterowania procesem wykonania}
+% Czyli standardy opisuj±ce sposoby sterowania orchiestracj± us³ug. Najsze¶ciej obs³ugiwanym jest opisywany dalej BPEL. Czasem jest to równie¿ WS-Choreography czy (mniej popularny) ebXML BPSS.
+% http://www-306.ibm.com/software/info1/websphere/index.jsp?tab\=landings\/esb
+
+% \subparagraph{WSDL}
+% Wa¿nym standardem pojawiaj±cym siê w ka¿dej implementacji ESB jest jêzyk WSDL, pozwalaj±cy na 
+% opis interfejsów us³ug, udostêpnianych przez aplikacje.
+
+% \subparagraph{Przetwarzanie danych w czasie rzeczywistym}
+% Jest to cecha która w ostatnim czasie staje siê coraz popularniejszym elementem ESB. Funkcjonalno¶æ ta
+% opiera siê na definiowaniu dzia³añ bêd±cych reakcj± na dane przep³ywaj±ce przez szyne. Mo¿e byæ to na przyk³ad powiadomienie o niskim stanie magazynowym, czy tendencji spadkowej jakiego¶ waloru na gie³dzie.s
+
+\subsection{Istniej±ce implementacje ESB}
+Na rynku istnieje wiele implementacji ESB. Do najbardziej znanych nale¿±:
+
+\begin{itemize}
+  \item Sonic ESB - najstarsza implementacja ESB 
+\cite{esb:impl:sonic}
+ \item OpenESB (Glassfish) \cite{esb:impl:openesb}
+ \item JBoss ESB \cite{esb:impl:jbossesb}
+ \item WebSphere ESB \cite{esb:impl:websphere}
+ \item MULE \cite{esb:impl:mule}
+ \item Apache ServiceMix \cite{esb:impl:servicemix}
+ \item BEA Aqualogic Service Bus \cite{esb:impl:aqualogic}
+\end{itemize}
+
+Autorzy przeanalizowali rozwi±zania pod k±tem wymagañ pracy, zwracaj±c najwiêksz± uwagê na otwarto¶æ kodu i prostotê tworzenia aplikacji. Do realizacji pracy wybrano ¶rodowisko OpenESB.
+
+\subsection{Wdro¿enia ESB}
+Mimo swojej krótkiej historii, wiele firm ju¿ zaadaptowa³o lub te¿ jest w trakcie adaptowania rozwi±zañ
+integracyjnych w oparciu o ESB. Do godnych uwagi nale¿±:
+\begin{itemize}
+ \item Wdro¿enie ESB w infrastrukturze jednego z wiod±cych po¿yczkodawców w Stanach Zjednoczonych,
+ 	pozwoli³o na obni¿enie kosztów przetwarzania danych o 60\%. Dokonano tego 
+poprzez oparcie 
+	jednolitego systemu informacji o klientach spinaj±cego rozsiane po ca³ym
+ kraju biura kredytowe
+ 	oraz system eCredit. \cite{esb:book:chapell}
+ \item Trwaj±ce 3 tygodniowe wdro¿enie ESB w jednej z najwiêkszych sieci dystrybucji ¿ywno¶ci w Europie,
+ pozwoli³o na zaoszczêdzenie 3 milionów dolarów. Rol± ESB by³o zintegrowanie systemów trzech ró¿nych 
+systemów informatycznych, celem automatyzacji zakupu, sprzeda¿y i zarz±dzania logistyk±.
+ \item Jedna z najwiêkszych firm energetycznych w Stanach Zjednoczonych (10 miliardów dolarów obrotu
+ rocznie), u¿ywa ESB w rachunkowo¶ci, zarz±dzaniu systemem i raportowaniu. Dodatkowo na ESB oparta jest 
+ realizacja regulowanej prawnie komunikacji z rz±dem. \cite{esb:book:chapell}
+ \item Udzia³ ESB w integracji systemów komórek rz±dowych Stanów Zjednoczonych celem walki z terroryzmem
+w ramach dokumentu ``USA Patriot Act''. \cite{esb:book:chapell}
+% http://www.gcn.com/print/25_20/41319-1.html - Washington DC
+\end{itemize}
+
+% http://steve.vinoski.net/blog/2007/10/04/the\-esb\-question/
+% http://www.oreillynet.com/xml/blog/2006/08/esb\_adoption\_in\_government.html
+\subsubsection{Problemy ESB}
+Bêd±c tak zaawansowan± koncepcj±, u¿ycie ESB poci±ga za sob± szereg problemów w¶ród których najbardziej znacz±ce to:
+\begin{itemize}
+ \item Spowodowany krótk± histori± technologii, brak odpowiedniej ilo¶ci ekspertów dysponuj±cych wiedz±
+wystarczaj±c± do zarz±dzania i konfiguracji ESB
+ \item Wa¿ny w kontek¶cie tej pracy, du¿y narzut technologiczny - bior±c pod uwagê u¿ycie takich
+ koncepcji jak orchiestracja, czy transformacje XSLT, przy dodatkowym wykorzystaniu WebService'ów 
+ zbudowanych w oparciu technologiê SOAP, istnieje du¿a obawa, ¿e obci±¿enie generowane przez 
+ samo oprogramowanie, mo¿e byæ znacz±ce.
+\end{itemize}
+
+
+% 
+% \begin{itemize}
+% 	\item  problemy ESB (conieco o wydajno¶ci)
+% 	% \item  istniej±ce implementacje ESB %
+% % http://www-306.ibm.com/software/info1/websphere/index.jsp\?tab\=landings\/esb
+% 	\item  zastosowania ESB w prawdziwym ¶wiecie:
+% \end{itemize}
+
+
+
+
+% http://www.gcn.com/print/25_20/41319-1.html
+
+
+\subsection{JBI}
+
+JBI (Java Business Integration) - to specyfikacja JCP\footnote{JSR-208 tworzony przez takie firmy jak Syn Micorsystems, BEA, Borland, Nokia, Novell czy Oracle\cite{esb:jbi:jsr}}, która pozwala na stworzenie ¶rodowiska realizuj±cego za³o¿enia ESB w technologiach zwi±zanych z jêzykiem Java. Definuje on ¶rodowisko komponentów realizuj±cych model wymiany danych oparty o specyfikacjê WSDL 2.0\cite{ws:wsdl:spec}.
+Specyfikacja stanowi, i¿ komponenty JBI musz± posiadaæ nastêpuj±ce trzy cechy:
+\begin{itemize}
+ \item \textbf{Przeno¶no¶æ} pomiêdzy ró¿nymi implementacjami kontenera JBI
+ \item \textbf{Scentralizowane zarz±dzanie}
+ \item \textbf{Wspó³praca z innymi komponentami} w obrêbie kontenera, niezale¿nie od tego 
+ sk±d pochodz±
+\end{itemize}
+Ka¿dy z komponentów realizuje funkcjê dostawcy i/lub konsumenta us³ugi. \cite{esb:jbi:jbi_components_theory}\cite{esb:jbi:developing_jbi}
+
+% https://open-esb.dev.java.net/kb/preview4/jbiag.html
+% http://www.scribd.com/doc/257973/JBI-based-ESB-as-backbone-for-SOI-applications
+% ksi±¿ka o JBI
+
+% Proponujê spojrzeæ do ksi±¿ki rozdzia³ 10.1 oraz do dokumentacji glassfisha
+
+Podstawow± nomenklaturê JBI przedstawia rysunek \ref{fig:jbi-simple}
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 300 223]{chapter1/jbi-simple.png}
+ % jbi-simple.png: 675x502 pixel, 94dpi, 18.26x13.58 cm, bb=0 0 518 385
+ \caption{Nomenklatura JBI\cite{esb:jbi:jbi_components_theory}}
+ \label{fig:jbi-simple}
+\end{figure}
+
+\paragraph{Kontener JBI} (org. JBI Container) - ¶rodowisko wykonawcze komponentów JBI - zarówno BC jak i SE.
+
+\paragraph{Router wiadomo¶ci o jednolitym formacie (NMR)}\footnote{org. Normalized Message Router} -
+najwa¿niejsza czê¶æ ¶rodowiska JBI - stanowi element który zajmuje siê sterowaniem przep³ywem wiadomo¶ci z punktów ¼ród³owych do punktów docelowych, na podstawie okre¶lonego z góry kontraktu. NMR mo¿e równie¿ realizowaæ pewne funkcje QoS dotycz±ce dostarczania wiadomo¶ci w obrêbie kontenera.
+
+\paragraph{Silnik us³ugowe (SE)} (org. service engine) - to jednostki wykonawcze umieszczane w kontenerze JBI, których zadaniem jest dostarczanie lub korzystanie z us³ug w jego obrêbie.
+Komponenty te dostarczaj± w³a¶ciwej logiki takiej jak obs³uga transformacji, regu³ biznesowych czy jêzyków skryptowych. SE pe³ni± rolê kontenrów dla SU.
+%, czy dostêp do wêz³ów obliczeniowych.
+
+\paragraph{Komponenty wi±¿±ce (BC)} (org. binding component) - to komponenty zapewniaj±ce ³±czno¶æ kontenera ze ¶wiatem zewnêtrznym w obu kierunkach - ka¿dy z nich realizuje okre¶lony protokó³ komunikacyjny. Wiadomo¶ci s± transformowane i przekazywane z i do NMR, który decyduje o jej dalszej drodze. Takie podej¶cie, pozwala ka¿demy SE komunikowaæ siê ze ¶wiatem zewnêtrznym z pomoc± dowolnego obs³ugiwanego przez kontener protoko³u. Podobnie jak SE, BC równie¿ pe³ni± rolê kontenerów dla SU.
+
+\paragraph{Jednostka us³ugowa (SU)} (org. service unit) - to jednostka programowa dostarczaj±ca konkretnej implementacji us³ug korzystaj±ca z w³a¶ciwo¶ci kontenera w którym zosta³a umieszczona. Dla przyk³adu SU umieszczone w SE udostêpniaj±cym mo¿liwo¶æ wykonywania skryptów w jêzyku Ruby, zawiera³by kod takiego skryptu. Aplikacje sk³adaj± siê ze skomponowanych SU umieszczonych w kontenerach ¶rodowiska JBI.
+
+\subsubsection{Kontrakt}
+Implementuj±c komponent JBI, realizujemy pewien kontrakt który obejmuje zagadnienia instalacji, pakowania, zarz±dzania cyklem ¿ycia, publikacji oferowanych us³ugi i przetwarzania wiadomo¶ci bazuj±ce na jednym z czterech MEP (Message Exchange Pattern)\footnote{opcjonalnie do kontraktu mo¿e nale¿eæ równie¿ zarz±dzanie jednostk± us³ugow± (SU - z ang. service unit)}.
+
+\paragraph{MEP - wzorce wymiany wiadomo¶ci}
+NMR dostarcza wiadomo¶ci realizuj±c jeden z czterech wzorców wymiany wiadomo¶ci bêd±cych cze¶ci± specyfikacji WSDL 2.0 \cite{ws:wsdl:spec}\cite{esb:sojbi}
+
+\begin{itemize}
+ \item \textbf{In-Only} - standardowy sposób przesy³ania w jedn± stronê, w którym konsument wysy³a 
+ wiadomo¶æ do dostawcy us³ugi, który odpowiada statusem 
+ \item \textbf{Robust In-Only} - niezawodny sposób przesy³ania jednokierunkowego, w którym konsument
+wysy³a wiadomo¶æ do dostawcy, który odpowiada statusem, i je¶li jest to b³±d (fault), odes³ane zostaje potwierdzenie
+ \item \textbf{In-Out} - dwukierunkowy sposób wymiany wiadomo¶ci w którym na wiadomo¶æ konsumenta,
+dostawca us³ugi wysy³a odpowied¼ która jest nastêpnie potwierdzana
+ \item \textbf{In Optional-Out} - dwukierunkowy sposób wymiany wiadomo¶ci, w którym wiadomo¶æ bêd±ca 
+ odpowiedzi± na ¿±danie konsumenta jest opcjonalna
+\end{itemize}
+
+\subsubsection{Implementacje JBI}
+Najpowszechniej znane implementacje kontenera JBI to:
+\begin{itemize}
+ \item ServiceMix (FUSE ESB) \cite{esb:impl:servicemix}
+ \item OpenJBI (OpenESB) \cite{esb:impl:openesb}
+ \item JBossESB \cite{esb:impl:jbossesb}
+ \item ObjectWeb2 PEtALS \cite{esb:impl:petals}
+\end{itemize}
+zgodny z JBI jest równie¿ MULE \cite{esb:impl:mule}.
+
+Do celów pracy wybrali¶my implementacjê OpenJBI firmy Sun Microsystems\texttrademark.

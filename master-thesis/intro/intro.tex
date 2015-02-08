@@ -1,0 +1,153 @@
+\chapter{Wstêp}
+
+SOA (Service Oriented Architecture) to najwiêksze osi±gniêcie informatycznej my¶li architektonicznej ostatnich lat\footnote{ ``My thought was, this change has to be compared to the switch from Newtonian physics to relativistic physics.''\cite{soa:newton}}.
+Ten wprowadzony w 1996 roku przez Gartnera\cite{soa:gartner} paradygmat stanowi obecnie dominuj±cy nurt w projektowaniu systemów informatycznych\footnote{Ocenia siê, ¿e w ci±gu najbli¿szych dwóch lat znajomo¶æ technologii wspieraj±cych tworzenie aplikacji o architekturze SOA podwoi siê z 25 do 50\%\cite{soa:soa_adoption_eweek}} 
+i jest ukoronowaniem wysi³ków maj±cych na celu uproszczenie oprogramowania rozproszonego. Jego powstanie ma ¶cis³y zwi±zek z dynamiczn± ewolucj± architektur oprogramowania (por. rysunek \ref{fig:soa-ewolucja}).
+
+\begin{figure}[htp!]
+ \centering
+ \includegraphics[bb=0 0 386 128]{intro/arch-evo.png}
+ \caption{Ewolucja architektur oprogramowania \cite{soa:ibm_soma}}
+ \label{fig:soa-ewolucja}
+ % arch-evo.png: 427x142 pixel, 94dpi, 11.55x3.84 cm, bb=0 0 327 109
+\end{figure}
+
+Rosn±ce wymagania odno¶nie mo¿liwo¶ci, jak i prostoty obs³ugi aplikacji, nieuchronnie prowadz± do wzrostu ich z³o¿ono¶ci.
+Aktualny model tworzenia oprogramowania powoli osi±ga kres swoich mo¿liwo¶ci
+- obserwowany jest znaczny wzrost kosztów zwi±zanych z rozwi±zywaniem problemów czysto technologicznych, np. integracj± systemów zbudowanych w oparciu o ró¿ne platformy po¶rednicz±ce (z ang. middleware). In¿ynierowie musz± równie¿ radziæ sobie z ci±g³ymi naciskami organizacyjnymi i biznesowymi takimi jak: ograniczanie kosztów wytwarzanego oprogramowania, potrzeba szybkiej odpowiedzi na zmieniaj±ce siê wymagania, mo¿liwo¶æ ³atwej integracji i absorpcji nowych partnerów biznesowych.
+W celu zniwelowania wymienionych trudno¶ci powsta³o szereg rozwi±zañ, np. architektury przeznaczone do tworzenia systemów rozproszonych, przeno¶ne jêzyki programowania, ¶rodowiska wspieraj±ce integracjê systemów itp.
+Nie rozwi±zuj± one jednak wspó³czesnych problemów - na przeszkodzie staje du¿a ró¿norodno¶æ platform programistycznych, stosowanych technologii oraz rosn±ca potrzeba integracji systemów.
+Brak uniwersalnego i powszechnie stosowanego, a jednocze¶nie odpowiadaj±cego obecnym potrzebom rozwi±zania cz±stkowego, przyczyni³ siê do powstania koncepcji SOA
+- architektury zorientowanej na us³ugi (Service Oriented Architecture). Podstawow± zasad± rz±dz±c± tym podej¶ciem jest lu¼ne powi±zanie (z ang. loose coupling) pomiêdzy elementami systemu, pozwalaj±ce na proste komponowanie go jako ca³o¶ci (zmianê w sposobie projektowania oprogramowania obrazuje \nolinebreak{rysunek \ref{fig:soa-evo2}}).
+
+\begin{figure}[htp]
+ \centering
+ \includegraphics[bb=0 0 267 132]{intro/soa-evolution.png}
+ \label{fig:soa-evo2}
+ \caption{Zmiana w podej¶ciu do projektowaniu oprogramowania}
+ % soa-evolution.png: 348x172 pixel, 94dpi, 9.42x4.65 cm, bb=0 0 267 132
+\end{figure}
+
+Logiczn± konsekwencj± takiego podej¶cia jest zastosowanie szeregu dobrych konwencji in¿ynierskich, takich jak ukrycie implementacji\footnote{zwane te¿ autonomiczno¶ci±} czy ponowne u¿ycie (z ang. software reuse), przy jednoczesnym wzro¶cie elastyczno¶ci,  przejrzysto¶ci, ³atwo¶ci wprowadzania zmian oraz prostocie zarz±dzania.
+
+Powszechne uznanie SOA, spowodowa³o zmianê w kierunku rozwoju technologii z zakresu wymiany danych i integracji oprogramowania.
+Coraz wiêkszy udzia³ w rynku maj± te rozwi±zania, które wiêksz± uwagê przywi±zuj± do wspó³dzia³ania ró¿nych platform i przeno¶no¶ci. Chc±c realizowaæ ideê SOA, u¿yte technologie musz± dawaæ jak najwiêksz± swobodê w zakresie komunikacji. Ich baz± przestaje byæ interfejs programistyczny konkretnego jêzyka, \nolinebreak{a zaczyna} format wymienianych danych. Dodatkowo chc±c zapewniæ jak najwiêksz± niezale¿no¶æ poszczególnych czê¶ci systemów, coraz wiêkszy nacisk k³adzie siê na ukrywanie szczegó³ów implementacji.
+
+Od czasu opublikowania paradygmatu SOA w 1996 roku, powsta³ szereg koncepcji (np. technologia webservice) maj±cych na celu praktyczn± realizacjê SOA.
+W oparciu o nie, korzystaj±c jednocze¶nie z idei ESB (Enterprise Service Bus) oraz jêzyka BPEL (Business Process Execution Language), firmy informatyczne s± w stanie stworzyæ oprogramowanie spe³niaj±ce za³o¿enia tej architektury,
+obni¿aj±ce jednocze¶nie koszty rozwoju i utrzymania, jakie nale¿a³oby ponie¶æ przy zastosowaniu tradycyjnego podej¶cia.
+
+Budowa oprogramowania w oparciu o technologie realizuj±ce SOA, wi±¿e siê z narzutami natury wydajno¶ciowej. 
+% , które mog± byæ nieakceptowalne w jego pó¼niejszym wykorzystaniu.
+Jednocze¶nie, brak powszechnej wiedzy na temat SOA i utartych dobrych wzorców wytwarzania powoduje, ¿e czêsto oprogramowanie tworzone w tej architekturze, nie jest napisane w sposób optymalny, bez wykorzystania jej podstawowych zalet.
+Powa¿nym wyzwaniem staje siê zatem kwestia pomiaru wydajno¶ci tworzonych aplikacji\footnote{Brak zrozumienia kryteriów wydajno¶ciowych jest uznawany za jedno z piêciu najwiêkszych zagro¿eñ SOA \cite{soa:piec_zagrozen}}.
+
+Do tej pory ¶wiat informatyczny nie dopracowa³ siê jednolitej metodologii pomiarów wydajno¶ci systemów o architekturze SOA. Z punktu widzenia in¿ynierów oprogramowania - niemo¿liwe jest obecnie przeprowadzenie analizy porównawczej takiego oprogramowania.
+Istniej±ce rozwi±zania pozwalaj± na pomiary wydajno¶ci poszczególnych elementów systemu o architekturze SOA\footnote{Na rynku istnieje szczególnie du¿o rozwi±zañ do testowania wydajno¶ci oprogramowania opartego na technologii webservice}, jednak¿e tematyka kompleksowego rozwi±zania tego problemu, nie spotka³a siê dotychczas z du¿ym zainteresowaniem, zarówno ze strony ¶wiata komercyjnego, jak i naukowego.
+
+\section{Cel pracy}
+Celem pracy jest analiza problemu pomiaru wydajno¶ci aplikacji zbudowanych w oparciu o paradygmat SOA. Rozwa¿onych zostanie kilka potencjalnych rozwi±zañ oraz przeanalizowane zostan± zalety i wady ka¿dego z nich.
+W oparciu o postawiony w pracy zestaw wymagañ zostanie wybrane i zaimplementowane najlepsze.
+ % a najlepsze rozwi±zanie zostanie wybrane w oparciu o postawiony w pracy zestaw wymagañ.
+Stworzona implementacja zostanie sprawdzona w ¶rodowisku testowym na zestawie przyk³adowych aplikacji. Proces testowania i wyniki bêd± podstaw± do wyci±gniêcia wniosków na temat przydatno¶ci wybranego rozwi±zania w analizie wydajno¶ci aplikacji opartych o SOA.
+
+\section{Struktura pracy}
+Niniejsza praca rozpoczyna siê opisem technologii wykorzystywanych w tworzeniu aplikacji opartych o SOA. W rozdziale 3 szczegó³owo sformu³owano problem oraz zbiór wymagañ stawianych poszukiwanemu rozwi±zaniu. 
+Rozdzia³ zawiera ponadto dyskusjê potencjalnych rozwi±zañ wraz z ich wadami i zaletami. Wybrane jest jedno, które najlepiej spe³nia postawione wymagania. W rozdziale 4 omawiane s± szczegó³y technologiczne implementacji wybranego rozwi±zania, natomiast w rozdziale 5 wyniki analizy przyk³adowej aplikacji w ¶rodowisku testowym. Pracê koñczy rozdzia³ 6 zawieraj±cy zbiór konkluzji odno¶nie mo¿liwo¶ci zastosowania i dalszego rozwoju zaimplementowanego systemu do badania wydajno¶ci aplikacji o architekturze SOA.
+
+Rozdzia³y 2.1, 2.2, 3.1, 4, 5.1, 5.5 oraz dodatek A zosta³y napisane przez Tomasza Duszkê. Rozdzia³y 1, 2.3, 2.4, 3.2, 3.3, 3.4, 5.1, 5.2 zosta³y napisane przez Jakuba Janczaka. Pozosta³e rozdzia³y: 6, 7 oraz 8 zosta³y napisane przez autorów pracy wspólnie.
+ 
+%  Rosn±ce nak³ady najwiêkszych gospodarek i ¶wiatowych koncernów na systemy komputerowe sprawi³y ¿e
+%  przekroczy³y one swoje naturalne granice. Rozwijaj±cym siê koncernom przesta³o wystarczaæ wewnêtrzne
+%  wspomaganie ich dzia³ania - coraz wiêkszy udzia³ w rynku maj± aplikacje zwyczajowo zwane B2B (Business
+%  to Business) - maj±ce na celu wymianê informacji pomiêdzy ró¿nymi podmiotami. Poza tym przemys³, wraz
+%  ze wzrostem zaawansowania, rozmiaru i udzia³u oprogramowania zaczyna siê borykaæ z problemami jakich
+%  wcze¶niej nie do¶wiadcza³:
+% 
+% 
+% \begin{itemize}
+% \item  szybko rozwijaj±cy siê rynek stymuluje powstawanie wielu coraz lepszych i pewniejszych technologii, co w istocie jest pozytywne, ale powoduje i¿ oprogramowanie ju¿ napisane bardzo szybko traci na warto¶ci i aktualno¶ci. Co poza wzrostem wydatków mo¿e nawet, przy ¼le prowadzonej polityce doboru, spowodowaæ konieczno¶æ wymiany ca³ych systemów
+% \item  silnie zintegrowane systemy wymagaj± ci±g³ej konserwacji, a zmiany w jednej czê¶ci zazwyczaj propaguj± siê na pozosta³e 
+% \item  coraz wiêksze skomplikowanie systemów powoduje, i¿ coraz trudniej je zrozumieæ i rozwijaæ
+% \end{itemize}
+% 
+% \subparagraph{Krótki wstêp do SOA}
+% 
+% SOA (Service Oriented Architecture) to koncepcja której za³o¿enia uwalniaj± oprogramowanie od tych problemów. SOA promuje model programowania zwany "lu¼nym powi±zaniem", tj. komponenty opgramowania s± niezale¿nymi bytami (us³ugami), które komunikuj± siê miêdzy sob± z pomoc± dobrze zdefiniowanych interfesjów. Us³ugi te wymieniaj± miêdzy sob± informacje samoistnie lub kierowane przez zewnêtrzny proces koordynuj±cy. Praktyka pokaza³a, ¿e wdro¿enie SOA w systemach wielkiej skali przynios³o wiele wymiernych korzy¶ci takich jak
+% % \footnote{za http://blogs.sun.com/rtenhove/entry/why_soa i http://labs.jboss.com/file-access/default/members/jbossesb/freezone/resources/whitepapers/WhyESB.pdf}:
+% 
+% \begin{itemize}
+% \item  wielokrotne u¿ycie komponentów systemu 
+% \item  szybkie reakcje na zmieniaj±ce siê wymagania i realia rynkowe - zmiana w procedurach biznesowych najczê¶ciej powoduje zmianê w sposobie wywo³ywania us³ug, a nie ich wewnêtrznej implementacji
+% \item  mo¿liwo¶æ stosowania przyrostowych metodologii rozwoju oprogramowania - w ostatnim czasie najpopularniejszych w firmach IT, dziêki którym mo¿liwe jest testowanie czêsciowej, ju¿ wykonanej implementacji systemu
+% \item  redukcja nak³adów poniesionych na oprogramowanie (o czym wspomnieli¶my wcze¶niej)
+% \item  skupienie siê na innowacjach zamiast na konserwacji systemu 
+% \end{itemize}
+%  Podstaw± powstania SOA jest fakt i¿ na topie przestaje byæ silna integracja, a zaczyna kompozycja :
+
+% img /home/kubek2k/public{\textunderscore}html/dokuwiki/data/media/magisterka/wstep/ewolucja{\textunderscore}soa.png
+% 
+% 
+% 
+% \dokutitleleveltree{Problemy z SOA i próby rozwi±zania}
+% \label{b9e3a44b7fdd9fd1d66bc1fc86f6286e}%% problemy_z_soa_i_proby_rozwiazania
+%  Pomimo swoich licznych zalet, podej¶cie SOA niesie ze sob± równie¿ du¿a ilo¶æ problemów. Chc±c zapewniæ wspó³dzia³anie systemów korzystaj±cych z ró¿nych technologii jeste¶my skazani na stosowanie oprogramowania ³±cz±cego (z ang. \hyperref[b200f0642a4dc4d9d66162920860c3f0]{middleware}) które jest w je nam w stanie zapewniæ - poci±ga to jednak za sob± do¶æ du¿e narzuty czasowe. Zwyczajowo technologi± u¿ywan± do integracji systemów w architekurze SOA stosuje siê technologiê \hyperref[742523daef59db4b718409f46de05d0c]{WebService'ów} opartych o protokó³ \hyperref[cbf4e0b7971051760907c327e975f4e5]{SOAP}. Dodatkowo wykorzystanie samej architektury SOA nak³ada na tworz±cych konieczno¶æ zaszywania lokalizacji poszczególnych komponentów systemu (tj. ka¿da z us³ug musi wiedzieæ gdzie powinna skierowaæ kolejne ¿±dania, w zale¿no¶ci od otrzymanych danych).
+% 
+% 
+% \dokutitlelevelfour{BPEL}
+% Chc±c zmieniæ naturalne podej¶cie do wykonywania ci±gu operacji na rozproszonych us³ugach (tzw. choreografii), wprowadzono pojêcie orchiestracji. \hyperref[54f21b6ecfc3292b6bcc669edc745133]{Orchiestracja} polega na tym, ¿e z komponentów systemu spada konieczno¶ci bycia ¶wiadomym o otoczeniu - wprowadzone zostaje pojêcie procesu biznesowego który sam wie co ma robiæ z danymi, i zawiaduje sekwencjami wywo³añ. Zmianê podej¶cia mo¿na porównaæ do przej¶cia z modelu \hyperref[705bcf0e77bc8b6fc8e66cbf3c055e6c]{peer-to-peer} do modelu scentralizowanego.
+% 
+% Jednym z rozwi±zañ wspieraj±cych ideê orchiestracji jest jêzyk BPEL - Business Process Execution Language. Dziêki niemu jeste¶my w stanie modelowaæ nawet bardzo z³o¿one procesy biznesowe na ró¿nych stopniach abstrakcji, korzystaj±c ze standardowych elementów sk³adniowych znanych z innych jêzyków programowania. Co najwa¿niejsze zosta³ on pomy¶lany w taki sposób, aby modele da³o siê przedstawiæ w postaci graficznej - bloczków, dziêki czemu proces tworzenia aplikacji ulega bardzo znacznemu uproszczeniu, a zarazem powiêksza siê grono potencjalnych u¿ytkowników. Nie bez znaczenia jest równie¿ obecno¶æ du¿ej gamy narzêdzi do modelowania w BPEL.
+% 
+% Co wa¿ne standard ten jest bardzo silnie wspierany przez przemys³ informatycznym i bez w±tpienia bêdzie w najbli¿szym czasie bêdzie to jedyny sensowny wybór na tym polu. Liczby \dokufootnote{ankieta OASIS: \href{http://mult.ifario.us/p/bpel-adoption-thermometer}{http://mult.ifario.us/p/bpel-adoption-thermometer}} pokazuj±, i¿ w¶ród programistów tworz±cych systemy SOA 23\% korzysta, a 28 planuje u¿ywaæ BPEL w swoich aplikacjach \dokufootnote{z drugiej strony 40\% nadal nie wie co to BPEL, co pokazuje nam jak niedojrza³y jest jeszcze ten rynek}. Liczby te rosn± z roku na rok. \dokufootnote{wiêcej informacji o BPEL \hyperref[22ee86570f52c823bdb1d5ef39aed4f7]{tutaj}}
+% 
+% 
+% \dokutitlelevelfour{ESB}
+% Innym, wspomnianym wcze¶niej, problemem jest mnogo¶æ u¿ywanych technologii w zewnêtrznych i ju¿ istniej±cych systemach (tzw. systemach odziedziczonych). Czêsto okazuje siê, ¿e pomimo najwiêkszych starañ nie jest mo¿liwe dostosowanie siê do takowych, a architektura SOA oparta tylko i wy³±cznie na \hyperref[742523daef59db4b718409f46de05d0c]{Web Service'ach} zaczyna traciæ na swoich w³asno¶ciach. Rozwi±zania mog± byæ dwa:
+% 
+% 
+% \begin{itemize}
+% \dokuitem  prostsze - mo¿na stworzyæ opgramowanie opakowuj±ce (tzw. wrapper) dla danej us³ugi, zrzucaj±c na siebie tym samym konieczno¶æ zmian za ka¿dym razem kiedy ta us³uga zmieni siê
+% \end{itemize}
+% lub
+% 
+% 
+% \begin{itemize}
+% \dokuitem  bardziej z³o¿one, ale daj±ce wiêkszy zysk w przysz³o¶ci - mo¿na u¿yæ istniej±cych platform integracyjnych (tzw. "integration middleware")
+% \end{itemize}
+% \hyperref[efb03b68f7a0c2a331fc61a491c4b2d7]{ESB (Enterprise Service Bus)} jest w³a¶nie jedn± z takich platform. Jej idea opiera siê na istnieniu szyny danych przy pomocy której realizujemy wszystkie komunikacje w systemie. Dziêki temu to nie proces, a szyna mo¿e decydowaæ o tym gdzie ma trafiæ dana informacja. Takie dzia³anie daje bardzo du¿e mo¿liwo¶ci, szczególnie je¶li chodzi o przeno¶no¶æ poniewa¿ chc±c skorzystaæ z jakiej¶ us³ugi proces nie odwo³uje siê do konkretnej instancji, ale po prostu wysy³a odpowiednio spreparowan± wiadomo¶æ do szyny i oczekuje na odpowied¼. Dziêki takiem podej¶ciu znacznie prostsze staje siê zapewnienie wielu wa¿nych w³a¶ciwo¶ci systemu rozproszonego:
+% 
+% 
+% \begin{itemize}
+% \dokuitem  integracja z innymi technologiami - ujednolicenie "punktu styku" ze ¶rodowiskiem zewnêtrznym i istniej±cymi systemami, za pomoc± odpowiednich adapterów i konwerterów wiadomo¶ci
+% \dokuitem  rozwi±zanie problemu lokalizacji us³ug - to szyna decyduje gdzie wys³aæ dan± wiadomo¶æ  zatem nasze aplikacje staj± siê przeno¶ne, wszystko zale¿y od konfiguracji ESB
+% \dokuitem  dziêki zastosowaniu redundantnych us³ug i odpowiedniej konfiguracji jeste¶my wstanie zapewniæ wy¿sz± wydajno¶æ i niezawodno¶æ systemu
+% \dokuitem  dzieki temu, ¿e dane pod±¿aj± niejako jednym kana³em komunikacyjnym ³atwiejsze staje siê zarz±dzanie bezpieczeñstwem 
+% \end{itemize}
+%  Mimo swojej krótkiej historii koncepcja ESB udowodni³a ju¿ swoj± przydatno¶æ w budowaniu du¿ych systemów. ESB jest z powodzeniem wdra¿ane w wielu inicjatywach ze szczególnym uwzglêdnieniem du¿ych projektów rz±dowych \dokufootnote{np. \href{http://www.gcn.com/print/25_20/41319-1.html}{system dla policji stanu Washington} czy \href{http://newsroom.progress.com/phoenix.zhtml?c=86919&p=NewsArticle&id=997931}{systemy bukmacherskie w UK}} \dokufootnote{wiêcej informacji o ESB \hyperref[efb03b68f7a0c2a331fc61a491c4b2d7]{tutaj}}
+% 
+% 
+% \dokutitleleveltree{Podsumowanie}
+% \label{96e21bf66c0133beafda0ff9f011643e}%% podsumowanie
+% Jak widaæ rynek informatyczny poradzi³ sobie z g³ównymi problemami z którymi spotyka siê programista stosuj±cy architekturê SOA. Jednak otaczaj±c ju¿ w samym sobie "ciê¿k±" technologiê \hyperref[742523daef59db4b718409f46de05d0c]{WebService'ów} dodatkowymi rozwi±zaniami, ryzykujemy sytuacjê w której to ich narzut bêdzie mia³ bardzo znacz±cy udzia³ w wykonaniu tych operacji. Dodatkowo zagro¿eniem dla tych technologii jest (sic!) ich dynamiczny rozwój w ostatnich latach\dokufootnote{co tyczy siê w zasadzie ca³ego rynku oprogramowania na ¶wiecie} - istnieje zagro¿enie, ¿e producenci oprogramowania popychani coraz wiêksz± konkurencj± na rynku, k³ad± wiêkszy nacisk na mo¿liwo¶ci pomijaj±c tak istotne cechy jak odporno¶æ na b³êdy czy wydajno¶æ. 
+% 
+% Chc±c porównaæ dzia³anie ró¿nych rozwi±zañ, tudzie¿ sprawdziæ narzut wynikaj±cy z wdro¿enia danej technologii, musi istnieæ jaka¶ spójna metodologia pomiarów wydajno¶ci - której rynek do tej pory niedopracowa³ siê. 
+% 
+% Celem tej pracy jest pokazanie jakie podej¶cie nale¿y zastosowaæ do pomiarów wydajno¶ci systemów o architekturze SOA. Efektem pracy ma byæ równie¿ stworzenie narzêdzia do takich pomiarów, oraz opracowanie przyk³adowych wyników testów w oparciu o przyk³adow± aplikacjê stworzon± w oparciu o wymienione wcze¶niej technologie.
+% 
+% 
+% \dokutitleleveltwo{Koniec}
+% \label{44943fe207611d5625258c1059d25ec8}%% koniec
+% Napisaæ o mo¿liwym narzucie generowanym przy takiej ilo¶ci technologii i konieczno¶ci pomiarów.
+% 
+%  Chc±c omin±æ problemy z integracj± systemów stworzonych z u¿yciem ró¿nych technologii i operuj±cych w ró¿nego rodzaju ¶rodowiskach, jako standard w zastosowaniach architektury SOA przyjê³o siê stosowaæ technologiê \hyperref[cca5d72b2013a1b8737449a4dd328903]{WebSevice'ów}. U¿ycie tak "ciê¿kiego" podej¶cia do zdalnego korzystania z us³ug ma jednak bardzo du¿e prze³o¿enie na wydajno¶æ aplikacji. Z tego powodu istotnie wa¿nym staje siê fakt i¿ brak jest zunifikowanego podej¶cia do badania jak wydajne s± aplikacje spe³niaj±ce za³o¿enia SOA. Taki stan rzeczy dodatkowo daje argument tzw. SOA-sceptykom, którzy jako g³ówn± wadê tej architektury wymieniaj± w³a¶nie straty wydajno¶ciowe. 
+% 
+% Celem tej pracy bêdzie opracowanie takiego podej¶cia ze szczególnym uwzglêdnieniem aplikacji opracowanych w oparciu o BPEL\ldots{}. i nie wiem co tu dalej napisac ;)
+% 
+% "My thought was, this change has to be compared to the switsch from Newtonian physics to relativistic physics." - \href{http://weblogs.asp.net/ralfw/archive/2005/07/03/417507.aspx}{http://weblogs.asp.net/ralfw/archive/2005/07/03/417507.aspx}
+% 
+% Melted Cheese programming - przej¶cie z SOA - \href{http://msdn2.microsoft.com/en-us/library/ms954609.aspx}{http://msdn2.microsoft.com/en-us/library/ms954609.aspx}
+% 
+% [mniej patetycznie, wiêcej konkretów, gar¶æ faktów]
+% 
+%  Dodatkowym problem, który jest szczególnie istotny w obecnych czasach, to du¿a prêdko¶æ rozwoju przemys³u i technologii informatycznych. Czêsto okazuje siê ¿e technologia traci swoj± warto¶ci na przestrzeni miesiêcy.  

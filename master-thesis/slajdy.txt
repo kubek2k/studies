@@ -1,0 +1,86 @@
+Dzień dobry, 
+tą krótka prezentacją chcieliśmy podsumować efekty naszych prac w ramach
+realizacji tematu:
+Badanie wydajności systemów o architekturze SOA
+
+Zacznijmy zatem od przedstawienia spisu treści naszej prezentacji
+AGENDA
+1. Rozpocznie się ona skrótowym omówieniem terminologii i koncepcji na których
+opiera się praca
+2. Po krótkim naświetleniu tematu pracy, przedstawione zostaną wymagania
+stawiane przed tworzonym oprogramowaniem
+3. Następnie przedstawiona zostanie koncepcja wybrana do realizacji i
+rozwiązania wybranych problemów implementacyjnych
+4. Ostatnim omawianym zagadnieniem będzie sposób testowania z użyciem
+stworzonego oprogramowania i prezentacja wyników jego działania
+5. Prezentację zakończymy krótkim podsumowaniem
+
+Technologie wspierające budowę systemów o arch SOA
+ESB - to koncepcja oprogramowania pośredniczącego opartego o integracyjną
+szynę. Rolą szyny jest dostarczanie zdarzeń, do uprzednio skonfigurowanych
+lokalizacji. Takie postępowanie pozwala na integrację usług o zróżnicowanym
+sposobie działania i formacie obsługiwanych danych.
+JBI - jest to niejako realizacja koncepcji ESB. Środowisko JBI dostarcza tzw.
+NMR, który pełni zadania wymienionej wcześniej szyny. Dodatkowo kontenery
+zawarte w środowisku JBI podzielono na te odpowiedzialne za komunikację (BC), 
+oraz logikę biznesową (SE).
+BPEL - Bussiness Process Execution Language - jest to język pozwalający na
+orchiestrację usług w obrębie procesów biznesowych - tj. kontrolowanie
+przepływem wiadomości między usługami, tak by nie były one świadome
+uczestnictwa w danym procesie biznesowym (oddzielenie logiki usług od
+logiki przepływu wiadomości między nimi). Silniki obsługujące język BPEL są
+najczęsciej częścią większych rozwiązań ESB.
+
+Omówienie tematu pracy
+Celem naszej pracy było opracowanie oprogramowania, pozwalającego na pomiar
+wydajności aplikacji o architekturze SOA, zbudowanych w oparciu o język BPEL
+
+Implementacja - schemat działania
+Analizując kilka możliwych koncepcji rozwiązań, pozwalających na osiągniecie 
+celu pracy, byliśmy zmuszeni odrzucić dużą część z nich, najczęściej z uwagi
+na brak przenośności. Zdecydowaliśmy się na koncepcję najbardziej
+skomplikowaną, ale i zarazem najbardziej elastyczną. Koncepcję tę przedstawia
+rysunek. Opiera się ona na takim zinstrumentowaniu kodu silnika BPEL w badanym
+środowisku, aby generował on zdarzenia w odpowiednio dobranych punktach
+pomiarowych dla każdej aktywności procesu biznesowego (początek, koniec,
+błąd). Następnie zdarzenia takie przekazywane są do systemu kolejkowego MOM
+(pozwalającego na elastyczne skalowanie rozwiązania), dzięki któremu trafiają
+do logiki przetwarzania danych, będącej częścią konsoli wizualizacyjnej.
+
+Procedura testowania
+Przykładową procedurę testowania przeprowadziliśmy dla 5 przykładowych
+aplikacji dostarczanych przez firmę Sun (tm), tzw Blueprints. Są to przykłady
+prezentujące standardowe podejścia do problemów występujących w aplikacjach
+opartych o język BPEL. Obejmują one:
+- Wywołanie synchroniczne
+- Wywołanie asynchroniczne
+- Obsługa sytuacji wyjątkowych w procesach biznesowych
+- Tworzenie procesów sterowanych zdarzeniami (np. przyjęcie zamówienia z
+  możliwościa jego potwierdzenia/anulowania o obrębie tego samego procesu)
+- Współbieżne wywołania asynchroniczne
+Procedura testowania obejmowała następujące kroki:
+- Umieszczenie aplikacji w środowisku wykonwaczym OpenESB
+- Rozpoczęcie działania testowanego procesu dla przykładowych danych
+  wejściowych
+- Obserwacja wyników
+
+Rysunek po prawej stronie obrazuje przykładowe środowisko testowe... (jak
+zdążę :))
+
+Podsumowanie
+Po serii testów można stwierdzić, że stworzone oprogramowanie spełnia
+wymagania postawione w pracy:
+- została zachowana niska intruzywaność testowania, niewielki jest również
+  wpływ na czas wykonania
+- prezentowane przez konsolę wizualizacyjną procesy biznesowe są zgodne z ich
+  rzeczywistą postacia
+- program generuje poprawne wartości parametrów wydajnościowych
+- dzięki zastosowaniu MOM umożliwiono obsługę wielu kontenerów jednocześnie,
+  jak i możliwość badania wydajności jednego kontenera z kilku konsoli
+- generowane wyniki mogą być prezentowane osobom o nawet niewielkiej wiedzy
+  technicznej, z uwagi na ich nieduży stopien skomplikowania
+
+Dalszy rozwój pracy mógłby obejmować:
+- implementację dla innych środowisk 
+- rozszerzenie możliwości prezentacyjnych (Gantt)
+- zintegrowanie rozwiązania z którymś z wiodących środowisk programistycznych

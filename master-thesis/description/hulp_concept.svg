@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="hulp_concept.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path3234"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path3231"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.4) translate(10,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.1840635"
+     inkscape:cx="213.19288"
+     inkscape:cy="844.67983"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1232"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2493"
+       width="398.32346"
+       height="295.01016"
+       x="4.7774925"
+       y="102.23834"
+       rx="9.5572395"
+       ry="7.4659567" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#155aff;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       id="rect3159"
+       width="0"
+       height="4.7909503"
+       x="-191.03914"
+       y="131.30199"
+       rx="12.814118"
+       ry="4.7909503" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2383"
+       width="105.26283"
+       height="71.404762"
+       x="85.472374"
+       y="249.72508"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.12872696px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="88.824394"
+       y="318.65955"
+       id="text3155"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895"><tspan
+         style="font-size:10px;font-weight:normal"
+         sodipodi:role="line"
+         id="tspan3157"
+         x="88.824394"
+         y="318.65955">Kontener serwletów</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3161"
+       width="57.264301"
+       height="31.448341"
+       x="119.83496"
+       y="275.90179"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.11442375px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="127.20692"
+       y="288.43695"
+       id="text3163"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895"><tspan
+         sodipodi:role="line"
+         id="tspan3165"
+         x="127.20692"
+         y="288.43695"
+         style="font-size:10px;font-weight:normal">Serwlet</tspan><tspan
+         sodipodi:role="line"
+         x="127.20692"
+         y="300.93695"
+         id="tspan3167"
+         style="font-size:10px;font-weight:normal">HULP</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3169"
+       width="128.09953"
+       height="150.26924"
+       x="211.0706"
+       y="170.84357"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.11442471px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="246.7477"
+       y="182.57425"
+       id="text3171"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895"><tspan
+         sodipodi:role="line"
+         id="tspan3173"
+         x="246.7477"
+         y="182.57425"
+         style="font-size:10px;font-weight:normal">Kontener JBI</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3175"
+       width="107.81962"
+       height="18.526751"
+       x="222.44092"
+       y="231.15408"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.11442471px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="265.87247"
+       y="243.60651"
+       id="text3179"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895"><tspan
+         sodipodi:role="line"
+         id="tspan3181"
+         x="265.87247"
+         y="243.60651"
+         style="font-size:10px;font-weight:normal">NMR</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3183"
+       width="100.48454"
+       height="49.928883"
+       x="226.07051"
+       y="246.61288"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.11442471px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="276.40308"
+       y="260.52097"
+       id="text3189"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895"><tspan
+         sodipodi:role="line"
+         id="tspan3191"
+         x="276.40308"
+         y="260.52097"
+         style="font-size:10px;font-weight:normal">Zinstrumentowany</tspan><tspan
+         sodipodi:role="line"
+         x="276.40308"
+         y="273.02097"
+         id="tspan3197"
+         style="font-size:10px;font-weight:normal">silnik</tspan><tspan
+         sodipodi:role="line"
+         x="276.40308"
+         y="285.52097"
+         id="tspan3203"
+         style="font-size:10px;font-weight:normal">BPEL</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3205"
+       width="32.117668"
+       height="15.109504"
+       x="261.23907"
+       y="293.21274"
+       rx="4"
+       ry="4"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.1001215px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="264.00507"
+       y="304.34549"
+       id="text3207"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895"><tspan
+         sodipodi:role="line"
+         id="tspan3209"
+         x="264.00507"
+         y="304.34549"
+         style="font-size:10px;font-weight:normal">HULP</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Mstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 178.46522,301.70463 L 261.19012,301.70463"
+       id="path5052"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3340"
+       width="78.828629"
+       height="59.121468"
+       x="85.472"
+       y="171.39326"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="125.47132"
+       y="183.96419"
+       id="text3342"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895"><tspan
+         sodipodi:role="line"
+         id="tspan3344"
+         x="127.06312"
+         y="183.96419"
+         style="font-size:10px;font-weight:normal;text-align:center;text-anchor:middle">Logika </tspan><tspan
+         sodipodi:role="line"
+         x="125.47132"
+         y="196.46419"
+         id="tspan3346"
+         style="font-size:10px;font-weight:normal;text-align:center;text-anchor:middle">przetwarzania</tspan><tspan
+         sodipodi:role="line"
+         x="127.06312"
+         y="208.96419"
+         id="tspan3348"
+         style="font-size:10px;font-weight:normal;text-align:center;text-anchor:middle">danych </tspan><tspan
+         sodipodi:role="line"
+         x="125.47132"
+         y="221.46419"
+         id="tspan3350"
+         style="font-size:10px;font-weight:normal;text-align:center;text-anchor:middle">pomiarowych</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Mstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 125.90155,231.88939 L 149.11361,275.78894"
+       id="path3352"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept.png"
+       inkscape:export-xdpi="299.82895"
+       inkscape:export-ydpi="299.82895"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

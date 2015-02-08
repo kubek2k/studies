@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="soa-evolution.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient7591">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop7593" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop7595" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path4735"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path4729"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Send"
+       style="overflow:visible;">
+      <path
+         id="path4741"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.3) rotate(180) translate(-2.3,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path4717"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7591"
+       id="linearGradient7597"
+       x1="-112.57983"
+       y1="367.56274"
+       x2="-205.16359"
+       y2="381.01657"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.4270228,0,0,0.7334889,417.47728,105.02083)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.66404571"
+     inkscape:cx="490.59557"
+     inkscape:cy="307.58107"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="1001"
+     inkscape:window-x="0"
+     inkscape:window-y="24" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect9785"
+       width="572.75458"
+       height="444.50732"
+       x="-73.461998"
+       y="167.08287"
+       rx="4.6671896"
+       ry="5.4800153" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.48153015999999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 29.079527,345.94726 C 26.786987,345.94726 24.941387,347.52089 24.941387,349.46845 L 24.941387,385.61331 C 24.941387,387.23331 26.216987,388.58699 27.965997,388.99907 C 28.131987,388.97101 28.289857,388.95392 28.462577,388.95392 L 37.400977,388.95392 C 35.663877,386.82887 34.617127,384.08471 34.617127,381.08391 C 34.617127,374.35835 39.881697,368.89519 46.369477,368.89518 C 52.857267,368.89519 58.121827,374.35837 58.121827,381.08391 C 58.121827,384.08469 57.075087,386.82888 55.337977,388.95392 L 64.607437,388.95392 C 64.850877,388.95392 65.100307,388.97422 65.329727,389.02916 C 67.148717,388.65743 68.489767,387.27537 68.489777,385.61331 L 68.489777,376.34385 C 70.614817,378.08096 73.358997,379.1277 76.359777,379.1277 C 83.085337,379.1277 88.548507,373.86313 88.548517,367.37535 C 88.548517,360.88757 83.085337,355.62301 76.359777,355.62301 C 73.358997,355.62301 70.614817,356.66975 68.489777,358.40685 L 68.489777,349.46845 C 68.489777,347.52089 66.644167,345.94726 64.351617,345.94726 L 29.079527,345.94726 z"
+       id="rect2383"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.48153015999999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 111.49398,350.24976 C 111.49398,347.95721 109.92035,346.11161 107.97279,346.11161 L 71.827917,346.11161 C 70.207917,346.11161 68.854237,347.38722 68.442167,349.13623 C 68.470217,349.30222 68.487307,349.46008 68.487307,349.6328 L 68.487307,358.57121 C 70.612357,356.8341 73.356527,355.78736 76.357317,355.78736 C 83.082877,355.78736 88.546037,361.05193 88.546047,367.53971 C 88.546047,374.02749 83.082857,379.29206 76.357317,379.29205 C 73.356537,379.29205 70.612347,378.24532 68.487307,376.50821 L 68.487307,385.77766 C 68.487307,386.0211 68.467007,386.27054 68.412067,386.49996 C 68.783797,388.31895 70.165857,389.65999 71.827917,389.66 L 81.097377,389.66 C 79.360277,391.78505 78.313537,394.52923 78.313537,397.53001 C 78.313537,404.25556 83.578097,409.71874 90.065877,409.71874 C 96.553667,409.71874 101.81823,404.25557 101.81823,397.53001 C 101.81823,394.52923 100.77149,391.78505 99.034377,389.66 L 107.97279,389.66 C 109.92035,389.66 111.49398,387.8144 111.49398,385.52185 L 111.49398,350.24976 z"
+       id="path3168"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.48153015999999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 107.39356,432.6421 C 109.68611,432.6421 111.53172,431.06847 111.53172,429.12091 L 111.53172,392.97605 C 111.53172,391.35605 110.25611,390.00237 108.5071,389.59029 C 108.3411,389.61835 108.18324,389.63544 108.01053,389.63544 L 99.072117,389.63544 C 100.80923,391.76049 101.85596,394.50466 101.85597,397.50545 C 101.85597,404.23101 96.591387,409.69417 90.103617,409.69418 C 83.615837,409.69418 78.351267,404.23099 78.351277,397.50545 C 78.351277,394.50467 79.397997,391.76048 81.135117,389.63544 L 71.865657,389.63544 C 71.622207,389.63544 71.372777,389.61514 71.143367,389.5602 C 69.324367,389.93193 67.983327,391.31399 67.983327,392.97605 L 67.983327,402.24551 C 65.858267,400.5084 63.114097,399.46166 60.113317,399.46166 C 53.387767,399.46166 47.924587,404.72623 47.924587,411.21401 C 47.924587,417.70179 53.387757,422.96636 60.113317,422.96636 C 63.114097,422.96636 65.858267,421.91961 67.983327,420.18251 L 67.983327,429.12091 C 67.983327,431.06847 69.828927,432.6421 72.121467,432.6421 L 107.39356,432.6421 z"
+       id="path3170"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.48153015999999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 25.001217,428.36232 C 25.001217,430.65486 26.574837,432.50047 28.522407,432.50047 L 64.667257,432.50047 C 66.287267,432.50047 67.640947,431.22486 68.053017,429.47586 C 68.024967,429.30986 68.007877,429.15199 68.007877,428.97928 L 68.007877,420.04088 C 65.882827,421.77798 63.138657,422.82472 60.137867,422.82472 C 53.412307,422.82472 47.949137,417.56015 47.949137,411.07238 C 47.949137,404.58459 53.412317,399.32003 60.137867,399.32003 C 63.138657,399.32003 65.882837,400.36676 68.007877,402.10388 L 68.007877,392.83442 C 68.007877,392.59097 68.028167,392.34154 68.083117,392.11213 C 67.711387,390.29313 66.329327,388.95209 64.667257,388.95208 L 55.397797,388.95208 C 57.134907,386.82703 58.181657,384.08286 58.181657,381.08208 C 58.181657,374.35652 52.917087,368.89335 46.429297,368.89334 C 39.941517,368.89334 34.676957,374.35651 34.676957,381.08208 C 34.676957,384.08286 35.723697,386.82703 37.460807,388.95208 L 28.522407,388.95208 C 26.574837,388.95208 25.001217,390.79769 25.001217,393.09023 L 25.001217,428.36232 z"
+       id="path3172"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:url(#linearGradient7597);stroke-width:4.09234428;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-mid:none;marker-end:url(#Arrow2Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 91.070847,384.52847 L 243.11033,384.52847"
+       id="path3176"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.48150240999999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7599"
+       width="43.203293"
+       height="42.954399"
+       x="342.70648"
+       y="-306.47794"
+       rx="3.6900868"
+       ry="4.3327427"
+       transform="matrix(0,1,-1,0,0,0)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.48150240999999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7605"
+       width="43.203293"
+       height="42.954399"
+       x="342.70648"
+       y="-358.15134"
+       rx="3.6900868"
+       ry="4.3327427"
+       transform="matrix(0,1,-1,0,0,0)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.48150240999999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7607"
+       width="43.203293"
+       height="42.954399"
+       x="393.75519"
+       y="-306.2074"
+       rx="3.6900868"
+       ry="4.3327427"
+       transform="matrix(0,1,-1,0,0,0)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.48150240999999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7611"
+       width="43.203293"
+       height="42.954399"
+       x="393.91516"
+       y="-358.21964"
+       rx="3.6900868"
+       ry="4.3327427"
+       transform="matrix(0,1,-1,0,0,0)"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.28965497;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 290.51471,357.78225 C 290.51471,357.78225 312.99554,335.1007 329.05328,356.97937"
+       id="path7615"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.28965497;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 343.36054,368.98089 C 343.36054,368.98089 366.0421,391.46172 344.16343,407.51944"
+       id="path9753"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.28965497;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 331.15581,421.4597 C 331.15581,421.4597 308.67498,444.14126 292.61725,422.26258"
+       id="path9755"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.28965497;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 278.07669,408.09534 C 278.07669,408.09534 255.39514,385.61451 277.27382,369.55677"
+       id="path9757"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:14.2315979px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="42.998634"
+       y="318.51941"
+       id="text9759"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan9761"
+         x="42.998634"
+         y="318.51941">Dawniej</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.2315979px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="283.74667"
+       y="317.53494"
+       id="text9765"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan9767"
+         x="283.74667"
+         y="317.53494">Obecnie</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.48773193px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="30.47184"
+       y="458.07062"
+       id="text9773"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan9775"
+         x="30.47184"
+         y="458.07062">silnie powiązane </tspan><tspan
+         sodipodi:role="line"
+         x="30.47184"
+         y="469.93027"
+         id="tspan9777">podsystemy</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.48773193px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="270.80951"
+       y="458.07062"
+       id="text9779"
+       inkscape:export-filename="/home/kubek2k/doki/mgr/intro/soa-evolution.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan9781"
+         x="270.80951"
+         y="458.07062">luźno powiązane </tspan><tspan
+         sodipodi:role="line"
+         x="270.80951"
+         y="469.93027"
+         id="tspan9783">usługi</tspan></text>
+  </g>
+</svg>

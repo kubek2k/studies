@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="instr.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lstart"
+       style="overflow:visible">
+      <path
+         id="path3349"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3352"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3334"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="145.8687"
+     inkscape:cy="815.579"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1232"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5713"
+       width="850.54846"
+       height="555.58392"
+       x="-207.08127"
+       y="-45.673634" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="57.857143"
+       y="139.50504"
+       id="text2403"><tspan
+         sodipodi:role="line"
+         x="57.857143"
+         y="169.50504"
+         id="tspan2409"
+         style="text-anchor:middle;text-align:center" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="52.142857"
+       y="210.93361"
+       id="text2416"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188"><tspan
+         sodipodi:role="line"
+         id="tspan2418"
+         x="52.142857"
+         y="210.93361" /><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="225.93361"
+         id="tspan2424">public class Test {</tspan><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="240.93361"
+         id="tspan2456" /><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="255.93361"
+         id="tspan2454">     @InstrumentMethod(className=&quot;App&quot;, value=&quot;calc&quot;)</tspan><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="270.93362"
+         id="tspan2420">     @BeforeMethodStart</tspan><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="300.93362"
+         id="tspan2526">     public static beforeCalc(</tspan><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="300.93362"
+         id="tspan2528">               @LinkThis Object  app  ,</tspan><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="330.93362"
+         id="tspan2514">               @LinkParameter(1) Object  param  ) {</tspan><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="345.93362"
+         id="tspan2450">          // ...</tspan><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="360.93362"
+         id="tspan2452">     }</tspan><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="375.93362"
+         id="tspan2458" /><tspan
+         sodipodi:role="line"
+         x="52.142857"
+         y="390.93362"
+         id="tspan2460">}</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3302"
+       width="46.108788"
+       height="14.847028"
+       x="272.05023"
+       y="305.75317"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="51.428581"
+       y="87.505043"
+       id="text2462"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188"><tspan
+         sodipodi:role="line"
+         id="tspan2464"
+         x="51.428581"
+         y="87.505043">public class  App  {</tspan><tspan
+         sodipodi:role="line"
+         x="51.428581"
+         y="102.50504"
+         id="tspan2466" /><tspan
+         sodipodi:role="line"
+         x="51.428581"
+         y="117.50504"
+         id="tspan2472">     public void calc( String  text  ) {</tspan><tspan
+         sodipodi:role="line"
+         x="51.428581"
+         y="132.50504"
+         id="tspan2474">          // ...</tspan><tspan
+         sodipodi:role="line"
+         x="51.428581"
+         y="147.50504"
+         id="tspan2476">     }</tspan><tspan
+         sodipodi:role="line"
+         x="51.428581"
+         y="162.50504"
+         id="tspan2468"></tspan><tspan
+         sodipodi:role="line"
+         x="51.428581"
+         y="177.50504"
+         id="tspan2488">}</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3304"
+       width="30.357143"
+       height="15.714286"
+       x="125.17857"
+       y="76.076462"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3306"
+       width="30.357143"
+       height="15.714286"
+       x="211.96429"
+       y="105.36218"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 49.097373,352.56503 C 38.001406,355.42152 43.84404,345.31625 43.077068,332.36198 C 42.945935,317.06384 41.974757,316.87304 34.006,311.65385 C 39.081865,307.8067 43.0067,309.41513 43.077068,289.95588 C 42.331217,278.15948 38.975218,271.49359 49.077068,271.75283"
+       id="path3324"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow2Lend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 33.230646,311.42116 L 1.9129114,311.42116 L 1.9129114,123.49028 L 92.333265,123.49028"
+       id="path3326"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);stroke-dashoffset:0"
+       d="M 235.36554,289.69701 L 235.36554,275.0498 L 416.68793,275.0498 L 416.68793,46.110662 L 140.4112,46.110662 L 140.4112,75.828939"
+       id="path4629"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5170"
+       width="29.209904"
+       height="14.904518"
+       x="218.48305"
+       y="290.40704"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);stroke-dashoffset:0"
+       d="M 295.46962,305.35437 L 295.46962,292.72747 L 437.90113,292.72747 L 437.90113,82.615739 L 225.76909,82.615739 L 225.76909,104.83909"
+       id="path5172"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="292.59113"
+       y="377.36218"
+       id="text5701"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188"><tspan
+         sodipodi:role="line"
+         id="tspan5703"
+         x="292.59113"
+         y="377.36218">Definicja instrumentacji</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-weight:normal;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="293.60229"
+       y="182.36218"
+       id="text5705"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188"><tspan
+         sodipodi:role="line"
+         id="tspan5707"
+         x="293.60229"
+         y="182.36218"
+         style="text-align:start;text-anchor:start">Testowa aplikacja</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6,6;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5709"
+       width="469.03821"
+       height="170.75247"
+       x="-12.519097"
+       y="18.057371"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6,6;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5711"
+       width="469.03821"
+       height="170.75247"
+       x="-12.519096"
+       y="211.27165"
+       inkscape:export-filename="/home/tomek/mgr/mgr/images/instr.png"
+       inkscape:export-xdpi="188"
+       inkscape:export-ydpi="188" />
+  </g>
+</svg>

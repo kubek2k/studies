@@ -1,0 +1,6 @@
+
+build:
+	latex index.tex
+
+show: 
+	xdvi index.dvi

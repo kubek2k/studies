@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="ss_overview.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2773"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="132.00931"
+     inkscape:cy="971.09399"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1211"
+     inkscape:window-height="773"
+     inkscape:window-x="10"
+     inkscape:window-y="2" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89398521;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3624"
+       width="1126.0347"
+       height="638.89172"
+       x="-271.94586"
+       y="-226.72655" />
+    <image
+       y="-10.466866"
+       x="29.19182"
+       id="image2775"
+       height="295.29507"
+       width="467.29288"
+       sodipodi:absref="/home/tomek/sr2.png"
+       xlink:href="/home/tomek/sr2.png"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.67500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 139.35032,-11.678537 L 26.284654,-11.678537 L 26.284654,-7.4662568 L -13.273883,-23.697307 L 26.284654,0.61484318 L 26.284654,4.6921172 L 139.35032,4.6921172 L 139.35032,-11.678537 z"
+       id="path3576"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.67500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 237.53684,0.66431618 L 491.0025,0.66431618 L 491.0025,4.8766001 L 530.56104,-11.35445 L 491.0025,12.9577 L 491.0025,17.03497 L 237.53684,17.03497 L 237.53684,0.66431618 z"
+       id="path3578"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.67500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 237.53683,18.831209 L 491.00249,18.831209 L 491.00249,54.093214 L 530.56103,37.862164 L 491.00249,62.174314 L 491.00249,101.35159 L 237.53683,101.35159 L 237.53683,18.831209 z"
+       id="path3580"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.67500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 237.53683,106.15703 L 491.00249,106.15703 L 491.00249,126.56932 L 530.56103,110.33827 L 491.00249,134.65042 L 491.00249,152.22769 L 237.53683,152.22769 L 237.53683,106.15703 z"
+       id="path3582"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.67500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 237.53683,154.41779 L 491.00249,154.41779 L 491.00249,212.63007 L 530.56103,196.39902 L 491.00249,220.71117 L 491.00249,276.08844 L 237.53683,276.08844 L 237.53683,154.41779 z"
+       id="path3584"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.67500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 219.77175,0.67181678 L 41.906084,0.67181678 L 41.906084,134.48408 L 2.3475474,118.25303 L 41.906084,142.56518 L 41.906084,275.56745 L 219.77175,275.56745 L 219.77175,0.67181678 z"
+       id="path3586"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007" />
+    <text
+       xml:space="preserve"
+       style="font-size:16.20000076px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="503.79266"
+       y="-15.481147"
+       id="text3588"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007"><tspan
+         sodipodi:role="line"
+         id="tspan3590"
+         x="503.79266"
+         y="-15.481147"
+         style="font-size:10.80000019px">Tryb ścieżek</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.20000076px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="-54.958122"
+       y="-26.67108"
+       id="text3592"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007"><tspan
+         sodipodi:role="line"
+         id="tspan3594"
+         x="-54.958122"
+         y="-26.67108"
+         style="font-size:10.80000019px">Modele BPEL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.20000076px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="503.40259"
+       y="104.98408"
+       id="text3596"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007"><tspan
+         sodipodi:role="line"
+         x="503.40259"
+         y="104.98408"
+         style="font-size:10.80000019px;text-align:start;text-anchor:start"
+         id="tspan3614">Wybrany proces</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.20000076px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="502.70123"
+       y="33.542072"
+       id="text3600"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007"><tspan
+         sodipodi:role="line"
+         id="tspan3602"
+         x="502.70123"
+         y="33.542072"
+         style="font-size:10.80000019px">Procesy BPEL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.20000076px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="503.40259"
+       y="190.21632"
+       id="text3604"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007"><tspan
+         sodipodi:role="line"
+         x="503.40259"
+         y="190.21632"
+         style="font-size:10.80000019px"
+         id="tspan3620">Wybrany element</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.20000076px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="-69.944862"
+       y="112.98348"
+       id="text3608"
+       inkscape:export-filename="/home/tomek/mgr/mgr/appendix/ss_overview.png"
+       inkscape:export-xdpi="299.85007"
+       inkscape:export-ydpi="299.85007"><tspan
+         sodipodi:role="line"
+         id="tspan3610"
+         x="-69.944862"
+         y="112.98348"
+         style="font-size:10.80000019px">Elementy modelu</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="listener_concept4.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3266"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Send"
+       style="overflow:visible;">
+      <path
+         id="path3260"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path3234"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path3231"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.4) translate(10,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.77254772"
+     inkscape:cx="372.04724"
+     inkscape:cy="526.18109"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="1001"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2493"
+       width="398.32346"
+       height="295.01016"
+       x="4.3566384"
+       y="98.200272"
+       rx="9.5572395"
+       ry="7.4659567" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#155aff;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       id="rect3159"
+       width="0"
+       height="4.7909503"
+       x="-191.03914"
+       y="131.30199"
+       rx="12.814118"
+       ry="4.7909503" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#155aff;stroke-width:0.86612141;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       id="rect3169"
+       width="99.882347"
+       height="91.884628"
+       x="268.78183"
+       y="115.52179"
+       rx="5.3294101"
+       ry="5.4658418"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept2.png"
+       inkscape:export-xdpi="93.873955"
+       inkscape:export-ydpi="93.873955" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.33818388px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="282.82092"
+       y="124.22247"
+       id="text3171"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept2.png"
+       inkscape:export-xdpi="93.873955"
+       inkscape:export-ydpi="93.873955"
+       transform="scale(0.9781098,1.0223802)"><tspan
+         sodipodi:role="line"
+         id="tspan3173"
+         x="282.82092"
+         y="124.22247">Kontener JBI</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#155aff;stroke-width:0.79227298;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       id="rect3175"
+       width="82.374443"
+       height="14.79513"
+       x="274.00891"
+       y="149.9973"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept2.png"
+       inkscape:export-xdpi="93.873955"
+       inkscape:export-ydpi="93.873955" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.33818388px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="285.04761"
+       y="155.17876"
+       id="text3179"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept2.png"
+       inkscape:export-xdpi="93.873955"
+       inkscape:export-ydpi="93.873955"
+       transform="scale(0.9781098,1.0223802)"><tspan
+         sodipodi:role="line"
+         id="tspan3181"
+         x="285.04761"
+         y="155.17876">NMR</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#155aff;stroke-width:1.33816016;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       id="rect3183"
+       width="68.93734"
+       height="39.946598"
+       x="276.20602"
+       y="162.72597"
+       ry="5.9621787"
+       rx="7.3017535"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept2.png"
+       inkscape:export-xdpi="93.873955"
+       inkscape:export-ydpi="93.873955" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.33818388px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="317.28574"
+       y="174.46413"
+       id="text3189"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept2.png"
+       inkscape:export-xdpi="93.873955"
+       inkscape:export-ydpi="93.873955"
+       transform="scale(0.9781098,1.0223802)"><tspan
+         sodipodi:role="line"
+         x="317.28574"
+         y="174.46413"
+         id="tspan3203"
+         style="font-size:6.24880648px">Zinstrumentowany</tspan><tspan
+         sodipodi:role="line"
+         x="318.15228"
+         y="182.27513"
+         style="font-size:6.24880648px"
+         id="tspan3361">silnik </tspan><tspan
+         sodipodi:role="line"
+         x="317.28574"
+         y="190.08614"
+         style="font-size:6.24880648px"
+         id="tspan3363">BPEL</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.50945902;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Mstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 75.898429,239.74022 L 157.95344,305.85867"
+       id="path5052"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept2.png"
+       inkscape:export-xdpi="93.873955"
+       inkscape:export-ydpi="93.873955" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.7253027px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="214.12076"
+       y="131.78879"
+       id="text3336"
+       transform="matrix(0.763604,0.6221526,-0.5630215,0.850853,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3338"
+         x="214.12076"
+         y="131.78879">publikacja zdarzenia</tspan></text>
+    <g
+       id="g5120"
+       transform="translate(-37.957845,-87.62609)">
+      <rect
+         ry="5.8490191"
+         rx="4.1929917"
+         y="203.53262"
+         x="56.277779"
+         height="59.121468"
+         width="78.828629"
+         id="rect3340"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#155aff;stroke-width:1.10000002;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529" />
+      <text
+         id="text3342"
+         y="218.42818"
+         x="63.023155"
+         style="font-size:8px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+         xml:space="preserve"><tspan
+           y="218.42818"
+           x="63.023155"
+           id="tspan3344"
+           sodipodi:role="line">Logika </tspan><tspan
+           id="tspan3346"
+           y="228.42818"
+           x="63.023155"
+           sodipodi:role="line">przetwarzania</tspan><tspan
+           id="tspan3348"
+           y="238.42818"
+           x="63.023155"
+           sodipodi:role="line">danych </tspan><tspan
+           id="tspan3350"
+           y="248.42818"
+           x="63.023155"
+           sodipodi:role="line">pomiarowych</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.89766836;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Mstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 57.963742,179.32827 L 60.553086,212.16013"
+       id="path3352"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept2.png"
+       inkscape:export-xdpi="93.873955"
+       inkscape:export-ydpi="93.873955" />
+    <g
+       id="g5128"
+       transform="translate(-40.784494,-133.25627)">
+      <rect
+         ry="5.8490191"
+         rx="4.1929917"
+         y="354.75577"
+         x="66.412003"
+         height="15.21008"
+         width="82.692169"
+         id="rect2534"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#155aff;stroke-width:0.82239461;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529" />
+      <text
+         id="text2569"
+         y="365.8905"
+         x="72.685242"
+         style="font-size:8px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+         xml:space="preserve"><tspan
+           y="365.8905"
+           x="72.685242"
+           id="tspan2571"
+           sodipodi:role="line">Rozwiązanie MOM</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:3,3;stroke-dashoffset:0"
+       d="M 277.41531,203.56016 L 193.82729,264.9388"
+       id="path3378" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:4,4;stroke-dashoffset:0"
+       d="M 345.25487,201.13732 L 396.53834,265.74641"
+       id="path3380" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#155aff;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823528999999999"
+       id="rect3382"
+       width="202.71104"
+       height="120.73825"
+       x="193.8273"
+       y="266.95782"
+       rx="9.5572395"
+       ry="7.4659567" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#155aff;stroke-width:1.55814791;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       d="M 220.05079,349.95216 C 220.15468,340.48569 213.6771,332.71125 205.59894,332.61873 C 202.81745,332.58687 200.23575,333.50764 198.0033,335.06319 L 198.18258,318.72581 C 200.15804,319.93366 202.40144,320.66123 204.78376,320.68851 C 212.86192,320.78103 219.50847,313.15688 219.61235,303.69043 C 219.71623,294.22397 213.23864,286.44952 205.1605,286.357 C 202.77818,286.32972 200.51938,287.00571 198.51792,288.16801 L 198.56538,283.84206 C 198.64632,276.46681 190.88832,270.45246 181.14307,270.34083 L 180.60251,270.33465 C 170.85726,270.22303 162.96926,276.05819 162.88829,283.43343 L 161.91664,371.97742 C 161.83571,379.35267 169.59323,385.41305 179.33845,385.52466 L 179.87901,385.53086 C 189.62426,385.64248 197.5128,379.76129 197.59373,372.38605 L 197.68211,364.3324 C 199.87986,365.9387 202.44072,366.91837 205.2222,366.95023 C 213.30035,367.04275 219.94692,359.41862 220.05079,349.95216 z"
+       id="rect3205" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.23830032px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="294.97455"
+       y="-185.84581"
+       id="text3207"
+       inkscape:export-filename="/home/tomek/mgr/mgr/description/hulp_concept2.png"
+       inkscape:export-xdpi="93.873955"
+       inkscape:export-ydpi="93.873955"
+       transform="matrix(0,1,-1,0,0,0)"><tspan
+         sodipodi:role="line"
+         x="294.97455"
+         y="-185.84581"
+         id="tspan2512">Kod </tspan><tspan
+         sodipodi:role="line"
+         x="294.97455"
+         y="-173.04793"
+         id="tspan3357">instrumentacji</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="226.53564"
+       y="281.09106"
+       id="text3216"><tspan
+         sodipodi:role="line"
+         id="tspan3218"
+         x="226.53564"
+         y="281.09106">Silnik BPEL</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#155aff;stroke-width:1.56885326;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98823529"
+       id="rect3220"
+       width="116.67333"
+       height="58.928951"
+       x="247.95084"
+       y="310.17859"
+       rx="9.8975153"
+       ry="7.4625559" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="259.6478"
+       y="321.87555"
+       id="text3222"><tspan
+         sodipodi:role="line"
+         id="tspan3224"
+         x="259.6478"
+         y="321.87555">Proces BPEL</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.65366215;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3226"
+       width="29.32424"
+       height="13.171965"
+       x="262.95511"
+       y="328.00952"
+       rx="0"
+       ry="0" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.64491111;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3228"
+       width="28.525375"
+       height="13.180715"
+       x="263.35455"
+       y="350.0126"
+       rx="0"
+       ry="0" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.66229028;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3230"
+       width="30.123224"
+       height="13.163336"
+       x="329.99136"
+       y="332.65759"
+       rx="0"
+       ry="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.30000000999999998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.80000007000000006, 0.60000001999999997;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 289.93333,335.20119 L 335.1597,340.45068"
+       id="path3232" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="266.51254"
+       y="338.83545"
+       id="text3234"><tspan
+         sodipodi:role="line"
+         id="tspan3236"
+         x="266.51254"
+         y="338.83545" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="267.32016"
+       y="336.81641"
+       id="text3238"><tspan
+         sodipodi:role="line"
+         id="tspan3240"
+         x="267.32016"
+         y="336.81641">Invoke</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="337.98636"
+       y="341.66211"
+       id="text4567"><tspan
+         sodipodi:role="line"
+         id="tspan4569"
+         x="337.98636"
+         y="341.66211">Usługa</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:2.20000005;stroke-dasharray:none"
+       d="M 278.22293,327.93267 L 278.22293,322.27937"
+       id="path4571" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25674576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 279.03054,341.64047 L 279.03054,350.97129"
+       id="path4573" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 279.43435,363.87148 L 279.43435,368.71716"
+       id="path4575" />
+    <text
+       xml:space="preserve"
+       style="font-size:6px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="268.12775"
+       y="359.8334"
+       id="text4577"><tspan
+         sodipodi:role="line"
+         id="tspan4579"
+         x="268.12775"
+         y="359.8334">Assign</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:3,1;stroke-dashoffset:0"
+       d="M 264.4935,334.39358 L 205.53769,305.31948"
+       id="path4581" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.99999952px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="331.90063"
+       y="198.89339"
+       id="text5116"
+       transform="matrix(0.9084004,0.4181014,-0.4181014,0.9084004,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5118"
+         x="331.90063"
+         y="198.89339">Invoke START</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.7253027px;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       x="222.42712"
+       y="146.43695"
+       id="text5136"
+       transform="matrix(0.763604,0.6221526,-0.5630215,0.850853,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5138"
+         x="222.42712"
+         y="146.43695">Invoke START</tspan></text>
+  </g>
+</svg>

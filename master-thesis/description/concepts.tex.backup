@@ -1,0 +1,198 @@
+
+\section{Koncepcje rozwi±zañ}
+
+W trakcie analizy mo¿liwo¶ci podej¶cia do postawionego wcze¶niej problemu, rozró¿nione zosta³y dwie grupy rozwi±zañ:
+\begin{itemize}
+ \item Nie wymagaj±ce modyfikacji kodu - koncepcje opieraj±ce siê na wykorzystaniu ju¿ istniej±cych mo¿liwo¶ci pobrania informacji pomiarowych ze ¶rodowiska
+ \item Wymagaj±ce modyfikacji ¶rodowiska testowego - koncepcje, których wykorzystanie opiera siê na zmianach w kodzie aplikacji, b±d¼ ¶rodowiska
+\end{itemize}
+
+
+\subsection{Koncepcje nie wymagaj±ce modyfikacji kodu BPEL}
+
+\subsubsection{Interfejs monitorowania BPEL OpenESB}
+Silnik us³ugowy BPEL zastosowany w implementacji OpenESB udostêpnia interfejs programistyczny pozwalaj±cy na monitorowanie i zarz±dzanie procesami wykonywanymi w jego obrêbie. Do jego mo¿liwo¶ci nale¿± miêdzy innymi:
+\begin{itemize}
+ \item Udostêpnianie identyfikatorów procesów oraz ich instancji
+ \item Zarz±dzanie cyklem ¿ycia procesów oraz ich instancji
+ \item Udostêpnianie informacji o b³êdach, które wyst±pi³y w instancjach procesów
+ \item Dostêp i zmiana zmiennych instancji
+ \item Dostêp do informacji na temat procesów, instancji, a tak¿e sk³adowych instancji (activity)
+\end{itemize}
+
+Wymieniony jako ostatni dostêp do informacji na temat sk³adowych instancji pozwala na sprawdzenie takich danych jak:
+\begin{itemize}
+ \item Status sk³adowej
+ \item Osadzony w czasie pocz±tek i koniec sk³adowej
+ \item Czas trwania 
+ \item Numer iteracji (pêtli)
+\end{itemize}
+
+\paragraph{Sposób dostêpu}
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 301 233]{description/bpel_monitoring_concept.png}
+ % bpel_monitoring_concept.png: 303x197 pixel, 94dpi, 8.20x5.33 cm, bb=0 0 232 151
+ \caption{Koncepcja rozwi±zania w oparciu o interfejs monitorowania silnika BPEL}
+ \label{fig:bpel_monitoring_concept}
+\end{figure}
+
+Rysunek \ref{fig:bpel_monitoring_concept} przedstawiaj±cy ideê ukazuje konieczno¶æ synchronicznego odpytywania o dane.
+
+\paragraph{Analiza trafno¶ci rozwi±zania}
+Odpowiednie u¿ycie i agregacja danych dostêpnych dla sk³adowych pozwala³oby na stworzenie zak³adanego systemu do pomiarów. Rozwi±zanie to ma jednak jedn± zasadnicz± wadê. Dane z interfejsu zbierane s± synchronicznie\footnote{u¿yty zosta³ tutaj wzorzec Wizytora} \cite{concept:gang_of_four}
+, co poci±ga za sob± konsekwencje w postaci mo¿liwo¶ci utraty czê¶ci z nich - problem ten dotyczy przede wszystkim konstrukcji pêtli. Problemem by³aby równie¿ agregacja otrzymanych w taki sposób danych.
+
+\subsubsection{HULP}
+HULP to biblioteka dla jêzyka Java\texttrademark pozwalaj±ca na zinstrumentowanie kodu  celem dokonywania pomiarów czasu wykonania obszarów kodu. Oferuje ona prosty interfejs programistyczny, z którego u¿yciem mo¿liwe jest zaznaczanie pocz±tku i koñca wykonania obszaru kodu. Wykonane w taki sposób pomiary s± nastêpnie zbierane, agregowane i prezentowane z pomoc± aplikacji WWW.
+
+\paragraph{Cechy rozwi±zania}
+\begin{itemize}
+ \item Prosta w realizacji instrumentacja. Przyk³adowo:
+ \begin{verbatim}
+  ...
+  public void komenda(String parameter) {
+    Measurement m = Measurement.begin("komenda", parameter);
+    try {
+       ... badany obszar kodu
+    } finally {
+       m.end();
+    }
+  }
+ \end{verbatim}  
+ \item Niski narzut czasowy zinstrumentowanego kodu przy wy³±czonym zbieraniu
+  danych
+ \item Nieskomplikowana budowa - HULP sk³ada siê z trzech komponentów:
+  interfejs instrumentacji, klasy agregacji i servlet odpowiedzialny za
+  prezentacje wyników
+ \item Zagregowane wyniki zwracane s± w postaci zestawu nastêpuj±cych danych:
+ \begin{itemize}
+    \item ilo¶ci wywo³añ
+    \item czas trwania pomiarów\footnote{od pierwszego begin() do ostatniego end()}
+    \item sumy czasu spêdzonego w zinstrumentowanych obszarach kodu
+    \item ¶redniej $-\parallel-$
+    \item przepustowo¶ci\footnote{ilo¶æ wywo³añ podzielona przez czas trwania
+     pomiarów} $-\parallel-$
+    \item obci±¿enie\footnote{suma czasu spêdzonego w zinstrumentowanych obszarach kodu podzielona przez czas trwania pomiarów} $-\parallel-$
+ \end{itemize}
+\end{itemize}
+
+\paragraph{Idea rozwi±zania z u¿yciem HULP}
+Rozwa¿anie u¿ycia HULP opiera siê na fakcie, i¿ kod OpenESB ju¿ zosta³ zinstrumentowany z pomoc± tej biblioteki. Idea rozwi±zania opiera siê na pobieraniu danych z warstwy prezentacji HULP (servletu), dla ich dalszej analizy (ogólny schemat koncepcji przedstawia rys. \ref{fig:hulp_concept}).
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 202 115]{description/hulp_concept.png}
+ % hulp_concept.png: 264x150 pixel, 94dpi, 7.14x4.06 cm, bb=0 0 202 115
+ \caption{Koncepcja rozwi±zania z u¿yciem HULP}
+ \label{fig:hulp_concept}
+\end{figure}
+
+
+\paragraph{Analiza trafno¶ci rozwi±zania}
+Pomimo szeregu zalet tego rozwi±zania nie spe³nia ono za³o¿eñ postawionych na pocz±tku tego rozdzia³u. Do najwa¿niejszych problemów zwi±zanych z u¿yciem HULP nale¿±:
+\begin{itemize}
+ \item konieczno¶æ modyfikacji kodu OpenESB (poniewa¿ nie wszystkie interesuj±ce z punktu widzenia pracy obszary kodu zosta³y zinstrumentowane)
+ \item brak znaczników czasowych
+ \item trudno¶ci w identyfikacji badanych procesów biznesowych\footnote{trudno¶ci w odró¿nieniu kilku dzia³aj±cych jednocze¶nie procesów biznesowych}
+ \item niepe³no¶æ zagregowanych danych
+ \item trudny do interpretacji przez komputer format dostarczanych danych
+\end{itemize}
+
+\subsection{Obserwator zdarzeñ silnika BPEL}
+Silnik BPEL OpenESB udostêpnia interfejs (BPEL SE Events Listener) pozwalaj±cy na zarejestrowanie obserwatorów\cite{concept:gang_of_four} zachodz±cych w nim zdarzeñ. Pozwala to na odbieranie informacji dotycz±cych procesów oraz ich sk³adowych i warto¶ci zadeklarowanych w nich zmiennych.\cite{concept:bpel_events_listener}
+
+Do monitorowanych zdarzeñ nale¿±: 
+\begin{itemize}
+ \item pocz±tek, koniec, u¶pienie i wybudzenie \textbf{procesu}
+ \item pocz±tek, koniec i b³±d \textbf{sk³adowej procesu}
+ \item zmiany warto¶ci \textbf{zmiennych procesu}
+\end{itemize}
+
+Ka¿de otrzymywane zdarzenie jest opatrzone identyfikatorem procesu i instancji oraz znacznikiem czasowym. Zdarzenia dotycz±ce sk³adowych procesu zawieraj± wyra¿enie XPath prowadz±ce do tej sk³adowej.
+
+Klasa obserwatora powinna implementowaæ nastêpuj±cy interfejs:
+\begin{verbatim}
+ interface EventListener {
+    void processEvent(Event event);
+ }
+\end{verbatim}
+
+\paragraph{Idea rozwi±zania}
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 225 133]{description/listener_concept.png}
+ % listener_concept.png: 294x173 pixel, 94dpi, 7.95x4.68 cm, bb=0 0 225 133
+ \caption{Koncepcja rozwi±zania z u¿yciem BPEL SE Events Listener}
+ \label{fig:listener_concept}
+\end{figure}
+
+Rysunek \ref{fig:listener_concept} przedstawia ideê rozwi±zania opartego o BPEL SE Events Listener. Logika przetwarzania danych pomiarowych otrzymywa³aby dane po uprzednim zarejestrowaniu obserwatora zdarzeñ w silniku BPEL.
+
+\paragraph{Analiza trafno¶ci rozwi±zania}
+Rozwi±zanie oparte o BPEL SE Events Listener posiada wiele zalet, takich jak prostota, asynchroniczny model dzia³ania oraz du¿y zakres dostarczanych danych. Wa¿na w³a¶ciwo¶ci± jest równie¿ oparty o pulê w±tków nieblokuj±cy model rozsy³ania zdarzeñ do obserwatorów, znacznie zmniejszaj±cy narzuty czasowe z nim zwi±zane. Rozwi±zanie nie spe³nia postawionych za³o¿eñ pracy: do jego pe³nego dzia³ania konieczna jest instrumentacja aplikacji umieszczanej na serwerze \footnote{konieczne jest dodanie do niej implementacji obserwatora oraz dopisanie nazwy jego klasy w pliku META-INF/services/com.sun.jbi.engine.bpel.core.bpel.event.BPELEventListener}. Niew±tpliwym problemem jest równie¿ nieprzeno¶no¶æ tego rozwi±zania\footnote{Pozwala³oby ono na monitorowanie jedynie tego konkretnego silnika BPEL}.
+
+% 
+
+
+
+\subsection{Koncepcje wymagaj±ce instrumentacji kodu BPEL}
+
+\subsubsection{Modyfikacja kodu aplikacji}
+
+Najprostszym rozwa¿anym rozwi±zaniem jest zmodyfikowanie kodu testowanej aplikacji w taki sposób aby sama dostarcza³a informacji pomiarowych. Modyfikacja taka opiera³aby siê na dodaniu takiej logiki do kodu BPEL w formie odpowiednio umieszczonych operacji Invoke, przed ka¿d± mo¿liw± operacj±. Operacje te wysy³a³yby informacje pomiarowe do uprzednio stworzonej us³ugi.
+Koncepcjê tê ukazuje rysunek \ref{fig:bpel_code_instrumentation_concept}.
+
+\begin{figure}[htp!]
+ \centering
+ \includegraphics[bb=0 0 295 255]{description/bpel_code_instrumenation_concept.png}
+ % bpel_code_instrumenation_concept.png: 385x332 pixel, 94dpi, 10.42x8.98 cm, bb=0 0 295 255
+ \label{fig:bpel_code_instrumentation_concept}
+ \caption{Koncepcja instrumentacji kodu BPEL aplikacji}
+\end{figure}
+
+Trudno¶ci w realizacji tego rozwi±zania, konieczno¶æ modyfikacji ju¿ zbudowanej aplikacji oraz niska wiarygodno¶æ dostarczanych znaczników czasowych wyklucza jego zastosowanie w kontek¶cie tej pracy.
+
+% \subsection{AspectSE}
+% TODO - je¶li starczy czasu to napisze o tym  - kubek2k
+% Wygl±da na to ¿e warto o nim wspomnieæ w kontek¶cie pracy - jednak ci±gle jest zawieszona w powietrzu planowana w³a¶ciwo¶æ openesb
+% nie piszemy o aspectse poniewa¿ jest to idea która lamie zbyt wiele za³o¿onych przez nas wla¶ciwo¶ci
+
+\subsubsection{Modyfikacja kodu ¶rodowiska wykonawczego}
+Skomplikowanym, ale jednocze¶nie posiadaj±cym najwiêcej mo¿liwo¶ci rozwi±zaniem jest zmodyfikowanie ¶rodowiska wykonawczego w taki sposób, aby generowa³o ono zdarzenia przekazywane asynchronicznie do zbiorczego punktu celem dalszej analizy. Zdarzenia te przenosi³yby ze sob± nastêpuj±ce informacje:
+\begin{itemize}
+ \item znaczniki czasowe operacji
+ \item szereg jednoznacznych identyfikatorów pozwalaj±cych okre¶liæ pochodzenie danych
+ \begin{itemize}
+  \item identyfikator procesu BPEL
+  \item identyfikator instancji procesu
+  \item identyfikator aktywno¶ci procesu
+  \item identyfikator w±tku
+ \end{itemize}
+ \item typ aktywno¶ci i informacje jej dotycz±ce (tj. np. identyfikator wywo³ywanej us³ugi w aktywno¶ci Invoke)
+\end{itemize}
+
+Generowanie by³oby wyzwalane nastêpuj±cymi zdarzeniami:
+\begin{itemize}
+ \item Rozpoczêcie procesu biznesowego
+ \item Rozpoczêcie aktywno¶ci procesu
+ \item Rzucenie wyj±tku w aktywno¶ci
+ \item Zakoñczenie aktywno¶ci procesu
+ \item Zakoñczenie procesu biznesowego
+\end{itemize}
+
+Asynchronicznie generowane zdarzenia mog± byæ przekazywane bezpo¶rednio do punktu zbiorczego. Celem polepszenia skalowalno¶ci rozwi±zania mo¿na publikowaæ zdarzenia z u¿yciem oprogramowania realizuj±cego koncepcjê MOM (np. JMS).
+
+Rysunek \ref{fig:bpel_engine_instrumentation_concept} przedstawia zarys tej koncepcji. Wynika z niego, ¿e aby dokonaæ takiej instrumentacji konieczna jest statyczna modyfikacja kodu silnika BPEL. Mo¿na tego dokonaæ albo modyfikuj±c jego otwarty kod ¼ród³owy, lub u¿yæ narzêdzia do instrumentacji kodu wykonawczego.
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[bb=0 0 304 219]{description/bpel_engine_instrumentation_concept.png}
+ % bpel_engine_instrumentation_concept.png: 396x285 pixel, 94dpi, 10.71x7.71 cm, bb=0 0 304 219
+ \caption{Koncepcja instrumentacji ¶rodowiska wykonania}
+ \label{fig:bpel_engine_instrumentation_concept}
+\end{figure}
+
+\subsubsection{Analiza trafno¶ci rozwi±zania}
+Brak konieczno¶ci modyfikacji kodu ¼ród³owego zarówno aplikacji, jak i ¶rodowiska , jest bardzo du¿± zalet± tego rozwi±zania. Drug± wa¿n± zalet± takiego podej¶cia jest wiarygodno¶æ dostarczanych danych - instrumentuj±c kod w odpowiednio dobranych punktach, znika problem niemiarodajnych znaczników czasowych. Wad± tego rozwi±zania jest brak przeno¶no¶ci - konieczne jest implementowanie kodu instrumentuj±cego oddzielnie dla ka¿dego ¶rodowiska, jednak¿e oddzielenie czê¶ci generowania od zbierania i agregacji danych, pozwala na ponowne u¿ycie du¿ej czê¶ci stworzonego oprogramowania. % TODO poprawiæ to zdanie k³ad±c akcent na to ze du¿a czê¶æ oprogramowania jest reu¿ywalna ;]

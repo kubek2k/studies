@@ -1,0 +1,99 @@
+
+\chapter{Podrêcznik u¿ytkownika}
+
+W niniejszym dodatku przedstawiony zosta³ krótki opis konfiguracji oraz obs³ugi aplikacji. Opis zosta³ przygotowany do u¿ycia w systemach z rodziny Linux, jednak w analogiczny sposób przebiega konfiguracja i obs³uga aplikacji w systemie Windows. Aplikacja zosta³a napisana i przetestowana w ¶rodowisku maszyny wirtualnej Java 1.6.0.
+
+Pierwszym krokiem który nale¿y wykonaæ przed u¿ytkowaniem niniejszej aplikacji jest odpowiednie zinstrumentowanie bibliotek kontenera oraz konfiguracja aplikacji.
+
+\section{Instrumentacja bibliotek kontenera oraz konfiguracja aplikacji}
+
+W ogólnym przypadku komputery u¿yte w badaniu wydajno¶ci us³ug maj± nastêpuj±ce nazwy symboliczne i przeznaczenie:
+\begin{itemize}
+ \item \textbf{host1} - serwer JMS
+ \item \textbf{host2} - konsola wizualizacyjna z aplikacj± dostêpn± w katalogu \textit{~/app}
+ \item \textbf{host3..hostN} - kontenery us³ug z zainstalowanym GlassFish w katalogu \textit{/opt/glassfish}
+\end{itemize}
+Mo¿liwy jest te¿ wariant prostszy, w którym \textbf{host1} oraz \textbf{host2} oznaczaj± ten sam komputer.
+
+Aby zbadaæ wydajno¶æ us³ug przechowywanych w kontenerach, nale¿y wykonaæ nastêpuj±ce kroki:
+
+\begin{enumerate}
+ \item \textbf{Uruchomienie serwera JMS}
+
+Na komputerze \textbf{host1} powinien zostaæ uruchomiony serwer JMS. S³u¿y on do przesy³ania wiadomo¶ci pomiêdzy sensorami wydajno¶ci oraz konsol±. Adres IP komputera \textbf{host1} powinien byæ widoczny dla konsoli oraz wszystkich komputerów na których zostan± umieszczone kontenery us³ug. Nale¿y pamiêtaæ o ustawieniu w polu \textit{ServerConfiguration} adresu IP komputera \textbf{host1} w pliku \textit{openjms.xml} z katalogu \textit{openjms/config}. Serwer JMS uruchamiany jest skryptem \textit{startup.sh} z katalogu \textit{openjms/bin}.
+
+ \item \textbf{Instrumentacja bibliotek serwera}
+
+Krok opcjonalny - wykonywany jedynie w przypadku zmiany adresu serwera JMS (lub przy pierwszym u¿yciu). Z u¿ywanego kontenera GlassFish nale¿y uzyskaæ oryginalny plik \textit{bpelcore.jar}:
+\begin{verbatim}
+[host2] ~/app$ cp /opt/glassfish/domains/domain1/jbi/\
+                  components/sun-bpel-engine/install_root/lib/\
+                  bpelcore.jar .
+\end{verbatim}
+Nastêpnie nale¿y uruchomiæ konsolê:
+\begin{verbatim}
+[host2] ~/app$ cd analyzer
+[host2] ~/app/analyzer$ ./run.sh
+\end{verbatim}
+Spowoduje to pojawienie siê okna dialogowe (por. rysunek \ref{fig:ss_conf}) z konfiguracj± instrumentacji. W polu \textbf{JMS provider URL} nale¿y wpisaæ adres uruchomionego serwera JMS w postaci: \textbf{rmi://host1:1099}. Nastêpnie nale¿y wybraæ operacjê \textbf{Instrument}. Spowoduje to pojawienie siê okna wyboru pliku ¼ród³owego do instrumentacji, w którym nale¿y wybraæ oryginalny plik \textit{bpelcore.jar}. W kolejnym oknie dialogowym nale¿y podaæ nazwê pliku docelowego (np. \textit{bpelcore2.jar} w tym samym katalogu co \textit{bpelcore.jar}). Nastêpnie zostanie wykonana instrumentacja i wygenerowany komunikat o jej rezultacie. Na koñcu nale¿y podmieniæ zinstrumentowany plik \textit{bpelcore.jar} we wszystkich u¿ywanych kontenerach GlassFish:
+\begin{verbatim}
+[host2] ~/app$ cp bpelcore2.jar /opt/glassfish/domains/\
+    domain1/jbi/components/sun-bpel-engine/\
+    install_root/lib/bpelcore.jar
+\end{verbatim}
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 235 143]{appendix/ss_conf.png}
+ % ss_conf.png: 978x597 pixel, 300dpi, 8.28x5.05 cm, bb=0 0 235 143
+ \caption{Konfiguracja konsoli}
+ \label{fig:ss_conf}
+\end{figure}
+
+\item \textbf{Uruchomienie konsoli}
+
+\begin{verbatim}
+[host2] ~/app$ cd analyzer
+[host2] ~/app/analyzer$ ./run.sh
+\end{verbatim}
+Pojawi siê okno dialogowe w którym nale¿y wpisaæ adres uruchomionego serwera JMS w postaci \textbf{rmi://host1:1099} w polu \textbf{JMS provider URL}. Po wybraniu przycisku \textbf{Run visualisation} konsola zostanie uruchomiona i przygotowana do analizowania zbieranych danych o wydajno¶ci us³ug.
+
+\item \textbf{Uruchomienie kontenerów i us³ug}
+
+Nale¿y uruchomiæ zinstrumentowane kontenery GlassFish wraz z aplikacjami. 
+
+\end{enumerate}
+
+W trakcie wykonywania operacji na us³ugach przechowywanych w kontenerach mo¿na obserwowaæ zbierane dane wydajno¶ciowe na konsoli wizualizacyjnej.
+
+\section{Sposób wizualizacji danych wydajno¶ciowych}
+
+G³ówne okno aplikacji (przedstawione na rysunku \ref{fig:app1_overview}) sk³ada siê z nastepuj±cych obszarów:
+\begin{itemize}
+ \item \textbf{Modele BPEL} - ka¿da zak³adka prezentuje osobny model BPEL
+ \item \textbf{Procesy BPEL} - lista procesów (pojedyñczych wywo³añ modelu BPEL)
+ \item \textbf{Wybrany proces} - informacje o wybranym procesie (m.in. identyfikator procesu, czas trwania)
+ \item \textbf{Elementy modelu} - graf elementów modelu, dowolny element mo¿e zostaæ wybrany po klikniêciu na niego
+ \item \textbf{Wybrany element} - informacje o wybranym elemencie modelu (m.in. identyfikator oraz rodzaj elementu, statystyka czasowa, ilo¶æ wywo³añ), dostêpny jest równie¿ przycisk pokazuj±cy szczegó³owe informacje o ka¿dym pojedyñczym wywo³aniu (por.rysunek \ref{fig:app1_details}).
+ \item \textbf{Tryb ¶cie¿ek} - tryb rysowania scie¿ek pomiêdzy elementami (umo¿liwia np. kolorowanie scie¿ek wed³ug intensywno¶ci ich u¿ycia)
+\end{itemize}
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 360 32]{appendix/ss_details.png}
+ % ss_details.png: 1000x89 pixel, 200dpi, 12.70x1.13 cm, bb=0 0 360 32
+ \caption{Szczegó³owe informacje o wywo³aniach}
+ \label{fig:app1_details}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 256 534]{appendix/ss_overview.png}
+ % ss_overview.png: 1062x2219 pixel, 299dpi, 9.02x18.85 cm, bb=0 0 256 534
+ \caption{Uk³ad g³ównego okna aplikacji}
+ \label{fig:app1_overview}
+\end{figure}
+
+Aplikacja ma równie¿ mo¿liwo¶æ w³±czenia trybu logowania w sensorze wydajno¶ci. Opcja taka mo¿e byæ pomocna w przypadku problemów z dzia³aniem sensora lub niepoprawnym dostarczaniem danych o wydajno¶ci do kolejki JMS. Logowanie sensora wydajno¶ci ustawia siê w oknie konfiguracji konsoli (por. rysunek \ref{fig:ss_conf}). W konfiguracji nale¿y ustawiæ opcjê \textit{Logging type} na \textit{FILE}, oraz podaæ nazwê pliku do którego bêd± zapisywane logi w polu \textit{Logging file name}. Plik o podanej nazwie pojawi siê na ka¿dym komputerze na którym uruchomiony zostanie kontener wraz z sensorem wydajno¶ci. Po ustawieniu odpowiedniego logowania w konfiguracji nale¿y dokonaæ ponownej instrumentacji bibliotek kontenera.

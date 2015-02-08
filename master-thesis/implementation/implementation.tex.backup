@@ -1,0 +1,190 @@
+\chapter{Implementacja}
+
+Stworzone oprogramowanie do badania wydajno¶ci aplikacji zgodnych z paradygmatem SOA sk³ada siê z nastêpuj±cych modu³ów funkcjonalnych:
+\begin{itemize}
+ \item \textbf{sensor wydajno¶ci} - element umieszczony w kontenerze, zbiera dane o wydajno¶ci i wysy³a je do kolejki JMS
+  \begin{itemize}
+   \item \textbf{czê¶æ charakterystyczna dla konkretnego kontenera} - wstrzykniêta bezpo¶rednio w kod kontenera i odpowiedzialna za zbieranie danych o wydajno¶ci
+   \item \textbf{czê¶æ wspólna dla wszystkich kontenerów} - konstruuje komunikat i wysy³a go asynchronicznie do kolejki JMS
+  \end{itemize}
+ \item \textbf{modu³ umieszczaj±cy sensor wydajno¶ci w kontenerze} - dokonuje instrumentacji bibliotek wchodz±cych w sk³ad kontenera umieszczaj±c w nich sensor wydajno¶ci
+ \item \textbf{konsola wizualizacyjna} - odbiera wiadomo¶ci z kolejki JMS i wy¶wietla zebrane dane
+\end{itemize}
+
+Poszczególne modu³y s± od siebie niezale¿ne, co u³atwia ich implementacje i testowanie.
+
+\section{Opis wybranych problemów implementacyjnych}
+
+Najtrudniejszym elementem do realizacji jest modu³ umieszczaj±cy sensor wydajno¶ci w kontenerze. Realizacja tego modu³u wymaga wykorzystania silnika do instrumentacji (modyfikacji skompilowanego kodu kontenera, bez dostêpno¶ci jego ¼róde³) programów napisanych w jêzyku Java. 
+
+\subsection{Wstrzykiwanie sensora wydajno¶ci}
+
+Sensor wydajno¶ci mo¿e zostaæ wstrzykniêty do bibliotek kontenera za pomoc± jednej z dostêpnych darmowych bibliotek wspomagaj±cych programowanie aspektowe (AOP\cite{impl:aop}), np. AspectJ\cite{impl:aspectj} lub Aspectwerkz\cite{impl:aspectwerkz}. Instrumentacja kodu jest realizowana w jednym z dwóch trybów\cite{impl:aspectwerkz_weaving}:
+\begin{itemize}
+ \item \textbf{Online} - instrumentacja w trakcie dzia³ania aplikacji. Zmodyfikowane klasy (wraz ze wstrzykniêtym kodem) mog± byæ ³adowane w momencie ich pierwszego u¿ycia lub podmieniane w dowolnym momencie w czasie dzia³ania aplikacji. Praktyczna realizacja trybu online wymaga czêsto modyfikacji maszyny wirtualnej (JVM) w której uruchomiona jest aplikacja (dodatkowe parametry dla maszyny wirtualnej, modyfikacja klas systemowych maszyny wirtualnej\cite{impl:boostrap_classes} (ang. bootstrap classes) itp). Modyfikacje s± charakterystyczne dla konkretnej wersji maszyny wirtualnej.
+ \item \textbf{Offline} - instrumentacja przed pierwszym uruchomieniem aplikacji. Modyfikacja kodu aplikacji wykonywana jest jednorazowo poprzez silnik instrumentacji. Nie ma konieczno¶ci wprowadzania ¿adnych zmian do maszyny wirtualnej w której uruchomiona bêdzie aplikacja. Jedyn± zmian± w aplikacji jest podmiana bibliotek na ich zinstrumentowan± wersjê.
+\end{itemize}
+
+Sensor wydajno¶ci mo¿e zostaæ wstrzykniêty w dowolnym z tych dwóch trybów pracy. Nale¿y jednak zauwa¿yæ, ¿e sensor jest elementem który jest obecny ca³y czas w kontenerze. Mamy równie¿ mo¿liwo¶æ przygotowania kontenera (jego instrumentacji) przed rozpoczêciem badania wydajno¶ci us³ug. Do realizacji wstrzykniêcia sensora wystarcza wiêc tryb ``offline''. Jego zalet± jest wiêksza prostota u¿ycia w porównaniu do trybu ``online'' (nie wymaga modyfikacji maszyny wirtualnej na której bêdzie dzia³aæ aplikacja ani skryptów startowych aplikacji). Po przeprowadzeniu analizy znanych nam bibliotek programowania aspektowego (np. AspectJ, AspectWerkz) pod k±tem u¿ycia ich w trybie ``offline'' mo¿na zauwa¿yæ ich wady:
+\begin{itemize}
+ \item wymagane jest podanie definicji dodatkowych zmiennych (poprzez parameter -D przy poleceniu ``java'') w skryptach startowych, np. podania lokalizacji pliku XML z definicj± aspektów
+ \item wymagane jest dodanie do listy bibliotek JAR aplikacji dodatkowych plików z kodem specyficznym dla danej biblioteki programowania aspektowego
+ \item u¿ywanie biblioteki programowania aspektowego w niepoprawnej wersji mo¿e powodowaæ konflikty z bibliotekami aspektowymi u¿ywanymi przez kontener (wiêkszo¶æ kontenerów udostêpnia wsparcie dla AOP), jeszcze wiêksze prawdopodobieñstwo konfliktów wersji wystêpuje dla bibliotek wymaganych przez bibliotekê AOP (ang. third-party libraries) np. Apache Commons\cite{impl:apache_commons}
+\end{itemize}
+
+Czê¶æ z przedstawionych wad (modyfikacji listy bibliotek JAR aplikacji, dodatkowe definicje zmiennych) teoretycznie mo¿na rozwi±zaæ poprzez modyfikacjê odpowiednich skryptów startowych kontenera. W praktyce jednak pojawiaj± siê problemy z du¿± ilo¶ci± skryptów w nieznanych lokalizacjach (np. w kontenerze GlassFish ka¿da domena ma w³asne skrypty) oraz z uruchamianem kontenera z pominiêciem skryptów startowych. Problem konfliktu wersji nie ma prostego rozwi±zania. Jednym z potencjalnych rozwi±zañ (ale niepraktycznych) jest np. zmiana biblioteki AOP w zale¿no¶ci od docelowego kontenera.
+
+Z uwagi na przedstawione problemy zosta³a podjêta decyzja o stworzeniu w³asnej biblioteki instrumentuj±cej kod. Podstawowe za³o¿enia takiej biblioteki to:
+\begin{itemize}
+ \item instrumentowanie kodu jedynie w trybie offline
+ \item brak konieczno¶ci modyfikacji skryptów startowych aplikacji, maszyn wirtualnych itp.
+ \item brak dodatkowych bibliotek, które musz± byæ do³±czane do zinstrumentowanego kodu
+ \item specyficzna i minimalna funkcjonalno¶æ w porównaniu z ogólnymi bibliotekami programowania aspektowego, pozwala jedynie wstrzykiwaæ wywo³ania metod w dowolne miejsca instrumentowanego kodu
+\end{itemize}
+
+Nale¿y podkre¶liæ fakt, i¿ biblioteka instrumentuj±ca kod ma bardzo specyficzn± funkcjonalno¶æ i nie jest równowa¿na bibliotece wspieraj±cej programowanie aspektowe (ma nieporównywalnie mniejsz± z³o¿ono¶æ). Do jej konstrukcji zosta³y u¿yte gotowe modu³y (np. biblioteka CGLIB\cite{impl:cglib} do manipulowania skompilowanym kodem Java (ang. bytecode)\cite{impl:jvm_spec}). Implementacja biblioteki instrumentuj±cej kod nie by³a wiêc zajêciem bardzo czasoch³onnym i nie przys³oni³a g³ównego tematu niniejszej pracy.
+
+Przyk³ad u¿ycia biblioteki instrumentuj±cej kod znajduje siê na rysunku \ref{fig:impl:instr}. W górnej czê¶ci znajduje siê przyk³adowa aplikacja do której wstrzykniêty zostanie dodatkowy kod widoczny w dolnej czê¶ci. Sterowanie sposobem instrumentacji odbywa siê poprzez adnotacje obecne we wstrzykiwanym kodzie. Dostêpne adnotacje umo¿liwiaj± wyznaczenie miejsca wstrzykniêcia kodu (np. \textit{@BeforeMethodStart} oznacza, ¿e kod musi byæ wstrzykniêty na pocz±tek metody okre¶lonej przez \textit{@InstrumentMethod}). Mo¿liwe jest równie¿ pobieranie parametrów przekazywanych do instrumentowanej metody (np. \textit{@LinkParameter(i)} przekazuje do danej zmiennej i-ty parametr instrumentowanej metody).
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 376 292]{implementation/instr.png}
+ % instr.png: 982x762 pixel, 188dpi, 13.27x10.29 cm, bb=0 0 376 292
+ \caption{Przyk³ad u¿ycia biblioteki instrumentuj±cej kod}
+ \label{fig:impl:instr}
+\end{figure}
+
+Adnotacje dla biblioteki instrumentuj±cej kod umieszczone s± w czê¶ci sensora wydajno¶ci charakterystycznej dla danego kontenera. Pozwalaj± sensorowi zbieraæ dane w trakcie dzia³ania us³ug (np. rozpoczêto wykonywanie operacji webservice, zakoñczono wykonywanie operacji webservice). Dane te tworz± komunikat w zestandaryzowanej postaci, który jest przekazywany do czê¶ci sensora niezale¿nej od konkretnego kontenera.
+
+\subsection{Format komunikatu z danymi o wydajno¶ci}
+
+Format komunikatu z danymi o wydajno¶ci zosta³ przedstawiony na rysunku \ref{fig:impl:message}.
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 384 530]{implementation/message.png}
+ % message.png: 800x1104 pixel, 150dpi, 13.55x18.69 cm, bb=0 0 384 530
+ \caption{Postaæ komunikatu z danymi o wydajno¶ci w postaci diagramu klas UML}
+ \label{fig:impl:message}
+\end{figure}
+
+G³ówna klasa komunikatu (Event) mo¿e przenosiæ jeden z dwóch rodzajów zdarzeñ:
+\begin{itemize}
+ \item{ActivityUnit} - je¶li zdarzenie dotyczy aktywno¶ci procesu BPEL (np. invoke, assign). Mo¿liwe zdarzenia okre¶lone s± wówczas przez warto¶æ EventType:
+  \begin{itemize}
+   \item{START} - rozpoczêto wykonywanie aktywno¶ci.
+   \item{COMPLETE} - poprawnie wykonano aktywno¶æ.
+   \item{FAULT} - wykonywanie aktywno¶ci zakoñczy³o siê wyj±tkiem.
+   \item{TERMINATE} - wykonywanie aktywno¶ci zosta³o przerwane (np. z powodu wyj±tku w podwykonywanej aktywno¶ci).
+  \end{itemize}
+ \item{CatchUnit} - je¶li zdarzenie dotyczy obs³ugi sytuacji wyj±tkowej.
+\end{itemize}
+
+
+W miarê otrzymywania kolejnych danych od sensora wydajno¶ci w konsoli budowany jest model zachodz±cego procesu. Konsola nie ma dostêpu do oryginalnych modeli procesów przechowywanych w kontenerach aplikacji, dlatego do zbudowania modelu procesu musz± jej wystarczyæ dane otrzymywane z sensora wydajno¶ci. Powoduje to konieczno¶æ sformu³owania dodatkowych za³o¿eñ dotycz±cych identyfikatorów otrzymywanych w wiadomo¶ciach z rysunku \ref{fig:impl:message}:
+\begin{itemize}
+ \item identyfikator modelu procesu (unikalny globalnie)
+ \item identyfikator procesu - wskazuje konkretne wywo³anie procesu wed³ug danego modelu (unikalny globalnie)
+ \item identyfikator aktywno¶ci - wyra¿enie XPATH\cite{impl:xpath} wskazuj±ce na aktywno¶æ z modelu procesu (unikalny w obrêbie modelu)
+ \item identyfikator w±tku (unikalny w obrêbie procesu)
+ \item identyfikator w±tku-rodzica (unikalny w obrêbie procesu)
+\end{itemize}
+
+Komunikat w formacie zgodnym z rysunkiem \ref{fig:impl:instr} jest przekazywany do czê¶ci sensora niezale¿nej od u¿ywanego kontenera. Odpowiada ona za przekazywanie komunikatów do konsoli prezentuj±cej wyniki.
+
+\subsection{Przekazywanie wiadomo¶ci od sensora do konsoli}
+
+Komunikaty wysy³ane s± z sensora do serwera JMS, sk±d mog± byæ pobierane przez konsolê prezentuj±c± wyniki. Proces wysy³ania komunikatów odbywa siê niezale¿nie od ich generowania, utworzone przez sensor komunikaty s± umieszczane w kolejce z której okresowo s± pobierane i przekazywane do serwera JMS przez osobny w±tek. Pozwala to zminimalizowaæ wp³yw sensora na dzia³anie badanych us³ug - jedyny dodatkowy narzut zwi±zany z umieszczaniem komunikatów w kolejce jest bardzo ma³y. U¿ycie serwera JMS zapewnia prosty i pewny sposób na dostarczenie danych do konsoli. W praktyce przekazywanie wiadomo¶ci do serwerów JMS wymaga dodania dodatkowej grupy bibliotek (np. bibliotek Service Provider dla JNDI \cite{impl:jndi_spi}). Biblioteki te musz± byæ dodane do kontenera, poniewa¿ kontener zosta³ zinstrumentowany przez sensor wydajno¶ci wysy³aj±cy komunikaty JMS. Powoduje to mo¿liwo¶æ powstawania konfliktów wersji z istniej±cymi ju¿ bibliotekami wchodz±cymi w sk³ad kontenerów (wsparcie dla serwerów JMS jest powszechne w kontenerach). Problem ten mo¿na rozwi±zaæ stosuj±c koncepcjê podobn± do tzw. sandbox\cite{impl:sandbox}. Biblioteki serwera JMS nie s± bezpo¶rednio do³±czane do kontenera, tylko do izolowanego ¶rodowiska (sandbox) dzia³aj±cego w obrêbie kontenera. W ¶rodowisku tym dzia³a kod odpowiedzialny za wysy³anie komunikatów do serwera JMS. Poza izolowanym ¶rodowiskiem nie s± widoczne biblioteki serwera JMS dlatego nie powoduj± one interakcji z kontenerem. Przedstawion± koncepcjê sposobu przekazywania wiadomo¶ci od sensora do konsoli ilustruje rysunek \ref{fig:impl:flow}.
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 329 177]{implementation/flow.png}
+ % flow.png: 859x463 pixel, 188dpi, 11.60x6.26 cm, bb=0 0 329 177
+ \caption{Przep³yw komunikatów z danymi o wydajno¶ci}
+ \label{fig:impl:flow}
+\end{figure}
+
+
+\subsection{Wizualizacja zebranych danych w konsoli}
+
+Czê¶æ prezentacyjna projektu zosta³a wykonana z u¿yciem komponentów z modu³u BPEL Designer pakietu NetBeans 6.0. Komponenty te nie s± dostêpne jako oddzielna biblioteka, lecz stanowi± integraln± czê¶æ tego ¶rodowiska. Chc±c je wykorzystaæ w innej aplikacji konieczne by³o zamkniêcie ich w kontenerze symuluj±cym ich orginalne ¶rodowisko (sytuacja przedstawiona na rys. \ref{fig:netbeans_emulation}). 
+
+\begin{figure}[htp!]
+ \centering
+ \includegraphics[bb=0 0 257 109]{implementation/netbeans_emulation.png}
+ % netbeans_emulation.png: 332x141 pixel, 93dpi, 9.07x3.85 cm, bb=0 0 257 109
+ %\includegraphics[bb=0 0 239 110]{implementation/netbeans_emulation.png}
+ %% netbeans_emulation.png: 311x143 pixel, 94dpi, 8.41x3.87 cm, bb=0 0 239 110
+ \caption{Emulacja ¶rodowiska NetBeans 6.0 w bibliotece wizualizacyjnej}
+ \label{fig:netbeans_emulation}
+\end{figure}
+
+Aby emulowaæ ¶rodowisko NetBeans w satysfakcjonuj±cym stopniu konieczne by³o podjêcie nastêpuj±cych kroków:
+\begin{itemize}
+ \item implementacja w³asnej klasy realizuj±cej rejestr obiektów ¶rodowiska (realizacja interfejsu org.openide.util.Lookup) i zape³nienie go wymaganymi warto¶ciami
+ \item stworzenie w³asnej klasy realizuj±cej interfejs org.openide.loaders.DataObject reprezentuj±cej obiekt z danymi w NetBeans
+ \item stworzenie szklieletu obiektu reprezentuj±cego pusty dokument procesu BPEL
+ \item zarz±dzanie skomplikowanym cyklem ¿ycia obiektu reprezentuj±cego model procesu BPEL
+\end{itemize}
+
+Efektem tych dzia³añ jest kompletna biblioteka pozwalaj±ca na przedstawianie procesu BPEL w efektownej formie graficznej. Komponent wizualizacyjny zosta³ zrealizowany jako obiekt rozszerzaj±cy znany ze ¶rodowiska Swing JPanel\footnote{org. javax.swing.JPanel}, co pozwala na jego proste u¿ycie. Przyk³adowy kod realizuj±cy wy¶wietlenie prostego procesu BPEL wygl±da nastêpuj±co:
+
+\begin{lstlisting}[frame=tb]
+ // inicjalizacja g³ównego obiektu widoku
+ BPELVisualisationView view =
+   BPELVisualisationView.createViewWithEmptyModel("stolenDesign", 
+                                                  "anyNS");
+ // pobranie referencji do modelu procesu BPEL
+ BpelModel model = view.getBPELModel();
+ // pobranie referencji do obiektu buduj±cego elementy procesu
+ BPELElementsBuilder builder = model.getBuilder();
+
+ // zbudowanie sekwencji 
+ Sequence sequence = builder.createSequence();
+ // ustawienie sekwencji jako g³ównej aktywno¶ci procesu
+ model.getProcess().setActivity(sequence);
+
+ // stworzenie aktywno¶ci przypisania zmiennej
+ Assign assign = builder.createAssign();
+ // dodanie aktywno¶ci do sekwencji
+ sequence.addActivity(assign);
+
+ // poinformowanie obiektu widoku o zmianach
+ view.commitChanges();
+\end{lstlisting}
+
+Przyk³adowy wynik dzia³ania, dla bardziej skomplikowanego przypadku jest przedstawiony na rysunku \ref{fig:designer_complicated}
+
+\begin{figure}
+ \centering
+ \includegraphics[bb=0 0 139 322]{implementation/designer_complicated.png}
+ % designer_complicated.png: 290x671 pixel, 150dpi, 4.91x11.36 cm, bb=0 0 139 322
+ \caption{Przyk³adowy wynik dzia³ania czê¶ci wizualizacyjnej}
+ \label{fig:designer_complicated}
+\end{figure}
+
+
+\paragraph{Rozszerzenia} Z uwagi na zastosowanie biblioteki, zosta³a ona rozszerzona o dwie dodatkowe funkcjonalno¶æi
+\begin{itemize}
+ \item mo¿liwo¶æ etykietowania aktywno¶ci procesu BPEL - celem dodawania informacji odno¶nie dokonanych pomiarów
+ \item mo¿liwo¶æ zmiany koloru po³±czeñ miêdzy aktywno¶ciami - celem ukazania czêsto¶ci wykorzystania poszczególnych ¶cie¿ek w procesie (np. na rysunku \ref{fig:impl:designer_paths} po³±czenie wychodz±ce od INVOKE nie by³o u¿ywane, wiêc ma inny kolor ni¿ reszta po³±czeñ)
+\end{itemize}
+Co istotne, zmiany te zosta³y dokonane bez ingerencji w orginalny kod BPEL Designer.
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[bb=0 0 246 228]{implementation/designer_paths.png}
+ % designer_paths.png: 513x474 pixel, 150dpi, 8.69x8.03 cm, bb=0 0 246 228
+ \caption{Fragment wizualizacji procesu BPEL wykorzystuj±cy zmianê koloru danego po³±czenia w celu pokazania czêsto¶ci jego u¿ycia}
+ \label{fig:impl:designer_paths}
+\end{figure}
+
+Biblioteka zosta³a przygotowana jako niezale¿na czê¶æ i mo¿e z powodzeniem byæ wykorzystywana w innych rozwi±zaniach.
+
+\newpage
+
+\section{Podsumowanie}
+
+Po rozwi±zaniu wszystkich (m.in. przedstawionych w niniejszym rozdziale) problemów uda³o siê stworzyæ aplikacjê do badania wydajno¶ci us³ug zrealizowanych w architekturze SOA zgodnie z za³o¿eniami przedstawionymi w rozdziale 3 i 4. Aplikacja otrzyma³a robocz± nazwê BPEL Profiler, której autorzy u¿ywaj± w dalszej czê¶ci pracy.
+
+Przyk³adowe regu³y instrumentacji zosta³y opracowane dla kontenerów us³ug obs³uguj±cych OpenESB. Praktyczne sprawdzenie zrealizowanej aplikacji w ¶rodowisku testowym zosta³o przedstawione w kolejnym rozdziale.
