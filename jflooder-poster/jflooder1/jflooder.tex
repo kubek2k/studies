@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{cgw07}
+
+
+\title{JFlooder - Application performance testing with QoS assurance}
+
+\author{Tomasz Duszka\inst{1}, 
+		Andrzej Gorecki\inst{1} , 
+		Jakub Janczak\inst{1}, 
+		Adam Nowaczyk\inst{1} 
+		and Dominik Radziszowski\inst{1}
+}
+
+\institute{Institute of Computer Science, AGH UST, al. Mickiewicza 30, 30-059 Krakow, Poland}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Contemporary distributed systems, such as Grids, must guarantee high efficiency, scalability and failover.
+To achieve these features one is required to perform complex tuning of numerous highly coupled configuration parameters of system, middleware and application level. 
+Because even little, outwardly insignificant, change of one parameter may affect system efficiency and even stability, tuning of distributed system must be validated by series of load tests. 
+Planning, implementation, execution, presentation and comparison of the results of these tests are not the easy tasks, but what is more important and stresful it takes a long time of repetitive tasks; it is the main reason why in many installations these tests are skipped or reduced to simple stress testing. 
+
+
+Well performed load tests are build upon QoS (Quality of Service) requirements and can help checking system's behavior under different load – only results of such tests can be compared and may answer the question whether the system tuning was correct and, what is more important, how the system will perform in production environment. 
+\end{abstract}
+
+Popular tools available for generation of system load and results acquisition like Grinder or JMeter help a little, but suffer from lack of automation in results comparison, dynamic load characteristic changes and support for QoS requirements. 
+Imperfections of available application performance testing caused the authors to create a new tool - JFlooder. 
+JFlooder is a program that performs load tests of SOA conform application and middleware running on distributed infrastructure (cluster and grid) in an easy and comfortable way. 
+
+JFlooder consists of agents running on workers nodes, responsible for generation of desired load and central graphical management console. 
+\\
+\includegraphics[width=120mm]{jflooder-arch.eps}
+\\
+The console is responsible for agent coordination during test execution in order to obtain required system load characteristic. User is able to choose among many of them including plain, peak and many more. Additionally user can choose between two types of data gathering:
+\begin{enumerate}
+
+\item{Off-line – results are gathered after the test has been performed, such behaviour gives better relevance of them}
+
+\item{On-line – results are gathered and processed while the test is being performed – user is able to observe all the reactions of the running system}
+
+\end{enumerate}
+
+Plugin architecture – one of the most outstanding features of JFlooder - allows for very elastic test definition. Built-in plugins gives an opportunity to:
+\begin{enumerate}
+\item{test RMI based services}
+\item{test Web Services}
+\item{test SMTP and HTTP servers}
+\item{execute scripts written in JRuby and Jython}
+\end{enumerate}
+
+As we can see the main plugin's responsibility is to perform a single test.
+This single unit of work can of course be parametrised.
+This can be done in two ways:
+\begin{enumerate}
+\item{specifing a set of input parameters exported by the plugin (ie. destination URL which is used to test HTTP server)}
+\item{executing an external configuration wizard supplied by the plugin (optional)}
+\end{enumerate}
+Using one of these ways (or both) we can customize behaviour of our plugin.
+
+On the other hand of course each plugin execution produces some results.
+JFlooder handles these results in a very flexible way.
+It allows every plugin developer to provide a set of so-called metrics.
+Each metric describes a possible value to be returned by a plugin (ie. awaiting connections count, current free memory size etc).
+Metric definition is divided into two parts.
+The first one happens during the compilation phase from a plugin source, therefore we can provide basic compilation-time error checking of metric use.
+The second phase is done while creating the plugin and it is responsible to setup various runtime properties of the metric.
+This way we can ensure that after compilation metrics are known to work as the developer wanted, and also we can provide quick and easy way of returning values from the plugin (because we already know all used metrics before the plugin executes).
+
+Of course we provide a typical set of built-in metrics, which includes:
+\begin{enumerate}
+\item{operation correctness (yes/no)}
+\item{response time}
+\item{system load}
+\end{enumerate}
+
+But JFlooder lets you do much more than just return some values from a plugin.
+It allows you to process this values to visualize them in a more convenient way.
+First of all one can filter plugin result.
+These filters includes mainly typical aggregate functions like deviation, average, min, max etc.
+You can then show the resulting value in a single-value field (ie. you want to know the minimum free memory size after the test) or plot this value in a time domain.
+After the test is done, you can save the original results (raw metrics values) or resulting plots. 
+
+The unique ability of the program is a possibility of detection of ‘optimal operation point’ of a system that is being tested. 
+Optimal operation point is a highest system load under which it can still guarantee given QoS parameters, such as a response time or number of served requests per second. 
+
+JFlooder's 'optimal operting point of work' estimation routine consists of following steps:
+\begin{enumerate}
+\item{Start performing load tests with specified low load boundary}
+\item{If these are successful increase the load and go back to the step 1}
+\item{If tests failed it means we have to decrease load or if the difference between current and last load characteristics are less than specified value we have found an 'optimal point of work'}
+\end{enumerate}
+
+This unique mechanism is very helpful for determining the system characteristics in a new or tuned environment. 
+What is more important user can choose how the load is decreased/increased between testing steps - one can choose logarythmic way, incrementing etc.
+Without much effort it answers the question what is the maximum load, that system can endure, while ensuring specified QoS parameters. 
+
+JFlooder has also been successfully used for testing adaptation mechanisms of a component system. 
+The most recent work cover SOA-related topics, such as testing workflow-based applications.
+It is being consequently improved and will be available as open source project in the near future. 
+
+\end{document}
