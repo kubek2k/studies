@@ -1,0 +1,32 @@
+ body {font-family:verdana; font-size:11pt ; background-color:#98c5fd;}
+ 
+ pre {font-size:9pt ; background-color:lightblue; margin-left:15pt; margin-right:15pt; border-top:dotted; border-left:dotted; }
+
+img.in { margin-left:30pt; border-top: dotted; border-left: dotted }
+
+ table { background-color:lightblue;}
+ 
+ a, a:link {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #176fdc;
+    text-decoration: none;
+}
+
+a:visited {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #141dff;
+    text-decoration: none;
+}
+
+a:active {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+

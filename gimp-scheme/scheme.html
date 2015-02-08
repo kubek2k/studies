@@ -1,0 +1,719 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" href="style.css">
+<title>Tutorial Scheme dla użytkowników Gimp'a</title>
+</head>
+
+
+<body>
+<center><img src="banner1.gif"></center>
+<blockquote>
+Gimp to wielki powód do dumy całego środowiska Open Source. Jest jednym z najlepszych graficznych narzędzi dla Linuxa. Jest to program do tworzenia i obróbki grafiki rastrowej. Również znakomicie sobie radzi przy  tworzeniu obrazków dla stron WWW. Program działa w środowisku XFree86, choć istnieją wersję na inne platformy takie jak MS Windows, Mac etc.
+
+<h1 align=center>Wprowadzenie do Scheme dla użytkowników Gimpa<br></h1>
+
+<h2>Spis treści</h2>
+<ul>
+<li> <a href="#SEC1">1. Wstęp</a></li>
+<li> <a href="#SEC2">2. Podstawy</a></li>
+
+<li> <a href="#SEC3">3. Fukcje</a></li>
+<li> <a href="#SEC4">4. Zmienne</a></li>
+<li> <a href="#SEC4.1">4.1. Operacje na zmiennych</a></li>
+<li> <a href="#SEC4.2">4.1. Operacje na listach</a></li>
+<li> <a href="#SEC4.3">4.3. Tablice </a></li>
+<li> <a href="#SEC5">5 Pętle</a></li>
+<li> <a href="#SEC6">6.Gimpowa PDB</a></li>
+<li> <a href="#SEC7">7.Rejestrowanie skryptu</a></li>
+<li> <a href="#SEC10.1">8. Hello World - prosty skrypcik</a></li>
+<li> <a href="#SEC10">9. Zaznaczenia</a></li>
+</ul>
+
+    
+<h2><a name="SEC1"><img src="motyl.gif" alt="motylek">1. Wprowadzenie</a></h2>
+
+<blockquote>
+Jedną z ciekawszych właściwości Gimp'a jest fakt iż cała jego funkcjonalność 
+może być oprogramowalna. Głównym językiem używanym do pisania skryptów w Gimp'ie
+jest pochodna Lispa - Scheme ( w najbliższej przyszłości ma być zastąpiony przez
+jeszcze bardziej okrojony język - tiny-Fu ). W tej częsci referatu postaram 
+się przedstawić krótko ten stosunkowo prosty język programowania. Będą to niesetty tylko podstawy, ponieważ mimo swej prostoty język Scheme to dość potężne 
+narzędzie.
+</blockquote>
+
+<h2><a name="SEC2"><img src="motyl.gif" alt="motylek">2. Podstawy</a></h2>
+
+<blockquote>
+W Scheme tak samo jak w lispie, wszystkie funkcje wywołujemy otaczając je
+nawiasami. Na początku wyrażenia podajemy nazwę funkcji, a następnie jej argumenty. Np.: suma 1 i 2 będzie wyglądała następująco:
+
+<pre>
+( + 1 2 )
+</pre>
+
+gdzie '+' to nazwa funkcji ( suma ), a 1 i 2 to jej argumenty.
+
+Wyrazenia takie mozemy dowolnie zagniezdzac np:
+<pre>
+	( + 1 ( - 4 5 ) )
+	</pre>
+oznacza 1 + ( 4 - 5 )
+
+Tzw. "białe znaki" ( takie jak spacje czy tabulatory) nie mają znaczenia .
+
+</blockquote>
+
+<h2><a name="SEC3"><img src="motyl.gif" alt="motylek">3. Funkcje</a></h2>
+
+<blockquote>
+Poza funkcjami arytmetycznymi, Scheme ( jak każdy porządny język programowania 
+), ma wiele innncyh. Wszystkie odpalamy analogicznie do operatorow czyli:
+<pre>
+	( funkcja arg1 arg2 ... )
+</pre>
+
+Aside from the four arithmetic functions that are represented through
+the symbols <tt>+ - * /</tt> there are lots of other functions built
+into the language. All of them have the form
+<pre>
+    (foo param1 param2 ...)</pre>
+
+Własne funkcje możemy definiowac za pomoca slowa kluczowego <tt>define</tt>. Przykladowo wyrazeniem:
+<pre>
+	( define ( kwadrat x ) ( * x x ) )
+</pre>
+
+tworzymy funkcję podnoszącą liczbę do kwadratu, z której możemy skorzystać w sposób następujący:
+<pre>
+	( kwadrat 3 ) 
+</pre>
+( a ile to bedzie ?!? ) ;)
+
+</blockquote>
+
+<h2><a name="SEC4"><img src="motyl.gif" alt="motylek">4. Zmienne i listy</a></h2>
+
+<blockquote>
+Zmienne deklarujemy i ustawiamy za pomocą słowa kluczowego <tt>set!</tt>. Zmienne tak zadeklarowane będą globalne, lecz my jako programiści gimpa nie musimy się tym przejmować ( po każdym uruchomieniu środowisko samo się czyści ).
+A oto i kilka przypisań:
+<pre>
+	(set! zielony 4352 )
+	(set! kat_w_radianach ( * 3.141 ( / 60 180 ) ) )
+</pre>
+
+Podobnie jak w lispie kluczową rolę dla języka Scheme mają listy. Script-fu 
+( odmiana Scheme którą będziemy się zajmować ) nie jest wyjątkiem i również 
+bardzo mocno wykorzystuje listy, np. przy zapisie liczb w systemie RGB ( red green blue ). 
+<pre>
+	'(255 127 0)
+</pre>
+to na przykład zapis koloru pomarańczowego.
+
+Znak ' zawarty przed listą ma kluczowe znaczenie. Oznacza on cytowanie - czyli 
+mówi on imterpreterowi by nie traktował listy jako wywołanie funkcji 255 ( ;) ), lecz 
+raczej jako lista będąca stałą.
+
+<p>
+Aby stworzyć zmienną nazwaną jako pomarancz z daną wartoscią, a następnie użyć 
+jej jako tła piszemy co następuje:
+<pre>
+	(set! pomarancz '(255 127 0) )
+	(gimp-set-background-color pomarancz)
+</pre>
+
+<small>Uwaga dla programujących w LISP'ie i pochodnych :
+	W Scheme inną wartością oznacza się fałsz, listę pustą i wartość niezdefiniowaną
+</small>
+
+</blockquote>
+
+<h3><a name="SEC4.1"><img src="motyl.gif" alt="motylek">4.1. car, cdr i inne gady (*)</a></h3>
+
+<blockquote>
+
+Lista, tak jak w lispie składa się "głowy" i "ogona". "Głową" nazywamy 
+jej pierwszy element, a "ogonem" resztę listy. Dla przykładu dla listy 
+'( 127 0 0 ) , głową jest 127, a ogonem lista (!) '( 0 0 ). Funkcja car 
+zwraca nam właśnie "głowę", cdr "ogon".
+
+A oto i przykład użycia wymienionych funkcji:
+<pre>
+	<b>(set! kolor '( 127 0 1 ) )</b>
+	( 127 0 1 )
+	<b> ( car kolor ) </b>
+	127
+	<b> (cdr kolor) </b>
+	( 0 1 )
+</pre>
+
+Aby pobrac wartosc niebieskiego dla koloru trzeba sie troszke nameczyc stosujac 
+kombinacje wczesniej poznanych funkcji:
+<pre>
+	<b>( car ( cdr ( cdr ( kolor ) ) ) ) </b>
+</pre>
+
+Zeby ulatwić prace programistom wprowadzono dodatkowe funkcje, takie jak:
+- cadr
+- cddr
+- caddr 
+dzięki którym można w dosyć prosty sposób dostać sie do odpowiednich elementów. 
+Dla przykładu nasza operacja w skrócie wygląda następująco:
+<pre>
+	<b>( caddr kolor</b>
+</pre>
+
+W Script-fu funkcje zwracają wartości w postaci list, co czyni <tt>car</tt> 
+jedną z najbardziej użytecznych funkcji. Np. dla funkcji <tt>gimp-new-image</tt>
+czy <tt>gimp-new-layer</tt> ( które użyjemy za chwilę ), wartością zwracaną 
+jest tylko jeden element, ale ponieważ zawiera się on w liście, dostęp do niego 
+mamy dzięki funkcji <tt>car</tt>
+
+</blockquote>
+
+
+<h3><a name="SEC4.2"><img src="motyl.gif" alt="motylek">4.2. Zmienne lokalne (*)</a></h3>
+
+<blockquote>
+Bardziej doświadczeni programiści używają zmiennych lokalnych, co jest
+oczywistym wyborem szczególnie w dużych i rozbudowanych funkcji lub w takich 
+w których stosujemy rekurencję. 
+
+<p>
+
+Zmienne lokalne deklarujemy za pomocą słowa kluczowego <tt>let*</tt> tak jak w 
+następującym przykładzie:
+<pre>
+	(let* ( ( a 5 )
+			( b 14 )
+			( ( ( * a b ) ) )
+	)
+</pre>
+
+W naszym przykładzie zmienne <tt>a</tt> i <tt>b</tt> obowiązują tylko w obrębie
+nawiasów okaląjacych funkcję <tt>let*</tt>
+
+</blockquote>
+
+<h3><a name="SEC4.3"><img src="motyl.gif" alt="motylek">4.3. Tablice</a></h3>
+
+<blockquote>
+Dostęp do tablic realizowany jest
+poprzez konstrukcje: 
+<pre>
+(set! tab (cons-array 4 'byte))
+(aset a 2 42)
+(aref a 3)
+</pre>
+gdzie CONS-ARRAY tworzy tablicę, ASET wpisuje podaną wartość do
+tablicy, natomiast AREF zwraca zawartość odpowiedniej komórki tablicy.
+
+</blockquote>
+
+<h2><a name="SEC5"><img src="motyl.gif" alt="motylek">5. Instrukcje sterujące</a></h2>
+
+<blockquote>
+Jak każdy sznujący się język programowania, Scheme posiada ( co prawda mocno 
+okrojone, ale za to bardzo funkcjonalne instrukcje sterujące. 
+Jeśli chodzi o instrukcję warunkową to mamy:
+<pre>
+	( if ( warunek ) ( jesli_warunek_spelniony ) ( jesli_warunek_nie_spelniony )) </pre>
+
+Jedyną pętlą obecną w script-fu jest <tt>while</tt>. Oto jej składnia:
+<pre>
+	( while ( warunek )
+			( dzialanie1 )
+			( dzialanie2 )
+
+	)
+</pre>
+          
+</blockquote>
+
+
+
+<h2><a name="SEC6"><img src="motyl.gif" alt="motylek">6. PDB - gimpowa procedural database</a></h2>
+
+<blockquote>
+Wszystkie funkcje z jakich możemy korzystać, by oprogramować GIMP'a są dostępne 
+dzięki tzw. PDB ( procedural database ). Każda z procedur tam zawartych ma 
+odpowienik w postaci funkcji scheme, np:
+<pre>
+	( gimp-image-new 640 480 RGB )
+</pre>
+tworzy nowy obrazek w gimpie o rozmiarach 640x480 ( słodkie VGA :) ) z paletą 
+kolorów RGB/
+
+<center><img src="browser.jpg"></center>
+
+<p>
+Dla przykładu procedura <tt> gimp-image-new </tt> wygląda następująco:
+<center><img src="browser1.jpg"></center>
+i jak widać dostarcza nam wielu cennych informacji takich jak:
+- parametry 
+- wartości zwracane 
+- autor
+- etc.
+
+
+</blockquote>
+
+<h2><a name="SEC7"><img src="motyl.gif" alt="motylek">7. Rejestrowanie skryptu w Script-Fu</a></h2>
+
+<blockquote>
+Po tym jak już uda nam się napisać jakąś użyteczną funkcję ( co uczynimy niebawem ), aby móc jej używać, musimy zarejestrować ją w script-fu. Robimy to za 
+pomocą funkcji <tt>script-fu-reqister</tt>.
+
+Oto cele rejestrowania funkcji:
+<ol><li> Wybór miejsca zadokowania skryptu w rozwijanych menu Script-fu
+	<li> Powiedzenie script-fu jaki typ parametrów skrypt pobiera i
+			nadanie im domyślnych wartości
+	<li> Zarejestrowanie skryptu w PDB
+</ol>
+
+Ostatni punkt dokładnke oznacza, że skrypt stanie się integralną częścią Gimpa 
+tak jak komendy wbudowane czy plug-in'y. Tak długo jak będzie zarejestrowany 
+będziemy go mogli używać z wnętrza programu.
+
+Parametry przyjmowane przez <tt>script-fu-register</tt> możemy podzielić na dwie 
+części. Pierwsza to te które zawsze muszą być podane. Są to:
+
+<ol>
+  <li> Nazwa funkcji 
+  <li> Umiejscowienie w menu.
+  <li> Krótki opis funkcji.
+  <li> Autor skryptu.
+  <li> Licencja.
+  <li> Data utworzenia.
+  <li> Lista obrazków dla których może być wywoływany ten skrypt. Dotyczy to 
+  tylko obrazków które już istnieją.
+</ol>
+
+Poza tym podajemy argumenty jakie przyjmuje skrpyt. Każdy parametr ma trzy atrybuty:
+<table border="0">
+<tr>
+<th>Typ argumentu</th>
+<th>Typ danych</th>
+<th>Opis</th>
+</tr>
+
+<tr>
+
+<td><tt class="code">SF-IMAGE</tt></td>
+<td>Wartość całkowita (id obrazka)</td>
+<td>Do pobrania id obrazka</td>
+</tr>
+
+<tr>
+<td><tt class="code">SF-DRAWABLE</tt></td>
+
+<td>Wartość całkowita (id obszaru)</td>
+<td>Pobranie id obszaru</td>
+</tr>
+
+<tr>
+<td><tt class="code">SF-VALUE</tt></td>
+<td>String</td>
+
+<td>Wartość wprowadzona</td>
+</tr>
+
+<tr>
+<td><tt class="code">SF-TOGGLE</tt></td>
+<td>Wartość logiczna (TRUE lub FALSE)</td>
+<td>Do wprowadzania wartości logicznych</td>
+
+</tr>
+
+<tr>
+<td><tt class="code">SF-PATTERN</tt></td>
+<td>String (Nazwa patternu)</td>
+<td>Pozwala wybrać pattern( deseń )</td>
+</tr>
+
+<tr>
+<td><tt class="code">SF-ADJUSTMENT</tt></td> 
+<td>Lista
+(wart-startowa wart-min wart-max maly-krok duzy-krok
+ [int=0 lub float=1] [slider=0 lub roll-box=1])</td>
+<td> Tworzy suwak lub okienko do wprowadzania wartości</td>
+</tr>
+
+<tr>
+<td><tt class="code">SF-FILENAME</tt></td>
+
+<td>String (nazwa pliku)</td>
+<td>Pozwala wybrać plik</td>
+</tr>
+
+<tr>
+<td><tt class="code">SF-STRING</tt></td>
+<td>String</td>
+
+<td>Do wprowadzania stringów</td>
+</tr>
+
+<tr>
+<td><tt class="code">SF-FONT</tt></td>
+<td>String ( nazwa fonta )</td>
+<td>Pozwala wybrać czcionkę</td>
+
+</tr>
+
+<tr>
+<td><tt class="code">SF-COLOR</tt></td>
+<td>Lisa (RGB) [0-255]</td>
+<td>Pozwala wybrać kolor</td>
+</tr>
+
+<tr>
+<td><tt class="code">SF-OPTION</tt></td>
+<td>Lista stringów</td>
+<td>Pozwala wybrać wartość z listy</td>
+</tr>
+
+<tr>
+<td><tt class="code">SF-GRADIENT</tt></td>
+
+<td>String (nazwa gradientu)</td>
+<td>Pozwala wybrać gradient</td>
+</tr>
+</table>
+A oto przykład rejestracji skryptu ( ze wszystkimi możliwymi opcjami ):<br>
+<pre>
+(script-fu-register "my-demo-box"
+ "<Toolbox>/kubek2k/Script-Fu/Demko..."
+ "Do nothing"
+ "Joe User"
+ "Joe User"
+ "August 2000"
+ ""
+ SF-ADJUSTMENT "SF-ADJUSTMENT (slider)" '( 30 1 2000 1 10 1 0)
+ SF-ADJUSTMENT "SF-ADJUSTMENT"         '(400 1 2000 1 10 1 1)
+ SF-COLOR      "SF-COLOR" '(255 0 255)
+ SF-DRAWABLE   "SF-DRAWABLE" 0
+ SF-FONT       "SF-FONT" ""
+ SF-GRADIENT   "SF-GRADIENT"  "Golden"
+ SF-IMAGE      "SF-IMAGE" 0
+ SF-OPTION     "SF-OPTION" '("Option 1" "Option 2" "Option 3")
+ SF-PATTERN    "SF-PATTERN" "Wood"
+ SF-STRING     "SF-STRING" "Testowy String"
+ SF-TOGGLE     "SF-TOGGLE" TRUE
+ SF-VALUE      "SF-VALUE" "0"
+ SF-FILENAME   "SF-FILENAME" "/")
+</pre>
+</blockquote>
+
+
+<h3><a name="SEC7.1"><img src="motyl.gif" alt="motylek">7.1. Umieszczanie skryptu w menu</a></h3>
+
+<blockquote>
+Jak wiemy umiejscowienie skryptu w menu określa argument 2. W naszym przypadku 
+jest to pasek narzędziowy, ale mamy też inne możliwości. Nie podając na początku ścieżki specjalnej sekwencji umieszczmy swoje skrypty w głównym oknie Gimpa. 
+Możemy też podać &lt;Image&gt; co będzie oznaczać że skrypt będzie się znajdował w menu okienka z obrazkiem ( najlepszy wybór ).
+</blockquote>
+
+<h2><a name="SEC10"><img src="motyl.gif" alt="motylek">8. Zaznaczenia</a></h2>
+
+<blockquote>
+Wklejając coś ze schowka resultat nie jest wprowadzany bezpośrednio na warstwę, 
+lecz znajduje się w tzw. warstwie tymczasowej. Możemy sobie manipulować tą warstwą ile tylko chcemy do czasu aż nie wkleimy czegoś nowgo lub jej nie zaktwiczymy ( symbol kotwicy ).
+</blockquote>
+
+<h3><a name="SEC10.2"><img src="motyl.gif" alt="motylek">8.1. Kopiowanie zaznaczonego obszaru</a></h3>
+
+<blockquote>
+Aby dokonać skopiowania zaznaczonego obszaru, używamy funkcji <tt>
+gimp-edit-copy</tt>. Po takiej operacji całe zaznaczenie znajdzie się w buforze który możemy następnie wykorzystać, na przykład jako nową warstwę w rysunku.
+  
+</blockquote>
+
+<h2><a name="SEC10.1"><img src="motyl.gif" alt="motylek">9. Hello World - pisanie po obrazku</a></h2>
+
+<blockquote>
+Pierwszym skryptem który wykonamy będzie prościutki ( tak się wydaje ) skrypt 
+piszący nam po obrazku dowolny tekst i tworzący cień dla niego. Rozpiszmy sobie kroki:
+<ol>
+	<li>Utworznie napisu takiego jaki chcemy</li>
+	<li>Stworzenie jego kopii</li>
+	<li>cieniowanie z pomocą kopii</li>
+</ol>
+
+Teraz należy się zastanowić czy to wszystko ( ;) ) i czy jesteśmy to w stanie 
+uczynić bez ingerencji użytkownika. Pierwszy krok wygląda na prosty - szukamy 
+zatem funkcji która będzie w stanie nam pomóc w wypisywaniu tekstu na obrazku i ... znajdujemy ( gimp-text-fontname ). Wygląda na to że będziemy potrzebować:
+numeru obrazka ( o to zadba program ), umiejscowienia nowej warstwy ( to nie jest aż takie istotne ), wielkości i kroju czcionki ( tym zajmie się użytkownik ). Kiedy już zwalilismy większość pracy na innych ( ;) ) testujemy nową procedurę z pomocą konsoli ( jest ona osiągalna z menu Dodatki-&gt;Script-Fu-&gt;Script-Fu console... ). <br>
+Następnym krokiem który powinniśmy uczynić to stworzenie kopii naszego napisu. Posłużymy się tu operacją ( gimp-layer-copy ) - funkcja ta jest stosunkowo prosta - jej wywołanie polega na podaniu kopiowanej warstwy i kanału alpha ( to nie jest dla nas istotne ). Niestety brak duplikacji warstw w script-fu zmusza nas do dodania kopii do obrazka. Uważnie szukając odnajdujemy ( gimp-image-add-layer ). Podajmy jej numerek obrazka, warstwy do dodania i pozycję nowej warstwy. <br>
+Super - mamy dwie kopie stworzonego tekstu, ale co z tym zrobić? Słuszne pytanie - tutaj musimy posłużyć się wrodzonym instynktem i zastanowić się jak cień może wyglądać. Autor po przeczytaniu jednego z podręczników do Gimp'a ( bo sam oczywiście nie był na tyle inteligentny by na to wpaść ), dowiedział się, że jednym z lepszych sposobów na stworzenie efektownego cienia jest wprowadzenie tak zwanego zakłócenia do obrazka ( ang. noise ). Chcąc to uczynić posłużymy się tzw.
+rozmyciem Gaussa ( funkcja ( plug_in_gauss ) ). Następnie chcąc wmówić użytkownikowi że znajduje się w trzecim wymiarze, przesuwamy nieco rozmyta warstwę względem pierwotnej ( funkcja ( gimp-layer-translate ) ). Dobrze, ale jak ma wyglądać taki skrypt?? Oto i on:
+<pre>
+	
+( define ( hello-world image warstwa text font-size font )
+		 ( let* ( ( nasztext ( car ( gimp-text-fontname image -1 
+							( / ( car (  gimp-image-width image ) ) 2 )
+							( / ( car ( gimp-image-height image ) ) 2 )
+								  text
+								  0 TRUE font-size 1
+								  font ) )
+				  ) 
+				  ( kopia ( car (gimp-layer-copy nasztext 1 ) ) ) 
+				 )
+				  ( gimp-image-add-layer image kopia 0 )
+				  ( plug-in-gauss 1 image kopia 3 3 0 )
+				  ( gimp-layer-translate kopia 3 3  )
+				  ( gimp-image-raise-layer image nasztext )
+				  ( gimp-image-merge-down image nasztext 0 )
+		 		 ( gimp-displays-flush )
+		 )
+)
+			    
+
+(script-fu-register "hello-world"
+					_"<Image>/Script-Fu/kubek2k/Hello World..."
+					"Wypisuje dowolny tekst i tworzy cien..."
+					"Jakub Janczak"
+					"Jakub Janczak"
+					"January 2005"
+					""
+					SF-IMAGE "Image" 0
+					SF-DRAWABLE "Drawable" 0
+					SF-STRING      "Text" "Hello World!!!"
+					SF-VALUE "Font-size" "14"
+					SF-FONT "Fontname" "Arial" )
+
+
+</pre>
+<a href="examples/hello.scm">Źródło skryptu</a><br>
+<b>Użyte funkcje</b><br>
+wyjaśnienia wymagają jeszcze funkcje <tt>( gimp-image-raise-layer ), ( gimp-image-merge-down ) i ( gimp-displays-flush )</tt>. Pierwsza odpowiada za wyniesienie warstwy pierwotnej nad rozmytą ( bez tego nie byłoby efektu ). Druga powoduje scalenie warstw. Trzecia powoduje wyświetlenie wszystkich zmian znajdujących się jeszce w buforach wewnętrznych Gimp'a. A oto i przykładowy obrazek wygenerowany skryptem:<br><br>
+
+<center><img src="helloworld.jpg"></center>
+
+
+<h1><img src="motyl.gif" alt="motylek">Przykłady</h1>
+
+<blockquote>
+
+<b>Pierwszy z przykładów wymazuje co n-ty pikselowy pasek z obrazka</b><br>
+Oto przykład działania skryptu:<br>
+<center><img src="pieseczek.jpg"></center>
+<pre>
+;;
+;;  Skrypt do wymazywania co n-tej kolumny
+;; 	Jakub Janczak
+;; 
+;;
+(define (script-fu-wymaz-co-n img drawable n)
+  (gimp-undo-push-group-start img)
+  (let* (
+  			(szer (car (gimp-drawable-width drawable)))
+  			(wys (car (gimp-drawable-height drawable)))
+			( x 0 )
+		)
+		(
+  			(while (< x szer )
+        	 (gimp-rect-select img x 0 1 wys REPLACE FALSE 0)
+    	     (gimp-edit-clear drawable)
+         	 (set! x (+ x n))
+        	)
+		)
+	)
+  	(gimp-selection-none img)
+  	(gimp-undo-push-group-end img)
+  	(gimp-displays-flush)
+  )
+
+(script-fu-register "script-fu-wymaz-co-n"
+                    _"&lt;Image&gt;/Script-Fu/moje/Wymaz co n-ta kolumne..."
+                    "Wymazuje co n-ta kolumne"
+                    "Jakub Janczak"
+                    "GNU GPL"
+                    "9 sty 2005"
+                    "RGB* GRAY* INDEXED*"
+                    SF-IMAGE "Image" 0
+                    SF-DRAWABLE "Drawable" 0
+                    SF-ADJUSTMENT "Every Nth Pixel" '(3 2 10 1 1 0 0) 
+						;; ciekawa rzecz - tworzy dosyć wygodny suwak
+                    )'
+</pre>
+
+<a href="examples/nta_kolumna.scm">Źródło skryptu</a><br>
+<b>Użyte funkcje</b>: <br>
+<tt>( gimp-rect-select obraz x y szer wys operacja zmiekcz wsp_zmiekcz )</tt> -worzy zaznaczenie prostokątne w p (x,y) 
+o wysokości wys i szerokości szer. Trzeci argument to typ operacji ( przecięcie, dodanie, odjęcie ). Czwarty argument jest odpowiedzialny za zmiękczenie brzegów ( ustawienie go daje całkiem ciekawe efekty ).<br>
+<br>
+<tt>( gimp-edit-clear obszar ) </tt> - czyści zaznaczony obszar <br>
+<tt>( gimp-selection-none obraz ) </tt> - wyłącza wszelkie zaznaczenia na obrazie </tt> <br>
+<tt>( gimp-displays-flush)</tt> pokazuje wszystkie zmiany na obrazkach ( tzw. flush ) <br>
+
+
+<b>Drugi omawiany skrypt tworzy efekt półprzezroczystej siatki. A oto przykład 
+działania: </b>
+
+<p>Przed:<br>
+		<img src="gfx/siatka_przed.jpg" class=in>
+<p>Po:<br>
+		<img src="gfx/siatka_po.jpg" class=in>
+<p>Po niewielkich zmianach w skrypcie możemy uzyskać jeszcze ładniejszą siatkę:<br>
+		<img src="gfx/siatka_po2.jpg" class=in>
+
+<pre>
+;;
+;; Jakub Janczak
+;; Tworzy ciekawy efekt półprzezroczystej siatki na zaznaczonej częsci obrazka  
+;; 
+;;
+(define (script-fu-grid-overlay img drawable color size)
+  (define (draw-line drawable startx starty endx endy)
+    (let ((line (cons-array 4 'double)))
+      		(aset line 0 startx)
+      		(aset line 1 starty)
+		    (aset line 2 endx)
+     		(aset line 3 endy)
+		    (gimp-pencil drawable 4 line)
+      ))
+  (gimp-undo-push-group-start img)
+  (let* ((szer (car (gimp-drawable-width drawable)))
+         (wys (car (gimp-drawable-height drawable)))
+         (siatka (car (gimp-layer-new img szer wys 
+                                          RGB-IMAGE 
+                                          "grid" 
+                                          100 
+                                          NORMAL-MODE)))
+         (sx 0)
+         (sy 0)
+         )
+    (gimp-layer-add-alpha siatka)
+
+    (gimp-image-add-layer img siatka -1)
+    
+    (gimp-rect-select img 0 0 szer wys REPLACE FALSE 0)
+    (gimp-edit-clear siatka)
+    
+    (gimp-palette-set-foreground color)
+    (gimp-brushes-set-brush "pixel (1x1 square)")
+
+    (while ( &gt; sy wys)
+           (set! sy (+ sy size))
+           (draw-line siatka 0 sy szer sy)
+           )
+    (while (&gt; sx szer )
+           (set! sx (+ sx size))
+           (draw-line siatka sx 0 sx wys)
+           )
+    
+    (gimp-layer-set-opacity siatka 25)
+    
+    (gimp-selection-none img)
+    (gimp-undo-push-group-end img)
+    (gimp-displays-flush)
+    )
+)
+
+(script-fu-register "script-fu-grid-overlay"
+                    _"&lt;Image&gt;/Script-Fu/kubek2k/Dodaj przezroczysta siatke..."
+                    "Dodaje przezroczysta siatke"
+                    "Jakub Janczak"
+                    "Jakub Janczak"
+                    "Sty 2005"
+                    "RGB* GRAY* INDEXED*"
+                    SF-IMAGE "Image" 0
+                    SF-DRAWABLE "Drawable" 0
+                    SF-COLOR      _"Color"  '(255 255 255)
+                    SF-VALUE      _"Size" "10")
+</pre>'
+
+<a href="examples/przezroczysta_siatka.scm">Źródło skryptu</a><br>
+<b>Użyte funkcje:</b><br>
+<tt>( gimp-layer-new obraz szer wys paleta_warstwy nazwa_warstwy stopien_pokrycia sposób_scalenia )</tt> - tworzy nową warstwę ( ważne aby paleta kolorów warstwy nie była bogatsza od palety obrazu ). Stopień pokrycia oznacza jak bardzo przezroczytsta będzie nowa warstwa.<br>
+
+<tt>( gimp-pencil obszar ilosc_wspolrzednych wspolrzedne )</tt> - narzedzie rysuje ołówkiem po zadanych w 3. parametrze współrzędnych<br>
+<tt>( gimp-palette-set-foreground kolor ) </tt> - ustawia kolor wypełnienia <br>
+
+<tt>( gimp-layer-set-opacity wsp_przezroczystosci ) </tt> - ustawia współczynnik przezroczystości warstwy<br>
+Przy okazji zobaczyliśmy jak korzystamy z tablic i funkcji wewnętrznych w Scheme<br>
+
+</blockquote>
+
+<b>Ostatni z przykładów kopiuje obrazy ze schowka do aktualnego obrazu w sposób losowy dobierając pozycję i kąt obrotu</b><br>
+Nazwa motylki pochodzi od pierwotnego przeznaczenia skryptu który miał symulować nalot chmary motyli ;). Obecnie służy np. do zaśnieżania obrazków ( śniegu mamy w tym momencie aż zanadto ;) ).<br>
+<center><img src="snieg.jpg"></center>
+
+<br>
+Kod programu:<br>
+<pre>
+
+( define ( motylki image warstwa n ) 
+		 ( let* ( 
+				  ( wys ( car ( gimp-image-height image ) ) )
+				  ( szer ( car ( gimp-image-width image ) ) )
+				  ( i 0 )
+				  )
+				( while ( &lt; i n )
+					( let* ( 
+					 ( tmp ( car ( gimp-edit-paste warstwa 100 ) ) )
+					 ( wystmp ( car ( gimp-drawable-height tmp ) ) )
+					 ( szertmp ( car ( gimp-drawable-width tmp ) ) )
+					 )
+ 					   ( gimp-layer-set-offsets tmp 
+					   	( rand ( - szer szertmp ) ) 
+					   	( rand ( - wys wystmp ) ) )
+					   ( gimp-drawable-transform-rotate tmp 
+						( / ( rand 180 ) 6.28 ) 1 0 0 0 0 0 3 0 )
+					   ( print i )
+					   ( set! i ( + i 1 ) )
+					   )
+					)
+		( gimp-image-merge-visible-layers image 1 )
+	)
+ )
+
+(script-fu-register "motylki"
+					_"&lt;Image&gt;/Script-Fu/kubek2k/Motylki..."
+					"Wrzuca n zaznaczen..."
+					"Jakub Janczak"
+					"Jakub Janczak"
+					"January 2005"
+					""
+					SF-IMAGE "Image" 0
+					SF-DRAWABLE "Drawable" 0
+					SF-VALUE      _"Size" "10")
+
+</pre>
+
+<a href="examples/motylki.scm">Źródło skryptu</a><br>
+Jedyne co wymaga wyjasnienia to funkcje:<br>
+<tt>( gimp-layer-set-offsets )</tt> - funkcja ustalająca oległość warstwy od górnego lewego rogu obrazka<br>
+<tt>( gimp-image-merge-visible-layers )</tt> - funkcja scala wszustkie widoczne warstwy<br>
+
+<br>
+
+
+<h2><a name="SEC11"><img src="motyl.gif" alt="motylek">11. Materiały:</a></h2>
+
+<blockquote>
+  <UL>
+    <LI> <A HREF="http://lehmann.home.ml.org/gimp.html">Strona Marca Lehmanna o  Gimp'ie</A> </LI>
+    
+    <LI> <A HREF="http://imagic.weizmann.ac.il/~dov/gimp/perl-tut.html">Tutorial do perla dla Gimpowców ( zwiększenie możliwości )</A> </LI>
+
+    
+    <LI> <a href="http://www.gimp.org">Strona Domowa Gimpa'a</a> </LI>
+	<li><a href="http://imagic.weizmann.ac.il/%7Edov/gimp/scheme-tut.html" target="_parent">A Scheme Tutorial for Gimp Users</a>
+		</li>
+	<li><a href="http://lithwww.epfl.ch/teaching/rdf/support99/SchemeTut.html" target="_parent">Krótki opis Script-Fu i Scheme</a>
+	</li>
+	<li> <a href"http://www.cs.wcu.edu/~bubak/scheme/">
+			Jeszcze inny tutorial do Scheme ( bardzo ciekawy )
+		</a> </li>
+		<li><a href="http://www.ccs.neu.edu/home/dorai/t-y-scheme/t-y-scheme-Z-H-1.html">Teach yourself Scheme in fixnum Days ;)</a></li>
+  </UL>
+</blockquote>  
+
+<i>To wszystko - miłego Gimpowania!!! </i>
+
+<hr>
+<address>Autor: <a
+href="mailto:kubek2k@o2.pl">Jakub Janczak</a>. W ramach referatu z przedmiotu Obliczenia Symboliczne prowadzonych w <a href="http://www.ki.agh.edu.pl">Katedrze Informatyki AGH</a><a href="http://student.uci.agh.edu.pl/~janczak/gimp-scheme/scheme.html"><br>Adres orginału http://student.uci.agh.edu.pl/~janczak/gimp-scheme/scheme.html</a></address>
+</body> </html>
