@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[latin2]{inputenc}
+\usepackage{amsfonts}
+\usepackage[MeX]{polski}
+
+\title{Dokumentacja do projektu z Teorii Obliczeñ i Z³o¿no¶ci Obliczeniowej - Saper}
+\author{Jakub Janczak (janczak@student.uci.agh.edu.pl)}
+\begin{document}
+\maketitle
+	\section{Szczegó³y techniczne}
+	Wybrany jêzyk to C++ - bez u¿ycia STL.
+	\section{Szczegó³owy opis algorytmu}
+	Algorytm dzia³a na zasadzie analizy pól z numerami.
+		Rozpoczyna sw± pracê od:
+		\begin{itemize}
+			\item{Znalezienia miejsc na planszy które mog± byæ dowolnie obsadzone, niezale¿nie od pozosta³ej czê¶ci planszy (tzw. pola ANY) i wyliczenia tzw. tolerancji ilo¶ci min tj. ile min mo¿na jeszcze ewentualnie dostawiæ je¶li zajdzie taka potrzeba}
+			\item{Zbudowania list pól z numerami po których bêdzie sprawdzaæ obecno¶æ min w otoczeniu w ka¿deym z takich pól zapamiêtywana jest liczba min do dostawienia}
+		\end{itemize}
+		\subsection{Opis funkcji rekursywnej}
+			Ka¿de wej¶cie w rekursjê rozpoczyna siê od znalezienia na planszy miejsc gdzie min ju¿ nie nale¿y dostawiaæ. S± to pola które nosz± na sobie tak± liczbê jak jest ilo¶æ min dooko³a nich. Pola bêd±ce zakrytymi s±siadami takiego pola oznaczamy jako miejsca zakryte. Pola "zredukowane" wyrzucamy z listy do sprawdzenia - nie bêdzie konieczne ju¿ ich sprawdzenie.
+			Nastêpnie szukamy pól wokó³ których ilo¶æ wolnego miejsca jest równa ilo¶ci min do dostawienia. Uk³adamy te miny i te pola równie¿ wyrzucamy z listy do sprawdzenia. 
+			
+			Dwa poprzednie kroki powtarzamy tak d³ugo jak:
+			
+			\begin{itemize}
+				\item{Wokó³ którego¶ z miejsc bêdzie mniej wolnego miejsca ni¿ ilo¶æ min do obsadzenia}
+				\item{Ilo¶æ min obstawionych do tej pory przekracza ilo¶æ min jak± podano na wej¶ciu programu}
+				\item{Je¶li w którym¶ z kroków nic nie zmienimy - wychodzimy z pêtli}
+			\end{itemize}
+			
+			Je¶li który¶ z warunków zawiedzie powracamy z rekursji.
+
+			Je¶li lista pól do sprawdzenia jest pusta - sprawdzamy czy ilo¶æ min siê zgadza tj. czy obecny uk³ad + ewentualne do³o¿one miny bêd± stanowi³y uk³ad stanowi±cy rozwi±zanie problemu. Je¶li tak - wypisujemy rozwi±zanie i koñczymy program.
+
+			Zmniejszamy ilo¶æ min do dostawienia na danym polu o jeden i sprawdzamy czy takie dostawienie miny spowoduje spadek ilo¶ci wszystkich min poni¿ej zera - je¶li tak powracamy z rekursj±.
+			Nastêpnie algorytm dok³ada minê w s±siedztwie danego pola, tak aby wszystkie mo¿liwe kombinacje min, zosta³y u³o¿one w drzewie rekursji (robi to zbieraj±c referencjê do pól zakrytych dooko³a pola z min± i ustawia dla pola parametr last definiuj±cy ostatnio zaminowywane pole). Je¶li nie mo¿na ju¿ dostawiæ miny przed polem last powracamy z rekursji, w przeciwnym wypadku robimy kopiê planszy do gry i listy pól do sprawdzenia i podajemy kopie jako argumenty kolejnego stopnia rekursji. Je¶li rekursja powróci-zwalnimy pamiêæ i próbujemy dostawiæ minê na kolejn± pozycjê. Je¶li nie ma ju¿ takiej mo¿liwo¶ci powracamy z rekursji.
+			Kopiowanie mo¿e wydawaæ sie z³ym rozwi±niem ale znacznie u³atwia sprz±tanie po b³êdnych ga³êziach rekursji.
+		\section{Analiza z³o¿no¶ci}
+		Mimo prostoty algorytmu obliczenie jego z³o¿no¶ci algorytmu nie jest spraw± prost±. Jasne jest, ¿e teoretyczn± z³o¿no¶ci± pesymistyczn± tego algorytmu jest \(2^n\) (ka¿de pole w pesymistycznym przypadku jest sprawdzane pod wzglêdem obecno¶ci min), gdzie n jest iloczynem wymiarów planszy. Podobnie jest ze z³o¿no¶ci± pamiêciow± mojego algorytmu (spowodowana przez kopiowanie ca³ej strunktury dancyh dla ka¿dego poziomu rekursji. Silna zale¿no¶æ z³o¿no¶ci od danych i kilka usprawnieñ algorytmu praktycznie uniemo¿liwiaj± obliczenie ¶redniej z³o¿no¶ci czasowej i pamiêciowej.
+
+		\section{Analiza silnych i s³abych stron algorytmu}
+			S³abymi stronami algorytmu s±:
+			\begin{itemize}
+				\item{Plansze bez rozwi±zania} - mog± wykazywaæ konieczno¶æ prezj¶cia przez ca³e drzewo rozwi±zañ. 
+				\item{Pierwszy element wybrany do rozpatrywania ma rozwi±zanie wybierane jako ostatnia kombinacja} - korzeñ drzewa psuje je.
+				\item{Plansza jest plansz± rzadk±} - jest ma³o pól z liczb± ale siê "zazêbiaj±"
+			\end{itemize}
+			Silne strony to:
+			\begin{itemize}
+				\item{Rozwi±zywanie plansz ju¿ czê¶ciowo rozwi±zanych}
+				\item{Rozwi±zywanie plansz które maj± gêste skupiska miejsc z liczbami}
+				\item{Szybkie sprz±tanie po zmianach w b³êdnych ga³êziach rekurencji}
+			\end{itemize}
+		\section{Mozliwosci usprawnienia}
+			Jest ich bardzo wiele gdy¿ wybrany przeze mnie algorytm jest bardzo rozszerzalny:
+			\begin{itemize}
+				\item{Moznaby usprawnic przerywanie b³êdnych poszukiwañ poprzez wprowadzenie zapamiêtywania stanów wokó³ danego pola z liczb± prowadz±cych do b³êdnych rozwi±zañ, a nie maj±cych zwi±zku z wprowadzonymi zmianami w ni¿szym stopniu rekurencji}
+				\item{Odsmiecanie poziomow z pomoca free mozna zastapic markowaniem zmian poprzez poziom rekursji i w miare cofania, anulowac je}
+				\item{Sposob liniowy dodawania do listy sprawdzanych pol mozna zastapic na sposob slimakowy dookola pola z najwieksza iloscia sasiadow (pol z liczba na ktore postawienie miny obok jakiegos pola z liczba ma bezposredni wplyw)}
+				\item{Zamiast sprawdzania kazdego pola po kolei w procesie sprawdzania i redukowania planszy (1. punkt funkcji rekursywnej)  mo¿na sprawdzaæ tylko pola s±siadów pola woko³ którego dostawili¶my minê, potem ich s±siadów itd. a¿ do momentu gdy nic na planszy sie nie zmieni}
+			\end{itemize}
+			
+\end{document}
