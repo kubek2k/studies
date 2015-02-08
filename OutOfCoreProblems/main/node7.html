@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>OOC LU and QR factorization</TITLE>
+<META NAME="description" CONTENT="OOC LU and QR factorization">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html116"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html112"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html106"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html114"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html117"
+  HREF="node8.html">Compression and decompression of</A>
+<B> Up:</B> <A NAME="tex2html113"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html107"
+  HREF="node6.html">Out of core sorting</A>
+ &nbsp; <B>  <A NAME="tex2html115"
+  HREF="node15.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00022000000000000000">
+OOC LU and QR factorization</A>
+</H2>
+<P>
+<SMALL CLASS="SMALL">As described in [<A
+ HREF="node16.html#ooc-scalapack">8</A>] out-of-core extension of ScaLAPACK exists which provides three core factorization routines: LU, QR and Cholesky.
+They allow factorization of dense systems which are too large to fit in psychical memory. 
+Original matrix is stored entirely on disk and factorization routines transfer its parts into memory. 
+These routines make use of portable I/O interface and ScaLAPACK in-core factorization as a subroutines.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">Authors of [<A
+ HREF="node16.html#ooc-scalapack">8</A>] also provide comparison between various problems size for out-of-core factorizatoin routines. 
+They used Linux cluster, each node consisted of dual Pentium II at 450MHz with 512MB and a local 8GB IDE disk using red-hat Linux 6.2 with smp kernel.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">Below there is a comparison for LU factorization applied to various matrices and grids.
+The 'fact' time is the total elapsed to perform out-of-core factorization, 
+the 'solve' is the total elapsed time for solution with 10 vectors (they both include I/O time) and
+the 'io' is the total elapsed time for read and write operations.
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+
+<DIV ALIGN="CENTER"><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">
+    size </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> grid </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> fact </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> solve </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> io </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">16000 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4 x 4 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 3670s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 180s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 417s </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 
+    32000 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4 x 4 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 28850s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 508s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1918s </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">16000 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4 x 8 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1867s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 123s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 163s </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 
+    32000 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4 x 8 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 15730s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 313s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 951s </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 
+    40000 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4 x 8 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 32420s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 443s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1595s </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">20000 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8 x 7 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2301s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 81s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 78s </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 
+    32000 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8 x 7 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8317s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 289s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 470s </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 
+    45000 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8 x 7 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 22508s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 482s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1148s </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 
+    80000 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8 x 7 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 128155s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 899s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 3627s </SMALL></TD>
+</TR>
+<TR><TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+</TABLE></DIV>
+<P><P>
+<BR>
+
+<P>
+<SMALL CLASS="SMALL">As shown in the table, the time for the I/O operations was generally a small fraction of overall time. 
+This shows that these out-of-core algorithms were compute-bound on this cluster. 
+</SMALL>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html116"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html112"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html106"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html114"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html117"
+  HREF="node8.html">Compression and decompression of</A>
+<B> Up:</B> <A NAME="tex2html113"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html107"
+  HREF="node6.html">Out of core sorting</A>
+ &nbsp; <B>  <A NAME="tex2html115"
+  HREF="node15.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Kubek2k
+2005-05-09
+</ADDRESS>
+</BODY>
+</HTML>

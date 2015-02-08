@@ -1,0 +1,42 @@
+\subsection{lip environment}
+One of OOC libraries on which I want to concern is lip. \cite{kzajac} 
+It was made as a utility able to help in solving Irregular \footnote{these which can't be optimized in the process of development, because their properties are not known until the runtime ( such as Monte-Carlo or N-Body simulations ). }simulations and Out of Core problems.
+It is based on MPI-IO, so it can be ported on any system: from SMP machine to simple workstation.
+It has three interesting features helping in more efficient use of parallel machines:
+
+\begin{itemize}
+	\item{Reusing communication schedule} - in lip we are able to construct objects called communication patterns, which are responsible for managing sending and suspending data from memory.
+	We can do it in phase called ,,inspector phase'', and therefore the I/O delays are a bit minimalized ( as the data are coming while the other are being processed ).
+	\item{Data caching}- which is especially used in computing OOC problems. Additionally the I/O latency is minimized by derived data attributes, that makes as able to read one non-contignous burst of data per only one MPI-IO routine. 
+	\item{Scalability} - the number of processors doesn't matter ( in spite of CHAOS which needed $2^n$ ).
+
+\end{itemize}
+
+OOC index-arrays problems are done by dividing data for i-sections and referencing globals to the local nodes.
+It's done by multiple use of Localize() method which is done in the so called Inspector phase.
+Every node receives the same portion of data and processes it. 
+The global chunks are treated almost like the local ones.
+The only difference is in gathering data ( we have to perform request for new data ).
+
+Sometimes problem grows a bit and also data arrays becomes OOC.
+That is little more complicated as the Inspector phase ( from the first case ) is insufficient, because some data could be unreachable, as their index exists only in the disk memory.
+These problems could be solved using another optimization - it should concern not only on communication but also on I/O access. 
+It's kind of trick and is done by examining and translating references between disk and the memory.
+Calling ooc\_localize() we can be sure that lip will make everything for us.
+
+After such a examination and translation the computing can be done using simple MPI procedures.
+
+\subsection{KeLP Programming system}
+KeLP \cite{kelp} is a C++ library for coordinating block-structured scientific applications.
+It's based on intuitive, geometric programming abstraction: points, regions, etc... It's really hard typed library ( every object type has characteristic "X" on it's end, exp. PointX and similar ).
+It also uses similar inspector-executor paradigm as lip do.
+The main purpose of using KeLP is parallel programming in computing - it doesn't have internal OOC support, but thanks to Bradley Broom's and Robert Fowler's work we've got a great utlity for building and converting our in-core solutions to OOC scheme.  
+It's called KeLPIO \cite{kelpio} and comes with many interesting features:
+\begin{itemize}
+	\item{Checkpointing} - helps in overlaps saving
+	\item{Embedding} - we are able to transform away overlapped regions of data
+	\item{OOCArrayX} - new type which can be used in similar way as XArrayX
+	\item{New way of communication} - done by using OOCMoverX
+	\item{VArrayX} - new virtual interface helps in creating cleaner namespace ( which got dirter 'cause of types which meant the same~)
+\end{itemize}
+One disadvantage of using the KeLPIO is lack of MPI support, but it's authors promise that work is in progress.

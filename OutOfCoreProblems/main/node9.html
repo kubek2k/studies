@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Inverting great matrices</TITLE>
+<META NAME="description" CONTENT="Inverting great matrices">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html140"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html136"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html130"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html138"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html141"
+  HREF="node10.html">Processing big meshes</A>
+<B> Up:</B> <A NAME="tex2html137"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html131"
+  HREF="node8.html">Compression and decompression of</A>
+ &nbsp; <B>  <A NAME="tex2html139"
+  HREF="node15.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00024000000000000000">
+Inverting great matrices</A>
+</H2>
+<P>
+<SMALL CLASS="SMALL">Matrix inversion is used in many applications ie. as a direct method for solving linear equations.
+For challenging applications (like astronomical simulation, crash test simulation, global climate modelling and many others) the memory is always insufficient in size.
+Scientist usually want to increase accuracy which causes bigger and bigger matrices.
+Thus, out-of-core algorithm for inverting matrices might be very useful.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">Inversion of a matrix can be computed from its LU factorization.
+LU factorization produces matrices: L (lower triangular) and U (upper triangular) such that:
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+<SMALL CLASS="SMALL"><SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$M = LU$"></SPAN>
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+<SMALL CLASS="SMALL">In general when LU decomposition uses partial pivoting there may be third matrix P, which stores the permutation matrix.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">We're searching for a matrix <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$M^{-1}$"></SPAN> such that:
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+<SMALL CLASS="SMALL"><SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$MM^{-1}=I$"></SPAN>
+</SMALL>
+<P>
+<SMALL CLASS="SMALL"><SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$LUM^{-1}=I$"></SPAN>
+<BR>
+</SMALL>
+<P>
+<SMALL CLASS="SMALL"><SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$LY=I$"></SPAN>
+</SMALL>
+<P>
+<SMALL CLASS="SMALL"><SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$UM^{-1}=Y$"></SPAN>
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+<SMALL CLASS="SMALL">Firstly we compute matrix Y such that <SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$LY=I$"></SPAN>, this can be done using backward substitution.
+Another backward substitution is used to compute <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$M^{-1}$"></SPAN> from <SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$UM^{-1}=Y$"></SPAN>
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">As proved in [<A
+ HREF="node16.html#matinv">7</A>] out-of-core inverting of a matrix can be efficiently done using blocked decomposition of matrices.
+It presents algorithms for both parallel out-of-core LU factorization (which is also presented in [<A
+ HREF="node16.html#ooc-scalapack">8</A>]) and parallel out-of-core triangular substitution.
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+
+<DIV ALIGN="CENTER"><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">
+    size </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> grid </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> LU fact </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> io </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> communication </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> computation </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> total </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">12288 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1x8 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 29m39s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 10m16s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 11m19s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 21m21s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h36m </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+	</SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2x4 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 21m17s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 9m39s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4m31s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 20m27s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h12m </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+	</SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4x2 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 18m50s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8m52s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4m30s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 19m50s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h08m </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+	</SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8x1 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 19m57s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8m09s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 9m17s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 19m50s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h21m </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+    20480 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1x8 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2h37m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h07m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h27m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2h34m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 10h38m</SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+	</SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2x4 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h06m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h02m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 31m55s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2h05m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 6h23m </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+	</SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4x2 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h50m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h02m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 17m48s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h56m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 6h21m </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+	</SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8x1 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h43m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 55m46s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 27m26s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h49m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 6h25m </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+    27648 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1x8 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 7h59m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2h07m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 6h16m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4h04m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1d04h </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+	</SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2x4 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4h34m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 1h59m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2h10m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 3h51m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 16h45m </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+	</SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 4x2 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 3h20m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2h02m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 49m31s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 3h47m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 12h43m </SMALL></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><SMALL CLASS="SMALL">  
+	</SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 8x1 </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 3h02m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 2h04m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 53m28s </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 3h46m </SMALL></TD>
+<TD ALIGN="RIGHT"><SMALL CLASS="SMALL"> 12h29m </SMALL></TD>
+</TR>
+<TR><TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+</TABLE></DIV>
+<P><P>
+<BR>
+
+<P>
+<SMALL CLASS="SMALL">These results were obtained on a cluster of 8 PC-Celeron running Linux (each one has 96MB of psychical memory) and interconnected by a Ethernet switch,
+Of course there is a way to avoid I/O overhead in this algorithm, it can be done by overlapping I/O with the computation, which is further described in [<A
+ HREF="node16.html#matinv">7</A>]
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html140"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html136"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html130"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html138"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html141"
+  HREF="node10.html">Processing big meshes</A>
+<B> Up:</B> <A NAME="tex2html137"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html131"
+  HREF="node8.html">Compression and decompression of</A>
+ &nbsp; <B>  <A NAME="tex2html139"
+  HREF="node15.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Kubek2k
+2005-05-09
+</ADDRESS>
+</BODY>
+</HTML>

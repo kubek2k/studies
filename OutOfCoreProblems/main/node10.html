@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Processing big meshes</TITLE>
+<META NAME="description" CONTENT="Processing big meshes">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html150"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html146"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html142"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html148"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html151"
+  HREF="node11.html">OOC environments</A>
+<B> Up:</B> <A NAME="tex2html147"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html143"
+  HREF="node9.html">Inverting great matrices</A>
+ &nbsp; <B>  <A NAME="tex2html149"
+  HREF="node15.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00025000000000000000">
+Processing big meshes</A>
+</H2>
+<P>
+<SMALL CLASS="SMALL">Polygonal meshes acquired with modern scanning technology can easily reach hundreds of millions of triangles which gives many GB data size.
+There exist special approaches to processing such large meshes, which sizes often exceeds 4GB address space of 32-bit machines.
+Those approaches may be divided into few groups [<A
+ HREF="node16.html#mesh">10</A>]:
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+
+<UL>
+<LI>mesh cutting - original mesh is cut into smaller parts, small enough to fit entirely in memory.
+	Then algorithm analyses each part independently.
+	Despite the simplicity of this approach, the initial cutting step can be expensive when the input mesh is given in an indexed representation. 
+	Unfortunately mesh cutting typically lowers the quality of the output and there might be some problems with processing cut boundaries.
+
+<P>
+</LI>
+<LI>batch processing - stream the data through main memory in one or more passes.
+	Of course computations are restricted to the amount of data actually resident in memory at any time.
+	This makes batch processing a very efficient approach.
+	Using this approach there can be done mesh simplification process, which batch-process the input mesh as a sequence of individual triangles.
+
+<P>
+</LI>
+<LI>online processing - access the data through a series of queries.
+	Data should be initially re-organised to avoid costly disk seeks with each query.
+	Also queries can be accelerated by caching or pre-fetching data that is likely to be accessed.
+	This way we can just use the virtual memory functionality provided by the operating system, but the performance of such algorithm is os-dependant.
+	And of course as we seen before, there are some problems with the use of virtual memory for out-of-core algorithms.
+	We can also use many data structures which give us possibility to use traditional in-core algorithms in large data sets (ie. octree).
+
+<P>
+</LI>
+<LI>processing sequence - access to mesh is restricted to fixed traversal order while supporting access to full connectivity and geometry information for the active elements of this traversal.
+	This approach combines efficiency of batch processing with the advantage of explicit mesh connectivity that is available in online processing.
+	Generating processing sequences can be done in numerous ways, ie. from a out-of-core compression method which naturally generate triangles and vertex ordering suitable as the processing sequence.
+
+<P>
+</LI>
+</UL>
+<P><P>
+<BR>
+<SMALL CLASS="SMALL"></SMALL>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html150"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html146"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html142"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html148"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html151"
+  HREF="node11.html">OOC environments</A>
+<B> Up:</B> <A NAME="tex2html147"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html143"
+  HREF="node9.html">Inverting great matrices</A>
+ &nbsp; <B>  <A NAME="tex2html149"
+  HREF="node15.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Kubek2k
+2005-05-09
+</ADDRESS>
+</BODY>
+</HTML>

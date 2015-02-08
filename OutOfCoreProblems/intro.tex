@@ -1,0 +1,90 @@
+We are limited\ldots
+
+Despite the ,,Moore's law'' we are limited in computing s.
+As the computers grow larger and larger, we have to be aware of the fact that the moment of ,,The highest limit'' is coming very quickly, and as a matter of fact we can't stave off it.
+One of these problems is ,,memory problem''.
+Giving memory devices greater size we have to combine it with increasing speed, what physics has proved is limited by the light speed.
+Out-of-core researches are the answer for these problems. ,,Out-of-core'' - means that the problem can't be stored in normal \footnote{technologically-achievable} computer's memory and nowadays it's a possibility for scientists to achieve great computing goals on available computers.
+But in many mathematics' opinion it could be the only way to use electrical computers in the future when we "touch the roof" in their abilities.
+
+\emph{Out-of-core problems} are these which can't be whole stored in the memory in the one moment and could be quite big in our opinion.
+For example there is a class of problems called Grand Challenge Applications which need about 100 gigabytes of data per run.\cite{grandc}
+Thus it's obviously needed to fetch some data into the memory leaving the rest in the memory, process it as much as we can and then take another chunk from mass storage medias (~RAID matrices or similar~).
+
+\subsection{Variety of OOC problems}
+There are many kinds of OOC problems, some of them are:
+\begin{itemize}
+	\item{Big matrices operations ( inverting, multiplying, transpositioning etc. )}
+	\item{Huge sets of equations solving ( also decompositions ) }
+	\item{Processing great meshes ( rendering etc. )}
+	\item{Data mining}
+	\item{Out of core sorting}
+	\item{Markov models out of core symbolic solving}
+
+\end{itemize}
+	
+\subsection{Variation of abstract models}
+There are three most common kinds of OOC's solve models used in parallel computing: \cite{kzajac1}
+\begin{itemize}
+%	\clearpage
+	\item{General placement model} -- when the memory is available for all the processes and is stored in one BIG virtual file -- figure 1
+	\begin{figure}[h!]
+		\begin{center}
+			\includegraphics{fig1.fig.eps}
+			\caption{General placement model}
+		\end{center}
+	\end{figure}
+	\item{Local placement model} -- every process has it's own portion of data ( own file ) in it's memory and the exchange of data is made by I/O operations ( which is unfortunately very low effective ) -- figure 2
+	\begin{figure}[h!]
+		\begin{center}
+			\includegraphics{fig2.fig.eps}
+			\caption{Local placement model}
+		\end{center}
+	\end{figure}
+	\item{Partitioned-in-core model} --
+	when we are lucky - problem can be logically divided, so the I/O operations aren't needed.
+	The only problem is that the processes should have as much memory as one ,,problem chunk'' needs -- figure 3
+
+	
+	\begin{figure}[h!]
+		\begin{center}
+			\includegraphics{fig3.fig.eps}
+			\caption{Partitioned-in-core placement model}
+		\end{center}
+	\end{figure}
+	
+\end{itemize}
+\subsection{Parallel I/O problems}
+As we could see the main problem with OOC problem ( esp. in 2nd case ) is I/O subsystem.
+There are many ways to help computer in it's work.
+They can be divided for groups ( using another levels of software and hardware ):
+\begin{itemize}
+	\item{Hardware ways} - consists of parallel device support, such as RAID. They are small scaled and they don't affect the software level
+	\item{Parallel filesystems} - providing very efficient filesystem access as a part of High Throughput Computing. They should provide three services:
+	\begin{itemize}
+		\item{consistent namespace across the machine}
+		\item{distribution of data across the disks or network stations}
+		\item{some additional I/O links}
+	\end{itemize}
+	It's for example PVFS wich is striping all the data across multiple disks of different nodes in cluster.
+	Doing it such a way we are able to create larger files with better bandwidth available, and without network speed problems ( "bottlenecks" ).
+	It also supports 64-bit address space, so we are able to create really huge files.
+	Another advantages of using PVFS are working in user-level space, good cooperation with MPI-IO and NASA support.\cite{pvfs}
+
+	Another example of parallel filesystem is HDIOS which has been done by bypassing NFS and little recoding VFS.
+	
+	\item{Virtual memory} - allows the user to use more memory than the computer actually have.
+	This technique is transparent to user and make use of various heuristic algorithms which are designed to support wide range of applications.
+	One may think that virtual memory solves out-of-core problems, but it doesn't, because:
+	\begin{itemize}
+		\item{operating system limits the size of virtual memory}
+		\item{he cannot optimise memory access for specified problem}
+		\item{no collective I/O is possible (all nodes perform I/O operations simultaneously ) }
+	\end{itemize}
+	As a matter of fact, best thing to do is just turning off virtual memory management, as with it some data comes from the disk, is being processed and sometime they go back to the disk-cache suspended by VM manager ( which is completely insane ).
+	\item{Low Level API's} - these are sets of computer low-level functions provided by the system. 
+	Basically they are most efficient and allow user to operate with I/O in efficient, but unfortunately not portable way. 
+	To increase portability some standards were set. 
+	The most known and widely used is MPI\_IO ( Message Passing Interface I/O ) which is set of Fortran and C++ functions ported for wide spectrum of computer architectures\cite{mpi}.
+	\item{Programming libraries} which are making programs working more efficiently by giving them good I/O access. It is for example Panda ( daily used in Centre for the Simulation of Advanced Rockets )\cite{panda}. These are also lip and KeLPIO ( described later ).
+\end{itemize}

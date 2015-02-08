@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>lip environment</TITLE>
+<META NAME="description" CONTENT="lip environment">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html176"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html172"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html166"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html174"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html177"
+  HREF="node13.html">KeLP Programming system</A>
+<B> Up:</B> <A NAME="tex2html173"
+  HREF="node11.html">OOC environments</A>
+<B> Previous:</B> <A NAME="tex2html167"
+  HREF="node11.html">OOC environments</A>
+ &nbsp; <B>  <A NAME="tex2html175"
+  HREF="node15.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00031000000000000000">
+lip environment</A>
+</H2><SMALL CLASS="SMALL">
+One of OOC libraries on which I want to concern is lip. [<A
+ HREF="node16.html#kzajac">13</A>] 
+It was made as a utility able to help in solving Irregular <A NAME="tex2html6"
+  HREF="footnode.html#foot364"><SUP><SPAN CLASS="arabic">3</SPAN></SUP></A>simulations and Out of Core problems.
+It is based on MPI-IO, so it can be ported on any system: from SMP machine to simple workstation.
+It has three interesting features helping in more efficient use of parallel machines:
+</SMALL>
+<P>
+
+<UL>
+<LI>Reusing communication schedule - in lip we are able to construct objects called communication patterns, which are responsible for managing sending and suspending data from memory.
+	We can do it in phase called ,,inspector phase'', and therefore the I/O delays are a bit minimalized ( as the data are coming while the other are being processed ).
+</LI>
+<LI>Data caching- which is especially used in computing OOC problems. Additionally the I/O latency is minimized by derived data attributes, that makes as able to read one non-contignous burst of data per only one MPI-IO routine. 
+</LI>
+<LI>Scalability - the number of processors doesn't matter ( in spite of CHAOS which needed <SPAN CLASS="MATH"><IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$2^n$"></SPAN> ).
+
+<P>
+</LI>
+</UL>
+<P>
+<SMALL CLASS="SMALL">OOC index-arrays problems are done by dividing data for i-sections and referencing globals to the local nodes.
+It's done by multiple use of Localize() method which is done in the so called Inspector phase.
+Every node receives the same portion of data and processes it. 
+The global chunks are treated almost like the local ones.
+The only difference is in gathering data ( we have to perform request for new data ).
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">Sometimes problem grows a bit and also data arrays becomes OOC.
+That is little more complicated as the Inspector phase ( from the first case ) is insufficient, because some data could be unreachable, as their index exists only in the disk memory.
+These problems could be solved using another optimization - it should concern not only on communication but also on I/O access. 
+It's kind of trick and is done by examining and translating references between disk and the memory.
+Calling ooc_localize() we can be sure that lip will make everything for us.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">After such a examination and translation the computing can be done using simple MPI procedures.
+</SMALL>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html176"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html172"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html166"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html174"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html177"
+  HREF="node13.html">KeLP Programming system</A>
+<B> Up:</B> <A NAME="tex2html173"
+  HREF="node11.html">OOC environments</A>
+<B> Previous:</B> <A NAME="tex2html167"
+  HREF="node11.html">OOC environments</A>
+ &nbsp; <B>  <A NAME="tex2html175"
+  HREF="node15.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Kubek2k
+2005-05-09
+</ADDRESS>
+</BODY>
+</HTML>

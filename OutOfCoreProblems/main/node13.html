@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>KeLP Programming system</TITLE>
+<META NAME="description" CONTENT="KeLP Programming system">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html186"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html182"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html178"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html184"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html187"
+  HREF="node14.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html183"
+  HREF="node11.html">OOC environments</A>
+<B> Previous:</B> <A NAME="tex2html179"
+  HREF="node12.html">lip environment</A>
+ &nbsp; <B>  <A NAME="tex2html185"
+  HREF="node15.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00032000000000000000">
+KeLP Programming system</A>
+</H2><SMALL CLASS="SMALL">
+KeLP [<A
+ HREF="node16.html#kelp">1</A>] is a C++ library for coordinating block-structured scientific applications.
+It's based on intuitive, geometric programming abstraction: points, regions, etc... It's really hard typed library ( every object type has characteristic "X" on it's end, exp. PointX and similar ).
+It also uses similar inspector-executor paradigm as lip do.
+The main purpose of using KeLP is parallel programming in computing - it doesn't have internal OOC support, but thanks to Bradley Broom's and Robert Fowler's work we've got a great utlity for building and converting our in-core solutions to OOC scheme.  
+It's called KeLPIO [<A
+ HREF="node16.html#kelpio">2</A>] and comes with many interesting features:
+</SMALL>
+<UL>
+<LI>Checkpointing - helps in overlaps saving
+</LI>
+<LI>Embedding - we are able to transform away overlapped regions of data
+</LI>
+<LI>OOCArrayX - new type which can be used in similar way as XArrayX
+</LI>
+<LI>New way of communication - done by using OOCMoverX
+</LI>
+<LI>VArrayX - new virtual interface helps in creating cleaner namespace ( which got dirter 'cause of types which meant the same&nbsp;)
+</LI>
+</UL><SMALL CLASS="SMALL">
+One disadvantage of using the KeLPIO is lack of MPI support, but it's authors promise that work is in progress.
+</SMALL>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html186"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html182"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html178"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html184"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html187"
+  HREF="node14.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html183"
+  HREF="node11.html">OOC environments</A>
+<B> Previous:</B> <A NAME="tex2html179"
+  HREF="node12.html">lip environment</A>
+ &nbsp; <B>  <A NAME="tex2html185"
+  HREF="node15.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Kubek2k
+2005-05-09
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,78 @@
+\begin{thebibliography}{10}
+
+\bibitem{kelp}
+{\em The KeLP Programming System}.
+\newblock World Wide Web, http://www-cse.ucsd.edu/groups/hpcl/scg/kelp.html,
+  2001.
+\newblock Kernel Lattice Parallelism.
+
+\bibitem{kelpio}
+{\em The KeLPIO extension homepage}.
+\newblock World Wide Web, http://www.cs.rice.edu/\~{}dsystem/kelpio/, 2001.
+\newblock Kernel Lattice Parallelism IO subsytem.
+
+\bibitem{grandc}
+{\em Grand Challenge Applications}.
+\newblock World Wide Web,
+  http://www.mat.univie.ac.at/\~{}neum/contrib/grand\_challenges.html, 2002.
+\newblock Official List of Grand Challange Applications.
+
+\bibitem{mpi}
+{\em Message Passing Interface Forum}.
+\newblock World Wide Web, http://www.mpi-forum.org/, 2004.
+
+\bibitem{panda}
+{\em Panda library homepage}.
+\newblock World Wide Web, http://drl.cs.uiuc.edu/panda/, 2004.
+
+\bibitem{pvfs}
+{\em PVFS Homepage}.
+\newblock World Wide Web, http://www.parl.clemson.edu/pvfs/, 2004.
+
+\bibitem{matinv}
+Eddy Caron and Gil Utard.
+\newblock {Parallel Out-of-Core Matrix Inversion}.
+\newblock 2002.
+
+\bibitem{ooc-scalapack}
+Eduardo D'Azevedo and Jack Dongarra.
+\newblock {The Design and Implementation of the Parallel Out-of-core ScaLAPACK
+  LU, QR and Cholesky Factorization Routines}.
+
+\bibitem{ndim-fields}
+Lawrence Ibarria, Peter Lindstrom, Jarek Rossignac, and Andrzej Szymczak.
+\newblock Out-of-core compression and decompression of large n-dimensional
+  scalar fields.
+
+\bibitem{mesh}
+Martin Isenburg, Peter Lindstrom, Stefan Gumhold, and Jack Snoeyink.
+\newblock Large mesh simplification using processing sequences.
+\newblock 2003.
+
+\bibitem{img}
+Muller.
+\newblock {\em Grid Generation and Manipulation Tools}.
+\newblock www.cerfacs.fr/\~{}muller/delaundo.html.
+\newblock Title image.
+
+\bibitem{2ndclarkelaw}
+Susan Stepney.
+\newblock {\em Collection of quotations}.
+\newblock World Wide Web,
+  http://www\-users.cs.york.ac.uk/\~{}susan/cyc/index.htm, 2004.
+\newblock New phisics laws.
+
+\bibitem{kzajac}
+Katarzyna Zajac.
+\newblock {\em lip library homepage}.
+\newblock World Wide Web, http://galaxy.uci.agh.edu.pl/\~{}kzajac/, 2002.
+\newblock lip documentation.
+
+\bibitem{kzajac1}
+Katarzyna Zajac.
+\newblock {\em On-line OOC tutorial}.
+\newblock World Wide Web, http://galaxy.uci.agh.edu.pl/\~{}kzajac/ooc\_tut/,
+  2004.
+\newblock Part of lip documentation.
+
+\end{thebibliography}

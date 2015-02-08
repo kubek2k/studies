@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Parallel I/O problems</TITLE>
+<META NAME="description" CONTENT="Parallel I/O problems">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html75"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html71"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html67"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html73"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html76"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Up:</B> <A NAME="tex2html72"
+  HREF="node1.html">Introduction to Out-of-core problems</A>
+<B> Previous:</B> <A NAME="tex2html68"
+  HREF="node3.html">Variation of abstract models</A>
+ &nbsp; <B>  <A NAME="tex2html74"
+  HREF="node15.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00013000000000000000">
+Parallel I/O problems</A>
+</H2><SMALL CLASS="SMALL">
+As we could see the main problem with OOC problem ( esp. in 2nd case ) is I/O subsystem.
+There are many ways to help computer in it's work.
+They can be divided for groups ( using another levels of software and hardware ):
+</SMALL>
+<UL>
+<LI>Hardware ways - consists of parallel device support, such as RAID. They are small scaled and they don't affect the software level
+</LI>
+<LI>Parallel filesystems - providing very efficient filesystem access as a part of High Throughput Computing. They should provide three services:
+	
+<UL>
+<LI>consistent namespace across the machine
+</LI>
+<LI>distribution of data across the disks or network stations
+</LI>
+<LI>some additional I/O links
+	
+</LI>
+</UL>
+	It's for example PVFS wich is striping all the data across multiple disks of different nodes in cluster.
+	Doing it such a way we are able to create larger files with better bandwidth available, and without network speed problems ( "bottlenecks" ).
+	It also supports 64-bit address space, so we are able to create really huge files.
+	Another advantages of using PVFS are working in user-level space, good cooperation with MPI-IO and NASA support.[<A
+ HREF="node16.html#pvfs">6</A>]
+
+<P>
+Another example of parallel filesystem is HDIOS which has been done by bypassing NFS and little recoding VFS.
+
+<P>
+</LI>
+<LI>Virtual memory - allows the user to use more memory than the computer actually have.
+	This technique is transparent to user and make use of various heuristic algorithms which are designed to support wide range of applications.
+	One may think that virtual memory solves out-of-core problems, but it doesn't, because:
+	
+<UL>
+<LI>operating system limits the size of virtual memory
+</LI>
+<LI>he cannot optimise memory access for specified problem
+</LI>
+<LI>no collective I/O is possible (all nodes perform I/O operations simultaneously ) 
+	
+</LI>
+</UL>
+	As a matter of fact, best thing to do is just turning off virtual memory management, as with it some data comes from the disk, is being processed and sometime they go back to the disk-cache suspended by VM manager ( which is completely insane ).
+</LI>
+<LI>Low Level API's - these are sets of computer low-level functions provided by the system. 
+	Basically they are most efficient and allow user to operate with I/O in efficient, but unfortunately not portable way. 
+	To increase portability some standards were set. 
+	The most known and widely used is MPI_IO ( Message Passing Interface I/O ) which is set of Fortran and C++ functions ported for wide spectrum of computer architectures[<A
+ HREF="node16.html#mpi">4</A>].
+</LI>
+<LI>Programming libraries which are making programs working more efficiently by giving them good I/O access. It is for example Panda ( daily used in Centre for the Simulation of Advanced Rockets )[<A
+ HREF="node16.html#panda">5</A>]. These are also lip and KeLPIO ( described later ).
+</LI>
+</UL><SMALL CLASS="SMALL">
+</SMALL>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html75"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html71"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html67"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html73"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html76"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Up:</B> <A NAME="tex2html72"
+  HREF="node1.html">Introduction to Out-of-core problems</A>
+<B> Previous:</B> <A NAME="tex2html68"
+  HREF="node3.html">Variation of abstract models</A>
+ &nbsp; <B>  <A NAME="tex2html74"
+  HREF="node15.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Kubek2k
+2005-05-09
+</ADDRESS>
+</BODY>
+</HTML>

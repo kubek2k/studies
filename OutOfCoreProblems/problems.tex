@@ -1,0 +1,196 @@
+
+\subsection{Out of core sorting}
+
+Sorting is a fundamental procedure, useful in many various tasks.
+It's very important to be able to efficiently sort large datasets using limited memory size.
+
+One of possibilities to implement out-of-core sort may be the external merge sort.
+This algorithm is a recursive procedure as follows.
+In each recursion we check if current list fits entirely in physical memory.
+If so, we read entire list into main memory, sort it and write it back to disk in contiguous place.
+If not, we split current list into k sublists of equal sizes, sort each one recursively and then merge all sublists into one sorted list.
+Of course, main problem of this algorithm is the merging process, which must be done in an IO efficient way.
+We keep k buffers (each one for each sublist), which are initially initialised with first blocks of each sublist.
+Then we perform merging of items in k buffers (each buffer is already sorted) and output sorted items to disk.
+When some buffer is exhausted it is loaded with the next buffer from the corresponding sublist.
+This process continues until all of the k sublists are merged.
+
+Let's denote input list size as n and size of one IO buffer as b.
+As we can see complexity of this algorithm is $O(n\log{n})$.
+The IO complexity is $\displaystyle O(\frac{n}{b}\log_{k}\frac{n}{b})$.
+By choosing right k we can minimalise IO communication.
+
+
+\subsection{OOC LU and QR factorization}
+
+
+As described in \cite{ooc-scalapack} out-of-core extension of ScaLAPACK exists which provides three core factorization routines: LU, QR and Cholesky.
+They allow factorization of dense systems which are too large to fit in psychical memory. 
+Original matrix is stored entirely on disk and factorization routines transfer its parts into memory. 
+These routines make use of portable I/O interface and ScaLAPACK in-core factorization as a subroutines.
+
+Authors of \cite{ooc-scalapack} also provide comparison between various problems size for out-of-core factorizatoin routines. 
+They used Linux cluster, each node consisted of dual Pentium II at 450MHz with 512MB and a local 8GB IDE disk using red-hat Linux 6.2 with smp kernel.
+
+Below there is a comparison for LU factorization applied to various matrices and grids.
+The 'fact' time is the total elapsed to perform out-of-core factorization, 
+the 'solve' is the total elapsed time for solution with 10 vectors (they both include I/O time) and
+the 'io' is the total elapsed time for read and write operations.
+\bigskip
+
+\begin{center}
+\begin{tabular}{|r|r|r|r|r|} \hline
+    size & grid & fact & solve & io \\ \hline
+    
+    16000 & 4 x 4 & 3670s & 180s & 417s \\
+    32000 & 4 x 4 & 28850s & 508s & 1918s \\ \hline
+    
+    16000 & 4 x 8 & 1867s & 123s & 163s \\
+    32000 & 4 x 8 & 15730s & 313s & 951s \\
+    40000 & 4 x 8 & 32420s & 443s & 1595s \\ \hline
+    
+    20000 & 8 x 7 & 2301s & 81s & 78s \\
+    32000 & 8 x 7 & 8317s & 289s & 470s \\
+    45000 & 8 x 7 & 22508s & 482s & 1148s \\
+    80000 & 8 x 7 & 128155s & 899s & 3627s \\ \hline    
+    
+    
+\end{tabular}
+\end{center}
+\bigskip
+
+As shown in the table, the time for the I/O operations was generally a small fraction of overall time. 
+This shows that these out-of-core algorithms were compute-bound on this cluster. 
+
+
+\subsection{Compression and decompression of large n-dimensional scalar fields}
+
+
+Many scientific applications make use of extremely large data sets, usually 
+represented as n-dimensional scalar fields. For example, a typical 3D simulation
+may require regular grid of $2048^{3}$ samples. Such grids need to be
+stored and transmitted ie. to remote visualisation clients, which may take
+large amount of time due to their big sizes. In such case variety of data compression
+techniques may be used to reduce data size.
+
+Of course several compression techniques exists for lower dimensional gridded data,
+like JPEG and others. Many method for 4D volumes were also proposed in recent years ie.
+wavelets, Discrete Cosine Transform or Run Length Encoding.
+
+Recent research showed that there exists another algorithm, suitable for arbitrary
+n-dimensional scalar fields \cite{ndim-fields}. It's based on the Lorenzo predictor.
+It estimates the scalar value of a sample on the corner of an n-dimensional cube
+from the scalar values of the others $2^{n}-1$ corners. The value of the scalar field
+F(u) is estimated using the following formula:
+\bigskip
+
+$E(v)=\displaystyle \sum_{u \in U} (-1)^{c_{0}(u)+1}F(u)$
+\bigskip
+
+The estimated value computed from this formula in n-dimension is exact
+for all scalar functions that are polynomial of degree n-1.
+
+Compressor in each step estimates next value in the scanline order and encodes the difference
+between the original and estimated value (which usually requires less bits). These differences
+may be encoded ie. with an adaptative arithmetic encoder.
+
+As proved in \cite{ndim-fields} this algorithm may be easily adapted to out-of-core problems.
+In fact, if properly written it requires only about $D^{n-1}$ bytes of memory for compressing (or decompressing)
+scalar field of $D^{n}$ bytes size. For example, if we want to compress scalar field of $2048^3$ values
+(each encoded in one byte which gives us 8GB size) we need only about 4MB memory window for this algorithm, and
+resulting compression is generally comparable to wavelet compression.
+
+\subsection{Inverting great matrices}
+
+Matrix inversion is used in many applications ie. as a direct method for solving linear equations.
+For challenging applications (like astronomical simulation, crash test simulation, global climate modelling and many others) the memory is always insufficient in size.
+Scientist usually want to increase accuracy which causes bigger and bigger matrices.
+Thus, out-of-core algorithm for inverting matrices might be very useful.
+
+Inversion of a matrix can be computed from its LU factorization.
+LU factorization produces matrices: L (lower triangular) and U (upper triangular) such that:
+\bigskip
+
+$M = LU$
+\bigskip
+
+In general when LU decomposition uses partial pivoting there may be third matrix P, which stores the permutation matrix.
+
+We're searching for a matrix $M^{-1}$ such that:
+\bigskip
+
+$MM^{-1}=I$
+
+$LUM^{-1}=I$
+\newline
+
+$LY=I$
+
+$UM^{-1}=Y$
+\bigskip
+
+Firstly we compute matrix Y such that $LY=I$, this can be done using backward substitution.
+Another backward substitution is used to compute $M^{-1}$ from $UM^{-1}=Y$
+
+As proved in \cite{matinv} out-of-core inverting of a matrix can be efficiently done using blocked decomposition of matrices.
+It presents algorithms for both parallel out-of-core LU factorization (which is also presented in \cite{ooc-scalapack}) and parallel out-of-core triangular substitution.
+\bigskip
+
+\begin{center}
+\begin{tabular}{|r|r|r|r|r|r|r|} \hline
+    size & grid & LU fact & io & communication & computation & total \\ \hline
+    
+    12288 & 1x8 & 29m39s & 10m16s & 11m19s & 21m21s & 1h36m \\ \hline
+	& 2x4 & 21m17s & 9m39s & 4m31s & 20m27s & 1h12m \\ \cline{2-7}
+	& 4x2 & 18m50s & 8m52s & 4m30s & 19m50s & 1h08m \\ \cline{2-7}
+	& 8x1 & 19m57s & 8m09s & 9m17s & 19m50s & 1h21m \\ \hline
+    20480 & 1x8 & 2h37m & 1h07m & 1h27m & 2h34m & 10h38m\\ \hline
+	& 2x4 & 1h06m & 1h02m & 31m55s & 2h05m & 6h23m \\ \cline{2-7}
+	& 4x2 & 1h50m & 1h02m & 17m48s & 1h56m & 6h21m \\ \cline{2-7}
+	& 8x1 & 1h43m & 55m46s & 27m26s & 1h49m & 6h25m \\ \hline
+    27648 & 1x8 & 7h59m & 2h07m & 6h16m & 4h04m & 1d04h \\ \hline
+	& 2x4 & 4h34m & 1h59m & 2h10m & 3h51m & 16h45m \\ \cline{2-7}
+	& 4x2 & 3h20m & 2h02m & 49m31s & 3h47m & 12h43m \\ \cline{2-7}
+	& 8x1 & 3h02m & 2h04m & 53m28s & 3h46m & 12h29m \\ \hline
+    
+\end{tabular}
+\end{center}
+\bigskip
+
+These results were obtained on a cluster of 8 PC-Celeron running Linux (each one has 96MB of psychical memory) and interconnected by a Ethernet switch,
+Of course there is a way to avoid I/O overhead in this algorithm, it can be done by overlapping I/O with the computation, which is further described in \cite{matinv}
+\bigskip
+
+\subsection{Processing big meshes}
+
+Polygonal meshes acquired with modern scanning technology can easily reach hundreds of millions of triangles which gives many GB data size.
+There exist special approaches to processing such large meshes, which sizes often exceeds 4GB address space of 32-bit machines.
+Those approaches may be divided into few groups \cite{mesh}:
+\bigskip
+
+\begin{itemize}
+
+    \item{mesh cutting} - original mesh is cut into smaller parts, small enough to fit entirely in memory.
+	Then algorithm analyses each part independently.
+	Despite the simplicity of this approach, the initial cutting step can be expensive when the input mesh is given in an indexed representation. 
+	Unfortunately mesh cutting typically lowers the quality of the output and there might be some problems with processing cut boundaries.
+	
+    \item{batch processing} - stream the data through main memory in one or more passes.
+	Of course computations are restricted to the amount of data actually resident in memory at any time.
+	This makes batch processing a very efficient approach.
+	Using this approach there can be done mesh simplification process, which batch-process the input mesh as a sequence of individual triangles.
+	
+    \item{online processing} - access the data through a series of queries.
+	Data should be initially re-organised to avoid costly disk seeks with each query.
+	Also queries can be accelerated by caching or pre-fetching data that is likely to be accessed.
+	This way we can just use the virtual memory functionality provided by the operating system, but the performance of such algorithm is os-dependant.
+	And of course as we seen before, there are some problems with the use of virtual memory for out-of-core algorithms.
+	We can also use many data structures which give us possibility to use traditional in-core algorithms in large data sets (ie. octree).
+	
+    \item{processing sequence} - access to mesh is restricted to fixed traversal order while supporting access to full connectivity and geometry information for the active elements of this traversal.
+	This approach combines efficiency of batch processing with the advantage of explicit mesh connectivity that is available in online processing.
+	Generating processing sequences can be done in numerous ways, ie. from a out-of-core compression method which naturally generate triangles and vertex ordering suitable as the processing sequence.
+
+\end{itemize}
+\bigskip
+

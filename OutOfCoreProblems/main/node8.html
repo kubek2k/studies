@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Compression and decompression of large n-dimensional scalar fields</TITLE>
+<META NAME="description" CONTENT="Compression and decompression of large n-dimensional scalar fields">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html128"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html124"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html118"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html126"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html129"
+  HREF="node9.html">Inverting great matrices</A>
+<B> Up:</B> <A NAME="tex2html125"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html119"
+  HREF="node7.html">OOC LU and QR</A>
+ &nbsp; <B>  <A NAME="tex2html127"
+  HREF="node15.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00023000000000000000">
+Compression and decompression of large n-dimensional scalar fields</A>
+</H2>
+<P>
+<SMALL CLASS="SMALL">Many scientific applications make use of extremely large data sets, usually 
+represented as n-dimensional scalar fields. For example, a typical 3D simulation
+may require regular grid of <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$2048^{3}$"></SPAN> samples. Such grids need to be
+stored and transmitted ie. to remote visualisation clients, which may take
+large amount of time due to their big sizes. In such case variety of data compression
+techniques may be used to reduce data size.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">Of course several compression techniques exists for lower dimensional gridded data,
+like JPEG and others. Many method for 4D volumes were also proposed in recent years ie.
+wavelets, Discrete Cosine Transform or Run Length Encoding.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">Recent research showed that there exists another algorithm, suitable for arbitrary
+n-dimensional scalar fields [<A
+ HREF="node16.html#ndim-fields">9</A>]. It's based on the Lorenzo predictor.
+It estimates the scalar value of a sample on the corner of an n-dimensional cube
+from the scalar values of the others <SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$2^{n}-1$"></SPAN> corners. The value of the scalar field
+F(u) is estimated using the following formula:
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+<SMALL CLASS="SMALL"><!-- MATH
+ $E(v)=\displaystyle \sum_{u \in U} (-1)^{c_{0}(u)+1}F(u)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="224" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$E(v)=\displaystyle \sum_{u \in U} (-1)^{c_{0}(u)+1}F(u)$"></SPAN>
+</SMALL>
+<P><P>
+<BR>
+
+<P>
+<SMALL CLASS="SMALL">The estimated value computed from this formula in n-dimension is exact
+for all scalar functions that are polynomial of degree n-1.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">Compressor in each step estimates next value in the scanline order and encodes the difference
+between the original and estimated value (which usually requires less bits). These differences
+may be encoded ie. with an adaptative arithmetic encoder.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">As proved in [<A
+ HREF="node16.html#ndim-fields">9</A>] this algorithm may be easily adapted to out-of-core problems.
+In fact, if properly written it requires only about <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$D^{n-1}$"></SPAN> bytes of memory for compressing (or decompressing)
+scalar field of <SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$D^{n}$"></SPAN> bytes size. For example, if we want to compress scalar field of <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$2048^3$"></SPAN> values
+(each encoded in one byte which gives us 8GB size) we need only about 4MB memory window for this algorithm, and
+resulting compression is generally comparable to wavelet compression.
+</SMALL>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html128"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html124"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html118"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html126"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html129"
+  HREF="node9.html">Inverting great matrices</A>
+<B> Up:</B> <A NAME="tex2html125"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html119"
+  HREF="node7.html">OOC LU and QR</A>
+ &nbsp; <B>  <A NAME="tex2html127"
+  HREF="node15.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Kubek2k
+2005-05-09
+</ADDRESS>
+</BODY>
+</HTML>

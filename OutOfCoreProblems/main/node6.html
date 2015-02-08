@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Out of core sorting</TITLE>
+<META NAME="description" CONTENT="Out of core sorting">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html104"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html100"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html94"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html102"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html105"
+  HREF="node7.html">OOC LU and QR</A>
+<B> Up:</B> <A NAME="tex2html101"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html95"
+  HREF="node5.html">Problems and solving examples</A>
+ &nbsp; <B>  <A NAME="tex2html103"
+  HREF="node15.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00021000000000000000">
+Out of core sorting</A>
+</H2>
+<P>
+<SMALL CLASS="SMALL">Sorting is a fundamental procedure, useful in many various tasks.
+It's very important to be able to efficiently sort large datasets using limited memory size.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">One of possibilities to implement out-of-core sort may be the external merge sort.
+This algorithm is a recursive procedure as follows.
+In each recursion we check if current list fits entirely in physical memory.
+If so, we read entire list into main memory, sort it and write it back to disk in contiguous place.
+If not, we split current list into k sublists of equal sizes, sort each one recursively and then merge all sublists into one sorted list.
+Of course, main problem of this algorithm is the merging process, which must be done in an IO efficient way.
+We keep k buffers (each one for each sublist), which are initially initialised with first blocks of each sublist.
+Then we perform merging of items in k buffers (each buffer is already sorted) and output sorted items to disk.
+When some buffer is exhausted it is loaded with the next buffer from the corresponding sublist.
+This process continues until all of the k sublists are merged.
+</SMALL>
+<P>
+<SMALL CLASS="SMALL">Let's denote input list size as n and size of one IO buffer as b.
+As we can see complexity of this algorithm is <SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$O(n\log{n})$"></SPAN>.
+The IO complexity is <!-- MATH
+ $\displaystyle O(\frac{n}{b}\log_{k}\frac{n}{b})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="103" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\displaystyle O(\frac{n}{b}\log_{k}\frac{n}{b})$"></SPAN>.
+By choosing right k we can minimalise IO communication.
+</SMALL>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html104"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html100"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html94"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html102"
+  HREF="node15.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html105"
+  HREF="node7.html">OOC LU and QR</A>
+<B> Up:</B> <A NAME="tex2html101"
+  HREF="node5.html">Problems and solving examples</A>
+<B> Previous:</B> <A NAME="tex2html95"
+  HREF="node5.html">Problems and solving examples</A>
+ &nbsp; <B>  <A NAME="tex2html103"
+  HREF="node15.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Kubek2k
+2005-05-09
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in *.fig ; do
+	echo "makin' $i.eps"
+	fig2dev -L eps $i $i.eps
+done
