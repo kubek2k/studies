@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<meta name="GENERATOR" content="TtH 3.60">
+ <style type="text/css"> div.p { margin-top: 7pt;}</style>
+ <style type="text/css"><!--
+ td div.comp { margin-top: -0.6ex; margin-bottom: -1ex;}
+ td div.comb { margin-top: -0.6ex; margin-bottom: -.6ex;}
+ td div.hrcomp { line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
+ td div.norm {line-height:normal;}
+ span.roman {font-family: serif; font-style: normal; font-weight: normal;} 
+ span.overacc2 {position: relative;  left: .8em; top: -1.2ex;}
+ span.overacc1 {position: relative;  left: .6em; top: -1.2ex;} --></style>
+ 
+
+ 
+<title>`"</title>
+
+`"
+
+
+
+<div class="p"><!----></div>
+
+<title> Plan czê¶ci referatu o java.util.concurrent</title>
+    
+<h1 align="center">Plan czê¶ci referatu o java.util.concurrent </h1>
+
+<div class="p"><!----></div>
+ <h2><a name="tth_sEc1">
+1</a>&nbsp;&nbsp;Wprowadzenie do ulepszeñ z java.util.concurrent</h2>
+
+<div class="p"><!----></div>
+Blah blah - historia, zalozenia, Doug Lea itp
+
+<div class="p"><!----></div>
+ <h2><a name="tth_sEc2">
+2</a>&nbsp;&nbsp;Ulatwienia w panowaniu nad watkami</h2>
+
+<div class="p"><!----></div>
+     <h3><a name="tth_sEc2.1">
+2.1</a>&nbsp;&nbsp;Klasa ThreadFactory </h3>
+
+<div class="p"><!----></div>
+Opis dzialania ( i potwierdzenie tego iz jest to pattern ;) )
+
+<div class="p"><!----></div>
+     <h3><a name="tth_sEc2.2">
+2.2</a>&nbsp;&nbsp;Klasa Executor</h3>
+
+<div class="p"><!----></div>
+Opis + przyk³ad ( wyjasnienie dla Runnable, Callable i Future )
+
+<div class="p"><!----></div>
+      <h4><a name="tth_sEc2.2.1">
+2.2.1</a>&nbsp;&nbsp;ExecutorService</h4>
+
+<div class="p"><!----></div>
+Opis
+
+<div class="p"><!----></div>
+      <h4><a name="tth_sEc2.2.2">
+2.2.2</a>&nbsp;&nbsp;ScheduledExecutorService</h4>
+
+<div class="p"><!----></div>
+Opis
+
+<div class="p"><!----></div>
+      <h4><a name="tth_sEc2.2.3">
+2.2.3</a>&nbsp;&nbsp;Implementacje:</h4>
+
+<div class="p"><!----></div>
+
+<ul>
+<li> ThreadPoolExecutor
+<div class="p"><!----></div>
+</li>
+
+<li> ScheduledThreadPoolExecutor
+<div class="p"><!----></div>
+</li>
+
+<li> FutureTask
+<div class="p"><!----></div>
+</li>
+
+<li> ExecutorCompletionService
+<div class="p"><!----></div>
+</li>
+</ul>
+( + moze jeden przyklad )
+
+<div class="p"><!----></div>
+     <h3><a name="tth_sEc2.3">
+2.3</a>&nbsp;&nbsp;Timing zadañ ( ;) )</h3>
+
+<div class="p"><!----></div>
+Opis Klasy TimeUnit ( moze przyklad wykorzystania )
+
+<div class="p"><!----></div>
+ <h2><a name="tth_sEc3">
+3</a>&nbsp;&nbsp;Synchronizacja danych</h2>
+
+<div class="p"><!----></div>
+Zarzadzanie synchronizacja danych ( inaczej niz zwykle ;P )
+
+<div class="p"><!----></div>
+
+<ul>
+<li> Semphore ( + przyklad )
+<div class="p"><!----></div>
+</li>
+
+<li> CountDownLatch
+<div class="p"><!----></div>
+</li>
+
+<li> CyclicBarrier
+<div class="p"><!----></div>
+</li>
+
+<li> Exchanger
+<div class="p"><!----></div>
+</li>
+</ul>
+
+<div class="p"><!----></div>
+ <h2><a name="tth_sEc4">
+4</a>&nbsp;&nbsp;Struktury danych</h2>
+
+<div class="p"><!----></div>
+     <h3><a name="tth_sEc4.1">
+4.1</a>&nbsp;&nbsp;Struktury danych przystosowane do w±tków:</h3>
+
+<div class="p"><!----></div>
+
+<ul>
+<li> ArrayBlockingQueue
+<div class="p"><!----></div>
+</li>
+
+<li> SynchronusQueue
+<div class="p"><!----></div>
+</li>
+
+<li> PriorityBlockingQueue
+<div class="p"><!----></div>
+</li>
+
+<li> DelayQueue
+<div class="p"><!----></div>
+</li>
+
+<li> LinkedBlockingQueue
+<div class="p"><!----></div>
+</li>
+</ul>
+( krotki opis kazdego + przyklad jednego )
+
+<div class="p"><!----></div>
+     <h3><a name="tth_sEc4.2">
+4.2</a>&nbsp;&nbsp;Kolekcje ( tutaj raczej krótko ):</h3>
+
+<div class="p"><!----></div>
+
+<ul>
+<li> ConcurrentHashMap
+<div class="p"><!----></div>
+</li>
+
+<li> CopyOnArrayList
+<div class="p"><!----></div>
+</li>
+
+<li> CopyOnArraySet
+<div class="p"><!----></div>
+</li>
+</ul>
+
+<div class="p"><!----></div>
+
+<br /><br /><hr /><small>File translated from
+T<sub><font size="-1">E</font></sub>X
+by <a href="http://hutchinson.belmont.ma.us/tth/">
+T<sub><font size="-1">T</font></sub>H</a>,
+version 3.60.<br />On 17 Oct 2004, 19:15.</small>
+</html>

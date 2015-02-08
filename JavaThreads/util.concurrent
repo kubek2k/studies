@@ -1,0 +1,45 @@
+Exekutory
+	
+	Obiekty mog±ce odpalaæ wykonywalne komendy typu Runnable. Zaleznie od tego jakiego exekutora uzyjemy, komendy s± odpalane:
+	-w nowym w±tku
+	-w w±tku bie¿±cym
+	-w w±tku wywo³uj±cym execute()
+	
+	Dodatkowo istnieje klasa ExecutorService ktora pozwala na lepsz± kontrolê kolejkowania, i szeregowania zadañ. 
+	Klasa Callable ( podobna do Runnable ) - pozwalajaca sprawdzic wynik komendy i ew. zrzucic wyjatek.
+	Istnieje klasa Future ktora pozwala sprawdzic czy dana komenda jeszcze sie wykonuje, i jezeli nie pozwala na sprawdzenie wyniku jej dzialania ( ew. mozemy odwolac te komende ;) )
+	
+		Implementacje:
+		ThredPoolExecutor - wywoluje zadane dzialanie z pomoca jednego z w±tków z danej puli.
+	
+		ScheduledThredPoolExecutor - jak powyzyszy z tym ze mozna uruchamiac komendy z opoznieniem czasowym lub wywolywac je periodycznie ( nie moglem znalezc slowa )
+	
+		FutureTask - praktyczny interfejs do zadania typu Future ( z wszystkimi potrzebnymi featurami ;) )
+		ExecutorCompletionService - pozwala zapanowac nad zadaniami, ustawiajace je w kolejce zaraz po wykonaniu ( dzieki temu mozemy sobie pobierac wyniki, lub jesli ich nie ma czekac na nowe )
+	
+Kolejki
+
+	ConcurrentLinkedQueue - klasa dostarczajaca efektywnej nie-blokujacej sie kolejki FIFO, ktora moze bezpiecznie wspolpracowac z aplikacjami wielowatkowymi. Klasy potomne:
+	-ArrayBlockingQueue
+	-SynchronusQueue
+	-PriorityBlockingQueue
+	-DelayQueue
+	-LinkedBlockingQueue
+	( zaleznie od potrzeb ;) )
+
+Timing ( nie znam lepszego slowa )
+	TimeUnit - pozwala przeprowadzac konwersje jednostek czasu, jak rowniez zarzadzac wykonaniem watka ( w czasie ) [ maslo maslane ].
+
+Synchronizatory ( ale nazwa!!! ) 
+	- obiekty zarzadzajace synchronizacja danych
+	Semaphore - znany i lubiany ( szczegolnie posrod programistow UNIX'owych semafor
+	CountDownLatch - nie rozumiem do konca, ale chyba odlicza ilosc prob dostepu do obiektu i kiedy dojdzie do 0 pozwala na dostep. ( do sprawdzenia )
+	CyclicBarrier - podobne do poprzedniego, tyle ze mozna resetowac licznik
+	Exchanger - pozwala dwom watkom wymieniac sie dostepem do zasobu
+
+Kolekcje przydatne w programowaniu wspolbieznym
+	ConcurrentHashMap - slownik wspolbiezny ( pobieranie nie blokuje dostepu )
+	CopyOnArrayList - ArrayList z tym ze kazda operacja jest wykonywana na kopii i potem dopiero synchronizowana.
+	CopyOnArraySet - to samo co powyzej - tyle ze ze zbiorem.
+	
+Wyjatki	

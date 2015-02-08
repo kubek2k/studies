@@ -1,0 +1,143 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass article
+\language polish
+\inputencoding auto
+\fontscheme default
+\graphics default
+\paperfontsize default
+\papersize Default
+\paperpackage a4
+\use_geometry 0
+\use_amsmath 0
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+
+\layout Title
+
+java.util.concurrent
+\layout Section
+
+Wprowadzenie do ulepszeñ z java.util.concurrent
+\layout Standard
+
+Blah blah - historia, zalozenia, Doug Lea itp
+\layout Section
+
+Ulatwienia w panowaniu nad watkami
+\layout Subsection
+
+Klasa ThreadFactory 
+\layout Standard
+
+Opis dzialania ( i potwierdzenie tego iz jest to pattern ;) )
+\layout Subsection
+
+Klasa Executor
+\layout Standard
+
+Opis + przyk³ad ( wyjasnienie dla Runnable, Callable i Future )
+\layout Subsubsection
+
+ExecutorService
+\layout Standard
+
+Opis
+\layout Subsubsection
+
+ScheduledExecutorService
+\layout Standard
+
+Opis
+\layout Subsubsection
+
+Implementacje:
+\layout Itemize
+
+ThreadPoolExecutor
+\layout Itemize
+
+ScheduledThreadPoolExecutor
+\layout Itemize
+
+FutureTask
+\layout Itemize
+
+ExecutorCompletionService
+\layout Standard
+
+( + moze jeden przyklad )
+\layout Subsection
+
+Timing zadañ ( ;) )
+\layout Standard
+
+Opis Klasy TimeUnit ( moze przyklad wykorzystania )
+\layout Section
+
+Synchronizacja danych
+\layout Standard
+
+Zarzadzanie synchronizacja danych ( inaczej niz zwykle ;P )
+\layout Itemize
+
+Semphore ( + przyklad )
+\layout Itemize
+
+CountDownLatch
+\layout Itemize
+
+CyclicBarrier
+\layout Itemize
+
+Exchanger
+\layout Section
+
+Struktury danych
+\layout Subsection
+
+Struktury danych przystosowane do w±tków:
+\layout Itemize
+
+ArrayBlockingQueue
+\layout Itemize
+
+SynchronusQueue
+\layout Itemize
+
+PriorityBlockingQueue
+\layout Itemize
+
+DelayQueue
+\layout Itemize
+
+LinkedBlockingQueue 
+\layout Standard
+
+( krotki opis kazdego + przyklad jednego )
+\layout Subsection
+
+Kolekcje ( tutaj raczej krótko ):
+\layout Itemize
+
+ConcurrentHashMap
+\layout Itemize
+
+CopyOnArrayList
+\layout Itemize
+
+CopyOnArraySet
+\layout Section
+
+Zwracane wyj±tki
+\the_end
