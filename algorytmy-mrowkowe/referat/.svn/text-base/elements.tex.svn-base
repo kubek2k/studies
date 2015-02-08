@@ -1,0 +1,62 @@
+\section{Elementy algorytmu}
+\subsection{¦rodowisko}
+Dyskretna przestrzeñ - graf. Wierzcho³ki po³±czone s± ¶cie¿kami wa¿onymi (waga oznacza w tym przypadku d³ugo¶æ ¶cie¿ki). Dodatkowo ka¿da ze ¶cie¿ek przenosi informacjê o ilo¶ci pozostawionego feromonu.
+
+Wprowadza siê dwa oznaczone wierzcho³ki - mrowisko i wierzcho³ek z jedzeniem (dla uproszczenia jest tylko jeden wierzcho³ek z jedzeniem, a jego ilo¶æ jest nieskoñczona).
+
+\subsection{Cel}
+Znalezienie najkrótszej drogi (o najmniejszej sumarycznej wadze) od mrowiska do ¼ród³a jedzenia.
+
+\subsection{Podstawowy wzór}
+Jako podstawê algorytmu ACO przyjmujê siê sposób wybierania nastêpnego kroku. Wybór ten jest przeprowadzany na podstawie ilo¶ci mrówek które poprzednio odwiedzi³y dany wierzcho³ek i sta³y przed takim samym wyborem w poprzednich iteracjach. Je¶li za $ R_m $ i $ L_m $ przymiemy ilo¶æ mrówek które w danym punkcie odpowiednio wybra³y ¶cie¿kê L (lew±) i R (praw±) (poprzednio dany wierzcho³ek odwiedzi³o m mrówek, $ R_m + L_m = m $. Prawdopodobieñstwo, ¿e mrówka $ m + 1 $ wybierze ¶cie¿kê praw± jest równe:
+$$
+P_R(m) = \frac{(R_m + k)^d}{(R_m + k)^d + (L_m + k)^d}
+$$
+i odpowiednio dla lewej ¶cie¿ki (wiêcej ¶cie¿ek nie ma):
+$$
+P_L(m) = 1 - P_R(m)
+$$
+Parametry $k$ i $d$ dobieramy z góry, tak aby najlepiej oddawa³y rzeczywisty model (warto¶ci wyznaczone symulacj± Monte Carlo dla naturalnego mrowiska wynosz± odpowieniednio $k \approx 20$, $d \approx 2$).
+
+Maj±c na uwadze powy¿szy wzór dobór ¶cie¿ki w powy¿szym przypadku mo¿na wyraziæ jako zale¿no¶æ:
+$$
+\begin{cases}
+R_m+1 = R_m + 1, L_{m+1} = L_m & \text{dla } r <= P_R(m) \\
+R_m+1 = R_m, L_{m+1} = L_m + 1 & \text{dla } r > P_R(m)
+\end{cases}
+$$
+
+gdzie $r$ jest zmienna losow± o rozk³adzie ci±g³ym w przedziale $[0,1]$. Powy¿szy przyk³ad nie jest mo¿e zbyt skomplikowany, ale w pe³ni oddaje istotê wyboru nastêpnego kroku.
+
+\subsection{Postêpowanie z feromonem}
+Wyró¿nia siê dwa podej¶cia do postêpowania z feromonem podczas optymalizacji:
+\begin{enumerate}
+	\item Pozostawianie feromonu w trakcie przechodzenia przez graf
+	\item Pozostawianie feromonu po przej¶ciu ca³ej ¶cie¿ki
+\end{enumerate}
+Drugi ze sposobów jest lepszy poniewa¿ nie zak³óca dzia³ania innych mrówek w iteracji, oraz (co wa¿niejsze) w trakcie dysponowania feromonem mo¿na wzi±æ pod uwagê jako¶æ znalezionego rozwi±zania.
+
+Zasadniczym wzorem na ilo¶æ pozostawionego feromonu w chwili t jest: 
+
+$$
+  \tau_{ij}(t) = (1 - \rho)\tau_{ij}(t) + \rho\delta
+$$
+
+gdzie $\rho$ to z góry ustalony parametr, a $\delta$ to zdefiniowany przyrost feromonu w czasie.
+
+W konkretnych rozwi±zaniach stosuje siê lekkie jego modyfikacje.
+
+\subsection{Ogólny algorytm ACO}
+Ogólny algorytm ACO mo¿na wyraziæ pseudokodem:
+\begin{verbatim}
+	while(1) {
+		ants_generation_and_activity(); // (1)
+		phreomone_evaporation(); // (2)
+		daemon_actions(); // optional (3)
+	}
+\end{verbatim}
+Kolejno kroki:
+(1) oznacza zarz±dzanie generowaniem mrówek i poruszanie ju¿ istniej±cych
+(2) to zarz±dzanie parowaniem feromonu poprzez uaktualnianie jego ilo¶ci na ka¿dej ze ¶cie¿ek (zmniejszanie jego ilo¶ci)
+(3) opcjonalne dzia³ania demona, to dodatkowe dzia³ania niezale¿ne od mrówek, takie jak na przyk³ad zwiêkszanie ilo¶ci feromonu na najlepszych ¶cie¿kach, czy wp³ywanie stanu jednych mrówek na inne (szcz±tkowa komunikacja)
+

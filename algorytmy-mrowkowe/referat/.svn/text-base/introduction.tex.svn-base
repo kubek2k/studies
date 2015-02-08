@@ -1,0 +1,38 @@
+\section{Wprowadzenie}
+Poszukuj±c po¿ywienia mrówki \b{losowo} wêdruj± po okre¶lonym obszearze pozostawiaj±c za sob± ¶lad feromonowy. W momencie gdy inna mrówka trafi na taki ¶lad, to wiêksze jest prawdopodobieñstwo, ¿e w kolejnym kroku wybierze drogê na której on siê znajduje. Obieraj±c miejsca ju¿ odwiedzone kolejne mrówki wzmacniaj± ¶lad, tym samym daj±c sygna³ innym mrówkom o potencjalnie lepszej ¶cie¿ce do wyboru. 
+
+Ideê dzia³ania kolonii mrówek mo¿na zaobserwowaæ na przyk³adzie eksperymentu Deneubourge'a:
+
+\includegraphics[width=100mm]{dene.eps}
+
+Jak widaæ po d³u¿szej chwili (rys. (d)) mrówki maj± tendencjê do wybierania ¶cie¿ki krótszej.
+
+Dziêki zjawisku parowania feromonu, mrówki ci±gle d±¿± do znalezienia prawid³owego rozwi±zania i unikaj± wpadania na zawsze w obiecuj±ce, ale nie najlepsze rozwi±zania. Poza tym im krótsza jest ¶cie¿ka tym podró¿ z mrowiska do po¿ywienia trwa krócej, co daje kolejn± przewagê lepszym rozwi±zaniom. Dziêki zastosowaniu pewnego stopnia losowo¶ci w wyborze nastêpnego kroku, mamy pewno¶æ ¿e czê¶æ mrówek bêdzie poszukiwa³a nowych (mo¿liwe ¿e lepszych) rozwi±zañ.
+
+Maj±c na uwadze prostotê zachowania kolonii mrówek, stwierdzono, ¿e taki schemat dzia³ania mo¿e byæ bardzo dogodnym rozwi±zaniem do przeprowadzania wszelkiego rodzaju optymalizacji.
+Wprowadzenie w ¿ycie ACO (Ant Colony Optimization) bêd±cych lekkimi modyfikacjami naturalnego zachowania mrówek, da³o zaskakuj±co dobre wyniki wydajno¶ciowe w tej klasie problemów.
+
+\subsection{Podobieñstwa w stosunku do naturalnej kolonii mrówek}
+\begin{itemize}
+\item modeluje kooperuj±ce ze sob± mrówki
+\item wykorzystuje w³a¶ciwo¶ci ¶ladu feromonowego (parowanie, wzmacnianie)
+\item prowadzi do optymalnego rozwi±zania
+\item wykorzystuje procesy stochastyczne przy wyborze nastêpnego kroku
+
+\end{itemize}
+
+\subsection{Odstêpstwa od orgina³u}
+\begin{itemize}
+\item wykorzystuje przestrzeñ dyskretn± jako modelowane ¶rodowisko
+\item przechowuje pamiêæ mrówek - insekty prawie jej nie posiadaj±
+\item czêsto ilo¶æ pozostawianego feromonu zale¿y od jako¶ci znalezionego rozwi±zania
+\item w lepszych modelach feromon zostaje pozostawiony po przej¶ci ca³ej ¶cie¿ki
+\item dodatkowo stosuje optymalizacje niewystêpuj±ce w ¶rodowisku naturalnym:
+\begin{itemize}
+	\item przewidywanie ruchów w przód
+	\item wycofywanie siê
+	\item lokalne optymalizacje poszukiwañ (innym algorytmem)
+\end{itemize}
+
+
+\end{itemize}

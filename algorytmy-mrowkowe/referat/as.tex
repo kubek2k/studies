@@ -1,0 +1,138 @@
+\section{Ant System}
+
+Jednym z pierwszych problemów który próbowano rozwi±zaæ za pomoc± algorytmów mrówkowych jest problem komiwoja¿era.
+Definiuje siê go jako problem znalezienia najkrótszego cyklu Hamiltona w danym grafie pe³nym $G=<V,E>$.
+Dla przypomnienia grafem pe³nym nazywamy graf w którym ka¿de dwa ró¿ne wierzcho³ki s± po³±czone krawêdzia.
+Cykl Hamiltona jest to natomiast cykl przechodz±cy przez ka¿dy wierzcho³ek dok³adnie jeden raz.
+Problem komiwoja¿era jest problemem NP-zupe³nym, co oznacza, ¿e wiêkszo¶æ naukowców s±dzi, ¿e nie da siê go rozwi±zaæ w czasie wielomianowym (ze wzlêdu na wielko¶æ grafu).
+Podstawowy algorytm mrówkowy rozwi±zuj±cy problem komiwoja¿era zosta³ nazwany algorytmem AS (Ant System).
+Oczywi¶cie jest to algorytm heurystyczny - nie mamy gwarancji, ¿e znalezione rozwi±zanie (cykl Hamiltona) jest najlepsze, ale ¿e jest do¶æ dobre.
+Dziêki temu algorytm ten dzia³a bardzo szybko nawet dla wiêkszych rozmiarów grafów.
+
+% TODO: jakis rysunek dla problemu komiwojazera i 2 slowa o rozwiazaniu
+
+\subsection{Opis algorytmu}
+
+Algorytm AS sk³ada siê z szeregu iteracji.
+W pojedyñczej iteracji dany zbiór mrówek wykonuje n kroków (n jest równa ilo¶ci wê¿³ów w grafie) przemieszczaj±c siê pomiêdzy wêz³ami.
+Wskutek przemieszczania siê mrówek ka¿da z nich buduje pewne rozwi±zanie (pewien cykl Hamiltona) które jest podstaw± do aplikacji feromonu w grafie.
+Wymy¶lono 3 g³ówne sposoby w jaki uaktualniany jest feromon:
+\begin{itemize}
+\item gêsto¶ciowy (ant-density): mrówka w trakcie budowania drogi zostawia sta³± ilo¶æ feromonu na krawêdziach
+\item ilo¶ciowy (ant-quantity): mrówka w trakcie budowania drogi zostawia ilo¶æ feromonu odwrotnie proporcjonaln± do dlugo¶ci krawêdzi
+\item cykliczny (ant-cycle): feromon na krawêdziach jest dodawany dopiero w momencie zbudowania ca³ej drogi przez mrówke
+\end{itemize}
+Poniewa¿ pocz±tkowe testy wykazywa³y, ¿e sposób cykliczny zachowuje siê znacznie lepiej ni¿ pozosta³e sposoby, wiêc skupiono siê g³ównie na nim w trakcie dalszych prac.
+Od tego momentu algorytm AS oznacza w³asnie algorytm mrówkowy dla problemu komiwoja¿era ze sposobem cyklicznym dodawania feromonu.
+
+\bigskip
+
+Feromony s± przypisywane poszczególnym krawêdziom typu $(i,j)$ i oznaczaj± w pewien sposób prawdopodobieñstwo tego, ¿e mrówka z miasta $i$ przejdzie do miasta $j$.
+Ilo¶æ feromonu jest dopierana zgodnie ze znalezionym rozwi±zaniem.
+Im lepsze rozwi±zanie znajdzie mrówka (krótszy koszt) tym wiêcej feromonu zostawia na krawêdziach.
+Taki sposób zostawiania feromonu ma za zadanie nakierowaæ przysz³e mrówki na juz znalezione dobre rozwi±zania.
+Dodatkowo parowanie feromonu zapobiega tutaj stagnacji - stanowi kiedy wszystkie mrówki pod±¿aj± t± sam± drog±.
+Poniewa¿ aplikacja feromonu odbywa siê dopiero po znalezieniu drogi przez mrówkê, wiêc musi ona byæ wyposa¿ona w pewien obszar pamiêci.
+Obszar ten nazywany jest z ang. "tabu list" i s³u¿y zapamiêtywaniu kolejnych miast które odwiedza mrówka.
+Pamiêc mrówki jest tak¿e wykorzystywana aby mrówka nie odwiedza³a juz odwiedzonych miast (zgodnie z definicj± cyklu Hamiltona który mrówka buduje).
+
+\bigskip
+
+Osobnym problemem pozostaje sposób wyboru kolejnych krawêdzi przez mrówkê.
+Stosuje siê w tym celu tzw. tablice decyzyjne które ³±cz± ¶lad feromonowy oraz lokalne heurystyki wynikaj±ce z d³ugo¶ci krawêdzi.
+Tablice decyzyjne s± dane wzorem:
+
+\medskip
+
+$a_{ij}(t) = \frac{{\tau_{ij}(t)}^{\alpha}*{n_{ij}}^{\beta}}{\sum_{l} {{\tau_{il}(t)}^{\alpha}*{n_{il}}^{\beta}}}$
+
+\medskip
+
+Gdzie $i$ oraz $j$ oznacza pewn± krawêd¼, $\tau_{ij}(t)$ to warto¶æ feromonu na krawêdzi $i$->$j$ w czasie $t$, a $n_{ij}$ to koszt krawêdzi $i$->$j$.
+Warto¶ci $\alpha$ oraz $\beta$ to pewne parametery, które s± dobierane zwykle w sposób eksperymentalny.
+Okreslaj± one balans pomiêdzy pod±¿aniem za feromonem a lokalnym wybieraniem zawsze najlepszej krawêdzi.
+Dla przyk³adu przy wyborze $\alpha = 0$ oraz $\beta = 1$ algorytm AS staje siê zwyk³ym algorytmem zach³annym zawsze wybieraj±cym najlepsze krawêdzie.
+
+Maj±c dane tablice decyzyjne mo¿emy wyznaczyæ prawdopodobieñstwo wyboru okre¶lonej krawêdzi:
+
+\medskip
+
+$p_{ij}(t) = \frac{a_{ij}(t)}{\sum_{l} {a_il}{t}}$
+
+\medskip
+
+Ilo¶æ feromonu która jest dodawana do krawêdzi po zbudowaniu drogi jest dana wzorem:
+
+\medskip
+
+$\delta \tau_{ij}(t)  = 1/L$
+
+\medskip
+
+W powy¿szym wzorze $L$ jest to d³ugo¶æ znalezionej przez mrówke drogi (jej koszt).
+Zmiana feromonu nastêpuje oczywi¶cie tylko na znalezionej przez mrówke ¶cie¿ce.
+
+Sposób parowania feromonu jest równie¿ bardzo prosty:
+
+\medskip
+
+$\tau_{ij}(t) = (1-\rho)*\tau_{ij}(t)$
+
+\medskip
+
+W powy¿szym wzorze wspó³czynnik $f$ okre¶laj±cy szybko¶æ parowania okre¶lamy eksperymentalnie.
+
+\subsection{Rezultaty do¶wiadczeñ}
+
+Algorytm AS by³ poddawany szeregom do¶wiadczeñ porównuj±cych go z innymi typowymi heurystykami u¿ywanymi w problemie komiwoja¿era.
+Rezultaty by³y jednocze¶nie bardzo interesuj±ce jak i troche niezadowalaj±ce.
+Z jednej strony algorytm AS dla wzglêdnie ma³ych grafów by³ w stanie bardzo szybko znale¼æ dosyæ dobre rozwi±zanie.
+Z drugiej jednak strony dla wiêkszych grafów nigdy nie zblizy³ siê on do uzyskanych innymi metodami najlepszych rozwi±zañ.
+Wskutek tych obserwacji algorytm AS zacz±³ ewoluowaæ a¿ do powstania jego ró¿nych wariantów, np. Max-Min AS, które wykazuj± siê lepszymi cechami ni¿ oryginalny AS.
+
+
+\section{Max-Min AS}
+
+Algorytm Max-Min AS jest modyfikacj± oryginalnego algorytmu AS.
+Modyfikacje te sprowadzaj± siê do 3 zmian:
+
+\begin{itemize}
+\item ilo¶æ feromonu na krawêdziach ograniczana jest do przedzia³u $[\tau_{min},\tau_{max}]$, s³u¿y to przeciwdzia³aniu stagnacji, która by³a jednym z g³ównym powodów dla których AS nie spisywa³ siê najlepiej dla wiêkszych grafów.
+\item pocz±tkowo na krawêdziach obecnych jest $\tau_{max}$ feromonu
+\item w ka¿dej iteracji najlepsza droga ze znalezionych przez mrówki otrzymuje dodatkow± ilo¶æ feromonu
+\end{itemize}
+
+Do¶wiadczenia pokaza³y, ¿e algorytmu typu Max-Min AS znajduje znacz±co lepsze rozwi±zania ni¿ AS.
+Dodatkowo wa¿n± jego zalêta jest te¿ niewiele wiêksze skomplikowanie algorytmu ni¿ oryginalny AS.
+
+\section{Algoryty mrówkowe w praktyce}
+
+Po sukcesie w rozwi±zywaniu problemu komiwoja¿era naturalne sta³y siê próby aplikacji algorytmów mrówkowych do innych typowych problemów kombinatorycznych.
+Próbowano nimi rozwi±zywaæ zarówno statyczne problemy kombinatoryczne (dane wej¶ciowe nie zmieniaj±ce siê w czasie) oraz dynamiczne (dane wej¶ciowe ulegaj± zmianom w czasie).
+Do typowych statycznych problemów kombinatorycznych dla których istniej± bardzo dobre rozwi±zania algorytmami mrówkowymi mo¿emy zaliczyæ:
+\begin{itemize}
+\item kolorowanie grafu
+\item przypisywanie fabryk do lokalizacji (quadratic assignment problem)
+\item szeregowanie zadañ na maszynach (job shop scheduling)
+\item wyznaczanie tras pojazdów (vehicle routing problem)
+\item najkrótszy wspólny nad-ci±g (shortest common supersequence)
+\end{itemize}
+Je¶li chodzi o problemy dynamiczne, to g³ównym polem zastosowania algorytmów mrówkowych jest routing w sieciach komunikacyjnych.
+Chodzi tutaj zarówno o routing po³±czeniowy (pakiety tego samego po³±czenia przesy³ane s± t± sam± drog±) jak i bezpo³±czeniowy (ka¿dy pakiet mo¿e byæ przesy³any inn± drog±).
+
+\section{Implementacje na maszynach równoleg³ych}
+
+Bardzo wa¿nych zagadanieniem we wspó³czesnym ¶wiecie jest mo¿liwo¶æ implementacji algorytmów mrówkowych na maszynach równoleg³ych.
+Z jednej strony mo¿na to zrobiæ bardzo prosto - przypisaæ ka¿d± mrówkê do osobnego jednostki wykonawczej (procesora).
+Niestety takie podej¶cie mimo wielu zalet (m.in. prostota implementacji) ma powa¿n± wadê.
+Po pierwsze zauwa¿my, ¿e z definicji ilo¶æ obliczeñ przypadaj±ca na pojedyñcz± mrówkê jest wzglêdnie ma³±, natomiast ilo¶æ komunikacji z innymi mrówkami mo¿e byæ znacz±ca
+(musimy tu uwzglêdniæ m.in. informacje o feromonach).
+Wskutek tego narzuty komunikacyjne okazuj± siê zbyt du¿e w porównaniu z zyskami ze zrównoleglenia.
+
+\medskip
+
+Najpro¶ciej rozwi±zaæ ten problem poprzez zmniejszenie ziarnisto¶ci.
+Dokonuje siê tego dziel±c dan± koloniê mrówek na pewn± ilo¶æ podkoloni, rozmieszczonych na róznych procesorach.
+Ka¿da podkolonia jest symulowana osobno z uwzglêdnieniem dodatkowych danych (np. przep³yw feromonu miêdzy koloniami).
+Dziêki temu narzuty komunikacyjne staj± siê wzglêdnie ma³e w porównaniu do ilo¶ci obliczeñ przeprowadzanej przez pojedyñcze procesory.
+Do¶wiadczenia pokazuj±, ¿e jest to bardzo skalowalne rozwi±zanie a przyspieszenie uzyskiwane w ten sposób jest praktycznie liniowe ze wzglêdu na ilo¶æ procesorów.

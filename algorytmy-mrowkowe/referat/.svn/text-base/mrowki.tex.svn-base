@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage[latin2]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[MeX]{polski}
+
+
+\title{Algorytmy mrówkowe - opis teoretyczny}
+
+\author{Tomasz Duszka (t.duszka@cyfronet.pl) \\ Jakub Janczak (j.janczak@cyfronet.pl)}
+
+\begin{document}
+\maketitle
+
+\input{introduction.tex}
+\input{elements.tex}
+\input{as.tex}
+
+\end{document}
+
+

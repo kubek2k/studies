@@ -1,0 +1,10 @@
+TARGET=main
+
+main: main.tex simple.tex example.tex
+	latex main.tex
+
+clean: 
+	@rm -rf main.dvi main.aux main.out main.log example.log example.dvi example.aux simple.log simple.aux simple.dvi
+
+view: main
+	xdvi main.dvi

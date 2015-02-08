@@ -1,0 +1,52 @@
+\subsection{Sposób u¿ytkowania programu}
+
+Program przyjmuje nastêpuj±ce parametry linii poleceñ (ich opis jest równie¿ wy¶wietlany po u¿yciu parametru "\textbf{-h}")
+\begin{itemize}
+\item "\textbf{-p liczba}" - szybkosc wysychania (ewaporacji) feromonu (nieujemna liczba w jednostkach feromonu na sekundê)
+\item "\textbf{-a liczba}" - maksymalna ilo¶æ generowanych mrówek na sekundê (co najwy¿ej 100)
+\end{itemize}
+W przypadku braku odpowiedniego parametru przyjmowane s± warto¶ci domy¶lne, odpowiednio szybkosc wysychania feromonu $0.01$ i maksymalnie $10$ nowych mrówek na sekundê.
+
+Po uruchomieniu programu mamy mo¿liwo¶æ pracy w 2 trybach:
+\begin{itemize}
+\item wizualizacja - po wci¶niêciu i przytrzymaniu lewego przycisku myszy mamy mo¿liwo¶æ obrotu sceny
+\item modyfikacja sceny - po wci¶niêciu lewego przycisku myszy nastêpuje dodanie przeszkody w miejscu wskazywanym przez kursor myszy
+\end{itemize}
+Domy¶lnie program jest uruchamiany w trybie wizualizacji.
+W obu trybach dzia³ania mamy do dyspozycji równie¿ nastêpuj±ce klawisze:
+\begin{itemize}
+\item 0..9 - ustawienie szybko¶ci symulacji
+\item góra/dó³ - zbli¿enie/oddalenie kamery
+\item ENTER - zmiana trybu pracy (wizualizacja/modyfikacja sceny)
+\end{itemize}
+
+\subsection{Wizualizacja zachowania mrówek}
+
+\subsubsection{Znajdowanie drogi do celu}
+
+Uruchomiæ program z domy¶lnymi parametrami i poczekaæ a¿ mrówki znajd± drogê.
+W przypadku gdyby nie chcia³y znale¼æ drogi mo¿na próbowaæ uruchomiæ program jeszcze raz lub zmodyfikowaæ parametry (np. zmniejszyæ wspó³czynnik ewaporacji feromonu).
+
+\subsubsection{Adaptacja zachowania mrówek w przypadku zmian trasy}
+
+Uruchomiæ program i poczekaæ a¿ mrówki znajd± drogê.
+Prze³±czyæ siê w tryb modyfikacji sceny i dodaæ przeszkodê na drodze mrówek.
+Zaobserwowaæ zachowanie mrówek.
+
+Uwagi:
+\begin{itemize}
+\item przeszkoda nie powinna byæ umiejscowiana ani w pobli¿u mrowiska (bêdzie blokowaæ mrówkom wyj¶cie) ani w bardzo bliskiej odleg³osci od celu
+\item w przypadku s³abej lub wolnej adaptowalno¶ci drogi mrówek po wstawieniu przeszkodzy mo¿na próbowaæ zwiêkszyæ wspó³czynnik ewaporacji feromonu
+\end{itemize}
+
+\subsubsection{Wp³yw szybko¶ci ewaporacji feromonu na znalezienie ¶cie¿ki}
+
+Przetestowaæ czas potrzebny na znalezienie ¶cie¿ki oraz czas potrzebny na znalezienie alternatywnej scie¿ki po ustawieniu blokady dla kilku ró¿nych warto¶ci
+wspó³czynnika ewaporacji feromonu (np. 0.005, 0.01, 0.1). Nastêpnie odpowiedzieæ na nastêpuj±ce pytania:
+
+Jaki jest wp³yw zmniejszania wspó³czynnika ewaporacji na znalezienie ¶cie¿ki?
+
+Jaki jest wp³yw zmniejszania wspó³czynnika ewaporacji na znalezienie alternatywnej scie¿ki?
+
+Jakie s± skutki zmniejszania i zwiêkszania wspó³czynnika ewaporacji je¶li chodzi o wp³yw na znajdowaniu minimum lokalnego drogi mrówek?
+

@@ -1,0 +1,21 @@
+\documentclass{article}
+
+\usepackage[latin2]{inputenc}
+\usepackage[MeX]{polski}
+
+\title{Algorytmy mrówkowe - sprawozdanie}
+
+\author{Tomasz Duszka \\ Jakub Janczak}
+
+\begin{document}
+\maketitle
+
+\section{Badanie prostych algorytmów mrówkowych}
+\input{simple}
+
+\section{Przyk³adowe wykorzystanie algorytmów mrówkowych w praktyce}
+
+\input{example}
+
+\end{document}
+

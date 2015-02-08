@@ -1,0 +1,222 @@
+\subsection{Opis narzêdzia}
+Ants Engine Simulator to prosty symulator kilku znanych algorytmów mrówkowych. Najwiêksz± czê¶æ wizualizacji stanowi obszar na którym pojawia siê graf - natê¿enie ¿ó³tego koloru na ¶cie¿kach pokazuje wzglêdne natê¿enie feromonu. Poni¿ej panelu z grafem znajduje siê skala natê¿enia. pod skal± znajduje siê wykres najkrótszej d³ugo¶ci ¶cie¿ki w danej iteracji. 
+
+Po prawej stronie znajduj± siê:
+
+\begin{enumerate}
+	\item{Panel generowania grafu}
+	\item{Panel parametrów wej¶ciowych wybranego algorytmu - ka¿dy parametr posiada dok³adniejszy opis dostêpny po najechaniu myszk±}
+	\item{Panel kontrolny algorytmu}
+
+\end{enumerate}
+
+\subsection{Badanie prostego algorytmu AS}
+Badanie algorytmu rozpocznij od wygenerowania przyk³adowego grafu:
+
+Number of nodes: 20 \\
+Maximal weight on edges: 2
+
+Nastêpnie ustaw iteration count na 25 i wystartuj silnik AS Ants z nastêpuj±cymi ustawieniami, notuj±c osi±gniête wyniki (pamiêtaj aby nie wymieniæ wygenerowanego grafu na nowy):
+
+\begin{tabular}{|cc|c|}
+	\hline
+	$ \alpha $ & $ \beta $ & d³ugo¶æ scie¿ki \\
+	\hline
+	1.0 & 2.0 &  \\
+	2.0 & 1.0 &  \\
+	1.0 & 5.0 &  \\
+	5.0 & 1.0 &  \\
+	10.0 & 1.0 &  \\
+	1.0 & 10.0 &  \\
+	\hline
+	
+\end{tabular}
+
+co zaobserwowa³e¶ ?
+
+...................................................
+
+
+Teraz zmieñ wspó³czynnik parowania (Evaporation factor) na 0.1 i powtórz æwiczenie:
+
+\begin{tabular}{|cc|c|}
+	\hline
+	$ \alpha $ & $ \beta $ & d³ugo¶æ scie¿ki \\
+	\hline
+	1.0 & 2.0 &  \\
+	2.0 & 1.0 &  \\
+	1.0 & 5.0 &  \\
+	5.0 & 1.0 &  \\
+	10.0 & 1.0 &  \\
+	1.0 & 10.0 &  \\
+	\hline
+	
+\end{tabular}
+
+co zaobserwowa³e¶ ?
+
+...................................................
+
+\subsection{Badanie algorytmu MaxMinAS}
+
+Wygeneruj taki sam graf jak w poprzednim punkcie i powtórz zadanie z warto¶ciami z tabelki.
+
+\begin{tabular}{|cccc|c|}
+	\hline
+	$ \alpha $ & $ \beta $ & Maximal pheromone & Minimal pheoromone & d³ugo¶æ scie¿ki \\
+	\hline
+	1.0 & 2.0 & 1.5 & 0.5 & \\
+	2.0 & 1.0 & 1.5 & 0.5 & \\
+	1.0 & 5.0 & 1.5 & 0.5 & \\
+	5.0 & 1.0 & 1.5 & 0.5 & \\
+	10.0 & 1.0 & 1.5 & 0.5 & \\
+	1.0 & 10.0 &  1.5 & 0.5 & \\
+	1.0 & 2.0 & 0.6 & 0.5 & \\
+	2.0 & 1.0 & 0.6 & 0.5 & \\
+	1.0 & 5.0 & 0.6 & 0.5 & \\
+	5.0 & 1.0 & 0.6 & 0.5 & \\
+	10.0 & 1.0 & 0.6 & 0.5 & \\
+	1.0 & 10.0 &  0.6 & 0.5 & \\
+	1.0 & 2.0 & 2.0 & 0.2 & \\
+	2.0 & 1.0 & 2.0 & 0.2 & \\
+	1.0 & 5.0 & 2.0 & 0.2 & \\
+	5.0 & 1.0 & 2.0 & 0.2 & \\
+	10.0 & 1.0 & 2.0 & 0.2 & \\
+	1.0 & 10.0 &  2.0 & 0.2 & \\
+
+
+	\hline
+	
+\end{tabular}
+
+co zaobserwowa³e¶ ?
+
+...................................................
+
+\subsection{Badanie algorytmu ACS}
+Ponownie wykonaj eksperyment dla algorytmu ACS i u¿ywanego wcze¶niej grafu. 
+
+Q0 - wspó³czynnik okre¶laj±cy prawdopodobieñstwo alternatywnego mechanizmu obierania nastêpnego kroku mrówki.
+
+\begin{tabular}{|cc|c|}
+	\hline
+	$ \beta $ & Q0 & d³ugo¶æ scie¿ki \\
+	\hline
+	1.0 & 0.1 & \\
+	2.0 & 0.1 & \\
+	5.0 & 0.1 & \\
+	10.0 & 0.1 & \\
+	1.0 & 0.5 & \\
+	2.0 & 0.5 & \\
+	5.0 & 0.5 & \\
+	10.0 & 0.5 & \\
+	1.0 & 0.7 & \\
+	2.0 & 0.7 & \\
+	5.0 & 0.7 & \\
+	10.0 & 0.7 & \\
+	\hline
+	
+\end{tabular}
+
+co zaobserwowa³e¶ ?
+
+...................................................
+
+
+\subsection{Badanie algorytmu ASRank}
+Ponownie wykonaj æwiczenie dla algorytmu ASRank dla okre¶lonych warto¶ci:
+
+$ \rho $ - wspó³czynnik okre¶laj±cy ilo¶æ najlepszych mrówek które otrzymuj± dodatkowy feromon na swojej ¶cie¿ce
+
+\begin{tabular}{|ccc|c|}
+	\hline
+	$ \alpha $ & $ \beta $ & $ \rho $ & d³ugo¶æ scie¿ki \\
+	\hline
+	1.0 & 2.0 & 10 & \\
+	2.0 & 1.0 & 10 & \\
+	1.0 & 5.0 & 10 & \\
+	5.0 & 1.0 & 10 & \\
+	10.0 & 1.0 & 10 & \\
+	1.0 & 2.0 & 5 & \\
+	2.0 & 1.0 & 5 & \\
+	1.0 & 5.0 & 5 & \\
+	5.0 & 1.0 & 5 & \\
+	5.0 & 1.0 & 5 & \\
+	1.0 & 2.0 & 15 & \\
+	2.0 & 1.0 & 15 & \\
+	1.0 & 15.0 & 15 & \\
+	15.0 & 1.0 & 15 & \\
+	15.0 & 1.0 &15 & \\
+
+
+	\hline
+	
+\end{tabular}
+
+co zaobserwowa³e¶ ?
+
+...................................................
+
+\subsection{Porównanie algorytmów}
+Wygeneruj graf:
+
+Number of nodes: 20
+Maximal weight: 5
+
+ustaw ilo¶æ iteracji na 70 i dokonaj porównania znalezionych scie¿ek (w kolumnie numer iteracji zanotuj odczytan± z wykresu d³ugo¶ci ¶cie¿ki iteracjê w której algorytm odnalaz³ najlepsz±):
+
+\begin{tabular}{|c|c|c|}
+	\hline
+		Nazwa algorytmu & d³ugo¶æ znalezionej ¶cie¿ki & numer iteracji \\
+		AS & & \\
+		MaxMinAS & & \\
+		AntQ & & \\
+		ACS & & \\
+		ASRank & & \\
+	\hline
+\end{tabular}
+		
+który algorytm wygra³ ?
+
+.......................
+
+eksperyment powtórz dla grafu:
+
+Number of nodes: 10
+Maximal weight: 5
+
+\begin{tabular}{|c|c|c|}
+	\hline
+		Nazwa algorytmu & d³ugo¶æ znalezionej ¶cie¿ki & numer iteracji \\
+		AS & & \\
+		MaxMinAS & & \\
+		AntQ & & \\
+		ACS & & \\
+		ASRank & & \\
+	\hline
+\end{tabular}
+		
+który algorytm wygra³ ?
+
+.......................
+
+... i dla grafu:
+
+Number of nodes: 10
+Maximal weight: 1
+
+\begin{tabular}{|c|c|c|}
+	\hline
+		Nazwa algorytmu & d³ugo¶æ znalezionej ¶cie¿ki & numer iteracji \\
+		AS & & \\
+		MaxMinAS & & \\
+		AntQ & & \\
+		ACS & & \\
+		ASRank & & \\
+	\hline
+\end{tabular}
+		
+który algorytm wygra³ ?
+
+.......................
+
